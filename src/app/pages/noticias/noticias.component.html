@@ -1,1 +1,73 @@
-<p>noticias works!</p>
+<h1>Noticias</h1>
+<section class="general">
+    <!-- Columna1, ultima foto-->
+    <article>
+        <div>
+            <img src="./assets/noticias/loteria.jpg" id="ultimafoto" (click)="open(content1)">
+            <p id="ultimafecha" style="margin-top: 8px;">16 de noviembre 2021</p>
+            <p id="ultimatitulo">¡Loteria de Navidad!</p>
+        </div>  
+    </article> 
+    <!-- Columna2, noticias-->
+    <article class="noticiascolumna">
+        <div class="noticias">
+            <img src="./assets/noticias/RASTRILLO.jpg" class="fotopequeña" (click)="open(content1)">
+            <p class="fechapequeña">10 de diciembre 2021</p>
+            <p class="titulopequeño">Mercadillo solidario</p>
+        </div>
+        <div class="noticias">
+            <img src="./assets/noticias/kitten.jpg" class="fotopequeña" (click)="open(content1)">
+            <p class="fechapequeña">12 de diciemnre 2021</p>
+            <p class="titulopequeño">Adopción urgente</p>
+        </div>
+        <div class="noticias">
+            <img src="./assets/noticias/techo.jpg" class="fotopequeña" (click)="open(content1)">
+            <p class="fechapequeña">14 de diciembre 2021</p>
+            <p class="titulopequeño">Techo caido</p>
+        </div>
+        <div class="noticias">
+            <img src="./assets/noticias/camadaH.jpeg" class="fotopequeña" (click)="open(content1)">
+            <p class="fechapequeña">18 de noviembre 2021</p>
+            <p class="titulopequeño">Camada de hamster</p>
+        </div>
+    </article>
+    <!-- Columna3, noticias -->
+    <article class="noticiascolumna">
+        <div class="noticias">
+            <img src="./assets/noticias/mantas-0-90547555_m.jpg" class="fotopequeña" (click)="open(content1)"> 
+            <p class="fechapequeña">30 de noviembre 2021</p>
+            <p class="titulopequeño">Recogida de mantas</p>
+        </div>
+        <div class="noticias">
+            <img src="./assets/noticias/cachorros.jpg" class="fotopequeña" (click)="open(content1)">
+            <p class="fechapequeña">5 de diciembre 2021</p>
+            <p class="titulopequeño">Cachorros para acogida</p>
+        </div>
+        <div class="noticias">
+            <img src="./assets/noticias/cine.jpg" class="fotopequeña" (click)="open(content1)" >
+            <p class="fechapequeña">12 diciembre</p>
+            <p class="titulopequeño">Cine benefico</p>
+        </div>
+        <div class="noticias">
+            <img src="./assets/noticias/gato2.jpg" class="fotopequeña" (click)="open(content1)">
+            <p class="fechapequeña">13 de noviembre</p>
+            <p class="titulopequeño">Necesitamos medicinas</p>
+        </div>
+     
+    </article>
+</section> 
+
+  <!-- Modal -->
+    <ng-template #content1 let-modal >
+            <div class="modal-header" >
+              <h4 class="modal-title" id="modal-basic-title" >Necesitamos medicinas</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')" >
+                <span aria-hidden="true" >&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p> Necesitamos medicinas para poder salvar a Gatuno</p>
+            </div>
+          </ng-template>
+          <hr>
+
