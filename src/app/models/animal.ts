@@ -11,5 +11,7 @@ export class Animal {
                 public esAptoGatos: boolean,
                 public esAptoNinyos: boolean,
                 public descripcion: string,
-                public tiempoAdopcion: number){}
+                public tiempoAdopcion: 0,
+                public notas: string,
+                public chip: number){}
 }

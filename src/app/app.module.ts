@@ -25,6 +25,7 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
