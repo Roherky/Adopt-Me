@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +24,18 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './pages/home/home.component';
+
+// Anggular Material in here is
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -48,9 +59,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListaAnimalesComponent,
     NoticiasComponent,
     QuienesSomosComponent,
-    FaqComponent
+    FaqComponent,
+    HomeComponent
   ],
   imports: [
+    MatToolbarModule,
+    MatSidenavModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatListModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
