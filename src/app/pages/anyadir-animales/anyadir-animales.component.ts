@@ -11,7 +11,7 @@ export class AnyadirAnimalesComponent implements OnInit {
 
   public animal: Animal;
 
-  constructor() { 
+  constructor() {
     this.animal=new Animal("", "", true, "", "", "", 0 , "", true, true, true, "", 0, "", 0);
   }
 
@@ -21,9 +21,4 @@ export class AnyadirAnimalesComponent implements OnInit {
   onSubmit(form: NgForm){
     console.log(this.animal);
   }
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> inicio

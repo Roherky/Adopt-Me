@@ -24,8 +24,6 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -39,25 +37,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-=======
-import { MatCardModule } from '@angular/material/card';
-import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
->>>>>>> inicio
-=======
-import { FormsModule } from '@angular/forms';
 
-// Anggular Material in here is
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
->>>>>>> inicio
+
+
 
 @NgModule({
   declarations: [
@@ -82,16 +65,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     NoticiasComponent,
     QuienesSomosComponent,
     FaqComponent,
-<<<<<<< HEAD
-    HomeComponent
-=======
->>>>>>> inicio
   ],
   imports: [
     MatToolbarModule,
     MatSidenavModule,
     MatGridListModule,
-    MatCardModule,
     MatMenuModule,
     MatIconModule,
     MatProgressSpinnerModule,
@@ -100,17 +78,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    FormsModule
-=======
-    MatCardModule,
     FormsModule,
+    MatCardModule,
     MatCheckboxModule
->>>>>>> inicio
-=======
-    FormsModule
->>>>>>> inicio
   ],
   providers: [],
   bootstrap: [AppComponent]

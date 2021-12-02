@@ -22,10 +22,10 @@
                 <select name="categoria" class="redondeado" [(ngModel)]="noticia.categoria" #categoria="ngModel"
                 [ngClass]="{'is-invalid': anyadirNoticia.submitted && categoria.invalid}" required>
                 <option value="" disabled selected>Selecciona la categoría</option>
-                    <option value="1">Urgente</option> 
-                    <option value="2">Destacado</option> 
+                    <option value="1">Urgente</option>
+                    <option value="2">Destacado</option>
                     <option value="3">Lo último</option>
-                    <option value="4">Otros</option> 
+                    <option value="4">Otros</option>
                  </select>
                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted  && categoria.invalid">
                     <p *ngIf="categoria.errors?.['required']">Debes elegir una categoría</p>
@@ -40,10 +40,10 @@
                 <select name="prioridad" class="redondeado" [(ngModel)]="noticia.prioridad" #prioridad="ngModel"
                 [ngClass]="{'is-invalid': anyadirNoticia.submitted && prioridad.invalid}" required>
                 <option value="" disabled selected>Selecciona la prioridad</option>
-                    <option value="1">Muy importante</option> 
-                    <option value="2">Importante</option> 
+                    <option value="1">Muy importante</option>
+                    <option value="2">Importante</option>
                     <option value="3">Normal</option>
-                    <option value="4">No importante</option> 
+                    <option value="4">No importante</option>
                  </select>
                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted  && prioridad.invalid">
                     <p *ngIf="prioridad.errors?.['required']">Debes elegir una prioridad</p>
@@ -57,12 +57,12 @@
               <div class="col">
                 <div class="form-group">
                   <label for="start">Fecha de la noticia</label><br>
-      
+
                   <input type="date" id="noticia" name="fechaNoticia" class="redondeado"
                          value="2021-11-29"
                          min="2018-01-01" max="2021-12-31"
                          [(ngModel)]="noticia.fechaNoticia" #fechaNoticia="ngModel"
-                         [ngClass]="{'is-invalid': anyadirNoticia.submitted && fechaNoticia.invalid}" required> 
+                         [ngClass]="{'is-invalid': anyadirNoticia.submitted && fechaNoticia.invalid}" required>
                          <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && fechaNoticia.invalid">
                             <p *ngIf="fechaNoticia.errors?.['required']">Introduce la fecha de la noticia</p>
                         </div>
@@ -76,9 +76,9 @@
              <label>Detalles</label><br>
              <textarea class="form-control" id="detalles"
              ></textarea>
-           </div>   
+           </div>
        </div>
-   
+
             <div class="row">
               <!--input subir imagen-->
               <label id="subirImagen">Imagen:</label><br><br>
@@ -86,7 +86,7 @@
         [ngClass]="{'is-invalid': anyadirNoticia.submitted && imagenNoticia.invalid}" required>
         <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && imagenNoticia.invalid">
             <p *ngIf="imagenNoticia.errors?.['required']">La imagen es obligatoria</p>
-           </div>    
+           </div>
     </div>
 
       <!--Textarea notas-->
@@ -102,8 +102,4 @@
   </div>
     </div>
 </form>
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> inicio

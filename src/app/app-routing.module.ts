@@ -2,22 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnimalDetalladoProtectoraComponent } from './pages/animal-detallado-protectora/animal-detallado-protectora.component';
 import { AnyadirAnimalesComponent } from './pages/anyadir-animales/anyadir-animales.component';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { FormularioAnyadirNoticiasComponent } from './pages/formulario-anyadir-noticias/formulario-anyadir-noticias.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-
-const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path:'home', component:HomeComponent},
-  {path:'Animales',component:AnimalDetalladoProtectoraComponent}
-=======
-import { ContactoComponent } from './pages/contacto/contacto.component';
-=======
-import { FormularioAnyadirNoticiasComponent } from './pages/formulario-anyadir-noticias/formulario-anyadir-noticias.component';
->>>>>>> inicio
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -34,8 +21,8 @@ import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.co
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
   {path: "inicio", component: InicioComponent},
+  {path:"footer",component:FooterComponent},
   {path: "login", component: LoginComponent},
   {path: "registro", component: RegistroComponent},
   {path: "contacto", component: ContactoComponent},
@@ -52,8 +39,6 @@ const routes: Routes = [
   {path: "perfilProtectora", component: PerfilProtectoraComponent},
   {path: "perfilUsuario", component: PerfilUsuarioComponent},
   {path: "quienesSomos", component: QuienesSomosComponent},
->>>>>>> inicio
-=======
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
   {path:'inicio', component: InicioComponent},
   {path:'login', component: LoginComponent},
@@ -72,8 +57,7 @@ const routes: Routes = [
   {path:'perfilProtectora', component: PerfilProtectoraComponent},
   {path:'perfilUsuario', component: PerfilUsuarioComponent},
   {path:'quienesSomos', component: QuienesSomosComponent},
-  {path:'editarAnimal', component: AnimalDetalladoProtectoraComponent},
->>>>>>> inicio
+  {path:'editarAnimal', component: AnimalDetalladoProtectoraComponent}
 ];
 
 @NgModule({

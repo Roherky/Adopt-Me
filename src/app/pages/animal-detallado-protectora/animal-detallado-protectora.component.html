@@ -1,16 +1,16 @@
 <div class="container">
     <h1>Perfil</h1>
-    
+
     <div class="boton">
-     
+
     <button type="reset"  class="form-control" id="botonEliminar" >Eliminar</button>
     <button type="reset" class="form-control" id="botonModificar">Modificar</button>
-    
+
     </div>
-    
+
     <h2>King</h2>
-    
-       
+
+
     <table>
         <thead>
             <tr>
@@ -20,29 +20,29 @@
                 <th>Ingreso</th>
                 <th>Chip</th>
             </tr>
-        </thead> 
+        </thead>
     <tbody>
     <ng-container  *ngIf="animal!=null">
-    
-    
-    
-        
-        <tr>   
-             
+
+
+
+
+        <tr>
+
             <td>{{animal.imagen}}</td>
             <td>{{animal.raza}}</td>
             <td>{{animal.razaPeligrosa}}</td>
             <td>{{animal.tiempoAdopcion}}</td>
             <td>{{animal.chip}}</td>
-          
+
         </tr>
-    
+
     </ng-container>
         </tbody>
     </table>
-    
+
     <hr>
-    
+
     <div class="descripcion">
         {{animal.descripcion}}
     </div>
@@ -52,12 +52,5 @@
         <img src="../../../assets/perro4.jpg">
         <img src="../../../assets/perro3.jpg">
     </div>
-<<<<<<< HEAD
-    
-    
-    
-    </div>
-    
-=======
 </div>
->>>>>>> inicio
+
