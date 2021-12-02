@@ -1,1 +1,137 @@
-<p>anyadir-animales works!</p>
+<div class="container">
+    <h1>Añadir Animales</h1>
+    <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank" #anyadirAnimal="ngForm" (ngSubmit)="onSubmit(anyadirAnimal)">
+         
+        <div class="row">
+             <!--Input nombre-->
+              <div class="col">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text"  class="redondeado" name="nombre" [(ngModel)]="animal.nombre" #nombre="ngModel" placeholder="Nombre"
+                    [ngClass]="{'is-invalid': anyadirAnimal.submitted && nombre.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && nombre.invalid">
+                        <p *ngIf="nombre.errors?.['required']">El nombre es obligatorio</p>
+                       </div>
+                </div>
+              </div>
+
+               <!--Input raza-->
+              <div class="col">
+                <div class="form-group">
+                    <label>Raza</label>
+                    <input type="text"  class="redondeado" name="raza" [(ngModel)]="animal.raza" #raza="ngModel"  placeholder="Raza"
+                    [ngClass]="{'is-invalid': anyadirAnimal.submitted && raza.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && raza.invalid">
+                        <p *ngIf="raza.errors?.['required']">La raza es obligatoria</p>
+                       </div>
+                </div>
+              </div>
+          
+               <!--Lista desplegable raza peligrosa-->
+              <div class="col">
+                <div class="form-group">
+                <label>Raza Peligrosa</label><br>
+                <select name="razas"  class="redondeado">
+                  <option value="" disabled selected>Selecciona raza peligrosa</option>
+                    <option value="1">Rottweiler</option> 
+                    <option value="2">Pit Bull Terrier</option> 
+                    <option value="3">Staffordshire Bull Terrier</option>
+                    <option value="4">American Staffodshire Terrier</option> 
+                    <option value="5">Dogo Argentino</option> 
+                    <option value="6">Fila Brasileiro</option> 
+                    <option value="7">Tosa Inu</option> 
+                    <option value="8">Akita Inu</option> 
+                 </select>
+                 </div>
+              </div>
+            </div>
+
+            <div class="row">
+                 <!--Lista desplegable genero-->
+                <div class="col">
+            <div class="form-group">
+                <label>Sexo</label><br>
+                <select id="genero"  class="redondeado" type="radio" name="genero"  [(ngModel)]="animal.genero" #genero="ngModel"
+                [ngClass]="{'is-invalid': anyadirAnimal.submitted && genero.invalid}" required>
+                <option value="" disabled selected>Selecciona género</option>
+                    <option value="1">Macho</option> 
+                    <option value="2">Hembra</option> 
+                </select>
+                <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && genero.invalid">
+                    <p *ngIf="genero.errors?.['required']">Debes elegir un género</p>
+                </div>
+            </div>
+        </div>
+        
+               <!--ILista desplegable tipo animal-->
+              <div class="col">
+                <div class="form-group">
+                <label>Tipo de Animal</label><br>
+                <select id="tipoAnimal"  class="redondeado" name="tipoAnimal"  [(ngModel)]="animal.tipoAnimal" #tipoAnimal="ngModel"
+                [ngClass]="{'is-invalid': anyadirAnimal.submitted && tipoAnimal.invalid}" required>
+                  <option value="" disabled selected>Selecciona tipo</option>
+                  <option value="1">Perro</option> 
+                  <option value="2">Gato</option> 
+               </select>
+               <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && tipoAnimal.invalid">
+                <p *ngIf="tipoAnimal.errors?.['required']">Debes elegir el tipo de animal</p>
+            </div>
+              </div>
+              </div>
+
+               <!--Input fecha ingreso-->
+              <div class="col">
+                <div class="form-group">
+                  <label for="start">Ingreso:</label><br>
+                  <input type="date" id="start" name="ftiempoAdopcion"  class="redondeado"
+                         value=""
+                         min="2018-01-01" max="2021-12-31"
+                         [(ngModel)]="animal.tiempoAdopcion" #tiempoAdopcion="ngModel"
+                         [ngClass]="{'is-invalid': anyadirAnimal.submitted && tiempoAdopcion.invalid}" required> 
+                         <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && tiempoAdopcion.invalid">
+                            <p *ngIf="tiempoAdopcion.errors?.['required']">Debes introducir una fecha de ingreso válida</p>
+                        </div>
+                        </div>
+                 </div>
+               </div>
+
+ 
+            <div class="row">
+                 <!--Textarea detalles-->
+                <div class="col">
+              <label>Detalles</label><br>
+              <textarea class="form-control" id="detalles"
+              ></textarea>
+            </div>   
+        </div>
+
+             <!--Enviar imágenes-->
+            <div class="row">
+                <div class="col">
+              <label id="subirImagen">Imagen:</label><br><br>
+            <input type="file"  name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" [(ngModel)]="animal.imagen" #imagen="ngModel"
+            [ngClass]="{'is-invalid': anyadirAnimal.submitted && imagen.invalid}" required>
+            <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && imagen.invalid">
+                <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
+               </div>
+        </div>
+
+
+       <!--Textarea notas-->
+      <div class="row" id="notas">
+        <div class="col">
+          <label>Notas</label><br>
+          <textarea class="form-control" id="textAreaNotas"></textarea>
+        </div>
+      </div>
+
+ 
+      <!--Botón enviar-->
+        <div class="row">
+            <div class="col">
+        <button type="submit" class="btn btn-primary btn-block" id="botonEnviar">Guardar</button>
+      </div>
+        </div>
+</div>
+</form>
+</div>
