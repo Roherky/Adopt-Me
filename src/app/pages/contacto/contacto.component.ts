@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-contacto',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor() { }
+  public usuario!:Usuario
+  constructor() { 
+    this.usuario = new Usuario("", "", "", "", "", null, "", "", "", "", "");
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    console.log(this.usuario);
   }
 
 }
