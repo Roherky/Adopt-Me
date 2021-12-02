@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   public protectora: Protectora;
 
   constructor() {
-    this.usuario = new Usuario("", "", "", "", "", 0, "", "", "", "", "");
+    this.usuario = new Usuario("", "", "", 0, "", "", "", "", "");
     this.protectora = new Protectora("", "", "", "", "", "", [], []);
     this.esProtectora = false;
   }

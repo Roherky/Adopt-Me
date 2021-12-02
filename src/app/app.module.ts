@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,8 +25,8 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './pages/home/home.component';
+
+
 
 // Anggular Material in here is
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -81,6 +82,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FormsModule,
     MatCardModule,
     MatCheckboxModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

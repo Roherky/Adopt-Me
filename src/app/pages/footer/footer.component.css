@@ -1,6 +1,10 @@
+
+.social {
+  margin-top: 1%;
+}
 .footer-basic {
-    padding:40px 0;
-    background-color:#D3E9F0;
+    padding: 0.5em;
+    background-color: #e0dfdf;
     color:#000000;
   }
 

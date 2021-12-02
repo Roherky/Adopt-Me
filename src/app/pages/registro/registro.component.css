@@ -16,9 +16,10 @@
         .checkbox-tipoUsuario {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
             margin-top: 2%;
             margin-bottom: 2%;
+            font-size: larger;
         }
 
         .registro-usuario {
@@ -30,104 +31,81 @@
             padding: 2%;
         }
 
-        .columna-1 {
-            display: flex;
-            flex-direction: column;
+
+        #nombre-usuario {
+            margin-top: 2%;
         }
 
-            #nombre-usuario {
-                margin-top: 2%;
+            #input-usuarioNombre {
+                border-radius: 1em;
+                width: 20em;
             }
 
-                #input-usuarioNombre {
-                    border-radius: 1em;
-                }
-
-            #apellido1-usuario {
-                margin-top: 2%;
-            }
-
-                #input-usuarioApellido1 {
-                    border-radius: 1em;
-                }
-
-            #apellido2-usuario {
-                margin-top: 2%;
-            }
-
-                #input-usuarioApellido2 {
-                    border-radius: 1em;
-                }
-
-            #fechaNacimiento-usuario {
-                margin-top: 2%;
-            }
-
-                #input-usuarioFechaNacimiento {
-                    border-radius: 1em;
-                }
-
-            .checkbox-genero {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                margin-top: 2%;
-            }
-
-            #hombre {
-                margin-right: 5%;
-                margin-top: 2%;
-            }
-
-            #mujer {
-                margin-top: 2%;
-            }
-
-        .columna-2 {
-            display: flex;
-            flex-direction: column;
+        #apellidos-usuario {
+            margin-top: 2%;
         }
 
-            #telefono-usuario {
-                margin-top: 2%;
+            #input-usuarioApellidos {
+                border-radius: 1em;
             }
 
-                #input-usuarioTelefono {
-                    border-radius: 1em;
-                }
+        #fechaNacimiento-usuario {
+            margin-top: 2%;
+        }
 
-            #email-usuario {
-                margin-top: 2%;
+            #input-usuarioFechaNacimiento {
+                border-radius: 1em;
             }
 
-                #input-usuarioEmail {
-                    border-radius: 1em;
-                }
+        #hombre {
+            margin-right: 5%;
+            margin-top: 2%;
+        }
 
-            #password-usuario {
-                margin-top: 2%;
+        #mujer {
+            margin-top: 2%;
+        }
+
+
+        #telefono-usuario {
+            margin-top: 2%;
+        }
+
+            #input-usuarioTelefono {
+                border-radius: 1em;
             }
 
-                #input-usuarioPassword {
-                    border-radius: 1em;
-                }
+        #email-usuario {
+            margin-top: 2%;
+        }
 
-            #localidad-usuario {
-                margin-top: 2%;
+            #input-usuarioEmail {
+                border-radius: 1em;
             }
 
-                #input-usuarioLocalidad {
-                    border-radius: 1em;
-                }
+        #password-usuario {
+            margin-top: 2%;
+        }
 
-            #direccion-usuario {
-                margin-top: 2%;
+            #input-usuarioPassword {
+                border-radius: 1em;
             }
 
-                #input-usuarioDireccion {
-                    border-radius: 1em;
-                }
+        #localidad-usuario {
+            margin-top: 2%;
+        }
+
+            #input-usuarioLocalidad {
+                border-radius: 1em;
+            }
+
+        #direccion-usuario {
+            margin-top: 2%;
+        }
+
+            #input-usuarioDireccion {
+                border-radius: 1em;
+            }
 
         .mostrar-pass {
             display: flex;
@@ -144,6 +122,9 @@
 
             #boton {
                 border-radius: 1em;
+                background-color: #5EC0CA;
+                border: 0px;
+                padding: 5%;
             }
 
     .registro-protectora {
