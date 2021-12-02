@@ -3,7 +3,7 @@ export class Usuario {
                 public apellido1: string,
                 public apellido2: string,
                 public fechaNacimiento: string,
-                public esHombre: boolean,
+                public genero: string,
                 public telefono: number,
                 public email: string,
                 public password: string,

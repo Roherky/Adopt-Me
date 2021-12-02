@@ -8,6 +8,7 @@
 
 .carousel {
     margin-top: 5%;
+    margin-left: 10%;
 }
 
 .instrucciones {
@@ -17,27 +18,48 @@
     justify-content: space-around;
     text-align: center;
     margin-top: 3%;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(238, 238, 238);
     border-radius: 1em;
     margin-left: 20%;
-    margin-right: 5%;
+    margin-right: 20%;
     padding: 1%;
+    width: 100%;
 }
 
     .primera-instruccion {
         width: 10%;
     }
 
+    .primera-instruccion:hover {
+        width: 15%;
+        transition: 1.5s;
+    }
+
     .segunda-instruccion {
         width: 10%;
+    }
+
+    .segunda-instruccion:hover {
+        width: 15%;
+        transition: 1.5s;
     }
 
     .tercera-instruccion {
         width: 10%;
     }
 
+    .tercera-instruccion:hover {
+        width: 15%;
+        transition: 1.5s;
+    }
+
     .cuarta-instruccion {
         width: 10%;
+    }
+
+    .cuarta-instruccion:hover {
+        width: 15%;
+        transition: 1.5s;
     }
 
 .adopciones {
@@ -48,6 +70,51 @@
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 6%;
-    width: 70%;
+    width: 100%;
     text-align: center;
 }
+
+    .boton {
+        text-align: center;
+        background-color: #5ebfca;
+        border-radius: 5em;
+        width: 50%;
+        border: 1px ridge;
+        border-radius: 6em 3em;
+    }
+
+.opiniones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+    #carouselExampleFade {
+        display: none;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .instrucciones {
+            display: flex;
+        }
+                      
+    * {
+    text-align: center;
+    }
+}
+
+/* @media screen and (max-width: 500px) {
+
+    .card-text {
+    }
+} */

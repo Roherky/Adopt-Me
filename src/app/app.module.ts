@@ -24,6 +24,7 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -37,6 +38,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+=======
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+>>>>>>> inicio
 
 @NgModule({
   declarations: [
@@ -61,7 +67,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     NoticiasComponent,
     QuienesSomosComponent,
     FaqComponent,
+<<<<<<< HEAD
     HomeComponent
+=======
+>>>>>>> inicio
   ],
   imports: [
     MatToolbarModule,
@@ -76,7 +85,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+<<<<<<< HEAD
     FormsModule
+=======
+    MatCardModule,
+    FormsModule,
+    MatCheckboxModule
+>>>>>>> inicio
   ],
   providers: [],
   bootstrap: [AppComponent]

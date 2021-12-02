@@ -1,0 +1,301 @@
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+    .derecha {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+        width: 50%;
+        margin-left: 5%;
+    }
+
+        .checkbox-tipoUsuario {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .registro-usuario {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border: 1px solid rgb(197, 197, 197);
+            border-radius: 1em;
+            padding: 2%;
+        }
+
+        .columna-1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+            #nombre-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioNombre {
+                    border-radius: 1em;
+                }
+
+            #apellido1-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioApellido1 {
+                    border-radius: 1em;
+                }
+
+            #apellido2-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioApellido2 {
+                    border-radius: 1em;
+                }
+
+            #fechaNacimiento-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioFechaNacimiento {
+                    border-radius: 1em;
+                }
+
+            .checkbox-genero {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 2%;
+            }
+
+            #hombre {
+                margin-right: 5%;
+                margin-top: 2%;
+            }
+
+            #mujer {
+                margin-top: 2%;
+            }
+
+        .columna-2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+            #telefono-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioTelefono {
+                    border-radius: 1em;
+                }
+
+            #email-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioEmail {
+                    border-radius: 1em;
+                }
+
+            #password-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioPassword {
+                    border-radius: 1em;
+                }
+
+            #localidad-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioLocalidad {
+                    border-radius: 1em;
+                }
+
+            #direccion-usuario {
+                margin-top: 2%;
+            }
+
+                #input-usuarioDireccion {
+                    border-radius: 1em;
+                }
+
+        .mostrar-pass {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        .boton {
+            text-align: center;
+            margin-top: 5%;
+        }
+
+            #boton {
+                border-radius: 1em;
+            }
+
+    .registro-protectora {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 1px solid rgb(197, 197, 197);
+        border-radius: 1em;
+        padding: 2%;
+    }
+    
+        .protectoraColumna-1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+                #nombre-protectora {
+                    margin-top: 2%;
+                }
+
+                    #input-protectoraNombre {
+                        border-radius: 1em;
+                    }
+
+                #direccion-protectora {
+                    margin-top: 2%;
+                }
+
+                    #input-protectoraDireccion {
+                        border-radius: 1em;
+                    }
+
+                #localidad-protectora {
+                    margin-top: 2%;
+                }
+
+                    #input-protectoraLocalidad {
+                    border-radius: 1em;
+                    }
+
+        .protectoraColumna-2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+                #email-protectora {
+                    margin-top: 2%;
+                }
+
+                    #input-protectoraEmail {
+                        border-radius: 1em;
+                    }
+
+                #password-protectora {
+                    margin-top: 2%;
+                }
+
+                    #input-protectoraPassword {
+                        border-radius: 1em;
+                    }
+
+                #telefono-protectora {
+                    margin-top: 2%;
+                }
+
+                    #input-protectoraTelefono {
+                    border-radius: 1em;
+                    }
+
+@media screen and (max-width: 1400px) {
+    .izquierda {
+        display: none;
+    }
+                    
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+                                          
+    * {
+        text-align: center;
+    }
+}
+                    
+@media screen and (max-width: 550px) {
+    .izquierda {
+        display: none;
+    }
+                    
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+                    
+    .checkbox-tipoUsuario {
+        display: flex;
+        flex-direction: column;
+    }
+                    
+    .registro-usuario {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+                    
+    .registro-protectora {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+                                          
+    * {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .izquierda {
+        display: none;
+    }
+                    
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+                    
+    .checkbox-tipoUsuario {
+        display: flex;
+        flex-direction: column;
+    }
+                    
+    .registro-usuario {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .checkbox-genero {
+        display: flex;
+        flex-direction: column;
+    }
+                    
+    .registro-protectora {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+                                          
+    * {
+        text-align: center;
+    }
+}
