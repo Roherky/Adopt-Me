@@ -4,7 +4,6 @@ import { AnimalDetalladoProtectoraComponent } from './pages/animal-detallado-pro
 import { AnyadirAnimalesComponent } from './pages/anyadir-animales/anyadir-animales.component';
 import { FormularioAnyadirNoticiasComponent } from './pages/formulario-anyadir-noticias/formulario-anyadir-noticias.component';
 import { FooterComponent } from './pages/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';

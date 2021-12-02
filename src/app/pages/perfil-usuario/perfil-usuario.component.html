@@ -1,1 +1,197 @@
-<p>perfil-usuario works!</p>
+
+<div class="container">
+<!-- Empieza card banner -->
+<div class="banner">
+    <div class="card bg-white text-white" id="perro">
+        <img src="./assets/img/perfil-usuario/dog.webp"  class="puppy" alt="...">
+        <div class="card-img-overlay">
+            <p class="card-text" style="font-weight: bolder; margin-top: 100px; margin-left: 50px; font-size: xx-large;">Nuria Fernández </p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!-- termina card -->
+
+<!-- Empieza card datos perfil -->
+
+<div class="card text-dark" style="background-color: #5EC0CA;" id="texto">
+
+    <div class="card text-center" id="bodyCard" style="width: 18rem;">
+        <div class="card-body">
+            
+                <h5 class="card-title text-white">Nuria Fernández</h5>
+                <p class="card-text text-white">Ingeniera en Sistemas</p>
+                <hr>
+            
+         
+            <div class="col">
+                <img src="./assets/img/perfil-usuario/fecha-de-nacimiento.png" class="iconoBody">
+                <p class="text-white">Fecha Nacimiento: 30 de Julio de 1990</p>
+            </div> 
+            <div class="col">
+                <img src="./assets/img/perfil-usuario/correo.png" class="iconoBody">
+                <p class="text-white">E-mail: nuri@gmail.com</p>
+            </div>
+            <div class="col">
+                <img src="./assets/img/perfil-usuario/telefono.png" class="iconoBody">
+                <p class="text-white">Telefono: 600.000.000</p>
+            </div> 
+           
+            <div class="col">
+                <img src="./assets/img/perfil-usuario/mapa.png" class="iconoBody">
+                <p class="text-white">Ubicación: Madrid</p>
+            </div>
+              <br>
+
+                <div class="redes">
+                    <a href="https://www.facebook.com"><img src="./assets/img/perfil-usuario/facebook.png" width="20px" height="20px" class="facebook"></a>
+                    <a href="https://www.instagram.com"><img src="./assets/img/perfil-usuario/instagram.png" width="20px" height="20px" class="instagram"></a> 
+                    <a href="https://www.twitter.com"><img src="./assets/img/perfil-usuario/twitter.png" width="20px" height="20px" class="twitter"></a>
+                    <button type="reset" class="form-control" id="botonEditar" style="width: 100px; font-size: small;">Editar</button>
+                    
+                </div>
+          
+        </div>
+    </div>
+    <!-- IMG DE PERFIL -->
+        <div class="card-img-overlay left content">
+            <img src="./assets/img/perfil-usuario/cocker.webp" id="imgPerfil" class="foto" alt="foto_perfil">
+        </div>
+</div>
+<!-- termina datos perfil -->
+</div>
+<br>
+<!-- termina container -->
+
+<!-- descripcion Sobre mi -->
+<section class="descripcion">
+    <div class="cms-heading layout1">
+    <h3 class="custom-heading">Acerca de mi:</h3>
+        <span>
+            Me encantan las mascotas, desde muy pequeña he tenido variedad de animales en casa porque son una perfecta compañía.
+            Actualmente tengo un perrito que adopte hace un par de meses, y con él disfruto en mi tiempo libre jugando, algunas veces
+            hacemos ejercicio juntos e incluso es mi paño de lágrimas en aquellos días grises.<br>
+            Animo a todas las personas a adoptar, porque no solo iluminas la vida de un animal, además ayudas a liberar espacio en 
+            un albergue, lo que permite rescatar a más animales abandonados a su suerte. <br>
+            El amor que brindan los animales es tan puro que solo querrás tenerlo cerca siempre. 
+        </span>
+    </div>
+</section>
+<br>
+<!-- termina descripcion -->
+
+<!-- galeria fotos -->
+<div class="galeria">
+<div class="card-group">
+    <div class="card">
+      <img src="../../../assets/img/perfil-usuario/cocker.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cocker</h5>
+        <p class="card-text">Breve Descripcion</p>
+        
+      </div>
+    </div>
+    <div class="card">
+      <img src="../../../assets/img/perfil-usuario/dog.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Amigos</h5>
+        <p class="card-text">Breve Descripcion</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../../../assets/img/perfil-usuario/niebla.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Niebla</h5>
+        <p class="card-text">Breve Descripcion</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../../../assets/img/perfil-usuario/puppy.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Puppy</h5>
+        <p class="card-text">Breve Descripcion</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- EDITAR PERFIL FORMULARIO -->
+<!-- <section class="editarP">
+<div class="card1">
+  <div class="card-body">
+    <h4>Editar perfil</h4> -->
+ <!-- empieza form -->
+ <!-- <form class="row g-3" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <div class="form-group">
+      <div class="col-md-4">
+        <label for="validationDefault01" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" name="name" id="validationDefault01" value="Nuria Fernández" [(ngModel)]="user.nombre" #name="ngModel"
+        [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid} " required >
+        <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+          <p *ngIf="name.errors?.['required']">
+            El nombre es obligatorio
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" name="phone" id="validationDefault02" value="600.000.000" [(ngModel)]="user.telefono" #phone="ngModel"
+        [ngClass]="{'is-invalid': (phone.dirty || phone.touched) && phone.invalid}" required>
+        <div class="invalid-feedback" *ngIf="(phone.dirty || phone.touched) && phone.invalid">
+          <p *ngIf="phone.errors?.['required']">Debes introducir un número de teléfono</p>
+      </div>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-md-4">
+        <label for="validationDefaultUsername" class="form-label">Correo electrónico</label>
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+          <input type="email" class="form-control" name="email" id="validationDefaultEmail"  aria-describedby="inputGroupPrepend2" [(ngModel)]="user.email" #email="ngModel" 
+         [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid}" email required>
+         <div class="invalid-feedback" *ngIf="userForm.submitted && email.invalid">
+          <p *ngIf="email.errors?.['required']">
+            El correo electrónico es obligatorio
+          </p>
+          <p *ngIf="email.errors?.['required']">
+            Correo electrónico incorrecto
+          </p>
+        </div>
+
+        </div>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">Dirección</label>
+        <input type="text" class="form-control" name="direccion" id="validationDefault03" [(ngModel)]=user.direccion required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="mb-3">
+        <input type="file" class="form-control" aria-label="file example" required>
+        <div class="invalid-feedback">Example invalid form file feedback</div>
+      </div>
+  </div>
+  
+  <div class="form-group">
+      <div class="col-12">
+        <button class="btn btn-primary btn-block" type="submit">Guardar cambios</button>
+      </div>
+  </div>
+</form> -->
+ <!-- termina form-->
+  <!-- </div>
+</div>
+</section> -->
+ 
