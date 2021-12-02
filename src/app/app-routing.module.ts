@@ -39,25 +39,7 @@ const routes: Routes = [
   {path: "perfilProtectora", component: PerfilProtectoraComponent},
   {path: "perfilUsuario", component: PerfilUsuarioComponent},
   {path: "quienesSomos", component: QuienesSomosComponent},
-  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
-  {path:'inicio', component: InicioComponent},
-  {path:'login', component: LoginComponent},
-  {path:'registro', component: RegistroComponent},
-  {path:'añadirAnimales', component: AnyadirAnimalesComponent},
-  {path:'contacto', component: ContactoComponent},
-  {path:'animales', component:AnimalDetalladoProtectoraComponent},
-  {path:'dashboard', component: DashboardComponent},
-  {path:'faq',component: FaqComponent},
-  {path:'finalesFelices', component: FinalesFelicesComponent},
-  {path:'añadirNoticias', component: FormularioAnyadirNoticiasComponent},
-  {path:'añadirFinalesFelices', component: FormularioFinalesFelicesComponent},
-  {path:'listaAnimales', component: ListaAnimalesComponent},
-  {path:'noticias', component: NoticiasComponent},
-  {path:'perfilAnimal', component: PerfilAnimalComponent},
-  {path:'perfilProtectora', component: PerfilProtectoraComponent},
-  {path:'perfilUsuario', component: PerfilUsuarioComponent},
-  {path:'quienesSomos', component: QuienesSomosComponent},
-  {path:'editarAnimal', component: AnimalDetalladoProtectoraComponent}
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 
 @NgModule({

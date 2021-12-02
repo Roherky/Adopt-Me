@@ -1,0 +1,109 @@
+*{
+    margin-right: 50px;
+}
+h1{
+    margin-left: 100px;
+    margin-top: 30px;
+   
+}
+.boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:8px;
+    margin-bottom: 25px;
+
+}
+.botonStyle1{
+    border-radius:  20px 20px 20px 20px;
+    width: 90px;
+    height: 30px;
+    background-color: #5EC0CA
+
+}
+.botonStyle2{
+  border-radius:  20px 20px 20px 20px;
+  width: 90px;
+  height: 30px;
+  background-color: #FCF4DB
+
+}
+.fechapequeña{
+    font-size: 9pt;
+    color:gray;
+    border-radius:  20px 20px 20px 20px;
+}
+.titulopequeño{
+    font-size: 10pt;
+    font-weight: bold;
+}
+.fotopequeña{
+    width: 125px;
+    height: 125px;
+    border-radius:  20px 20px 20px 20px;
+}
+.descripcionpequeña{
+    font-size: 8pt;
+
+}
+.general{
+    margin-top: 30px;
+    margin-left: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:5%
+
+}
+.noticias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}
+.close{
+    color:#5EC0CA;
+    border-style: none;
+    background-color: white;
+}
+.noticiascolumna{
+    display: flex;
+    flex-direction: column;
+
+}
+#ultimafoto{
+    width: 300px;
+    height: 300px;
+    margin-left: 40px;
+    border-radius:  20px 20px 20px 20px;
+}
+#ultimafecha{
+    font-size: 16pt;
+    color: gray;
+    margin-left: 40px;
+}
+#ultimatitulo{
+    font-size: 18pt;
+    font-weight: bold;
+    margin-left: 40px;
+
+}
+#ultimadescripcion{
+    font-size: 14pt;
+    margin-left: 40px;
+}
+#fijar{
+    position: fixed;
+}
+#content1{
+    width: 20%;
+    height: 15%;
+}
+@media screen and (max-width: 450px){
+    .general{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
