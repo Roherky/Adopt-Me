@@ -11,7 +11,7 @@ export class PerfilUsuarioComponent implements OnInit {
 
   public user: Usuario
   constructor() {
-    this.user = new Usuario("", "", "", "", "", 0, "", "", "", "","")
+    this.user = new Usuario("", "", "", 0, "", "", "", "", "");
    }
 
   ngOnInit(): void {

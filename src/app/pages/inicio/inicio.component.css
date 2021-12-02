@@ -11,9 +11,9 @@
 
 .instrucciones {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     margin-top: 3%;
     background-color: rgb(238, 238, 238);
@@ -21,6 +21,14 @@
     padding: 1%;
     width: 100%;
 }
+
+    .contenedor-intrucciones{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
 
     .primera-instruccion {
         width: 10%;
@@ -74,9 +82,21 @@
         background-color: #5ebfca;
         border-radius: 5em;
         width: 50%;
-        border: 1px ridge;
+        border: 0px;
         border-radius: 6em 3em;
+        padding: 5%;
+        color: white;
     }
+
+.titulo-opiniones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    height: 8em;
+    border-radius: 1em;
+}
 
 .opiniones {
     display: flex;

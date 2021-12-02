@@ -4,17 +4,17 @@
 
 #botonEliminar{
     width: 200px;
-     background-color: #ebd89c;
-     color: #fff;
-     border-radius: 15px;
+    border-radius: 1em;
+    background-color: #ebd89c;
+    color: #fff;
 
  }
 
  #botonModificar{
     width: 200px;
-     background-color: #5EC0CA;
-     color: #fff;
-     border-radius: 15px;
+    border-radius: 1em;
+    background-color: #5EC0CA;
+    color: #fff;
  }
 
  .boton{
