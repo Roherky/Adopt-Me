@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilUsuarioComponent implements OnInit {
 
-  constructor() { }
+  public user: Usuario
+  constructor() {
+    this.user = new Usuario("", "", "", "", false, 0, "", "", "", "","" )
+   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    console.log(form.value);
+    console.log(this.user);
+    
   }
 
 }
