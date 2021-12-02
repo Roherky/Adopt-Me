@@ -22,4 +22,8 @@ export class AnyadirAnimalesComponent implements OnInit {
     console.log(this.animal);
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> inicio

@@ -25,6 +25,7 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -42,6 +43,20 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+>>>>>>> inicio
+=======
+import { FormsModule } from '@angular/forms';
+
+// Anggular Material in here is
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 >>>>>>> inicio
 
 @NgModule({
@@ -86,11 +101,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     BrowserAnimationsModule,
     NgbModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
     FormsModule
 =======
     MatCardModule,
     FormsModule,
     MatCheckboxModule
+>>>>>>> inicio
+=======
+    FormsModule
 >>>>>>> inicio
   ],
   providers: [],

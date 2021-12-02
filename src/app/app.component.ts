@@ -12,4 +12,8 @@ export class AppComponent {
   sideBarToggle(){
     this.sideBarOpen = !this.sideBarOpen;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> inicio
