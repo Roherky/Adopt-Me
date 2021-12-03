@@ -107,8 +107,8 @@
 
              <!--Enviar imágenes-->
             <div class="row">
-                <div class="col">
-              <label id="subirImagen">Imagen:</label><br><br>
+                <!-- <div class="col"> -->
+              <label id="subirImagen">Imagen:</label><br>
             <input type="file"  name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" [(ngModel)]="animal.imagen" #imagen="ngModel"
             [ngClass]="{'is-invalid': anyadirAnimal.submitted && imagen.invalid}" required>
             <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && imagen.invalid">
@@ -117,21 +117,15 @@
         </div>
 
 
-       <!--Textarea notas-->
-      <div class="row" id="notas">
-        <div class="col">
+  
+   <!--textarea notas y botón enviar-->
+   <div class="notasYbtn">
+    <div>
           <label>Notas</label><br>
-          <textarea class="form-control" id="textAreaNotas"></textarea>
-        </div>
+          <textarea id="textAreaNotas"></textarea>
       </div>
-
- 
-      <!--Botón enviar-->
-        <div class="row">
-            <div class="col">
-        <button type="submit" class="btn btn-primary btn-block" id="botonEnviar">Guardar</button>
-      </div>
-        </div>
+<button type="submit" class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
 </div>
+<!-- </div> -->
 </form>
 </div>
