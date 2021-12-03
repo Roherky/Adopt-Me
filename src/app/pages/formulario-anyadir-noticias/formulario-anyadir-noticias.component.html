@@ -88,18 +88,13 @@
             <p *ngIf="imagenNoticia.errors?.['required']">La imagen es obligatoria</p>
            </div>
     </div>
-
-      <!--Textarea notas-->
-        <div class="row" id="notas">
-            <div class="col">
+ <!--textarea notas y botón enviar-->
+    <div class="notasYbtn">
+        <div>
               <label>Notas</label><br>
-              <textarea class="form-control" id="textAreaNotas"></textarea>
-            </div>
+              <textarea id="textAreaNotas"></textarea>
           </div>
-      <div class="row">
-        <div class="col">
     <button type="submit" class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
-  </div>
-    </div>
+   </div>
 </form>
 </div>
