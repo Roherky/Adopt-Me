@@ -1,6 +1,11 @@
+.container{
+    margin: 30px;
+    margin-bottom: 200px;
+}
+
 .container h1{
     color: #000;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-family: sans-serif;
 }
 
@@ -26,35 +31,38 @@ label{
         border-radius: 10px;
  }
 
- #detalles{
-     margin-bottom: 20px;
- }
 
 
 
  #botonEnviar{
     width: 200px; 
-    position: absolute; 
-    right: 20%;
-     background-color: #5EC0CA; 
-     color: #fff;
-     border-radius: 10px;
-     padding: 10px;
-   
-
- }
+    background-color: #5EC0CA; 
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
 
  #subirImagen{
+    font-family: sans-serif;
     font-weight: bold; 
     font-size: 20px;
+    margin-top: 100px;
     
  }
 
  #detalles{
     width: 87%; 
-    padding: 100px;
+    height: 200%;
     border-radius: 10px;
+ 
+  
+
  }
+
+ .row{
+    margin-bottom: 20px;
+}
 
  .form-group{
     width: 250px;
@@ -63,7 +71,7 @@ label{
 
 
  .row{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
  }
 
  .redondeado {
@@ -71,6 +79,37 @@ label{
     padding: 5px;
     width: 250px;
   }
+
+  .notasYbtn{
+    margin-top: 30px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+    width: 200%;
+    height: 300%;
+     gap: 100px;
+   
+ }
+
+ #textAreaNotas{
+    
+    width: 90%;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 400px;
+ }
+
+ @media all and (max-width: 1128px){ 
+
+    .notasYbtn{
+      
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: right;
+        gap: 20px;
+       
+     }   
+}
 
  @media all and (max-width: 994px){ 
 
