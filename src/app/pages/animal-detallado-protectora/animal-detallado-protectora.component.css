@@ -40,7 +40,6 @@
  }
 
 
-
  h2{
     margin-top: 40px;
  }
@@ -55,14 +54,12 @@
 table td{
     width: 100px;
     padding: 10px;
-
 }
 
 table th{
     width: 100px;
     padding: 10px;
-
-  }
+}
 
 hr{
     border: 1px solid black;
@@ -81,7 +78,6 @@ img{
    margin-top: 20px;
    background-color: rgb(253, 249, 249);
    padding: 10px;
-
 }
 
 #imagenInfo{
