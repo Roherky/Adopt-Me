@@ -9,18 +9,17 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class PerfilUsuarioComponent implements OnInit {
 
-  public user: Usuario
+  public usuario: Usuario
   constructor() {
-    this.user = new Usuario("", "", "", "", "", 0, "", "", "", "","")
+    this.usuario = new Usuario("Nuria", "Fernández", "", "21 - Julio - 1990", "", 600000000 , "nuri@gmail.com", "", "Getafe", "", "")
    }
 
   ngOnInit(): void {
   }
 
-  onSubmit(form: NgForm){
-    console.log(form.value);
-    console.log(this.user);
-    
-  }
 
 }
+
+
+
+

@@ -1,52 +1,52 @@
 
 <div class="container">
-<!-- Empieza card datos perfil -->
+  <h1 style="margin-top: 60px;">Nuria Fernández</h1>
 
-<div class="card text-dark" style="background-color: #5EC0CA;" id="texto">
+  <div class="boton">
 
-    <div class="card text-center" id="bodyCard" style="width: 18rem;">
-        <div class="card-body">
-            
-                <h5 class="card-title text-white">Nuria Fernández</h5>
-                <p class="card-text text-white">Ingeniera en Sistemas</p>
-                <hr>
-            
-         
-            <div class="col">
-                <img src="./assets/img/perfil-usuario/fecha.png" class="iconoBody">
-                <p class="text-white">Fecha Nacimiento: 30 de Julio de 1990</p>
-            </div> 
-            <div class="col">
-                <img src="./assets/img/perfil-usuario/correo.png" class="iconoBody">
-                <p class="text-white">E-mail: nuri@gmail.com</p>
-            </div>
-            <div class="col">
-                <img src="./assets/img/perfil-usuario/phone2.png" class="iconoBody">
-                <p class="text-white">Telefono: 600.000.000</p>
-            </div> 
-           
-            <div class="col">
-                <img src="./assets/img/perfil-usuario/mapa.png" class="iconoBody">
-                <p class="text-white">Ubicación: Madrid</p>
-            </div>
-              <br>
+  <button type="reset"  class="form-control" id="botonEliminar" >Eliminar</button>
+  <button type="reset" class="form-control" id="botonModificar">Modificar</button>
 
-                <div class="redes">
-                  
-                  <button type="reset" class="form-control" id="botonEditar" style="width: 100px; font-size: medium;">Editar</button>
-                    
-                </div>
-          
-        </div>
-    </div>
-    <!-- IMG DE PERFIL -->
-        <div class="card-img-overlay left content">
-            <img src="./assets/img/perfil-usuario/cocker.webp" id="imgPerfil" class="foto" alt="foto_perfil">
-        </div>
+  </div>
+
+  <!-- <h2>Abrazo Peludo</h2> -->
+<div class="info text-white" style="background-color: rgb(197, 197, 197); margin-right: 90px; border-radius: 10px;">
+
+      <img id="imagenInfo" src="../../../assets/img/perfil-usuario/cocker.webp" style="width: 200px; height: 150px; border-radius: 15px;  margin-top: 10px; margin-bottom: 10px; margin-left: 10px;">
+ 
+  <table>
+      <thead>
+          <tr>
+             
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Teléfono</th>
+              <th>Email</th>
+              <th>Localidad</th>
+              
+          </tr>
+      </thead>
+  <tbody>
+  <ng-container  *ngIf="usuario!=null">
+
+      <tr>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellido1}}</td>
+          <td>{{usuario.fechaNacimiento}}</td>
+          <td>{{usuario.telefono}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.localidad}}</td>
+      </tr>
+
+  </ng-container>
+      </tbody>
+  </table>
+
 </div>
-<!-- termina datos perfil -->
-</div>
-<br>
+
+  <hr>
+
 <!-- termina container -->
 
 <!-- descripcion Sobre mi -->
@@ -102,80 +102,4 @@
 </div>
 
 
-
-<!-- EDITAR PERFIL FORMULARIO -->
-<!-- <section class="editarP">
-<div class="card1">
-  <div class="card-body">
-    <h4>Editar perfil</h4> -->
- <!-- empieza form -->
- <!-- <form class="row g-3" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-  <div class="form-group">
-      <div class="col-md-4">
-        <label for="validationDefault01" class="form-label">Nombre Completo</label>
-        <input type="text" class="form-control" name="name" id="validationDefault01" value="Nuria Fernández" [(ngModel)]="user.nombre" #name="ngModel"
-        [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid} " required >
-        <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
-          <p *ngIf="name.errors?.['required']">
-            El nombre es obligatorio
-          </p>
-        </div>
-      </div>
-  </div>
-
-  <div class="form-group">
-      <div class="col-md-4">
-        <label for="validationDefault02" class="form-label">Teléfono</label>
-        <input type="text" class="form-control" name="phone" id="validationDefault02" value="600.000.000" [(ngModel)]="user.telefono" #phone="ngModel"
-        [ngClass]="{'is-invalid': (phone.dirty || phone.touched) && phone.invalid}" required>
-        <div class="invalid-feedback" *ngIf="(phone.dirty || phone.touched) && phone.invalid">
-          <p *ngIf="phone.errors?.['required']">Debes introducir un número de teléfono</p>
-      </div>
-      </div>
-  </div>
-
-  <div class="form-group">
-      <div class="col-md-4">
-        <label for="validationDefaultUsername" class="form-label">Correo electrónico</label>
-        <div class="input-group">
-          <span class="input-group-text" id="inputGroupPrepend2">@</span>
-          <input type="email" class="form-control" name="email" id="validationDefaultEmail"  aria-describedby="inputGroupPrepend2" [(ngModel)]="user.email" #email="ngModel" 
-         [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid}" email required>
-         <div class="invalid-feedback" *ngIf="userForm.submitted && email.invalid">
-          <p *ngIf="email.errors?.['required']">
-            El correo electrónico es obligatorio
-          </p>
-          <p *ngIf="email.errors?.['required']">
-            Correo electrónico incorrecto
-          </p>
-        </div>
-
-        </div>
-      </div>
-  </div>
-
-  <div class="form-group">
-      <div class="col-md-6">
-        <label for="validationDefault03" class="form-label">Dirección</label>
-        <input type="text" class="form-control" name="direccion" id="validationDefault03" [(ngModel)]=user.direccion required>
-      </div>
-  </div>
-
-  <div class="form-group">
-      <div class="mb-3">
-        <input type="file" class="form-control" aria-label="file example" required>
-        <div class="invalid-feedback">Example invalid form file feedback</div>
-      </div>
-  </div>
-  
-  <div class="form-group">
-      <div class="col-12">
-        <button class="btn btn-primary btn-block" type="submit">Guardar cambios</button>
-      </div>
-  </div>
-</form> -->
- <!-- termina form-->
-  <!-- </div>
-</div>
-</section> -->
  

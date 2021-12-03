@@ -1,67 +1,105 @@
-h5{
-    font-size: xx-large;
-}
-.puppy{
-    width: 1000px;
-    height: 310px; 
-    border-radius: 3px;
-}
-#perro{
-    font-size: 100px;
-    width: 1000px;
-    height: 310px;
-    border: 7px solid rgb(204, 204, 204);
-}
-#botonEditar{
-   background-color: white;
-   color: #5EC0CA;
-   border-radius: 15px;
-   
-}
-#botonEditar:hover {
-    cursor: pointer;
-}
+#botonEliminar{
+    width: 200px;
+     background-color: #ebd89c;
+     color: #fff;
+     border-radius: 15px;
+     border: 2px solid #ebd89c;
 
- .foto{
-    width: 490px;
-    height:310px;
-    margin-top: 40px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: flex-start;
+    /* caja1 animacion */
+    border-color: #ebd89c;
+  color: #fff;
+  background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
 
-}
-
-#texto{
-    margin-top: 30px;
-   text-align: left;
-    width: 1000px;
-    height: 400px;
-
-}
-#bodyCard{
-    margin-left: 590px;
-    margin-top: 50px;
-   background-color: transparent;
-   border: none;
-}
-/* .redes{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-left: 20px;
-} */
-.col {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: left;
-    text-align: left;
-    align-items: inherit;
-    font-size: small;
-    
+ }
+ #botonEliminar:hover {
+    background-position: 0;
   }
+
+ #botonModificar{
+    width: 200px;
+     background-color: #5EC0CA;
+     color: #fff;
+     border-radius: 15px;
+     border: 2px solid #5EC0CA;
+
+     /* animacion */
+     border-color: #5EC0CA;
+     color: #fff;
+     background-image: -webkit-linear-gradient(45deg, #00e5ff 50%, transparent 50%);
+     background-image: linear-gradient(45deg, #00e5ff  50%, transparent 50%);
+     background-position: 100%;
+     background-size: 400%;
+     -webkit-transition: background 300ms ease-in-out;
+     transition: background 300ms ease-in-out;
+ }
+
+ #botonModificar:hover {
+    background-position: 0;
+  }
+
+ .boton{
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     gap: 50px;
+     margin-top: 50px;
+     margin-right: 90px;
+ }
+
+ h1{
+     font-size: 3em;
+     margin-top: 20px;
+ }
+
+ table{
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+table td{
+    padding: 10px;
+}
+
+table th{
+    padding: 10px;
+  }
+
+hr{
+    border: 1px solid black;
+    margin-right: 90px;
+}
+
+
+.info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+ 
+ }
+ 
+ #imagenInfo{
+    width: 100px;
+    height: 150px;
+    margin-top: 0;
+
+     /* caja9 */
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  background-color: #2C3E50;
+ }
+
+ #imagenInfo:hover{
+    margin: 80px;
+  }
+
+
 .iconoBody{
     width: 20px;
     height: 20px;
@@ -69,8 +107,9 @@ h5{
 }
 
 .descripcion{
+    margin-top: 50px;
     margin-left: 20px;
-    margin-right: 150px;
+    margin-right: 90px;
     text-align: justify;
     
 }
@@ -85,21 +124,21 @@ h5{
     height: 20px;
     display: flex;
     gap: 40px;
-/* caja5*/
-    border-radius: 0px;
-    background-color: #ffffff;
-    -webkit-transition: 2s linear;
-    transition: 2s linear
+/* caja2*/
+-webkit-transition: 1s linear;
+transition: 1s linear;
+background-color: rgb(197, 197, 197);
 }
 
 .card-group:hover{
-border-radius: 100px;
+    padding: 30px;
 }
-.card1{
-    width: 610px;
-    height: 350px;
+.card{
+    width: 100px;
+    height: 300px;
     display: flex;
     align-items: flex-end;
+    border-radius: 10px;
 }
 
 .editarP{
@@ -108,3 +147,12 @@ border-radius: 100px;
     display: flex;
     align-items: flex-end;
 }
+.protectora{
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #F1C40F;
+}
+.protectora:hover{
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+  }
