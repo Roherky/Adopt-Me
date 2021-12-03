@@ -95,4 +95,11 @@ img{
        gap: 1px;
 
  }
+
+ @media all and (max-width: 606px){
+
+    #imagenInfo{
+        display: none;
+    }
+ }
 }

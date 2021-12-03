@@ -1,0 +1,47 @@
+<div class="contenedor">
+<h1>Donaciones</h1>
+<div class="parteSuperior">
+    <p>Donaciones activas</p>
+    <form>
+        <input type="search" placeholder="Buscar" #buscar aria-label="Search">
+        <button type="reset" (click) = "filtrar(buscar.value)">Buscar</button>
+      </form>
+    <button>Generar PDF<img src="../../../assets/pdfRojo.png"> </button>
+</div>
+
+
+
+<table>
+    <thead>
+        <tr>
+           
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Ingreso</th>
+            <th>Terminio</th>
+            <th>Precio</th>
+            <th>Staus</th>
+        </tr>
+    </thead>
+<tbody>
+<ng-container  *ngIf="donaciones!=null">
+
+    <tr *ngFor="let donacion of donaciones">
+        <td>{{donacion.nombre}}</td>
+        <td>{{donacion.fecha}}</td>
+        <td>{{donacion.ingreso}}</td>
+        <td>{{donacion.terminio}}</td>
+        <td>{{donacion.precio}}</td>
+        <td>{{donacion.status}}</td>
+
+    </tr>
+
+</ng-container>
+    </tbody>
+</table>
+
+
+</div>
+
+
+
