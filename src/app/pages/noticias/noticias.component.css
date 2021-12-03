@@ -46,12 +46,11 @@ h1{
 }
 .general{
     margin-top: 30px;
-    
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap:5%
-
 }
 .noticias{
     display: flex;
@@ -80,9 +79,15 @@ h1{
     align-items: center;
 
 }
+#ultima{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #ultimafoto{
     width: 400px;
-    height: 500px;
+    height: 450px;
     margin-left: 40px;
     border-radius:  20px 20px 20px 20px;
 }
