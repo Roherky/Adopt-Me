@@ -7,7 +7,8 @@
 }
 
 .carousel {
-    margin-top: 5%;}
+    margin-top: 0;
+}
 
 .instrucciones {
     display: flex;
@@ -28,6 +29,7 @@
         align-items: center;
         justify-content: space-around;
         text-align: center;
+        margin-top: 3%;
     }
 
     .primera-instruccion {
@@ -35,8 +37,7 @@
     }
 
     .primera-instruccion:hover {
-        width: 15%;
-        transition: 1.5s;
+        font-weight: bold;
     }
 
     .segunda-instruccion {
@@ -44,8 +45,7 @@
     }
 
     .segunda-instruccion:hover {
-        width: 15%;
-        transition: 1.5s;
+        font-weight: bold;
     }
 
     .tercera-instruccion {
@@ -53,8 +53,7 @@
     }
 
     .tercera-instruccion:hover {
-        width: 15%;
-        transition: 1.5s;
+        font-weight: bold;
     }
 
     .cuarta-instruccion {
@@ -62,8 +61,7 @@
     }
 
     .cuarta-instruccion:hover {
-        width: 15%;
-        transition: 1.5s;
+        font-weight: bold;
     }
 
 .adopciones {
@@ -80,12 +78,27 @@
     .boton {
         text-align: center;
         background-color: #5ebfca;
-        border-radius: 5em;
+        border-radius: 1em;
         width: 50%;
         border: 0px;
-        border-radius: 6em 3em;
-        padding: 5%;
+        padding: 4%;
         color: white;
+    }
+
+    #nombre-animal1 {
+        font-weight: bold;
+    }
+
+    #nombre-animal2 {
+        font-weight: bold;
+    }
+
+    #nombre-animal3 {
+        font-weight: bold;
+    }
+
+    #nombre-animal4 {
+        font-weight: bold;
     }
 
 .titulo-opiniones {
@@ -183,8 +196,8 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        margin-left: 10%;
         margin-top: 2%;
-        margin-right: 10%;
     }
 
     .colaborador3 {
@@ -197,7 +210,7 @@
             color: white;
             background-color: #5EC0CA;
             width: 100%;
-            border-radius: 3em 0 0 3em
+            border-radius: 0 3em 3em 0
         }
 
     .redes-colaborador3 {
@@ -211,7 +224,7 @@
         flex-direction: row;
         justify-content: flex-end;
         margin-top: 2%;
-        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .colaborador4 {
@@ -224,7 +237,7 @@
             color: white;
             background-color: #5EC0CA;
             width: 100%;
-            border-radius: 0 3em 3em 0
+            border-radius: 3em 0 0 3em
         }
 
     .redes-colaborador4 {

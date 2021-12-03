@@ -3,14 +3,14 @@
     <div class="izquierda">
         <!-- Imagen -->
         <div class="imagen">
-            <img src="./../../../assets/img/Página registro/Husky siberiano.jpg" style="width: 50vw; height: 100vh;">
+            <img src="./../../../assets/img/Página registro/Husky siberiano.jpg" style="width: 40vw; height: 100vh; border-radius: 1em;">
         </div>
     </div>
     <!-- Contenedor derecho -->
     <div class="derecha">
         <h1 style="text-align: center;">Bienvenido</h1>
         <!-- Checkbox para decidir tipo de usuario -->
-        <h3 style="text-align: center; margin-top: 2%;">¿Qué tipo de usuario eres?</h3>
+        <h3 style="text-align: center">¿Qué tipo de usuario eres?</h3>
         <div class="checkbox-tipoUsuario">
             <div class="form-check" style="margin-right: 10%;">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (click)="usuarioAdoptante()">
@@ -191,6 +191,7 @@
                             <p *ngIf="password.errors?.['minlength']">La contraseña debe contener 8 dígitos como mínimo</p>
                         </div>
                     </div>
+                    <!-- Confirmar contraseña -->
                     <div class="form-group" id="password-protectora">
                         <label style="margin-bottom: 1%;">Confirma la contraseña</label>
                         <input id="input-protectoraPassword" type="password" name="password" class="form-control" [(ngModel)]="protectora.password" #password="ngModel"
