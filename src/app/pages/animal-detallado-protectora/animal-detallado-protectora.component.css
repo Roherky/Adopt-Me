@@ -7,6 +7,7 @@
     border-radius: 1em;
     background-color: #ebd89c;
     color: #fff;
+    border-color: #ebd89c;
 
  }
 
@@ -15,6 +16,7 @@
     border-radius: 1em;
     background-color: #5EC0CA;
     color: #fff;
+    border-color: #5EC0CA;
  }
 
  .boton{
@@ -22,13 +24,19 @@
      align-items: center;
      justify-content: flex-end;
      gap: 50px;
-     margin-top: 50px;
+     margin-top: 20px;
+     margin-bottom: 40px;
  }
 
  h1{
 
      font-size: 3em;
      margin-top: 20px;
+     text-align: center;
+ }
+
+ h2{
+    margin-top: 40px;
  }
 
  table{
@@ -39,13 +47,13 @@
 }
 
 table td{
-
+    width: 100px;
     padding: 10px;
 
 }
 
 table th{
-
+    width: 100px;
     padding: 10px;
 
   }
@@ -69,8 +77,8 @@ img{
 }
 
 #imagenInfo{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     
     margin-top: 0;
 }
@@ -84,6 +92,7 @@ img{
 
 .descripcion{
     text-align: justify;
+    margin-top: 80px;
 }
 
 @media all and (max-width: 978px){
