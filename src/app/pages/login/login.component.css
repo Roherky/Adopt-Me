@@ -13,6 +13,12 @@
         margin-left: 5%;
     }
 
+        .imagen-bienvenida {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .login-usuario {
             display: flex;
             flex-direction: row;

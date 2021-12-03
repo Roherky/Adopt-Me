@@ -3,13 +3,18 @@
     <div class="izquierda">
         <!-- Imagen -->
         <div class="imagen">
-            <img src="./../../../assets/img/Página login/Chihuahua.jpg" style="width: 50vw; height: 70vh; margin-top: 5%; border-radius: 5em;">
+            <img src="./../../../assets/img/Página login/Perros tumbados.jpg" style="width: 50vw; height: 70vh; margin-top: 5%; border-radius: 5em;">
         </div>
     </div>
     <!-- Contenedor derecho -->
     <div class="derecha">
         <!-- Bienvenida al usuario -->
-        <h1 style="text-align: center; margin-bottom: 3%;">Bienvenido</h1>
+        <div class="bienvenida">
+            <h1 style="text-align: center; margin-bottom: 3%;">Bienvenido</h1>
+            <div class="imagen-bienvenida">
+                <img src="./../../../assets/img/Página login/Perro-Dibujo1.png" style="width: 10em; height: 10em;">
+            </div>
+        </div>
         <!-- Login de usuario -->
         <div class="login-usuario" *ngIf="esProtectora != true" style="background-color: transparent;">
             <form #usuarioLogin="ngForm" (ngSubmit)="onSubmit(usuarioLogin)">
