@@ -2,6 +2,10 @@
     font-family: sans-serif;
 }
 
+.container{
+    margin-bottom: 200px;
+}
+
 #botonEliminar{
     width: 200px;
     border-radius: 1em;
@@ -34,6 +38,8 @@
      margin-top: 20px;
      text-align: center;
  }
+
+
 
  h2{
     margin-top: 40px;
@@ -73,6 +79,8 @@ img{
    justify-content: flex-start;
    align-items: flex-start;
    margin-top: 20px;
+   background-color: rgb(253, 249, 249);
+   padding: 10px;
 
 }
 
