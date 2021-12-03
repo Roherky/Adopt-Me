@@ -11,7 +11,7 @@ export class PerfilUsuarioComponent implements OnInit {
 
   public usuario: Usuario
   constructor() {
-    this.usuario = new Usuario("Nuria", "Fernández", "", "21 - Julio - 1990", "", 600000000 , "nuri@gmail.com", "", "Getafe", "", "")
+    this.usuario = new Usuario("Nuria", "Fernández", "21 - Julio - 1990", 600000000 , "nuri@gmail.com", "", "Getafe","", "")
    }
 
   ngOnInit(): void {
