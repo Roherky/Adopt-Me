@@ -7,11 +7,16 @@
   <app-menu></app-menu>
   <mat-drawer-content>
     <router-outlet></router-outlet>
+<<<<<<< HEAD
     <app-footer></app-footer>
+=======
+    <!-- <app-footer></app-footer> -->
+>>>>>>> donaciones
   </mat-drawer-content>
   <mat-drawer-container>
     <app-dashboard></app-dashboard>
   </mat-drawer-container>
+<<<<<<< HEAD
 
 
 
@@ -23,3 +28,39 @@
 
 
 
+=======
+ 
+<!-- <app-inicio></app-inicio> -->
+<app-perfil-usuario></app-perfil-usuario>
+
+
+
+
+
+
+<!-- =======
+>>>>>>> inicio
+=======
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]=true>
+     <app-menu></app-menu>
+   </mat-drawer>
+   <app-menu></app-menu>
+   <mat-drawer-content>
+     <app-header (toggleSidebarForMe)="sideBarToggle()"></app-header>
+     <router-outlet>   <a routerLink="inicio">inicio</a>
+      <a routerLink="login">login</a>
+      <a routerLink="registro">registro</a>
+      <a routerLink="añadirAnimales">añadirAnimales</a>
+      <a routerLink="editarAnimal">editarAnimal</a>
+      <a routerLink="dashboard">dashboard</a>
+      <a routerLink="añadirNoticias">añadirNoticias</a></router-outlet>
+   </mat-drawer-content>
+   <mat-drawer-container>
+     <app-dashboard></app-dashboard>
+   </mat-drawer-container>
+   <mat-drawer-container>
+     <app-footer></app-footer>
+   </mat-drawer-container>
+>>>>>>> inicio -->
+>>>>>>> donaciones
