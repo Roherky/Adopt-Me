@@ -76,8 +76,9 @@ img{
    justify-content: flex-start;
    align-items: flex-start;
    margin-top: 20px;
-   background-color: rgb(253, 249, 249);
+   background-color: rgb(238, 238, 238);
    padding: 10px;
+   border-radius: 1em;
 }
 
 #imagenInfo{
