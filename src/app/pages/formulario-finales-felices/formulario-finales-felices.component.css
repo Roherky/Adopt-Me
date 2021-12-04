@@ -1,0 +1,96 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-left: 5%;
+    }
+
+        #input-nombreAnimal {
+            width: 30%;
+            border-radius: 1em;
+            margin-top: 0.5%;
+        }
+
+        #input-fechaPublicacion {
+            width: 30%;
+            border-radius: 1em;
+            margin-top: 0.5%;
+        }
+
+        #input-descripcion {
+            width: 100%;
+            border-radius: 1em;
+            margin-top: 0.5%;
+            height: 10em;
+        }
+
+    .imagenes {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-left: 5%;
+    }
+
+        .input-file {
+            position: relative;
+            display: inline-block;
+        }
+
+        .input-file::before {
+            background-color: rgb(238, 238, 238);
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1em;
+            content: 'Subir fichero';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 23em;
+            height: 2em;
+        }
+
+        .input-file::before:hover {
+            background-color: black;
+        }
+
+        .input-file[type="file"] {
+            opacity: 0;
+            /* width: 200px;
+            height: 32px; */
+            display: inline-block;
+        }
+
+        #input-file {
+            content: 'Seleccionar archivo';
+        }
+
+    .boton {
+        display: flex;
+        justify-content: flex-end;
+        width: 60%;
+    }
+
+    #boton {
+        border-radius: 1em;
+        background-color: #5ebfca;
+        border: none;
+        padding: 30%;
+        color: white;
+        background-image: linear-gradient(45deg, #00e5ff50  50%, transparent 50%);
+        background-position: 100%;
+        background-size: 400%;
+        transition: background 300ms ease-in-out;
+    }
+
+    #boton:hover {
+        background-position: 0;
+    }

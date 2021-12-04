@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,8 +26,7 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
+import { DonacionesComponent } from './pages/donaciones/donaciones.component';
 
 // Anggular Material in here is
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -36,10 +36,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { DonacionesComponent } from './pages/donaciones/donaciones.component';
 
 
 
@@ -83,8 +81,7 @@ import { DonacionesComponent } from './pages/donaciones/donaciones.component';
     NgbModule,
     FormsModule,
     MatCardModule,
-    MatCheckboxModule
-
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
