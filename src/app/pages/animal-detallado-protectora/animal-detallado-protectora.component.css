@@ -1,9 +1,12 @@
 *{
     font-family: sans-serif;
-}
-
+ }   
 .container{
-    margin-bottom: 200px;
+    width: 100%;
+    padding:50px;
+    background-image: url(./../../../assets/img/Fondo.jpg);
+   
+
 }
 
 #botonEliminar{
@@ -12,6 +15,7 @@
     background-color: #ebd89c;
     color: #fff;
     border-color: #ebd89c;
+    text-decoration: none;
 
  }
 
@@ -21,6 +25,7 @@
     background-color: #5EC0CA;
     color: #fff;
     border-color: #5EC0CA;
+    text-decoration: none;
  }
 
  .boton{
@@ -35,8 +40,9 @@
  h1{
 
      font-size: 3em;
-     margin-top: 20px;
-     text-align: center;
+     padding-top: 20px;
+     /* margin-top: 20px; */
+     /* text-align: center; */
  }
 
 
@@ -54,11 +60,17 @@
 table td{
     width: 100px;
     padding: 10px;
+    text-align: center;
+    
 }
 
 table th{
     width: 100px;
     padding: 10px;
+    text-align: center;
+    padding-top: 40px;
+   
+    
 }
 
 hr{

@@ -39,7 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { DonacionesComponent } from './pages/donaciones/donaciones.component';
+
 
 
 
@@ -66,8 +66,7 @@ import { DonacionesComponent } from './pages/donaciones/donaciones.component';
     ListaAnimalesComponent,
     NoticiasComponent,
     QuienesSomosComponent,
-    FaqComponent,
-    DonacionesComponent,
+    FaqComponent
   ],
   imports: [
     MatToolbarModule,

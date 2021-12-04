@@ -106,26 +106,19 @@
         </div>
 
              <!--Enviar imágenes-->
-            <div class="row">
-                <!-- <div class="col"> -->
-              <label id="subirImagen">Imagen:</label><br>
-            <input type="file"  name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" [(ngModel)]="animal.imagen" #imagen="ngModel"
-            [ngClass]="{'is-invalid': anyadirAnimal.submitted && imagen.invalid}" required>
-            <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && imagen.invalid">
-                <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
-               </div>
-        </div>
+           
 
-
-  
-   <!--textarea notas y botón enviar-->
-   <div class="notasYbtn">
-    <div>
-          <label>Notas</label><br>
-          <textarea id="textAreaNotas"></textarea>
-      </div>
-<button type="submit" class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
+<div style="margin-top: 140px;"><label for="files" class="btn" >Seleccionar img</label>
+  <input id="files"  type="file" name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif" name="imagen" [(ngModel)]="animal.imagen" #imagen="ngModel"
+  [ngClass]="{'is-invalid': anyadirAnimal.submitted && imagen.invalid}" style="visibility:hidden;" srequired>
+  <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && imagen.invalid">
+    <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
+  </div>
 </div>
+<!-- <div><label for="files" class="btn">Select Image</label><input id="files"  type="file"></div> -->
+  
+<button type="submit" class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
+
 <!-- </div> -->
 </form>
 </div>
