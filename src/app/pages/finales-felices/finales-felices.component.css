@@ -1,0 +1,60 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .fila1 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 2%;
+    }
+
+    .fila2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 2%;
+    }
+
+    .fila3 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    .card-img-top:hover {
+        filter: brightness(70%);
+    }
+
+.sinFinales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.logo {
+    margin-bottom: 2%;
+}
+
+.hipervinculo {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}

@@ -17,7 +17,6 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { PerfilAnimalComponent } from './pages/perfil-animal/perfil-animal.component';
 import { PerfilProtectoraComponent } from './pages/perfil-protectora/perfil-protectora.component';
 import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.component';
-import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 
 
 const routes: Routes = [
@@ -38,7 +37,6 @@ const routes: Routes = [
   {path: "perfilAnimal", component: PerfilAnimalComponent},
   {path: "perfilProtectora", component: PerfilProtectoraComponent},
   {path: "perfilUsuario", component: PerfilUsuarioComponent},
-  {path: "quienesSomos", component: QuienesSomosComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { HeaderComponent } from './pages/header/header.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -22,11 +22,8 @@ import { PerfilProtectoraComponent } from './pages/perfil-protectora/perfil-prot
 import { PerfilAnimalComponent } from './pages/perfil-animal/perfil-animal.component';
 import { ListaAnimalesComponent } from './pages/lista-animales/lista-animales.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
 
 // Anggular Material in here is
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -36,7 +33,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
@@ -48,7 +44,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   declarations: [
     AppComponent,
     InicioComponent,
-    HeaderComponent,
     MenuComponent,
     FooterComponent,
     LoginComponent,
@@ -65,7 +60,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     PerfilAnimalComponent,
     ListaAnimalesComponent,
     NoticiasComponent,
-    QuienesSomosComponent,
     FaqComponent
   ],
   imports: [
@@ -82,8 +76,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     NgbModule,
     FormsModule,
     MatCardModule,
-    MatCheckboxModule
-
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

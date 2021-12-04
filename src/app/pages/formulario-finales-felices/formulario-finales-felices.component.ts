@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FinalFeliz } from 'src/app/models/final-feliz';
 
 @Component({
   selector: 'app-formulario-finales-felices',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioFinalesFelicesComponent implements OnInit {
 
-  constructor() { }
+  public finalFeliz: FinalFeliz;
+
+  constructor() {
+    this.finalFeliz = new FinalFeliz(0, "", "", "", [], 0);
+  }
 
   ngOnInit(): void {
   }
