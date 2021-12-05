@@ -1,50 +1,327 @@
- <mat-nav-list>
+<!-- Menú lateral de usuario no registrado -->
+<aside class="menu">
+  <!-- Logo -->
+  <div class="logo">
+    <a routerLink="/inicio"><img src="./../../../assets/img/Logo.png" style="width: 10em; height: 5em; margin-top: -10%;"></a>
+  </div>
+  <hr style="margin-top: -10%;">
+  <!-- Primera ruta -->
+  <div class="rutas">
+    <a routerLink="/inicio"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Caseta perro.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/inicio" style="margin-left: 50%;">Inicio</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Segunda ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/login"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Perro con hueso.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/login" style="margin-left: 30%;">Login</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Tercera ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/registro"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Gato.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/registro" style="margin-left: 20%;">Registrarse</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Cuarta ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/listadoAnimales"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Huella perro.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/listadoAnimales" style="margin-left: 20%;">Adopciones</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Quinta ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/noticias"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Conejo.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/noticias" style="margin-left: 20%;">Noticias</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Sexta ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/finalesFelices"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Comedero.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/finalesFelices" style="margin-left: 20%;">Finales</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Séptima ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/faq"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Pez.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/faq" style="margin-left: 50%;">FAQ</a>
+      </div>
+    </div></a>
+  </div>
+  <!-- Octava ruta -->
+  <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/contacto"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Ovillo lana.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/contacto" style="margin-left: 20%;">Contacto</a>
+      </div>
+    </div></a>
+  </div>
+</aside>
 
-    <div class="logo py-4">
-     <a routerLink="inicio"><img src="../../../assets/img/Logo.png" alt="Adopt-Me"></a>
-   </div>
-  <mat-divider></mat-divider>
-    <h2 matSubheader class="mt-1"></h2>
+<!-- Menú lateral para usuario adoptante -->
+<!-- <aside class="menu"> -->
+  <!-- Logo -->
+  <!-- <div class="logo">
+    <a routerLink="/inicio"><img src="./../../../assets/img/Logo.png" style="width: 10em; height: 5em; margin-top: -10%;"></a>
+  </div>
+  <hr style="margin-top: -10%;"> -->
+  <!-- Primera ruta -->
+  <!-- <div class="rutas">
+    <a routerLink="/inicio"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Caseta perro.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/inicio" style="margin-left: 50%;">Inicio</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Segunda ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/perfilUsuario"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Perro con hueso.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/perfilUsuario" style="margin-left: 30%;">Perfil</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Tercera ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/chat"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Tortuga.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/chat" style="margin-left: 30%;">Chat</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Cuarta ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/listadoAnimales"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Huella perro.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/listadoAnimales" style="margin-left: 20%;">Adopciones</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Quinta ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/noticias"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Conejo.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/noticias" style="margin-left: 20%;">Noticias</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Sexta ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/finalesFelices"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Comedero.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/finalesFelices" style="margin-left: 20%;">Finales</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Séptima ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/faq"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Pez.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/faq" style="margin-left: 50%;">FAQ</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Octava ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/contacto"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Ovillo lana.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/contacto" style="margin-left: 20%;">Contacto</a>
+      </div>
+    </div></a>
+  </div><hr style="margin-top: 55%;"> -->
+  <!-- Logout -->
+  <!-- <div class="logout">
+    <div class="rutas" style="margin-top: 5%;">
+      <a routerLink=""><div class="ruta">
+        <div class="imagen" style="margin-left: -20%;">
+          <img src="./../../../assets/img/Menú/Mano.png" style="width: 3em; height: 3em; margin-right: 20%;">
+        </div>
+        <div class="link">
+          <a routerLink="" style="margin-left: 20%;">Logout</a>
+        </div>
+      </div></a>
+    </div>
+  </div>
+</aside> -->
 
-   <a mat-list-item routerLinkActive="list-item-active" routerLink="/inicio">
-     <mat-icon>Inicio</mat-icon> Home
-   </a>
-   <a mat-list-item routerLinkActive="list-item-active" routerLink="/editarAnimal">
-     <mat-icon>dashboard</mat-icon>editarAnimal
-   </a>
-   <a mat-list-item routerLinkActive="list-item-active" routerLink="/registro">
-    <mat-icon>dashboard</mat-icon> registro
-  </a>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/login">
-    <mat-icon>dashboard</mat-icon> login
-  </a>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/añadirAnimal">
-    <mat-icon>dashboard</mat-icon> añadirAnimales
-  </a>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/añadirNoticias">
-    <mat-icon>dashboard</mat-icon> añadirNoticias
-  </a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/perfilUsuario">
-    <mat-icon>dashboard</mat-icon> Perfil usuario
-  </a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/noticias">
-    <mat-icon>dashboard</mat-icon> Noticias
-  </a>
- 
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/listadoAnimales">
-    <mat-icon>dashboard</mat-icon> Lista Animales
-  </a>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/añadirFinalesFelices">
-    <mat-icon>dashboard</mat-icon> Añadir Finales
-  </a>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/finalesFelices">
-    <mat-icon>dashboard</mat-icon> Finales felices
-  </a>
-
-
-
+<!-- Menú lateral para usuario protectora -->
+<!-- <aside class="menu"> -->
+  <!-- Logo -->
+  <!-- <div class="logo">
+    <a routerLink="/inicio"><img src="./../../../assets/img/Logo.png" style="width: 10em; height: 5em; margin-top: -10%;"></a>
+  </div>
+  <hr style="margin-top: -10%;"> -->
+  <!-- Primera ruta -->
+  <!-- <div class="rutas">
+    <a routerLink="/inicio"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Caseta perro.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/inicio" style="margin-left: 50%;">Inicio</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Segunda ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/perfilProtectora"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Perro con hueso.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/perfilProtectora" style="margin-left: 30%;">Perfil</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Tercera ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/dashboard"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Perro y gato.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/dashboard" style="margin-left: 20%;">Dashboard</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Cuarta ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/chat"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Tortuga.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/chat" style="margin-left: 30%;">Chat</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Quinta ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/listadoAnimales"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Huella perro.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/listadoAnimales" style="margin-left: 20%;">Adopciones</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Sexta ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/noticias"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Conejo.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/noticias" style="margin-left: 20%;">Noticias</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Séptima ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/finalesFelices"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Comedero.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/finalesFelices" style="margin-left: 20%;">Finales</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Octava ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/faq"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Pez.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/faq" style="margin-left: 50%;">FAQ</a>
+      </div>
+    </div></a>
+  </div> -->
+  <!-- Novena ruta -->
+  <!-- <div class="rutas" style="margin-top: 5%;">
+    <a routerLink="/contacto"><div class="ruta">
+      <div class="imagen" style="margin-left: -20%;">
+        <img src="./../../../assets/img/Menú/Ovillo lana.png" style="width: 3em; height: 3em; margin-right: 20%;">
+      </div>
+      <div class="link">
+        <a routerLink="/contacto" style="margin-left: 20%;">Contacto</a>
+      </div>
+    </div></a>
+  </div><hr style="margin-top: 27%;"> -->
+  <!-- Logout -->
+  <!-- <div class="logout">
+    <div class="rutas" style="margin-top: 5%;">
+      <a routerLink=""><div class="ruta">
+        <div class="imagen" style="margin-left: -20%;">
+          <img src="./../../../assets/img/Menú/Mano.png" style="width: 3em; height: 3em; margin-right: 20%;">
+        </div>
+        <div class="link">
+          <a routerLink="" style="margin-left: 20%;">Logout</a>
+        </div>
+      </div></a>
+    </div>
+  </div>
+</aside> -->

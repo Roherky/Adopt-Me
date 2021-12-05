@@ -1,4 +1,4 @@
-
+/* 
 .social {
   margin-top: 1%;
 }
@@ -60,4 +60,40 @@
     font-size:13px;
     color:#aaa;
     margin-bottom:0;
+  } */
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0dfdf;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    height: 11em
   }
+
+    .iconos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1.5%;
+    }
+
+    .hipervinculos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1%;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: center;
+      margin-top: 1%;
+      color: #8390A2;
+    }
+
+a {
+  text-decoration: none;
+  color: black;
+}

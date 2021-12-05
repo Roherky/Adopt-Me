@@ -17,11 +17,12 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { PerfilAnimalComponent } from './pages/perfil-animal/perfil-animal.component';
 import { PerfilProtectoraComponent } from './pages/perfil-protectora/perfil-protectora.component';
 import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 
 const routes: Routes = [
   {path: "inicio", component: InicioComponent},
-  {path:"footer",component:FooterComponent},
+  {path: "footer",component:FooterComponent},
   {path: "login", component: LoginComponent},
   {path: "registro", component: RegistroComponent},
   {path: "contacto", component: ContactoComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path: "perfilAnimal", component: PerfilAnimalComponent},
   {path: "perfilProtectora", component: PerfilProtectoraComponent},
   {path: "perfilUsuario", component: PerfilUsuarioComponent},
+  {path: "chat", component: ChatComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 
