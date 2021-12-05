@@ -13,23 +13,10 @@ label{
 }
 
 
- #notas{
-    margin-top: 20px;
-   
- }
 
  select{
      padding: 7px;
  }
-
- #textAreaNotas{
-    
-        width: 50%; 
-        padding: 30px;
-        margin-bottom: 20px;
-        border-radius: 10px;
- }
-
 
 
 #files{
@@ -43,8 +30,43 @@ label{
     color: #fff;
     border-radius: 10px;
     padding: 10px;
-    margin-top: 70px;
-    margin-left: 43px;
+    margin-top: 85px;
+    margin-left: 820px;
+   
+}
+.input-file {
+   position: relative;
+   display: inline-block;
+
+}
+
+.input-file::before {
+
+   background-color:#ff8000;
+   color:#fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 1em;
+   content: 'Subir imagen';
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 120px;
+   bottom: 0;
+   width: 15em;
+   height: 2em;
+
+}
+#obligatoria{
+   margin-top: 130px;
+}
+.input-file::before:hover {
+   background-color: black;
+}
+
+#input-file {
+   content: 'Seleccionar archivo';
 }
 
  #subirImagen{
@@ -56,12 +78,9 @@ label{
  }
 
  #detalles{
-    width: 87%; 
+    width: 90%; 
     height: 200%;
     border-radius: 10px;
- 
-  
-
  }
 
  .row{
@@ -71,12 +90,7 @@ label{
  .form-group{
     width: 250px;
  }
-
-
-
- .row{
-    margin-bottom: 20px;
- }
+ 
 
  .redondeado {
    border-radius: 1em;
@@ -85,24 +99,6 @@ label{
     width: 250px;
   }
 
-  .notasYbtn{
-    margin-top: 30px;
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-    width: 200%;
-    height: 300%;
-     gap: 100px;
-   
- }
-
- #textAreaNotas{
-    
-    width: 90%;
-    height: 120px;
-    border-radius: 10px;
-    margin-right: 400px;
- }
 
  @media all and (max-width: 1128px){ 
 

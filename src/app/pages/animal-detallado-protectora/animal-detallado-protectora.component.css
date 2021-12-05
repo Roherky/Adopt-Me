@@ -12,9 +12,9 @@
 #botonEliminar{
     width: 200px;
     border-radius: 1em;
-    background-color: #ebd89c;
+    background-color:#ff8000;
     color: #fff;
-    border-color: #ebd89c;
+    border:none;
     text-decoration: none;
 
  }

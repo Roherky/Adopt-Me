@@ -4,6 +4,9 @@
     flex-direction: column;
     align-items: center;
     font-family: serif;
+    
+
+    
 }
 
 .carousel {
@@ -20,7 +23,9 @@
     background-color: rgb(238, 238, 238);
     border-radius: 1em;
     padding: 1%;
+    padding-right: 30px;
     width: 100%;
+
 }
 
     .contenedor-intrucciones{
@@ -74,6 +79,9 @@
     margin-bottom: 5%;
     width: 100%;
     text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+  
 }
 
     .boton {

@@ -1,12 +1,17 @@
 .container{
-    margin: 50px;
-    margin-bottom: 200px;
+padding:20px;
+
 }
 
 .container h1{
     color: #000;
     margin-bottom: 30px;
     font-family: sans-serif;
+}
+.fila1{
+    display: flex;
+    flex-direction: row;
+   
 }
 
 label{
@@ -15,51 +20,71 @@ label{
 
  
  .redondeado {
-    border-radius: 10px;
+    
+    border: 1px solid grey;
+    border-radius: 1em;
     padding: 5px;
     width: 250px;
   }
 
- #botonEnviar{
-     width: 200px; 
-     background-color: #5EC0CA; 
-     color: #fff;
-     border-radius: 10px;
-     padding: 10px;
-     margin-top: 20px;
- }
 
- #subirImagen{
-    font-weight: bold; 
-    font-size: 20px;
-    font-family: sans-serif;
+ #botonEnviar{
+   width: 200px; 
+   border:none;
+   background-color: #5EC0CA; 
+   color: #fff;
+   border-radius: 10px;
+   padding: 10px;
+   margin-top: 110px;
+   margin-left: 820px;
+  
+}
+
+ .input-file {
+    position: relative;
+    display: inline-block;
+ 
+ }
+ 
+ .input-file::before {
+ 
+    background-color:#ff8000;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    content: 'Subir imagen';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 150px;
+    bottom: 0;
+    width: 15em;
+    height: 2em;
+ 
+ }
+ #obligatoria{
+    margin-top: 130px;
+ }
+ .input-file::before:hover {
+    background-color: black;
+ }
+ 
+ #input-file {
+    content: 'Seleccionar archivo';
  }
 
  #detalles{
-    width: 87%; 
+    width: 89%; 
     height: 200%;
+    margin-top: 15px;
     border-radius: 10px;
-
- }
-
- .notasYbtn{
-    margin-top: 40px;
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-    width: 200%;
-    height: 300%;
-     gap: 100px;
    
+
  }
 
- #textAreaNotas{
-    
-    width: 90%;
-    height: 120px;
-    border-radius: 10px;
-    margin-right: 400px;
- }
+
 
  .row{
      margin-bottom: 20px;
