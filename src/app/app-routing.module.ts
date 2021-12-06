@@ -18,6 +18,9 @@ import { PerfilAnimalComponent } from './pages/perfil-animal/perfil-animal.compo
 import { PerfilProtectoraComponent } from './pages/perfil-protectora/perfil-protectora.component';
 import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { RecordarContrasenyaComponent } from './pages/recordar-contrasenya/recordar-contrasenya.component';
+import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
 
 
 const routes: Routes = [
@@ -39,6 +42,9 @@ const routes: Routes = [
   {path: "perfilProtectora", component: PerfilProtectoraComponent},
   {path: "perfilUsuario", component: PerfilUsuarioComponent},
   {path: "chat", component: ChatComponent},
+  {path: "editarPerfil", component: EditarPerfilComponent},
+  {path: "recordarContraseña", component: RecordarContrasenyaComponent},
+  {path: "modificarAnimal", component: ModificarAnimalComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

@@ -24,6 +24,10 @@ import { ListaAnimalesComponent } from './pages/lista-animales/lista-animales.co
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChatComponent } from './pages/chat/chat.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { RecordarContrasenyaComponent } from './pages/recordar-contrasenya/recordar-contrasenya.component';
+import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
 
 // Anggular Material in here is
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -35,10 +39,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ChatComponent } from './pages/chat/chat.component';
-
-
-
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -62,7 +64,10 @@ import { ChatComponent } from './pages/chat/chat.component';
     ListaAnimalesComponent,
     NoticiasComponent,
     FaqComponent,
-    ChatComponent
+    ChatComponent,
+    EditarPerfilComponent,
+    RecordarContrasenyaComponent,
+    ModificarAnimalComponent
   ],
   imports: [
     MatToolbarModule,
@@ -79,7 +84,9 @@ import { ChatComponent } from './pages/chat/chat.component';
     FormsModule,
     MatCardModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMatFileInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

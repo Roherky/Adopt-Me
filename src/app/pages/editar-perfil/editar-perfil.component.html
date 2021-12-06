@@ -1,0 +1,194 @@
+<!-- Título de la página -->
+<div class="titulo">
+    <h1 style="margin-top: 5%; margin-left: 3%;">Editar perfil</h1>
+</div>
+<div class="contenedor">
+    <!-- Página para adoptante -->
+    <div class="adoptante" *ngIf="tipoUsuario == 'adoptante'">
+        <!-- Imagen de usuario -->
+        <div class="imagen">
+            <div>
+                <img src="./../../../assets/img/Página inicio/Hombre1.jpg" style="width: 10em; height: 10em; border-radius: 5em;">
+            </div>
+            <!-- Input para cambiar de imagen -->
+            <mat-form-field>
+                <ngx-mat-file-input [multiple]="true" accept="image/png, .jpeg, .jpg, image/gif">
+                </ngx-mat-file-input>
+            </mat-form-field>
+        </div>
+        <!-- Primera fila -->
+        <div class="fila">
+            <!-- Input para cambiar el nombre -->
+            <div class="input">
+                <label>Nombre</label>
+                <input class="form-control" type="text" placeholder="Nombre actual">
+            </div>
+            <!-- Input para cambiar los apellidos -->
+            <div class="input">
+                <label>Apellidos</label>
+                <input class="form-control" type="text" placeholder="Apellidos actuales">
+            </div>
+            <!-- Input para cambiar la fecha de nacimiento -->
+            <div class="input">
+                <label>Fecha de nacimiento</label>
+                <input class="form-control" type="date">
+            </div>
+            <!-- Input para cambiar el teléfono -->
+            <div class="input">
+                <label>Teléfono</label>
+                <input class="form-control" type="tel" placeholder="Teléfono actual">
+            </div>
+            <!-- Input para cambiar la localidad -->
+            <div class="input">
+                <label>Localidad</label>
+                <input class="form-control" type="text" placeholder="Localidad actual">
+            </div>
+        </div>
+        <!-- Segunda fila -->
+        <div class="fila">
+            <!-- Input para cambiar la dirección -->
+            <div class="input">
+                <label>Dirección</label>
+                <input class="form-control" type="text" placeholder="Dirección actual">
+            </div>
+            <!-- Input para cambiar el correo electrónico -->
+            <div class="input">
+                <label>Correo electrónico</label>
+                <input class="form-control" type="text" placeholder="Correo electrónico actual">
+            </div>
+            <!-- Input para cambiar la contraseña -->
+            <div class="input">
+                <label>Contraseña actual</label>
+                <input class="form-control" type="password">
+            </div>
+            <!-- Input para confirmar la nueva contraseña -->
+            <div class="input">
+                <label>Confirma la nueva contraseña</label>
+                <input class="form-control" type="password">
+            </div>
+        </div>
+    </div>
+    <!-- Botones -->
+    <div class="botones" *ngIf="tipoUsuario == 'adoptante'">
+        <!-- Botón de guardar datos -->
+        <div class="boton">
+            <div class="form-group" id="contenedor-boton">
+                <button id="boton1" class="btn btn-success btn-block">Guardar datos</button>
+            </div>
+        </div>
+        <!-- Botón de eliminar cuenta -->
+        <div class="form-group" id="contenedor-boton">
+            <!-- Button trigger modal -->
+            <button type="button" id="boton2" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Eliminar cuenta
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="border-radius: 1em;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres eliminar tu cuenta?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Si eliminas la cuenta perderás toda la información que tengas y no podrás recuperarla
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar cuenta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Página para protectora -->
+    <div class="adoptante" *ngIf="tipoUsuario == 'protectora'">
+        <!-- Imagen de usuario -->
+        <div class="imagen">
+            <div>
+                <img src="./../../../assets/img/Página inicio/Hombre1.jpg" style="width: 10em; height: 10em; border-radius: 5em;">
+            </div>
+            <!-- Input para cambiar de imagen -->
+            <mat-form-field>
+                <ngx-mat-file-input [multiple]="true" accept="image/png, .jpeg, .jpg, image/gif">
+                </ngx-mat-file-input>
+            </mat-form-field>
+        </div>
+        <!-- Primera fila -->
+        <div class="fila">
+            <!-- Input para cambiar el nombre -->
+            <div class="input">
+                <label>Nombre</label>
+                <input class="form-control" type="text" placeholder="Nombre actual">
+            </div>
+            <!-- Input para cambiar la dirección -->
+            <div class="input">
+                <label>Dirección</label>
+                <input class="form-control" type="text" placeholder="Dirección actuales">
+            </div>
+            <!-- Input para cambiar la localidad -->
+            <div class="input">
+                <label>Localidad</label>
+                <input class="form-control" type="text" placeholder="Localidad actual">
+            </div>
+            <!-- Input para cambiar el teléfono -->
+            <div class="input">
+                <label>Teléfono</label>
+                <input class="form-control" type="tel" placeholder="Teléfono actual">
+            </div>
+        </div>
+        <!-- Segunda fila -->
+        <div class="fila">
+            <!-- Input para cambiar el correo electrónico -->
+            <div class="input">
+                <label>Correo electrónico</label>
+                <input class="form-control" type="text" placeholder="Correo electrónico actual">
+            </div>
+            <!-- Input para cambiar la contraseña -->
+            <div class="input">
+                <label>Contraseña actual</label>
+                <input class="form-control" type="password">
+            </div>
+            <!-- Input para confirmar la nueva contraseña -->
+            <div class="input">
+                <label>Confirma la nueva contraseña</label>
+                <input class="form-control" type="password">
+            </div>
+        </div>
+    </div>
+    <!-- Botones -->
+    <div class="botones" *ngIf="tipoUsuario == 'protectora'">
+        <!-- Botón de guardar datos -->
+        <div class="boton">
+            <div class="form-group" id="contenedor-boton">
+                <button id="boton1" class="btn btn-success btn-block">Guardar datos</button>
+            </div>
+        </div>
+        <!-- Botón de eliminar cuenta -->
+        <div class="form-group" id="contenedor-boton">
+            <!-- Button trigger modal -->
+            <button type="button" id="boton2" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Eliminar cuenta
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="border-radius: 1em;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres eliminar tu cuenta?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Si eliminas la cuenta perderás toda la información que tengas y no podrás recuperarla
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar cuenta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

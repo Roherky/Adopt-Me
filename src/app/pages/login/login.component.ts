@@ -10,23 +10,12 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class LoginComponent implements OnInit {
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  public usuario!: Usuario;
-  public esProtectora: boolean;
+  public usuario: Usuario;
   public protectora: Protectora;
 
   constructor() {
     this.usuario = new Usuario("", "", "", 0, "", "", "", "", "");
     this.protectora = new Protectora("", "", "", "", "", "", [], []);
-    this.esProtectora = false;
-  }
-
-  usuarioAdoptante(){
-    this.esProtectora = false;
-  }
-
-  usuarioProtectora(){
-    this.esProtectora = true;
   }
 
   onSubmit(form: NgForm){

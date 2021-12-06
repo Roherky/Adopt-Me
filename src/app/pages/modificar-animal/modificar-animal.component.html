@@ -1,0 +1,122 @@
+<div class="container">
+    <h1>Modificar Animal</h1>
+    <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank" #modificarAnimal="ngForm" (ngSubmit)="onSubmit(modificarAnimal)">
+         
+        <div class="row">
+             <!--Input nombre-->
+              <div class="col">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text"  class="redondeado"  placeholder="Nombre">
+                  
+                </div>
+              </div>
+  
+               <!--Input raza-->
+              <div class="col">
+                <div class="form-group">
+                    <label>Raza</label>
+                    <input type="text"  class="redondeado"  placeholder="Raza">
+                </div>
+              </div>
+          
+               <!--Lista desplegable raza peligrosa-->
+              <div class="col">
+                <div class="form-group">
+                <label>Raza Peligrosa</label><br>
+                <select name="razas"  class="redondeado">
+                  <option value="" disabled selected>Selecciona raza peligrosa</option>
+                    <option value="1">Rottweiler</option> 
+                    <option value="2">Pit Bull Terrier</option> 
+                    <option value="3">Staffordshire Bull Terrier</option>
+                    <option value="4">American Staffodshire Terrier</option> 
+                    <option value="5">Dogo Argentino</option> 
+                    <option value="6">Fila Brasileiro</option> 
+                    <option value="7">Tosa Inu</option> 
+                    <option value="8">Akita Inu</option> 
+                 </select>
+                 </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <!--Inout tamaño-->
+             <div class="col">
+         <div class="form-group">
+             <label>Tamaño</label><br>
+             
+             <input type="text"  class="redondeado"  placeholder="Tamaño">
+         </div>
+     </div>
+
+
+  
+            <!-- <div class="row"> -->
+                 <!--Lista desplegable genero-->
+                <div class="col">
+            <div class="form-group">
+                <label>Sexo</label><br>
+                <select id="genero"  class="redondeado" type="radio">
+                <option value="" disabled selected>Selecciona género</option>
+                    <option value="1">Macho</option> 
+                    <option value="2">Hembra</option> 
+                </select>
+            </div>
+        </div>
+        
+               <!--ILista desplegable tipo animal-->
+              <div class="col">
+                <div class="form-group">
+                <label>Tipo de Animal</label><br>
+                <select id="tipoAnimal"  class="redondeado">
+                  <option value="" disabled selected>Selecciona tipo</option>
+                  <option value="1">Perro</option> 
+                  <option value="2">Gato</option> 
+               </select>
+              </div>
+              </div>
+            </div>
+  
+               <!--Input fecha ingreso-->
+               <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="start">Ingreso:</label><br>
+                  <input type="date" id="start" name="ftiempoAdopcion"  class="redondeado"
+                         value=""
+                         min="2018-01-01" max="2021-12-31"> 
+                        </div>
+                 </div>
+               </div><br><br>
+              <!-- </div> -->
+  
+  
+            <div class="row">
+                 <!--Textarea detalles-->
+                <div class="col">
+              <label>Detalles</label><br>
+              <textarea class="form-control" id="detalles"
+              ></textarea>
+            </div>   
+        </div>
+  
+             <!--Enviar imágenes-->
+  <div class="imagenes">
+   
+    <div class="form-group">
+        <h5 style="margin-top: 4%; margin-bottom: 3%;">Imagen</h5>
+        <div class="input-file" id="input-file">
+            <input style="opacity: 0;" type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" accept="image/png, .jpeg, .jpg, image/gif" [(ngModel)]="animal.imagen" #imagen="ngModel"
+            [ngClass]="{'is-invalid':modificarAnimal.submitted && imagen.invalid}" required>
+            <div class="invalid-feedback" *ngIf="modificarAnimal.submitted && imagen.invalid">
+                <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <button type="reset" class="btn btn-primary btn-block"  id="botonModificar">Guardar</button>
+  
+  </form>
+  </div>

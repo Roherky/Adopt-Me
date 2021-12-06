@@ -1,8 +1,8 @@
 <div class="contenedor">
     <div class="titulo">
-        <h1 style="margin-top: 5%; margin-left: 3%;">Añadir final feliz</h1>
+        <h1 style="margin-top: 5%; margin-left: 3%;">Finales felices</h1>
     </div>
-    <div class="imagenes" *ngIf="finalesFelices != null">
+    <div class="imagenes" *ngIf="finalesFelices == null">
         <!-- Primera fila -->
         <div class="fila1">
             <!-- Primera tarjeta -->
@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-    <div class="sinFinales" *ngIf="finalesFelices == null">
+    <div class="sinFinales" *ngIf="finalesFelices != null">
         <div class="logo">
             <img src="./../../../assets/img/Logo.png">
         </div>
