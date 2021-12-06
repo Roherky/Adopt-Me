@@ -36,6 +36,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ChatComponent } from './pages/chat/chat.component';
+import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
 
 
 
@@ -62,7 +63,8 @@ import { ChatComponent } from './pages/chat/chat.component';
     ListaAnimalesComponent,
     NoticiasComponent,
     FaqComponent,
-    ChatComponent
+    ChatComponent,
+    ModificarAnimalComponent
   ],
   imports: [
     MatToolbarModule,
