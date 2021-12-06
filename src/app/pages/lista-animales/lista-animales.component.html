@@ -6,14 +6,14 @@
              <!--Input nombre-->
              <div class="clase1" > 
                 <div class="form-group" >
-                    <label>Nombre</label>
+                    <label style="margin-left: 10px;">Nombre</label>
                     <input type="text"  class="redondeado" name="nombre" [(ngModel)]="animal.nombre" #nombre="ngModel" >
               </div>
                  <!--Lista desplegable genero-->
                 
             <div class="form-group" style="margin-left: 10px;">
-                <label>Sexo</label><br>
-                <select id="genero"  class="redondeado" type="radio" name="genero"  [(ngModel)]="animal.genero" #genero="ngModel">
+                <label style="margin-left: 10px;">Sexo</label><br>
+                <select id="genero" style="background-color: white;" class="redondeado" type="radio" name="genero"  [(ngModel)]="animal.genero" #genero="ngModel">
                 <!-- <option value="" disabled selected>Selecciona género</option> -->
                     <option value="1">Macho</option> 
                     <option value="2">Hembra</option> 
@@ -24,8 +24,8 @@
                <!--ILista desplegable tipo animal-->
               
                 <div class="form-group" style="margin-left: 10px;">
-                    <label>Tipo de Animal</label><br>
-                    <select id="tipoAnimal"  class="redondeado" name="tipoAnimal"  [(ngModel)]="animal.tipoAnimal" #tipoAnimal="ngModel">
+                    <label style="margin-left: 10px;">Tipo de Animal</label><br>
+                    <select id="tipoAnimal" style="background-color: white;" class="redondeado" name="tipoAnimal"  [(ngModel)]="animal.tipoAnimal" #tipoAnimal="ngModel">
                         <!-- <option value="" disabled selected>Selecciona tipo</option> -->
                         <option value="1">Perro</option> 
                         <option value="2">Gato</option> 
@@ -38,7 +38,7 @@
                <!--Input fecha ingreso-->
               
                 <div class="form-group" style="margin-left: 10px;">
-                  <label for="start" >Ingreso:</label><br>
+                  <label for="start" style="margin-left: 10px;">Ingreso:</label><br>
                   <input type="date" id="start" name="ftiempoAdopcion"  class="redondeado" value="" min="2018-01-01" max="2021-12-31"
                     [(ngModel)]="animal.tiempoAdopcion" #tiempoAdopcion="ngModel"> 
                 </div>
@@ -52,43 +52,62 @@
                 <button type="submit" id="botonEnviar">Buscar</button>
             </div>
         </div>
-    </div>
+     </div>
 
-</form>
+    </form>
     <div class="columna">
         <div>
             <img src="./assets/noticias/dog.jpg" class="imagen">
-            <p style="text-align: center;">Galleta</p>
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Galleta</p>
         </div>
         <div>
-            <img src="./assets/noticias/perro1.jpg" class="imagen">
-            <p style="text-align: center;">Domingo</p>
+            <img src="./assets/img/perfil-usuario/cerdito.webp" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Pin-Pon</p>
         </div>
         <div>
             <img src="./assets/noticias/kitten.jpg" class="imagen">
-            <p style="text-align: center;">Polo</p>
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Polo</p>
         </div>
         <div>
-            <img src="./assets/noticias/gato2.jpg" class="imagen">
-            <p style="text-align: center;">Bigotes</p>
+            <img src="./assets/img/Página inicio/Peluso.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Peluso</p>
+        </div>
+       
+    </div>
+    <div class="columna">
+        <div>
+            <img src="./assets/img/perfil-usuario/gato1.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Bigotes</p>
+        </div>
+        <div>
+            <img src="./assets/img/perfil-usuario/hamster.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Goloso</p>
+        </div>
+        <div>
+            <img src="./assets/img/perfil-usuario/puppy.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Buda</p>
+        </div>
+        <div>
+            <img src="./assets/img/perfil-usuario/gato3.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Brooklyn</p>
         </div>
     </div>
     <div class="columna">
         <div>
-            <img src="./assets/img/Página inicio/Peluso.jpg" class="imagen">
-            <p style="text-align: center;">Peluso</p>
+            <img src="./assets/img/perfil-usuario/cocker.webp" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Cocker</p>
         </div>
         <div>
-            <img src="./assets/img/Página inicio/Moncho.jpg" class="imagen">
-            <p style="text-align: center;">Moncho</p>
+            <img src="./assets/img/perfil-usuario/gato.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Chicho</p>
         </div>
         <div>
-            <img src="./assets/img/Página inicio/Gatito.jpg" class="imagen">
-            <p style="text-align: center;">Salem</p>
+            <img src="./assets/img/perfil-usuario/spike.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Spike</p>
         </div>
         <div>
-            <img src="./assets/noticias/gato3.jpeg" class="imagen">
-            <p style="text-align: center;">Brooklyn</p>
+            <img src="./assets/img/Página inicio/Gato ojos.jpg" class="imagen">
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Salem</p>
         </div>
     </div>
 </div>
