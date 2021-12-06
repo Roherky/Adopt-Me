@@ -5,6 +5,7 @@
     width: 100%;
     padding:50px;
     background-image: url(./../../../assets/img/Fondo.jpg);
+    margin-bottom: -65px;
    
 
 }
@@ -12,21 +13,25 @@
 #botonEliminar{
     width: 200px;
     border-radius: 1em;
-    background-color: #ebd89c;
+    background-color: #f5993e;
     color: #fff;
-    border-color: #ebd89c;
+    border:none;
     text-decoration: none;
+   
 
  }
+
 
  #botonModificar{
     width: 200px;
     border-radius: 1em;
     background-color: #5EC0CA;
     color: #fff;
-    border-color: #5EC0CA;
+    border:none;
     text-decoration: none;
+ 
  }
+ 
 
  .boton{
      display: flex;
@@ -82,7 +87,13 @@ img{
     width: 300px;
     height: 250px;
     border-radius: 15px;
+      /* efectos */
+    overflow:hidden;
 }
+img:hover{
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+     cursor: pointer;
+ }
 .info{
    display: flex;
    justify-content: flex-start;

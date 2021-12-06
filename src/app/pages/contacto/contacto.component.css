@@ -5,6 +5,11 @@
 
 .principal{
     background: url("../../../assets/img/Fondo.jpg");
+    padding: 20px;
+    margin-bottom: -65px;
+    display: flex;
+    justify-content: center;
+   
 }
 
 .col{
@@ -54,11 +59,7 @@ form h1{
     height: 150px;
 }
 
-.principal{
-    display: flex;
-    justify-content: center;
-   
-}
+
 
 .contenedor h1{
     color: #000;
@@ -99,13 +100,19 @@ input{
 
 #btnEnviar{
     width: 200px; 
-    position: absolute; 
     right: 45%; 
     background-color: #5EC0CA;
     color: #fff;
     border-radius: 15px;
+    border:none;
+     /* efectos */
+     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
-
+#btnEnviar:hover{
+    box-shadow: 0 0 40px 40px #f5993e inset;
+    color: white;
+}
 @media all and (max-width: 979px){ 
 
     #carouselExampleControls{

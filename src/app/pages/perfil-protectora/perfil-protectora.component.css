@@ -1,24 +1,18 @@
+.container{
+    padding:20px;
+    margin-bottom: -65px;
+}
 #botonEliminar{
     width: 200px;
-     background-color: #ebd89c;
+     background-color: orange;
      color: #fff;
      border-radius: 15px;
-     border: 2px solid #ebd89c;
+     border: 2px solid orange;
 
-    /* caja1 animacion */
-    border-color: #ebd89c;
-  color: #fff;
-  background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-  background-position: 100%;
-  background-size: 400%;
-  -webkit-transition: background 300ms ease-in-out;
-  transition: background 300ms ease-in-out;
+  
 
  }
- #botonEliminar:hover {
-    background-position: 0;
-  }
+
 
  #botonModificar{
     width: 200px;
@@ -27,20 +21,9 @@
      border-radius: 15px;
      border: 2px solid #5EC0CA;
 
-     /* animacion */
-     border-color: #5EC0CA;
-     color: #fff;
-     background-image: -webkit-linear-gradient(45deg, #00e5ff 50%, transparent 50%);
-     background-image: linear-gradient(45deg, #00e5ff  50%, transparent 50%);
-     background-position: 100%;
-     background-size: 400%;
-     -webkit-transition: background 300ms ease-in-out;
-     transition: background 300ms ease-in-out;
+   
  }
 
- #botonModificar:hover {
-    background-position: 0;
-  }
 
  .boton{
      display: flex;
@@ -53,7 +36,7 @@
 
  h1{
      font-size: 3em;
-     margin-top: 20px;
+ 
  }
 
  table{
@@ -73,6 +56,7 @@ table th{
 hr{
     border: 1px solid black;
     margin-right: 90px;
+    margin-top: 50px;
 }
 
 
@@ -81,6 +65,9 @@ hr{
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 20px;
+    color: black;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
  
  }
  
@@ -88,16 +75,15 @@ hr{
     width: 100px;
     height: 150px;
     margin-top: 0;
-
-     /* caja9 */
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-  background-color: #2C3E50;
+    /* efectos */
+    overflow:hidden;
  }
 
  #imagenInfo:hover{
-    margin: 80px;
-  }
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+    cursor: pointer;
+ }
+  
 
 
 .iconoBody{
@@ -119,28 +105,27 @@ hr{
 }
 .card-group{
     margin-left: 10px;
-    margin-right: 100px;
+    margin-right: 40px;
     margin-bottom: 30px;
-    height: 20px;
     display: flex;
     gap: 40px;
-/* caja2*/
--webkit-transition: 1s linear;
-transition: 1s linear;
-background-color: #5EC0CA;
+
 }
 
-.card-group:hover{
-    padding: 30px;
-}
 .card{
-    width: 100px;
+    width: 100%;
     height: 300px;
     display: flex;
     align-items: flex-end;
-    border-radius: 10px;
-}
 
+    
+      /* efectos */
+    overflow:hidden;
+}
+.card:hover{
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+    cursor: pointer;
+}
 .editarP{
     margin-top: 300px;
     margin-left: 600px;

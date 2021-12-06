@@ -1,28 +1,32 @@
 *{
     font-family: sans-serif;
+ }   
+.container{
+    width: 100%;
+    padding:50px;
+    margin-bottom: -65px;
+    background-image: url(./../../../assets/img/Fondo.jpg);
+   
+
 }
 
- #botonAdoptar{
+
+
+ #botonModificar{
     width: 200px;
+    border-radius: 1em;
     background-color: #5EC0CA;
     color: #fff;
-    border-radius: 15px;
-    border: 2px solid #5EC0CA;
-    margin-right: 43px;
-
-    /* caja1 animacion */
     border-color: #5EC0CA;
-     color: #fff;
-     background-image: -webkit-linear-gradient(45deg, #00e5ff 50%, transparent 50%);
-     background-image: linear-gradient(45deg, #00e5ff  50%, transparent 50%);
-     background-position: 100%;
-     background-size: 400%;
-     -webkit-transition: background 300ms ease-in-out;
-     transition: background 300ms ease-in-out;
+    text-decoration: none;
+      /* efectos */
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
  }
-
- #botonAdoptar:hover {
-    background-position: 0;
+ 
+ #botonModificar:hover {
+    box-shadow: 0 0 40px 40px #f5993e inset;
+    color: white;
   }
 
  .boton{
@@ -30,63 +34,90 @@
      align-items: center;
      justify-content: flex-end;
      gap: 50px;
-     margin-top: 50px;
+     margin-top: 20px;
+     margin-bottom: 40px;
  }
 
  h1{
 
      font-size: 3em;
-     margin-top: 20px;
+     padding-top: 20px;
+     /* margin-top: 20px; */
+     /* text-align: center; */
+ }
+
+
+ h2{
+    margin-top: 40px;
  }
 
  table{
-    width: 700px;
-    margin: auto;
-    margin-top: 20px;
+   
+       width: 700px;
+       margin: auto;
+       margin-top: 20px;
 }
 
 table td{
+    width: 100px;
     padding: 10px;
+    text-align: center;
+    
 }
 
 table th{
+    width: 100px;
     padding: 10px;
+    text-align: center;
+    padding-top: 40px;
+   
+    
 }
 
 hr{
     border: 1px solid black;
-    margin-right: 43px;
 }
 
 img{
     margin-top: 50px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
     border-radius: 15px;
+      /* efectos */
+
+      overflow:hidden;
+}
+img:hover{
+-webkit-transform:scale(1.2);transform:scale(1.2);
+ cursor: pointer;
 }
 .info{
    display: flex;
    justify-content: flex-start;
    align-items: flex-start;
    margin-top: 20px;
-
+   background-color: rgb(238, 238, 238);
+   padding: 10px;
+   border-radius: 1em;
 }
 
 #imagenInfo{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+    
     margin-top: 0;
 }
 
 .fotos{
     display: flex;
     justify-content: space-around;
+    gap: 30px;
+
 }
 
 .descripcion{
     text-align: justify;
-    width: 95%;
-    font-size: 14px;
+    margin-top: 80px;
 }
 
 @media all and (max-width: 978px){
@@ -96,57 +127,13 @@ img{
         align-items: center;
        flex-direction: column;
        gap: 1px;
- }
-}
-
-
-/* MY CSS */
-#lateral{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-}
-#columnas{
-    width: 100%;
-}
-
-
-.contenedorDatos{
-   
-    width: 100%;
-    height: 100%;
-}
-#columna2{
-    display: flex;
-    height: 100%;
-}
-
-
-.donarImg{
-  width: 100px;
-  height: 100px;
-}
-
-
-#botonDonar{
-    width: 200px;
-     background-color: #ebd89c;
-     color: #fff;
-     border-radius: 15px;
-     border: 2px solid #ebd89c;
-
-    /* caja1 animacion */
-    border-color: #ebd89c;
-    color: #fff;
-    background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-    background-position: 100%;
-    background-size: 400%;
-    -webkit-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
 
  }
- #botonDonar:hover {
-    background-position: 0;
-  }
+
+ @media all and (max-width: 606px){
+
+    #imagenInfo{
+        display: none;
+    }
+ }
+}

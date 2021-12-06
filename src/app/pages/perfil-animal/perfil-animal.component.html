@@ -1,105 +1,44 @@
 <div class="container" style="background-image: url(./../../../assets/img/Fondo.jpg);">
     <h1>Perfil</h1>
-   
-<!-- container lateral -->       
-<div id="lateral">
-
-    <!-- prueb columna1 -->
-     <!-- columnas -->
-   
-        <div id="columna1">
-            
-           
-            <div class="contenedorDatos">
-                 <div class="boton">
-                <button type="reset" class="form-control" id="botonAdoptar">Adopt-Me</button>
-                </div>
-            <h2>Niebla</h2>
-
-            <div class="info">
-                    <img id="imagenInfo" src="../../../assets/img/perfil-usuario/gato.jpg">
-            
-                <table>
-                    <thead>
-                        <tr>
-                        
-                            <th>Raza</th>
-                            <th>GPP</th>
-                            <th>Ingreso</th>
-                            <th>Chip</th>
-                        </tr>
-                    </thead>
-                <tbody>
-                <ng-container  *ngIf="animal!=null">
-
-                    <tr>
-                        <td>{{animal.raza}}</td>
-                        <td>{{animal.razaPeligrosa}}</td>
-                        <td>{{animal.tiempoAdopcion}}</td>
-                        <td>{{animal.chip}}</td>
-
-                    </tr>
-
-                </ng-container>
-                    </tbody>
-                </table>
-
-            </div>
-
-            <hr>
-
-            <div class="descripcion">
-                {{animal.descripcion}}
-            </div>
-
-            <div class="fotos">
-                <img src="../../../assets/img/perfil-usuario/gato1.jpg">
-                <img src="../../../assets/img/perfil-usuario/gato2.png">
-                <img src="../../../assets/img/perfil-usuario/gato3.jpg">
-            </div>
-        </div>
-            <!-- termina contenedor datos -->
-        </div>
-        <!-- termina columna 1 -->
-
-    <!-- termina prueba -->
-
-   <div class="row" id="columna2" style="width: 100%;">
-    
-   
-        <div class="card" style="width: 100%; height: 100%;">
-                <div class="card-body">
-                    <p>
-                        <strong >Haz una donación en nuestro Paypal</strong>
-                        <div class="dona">
-                            <a href="https://www.paypal.com/es/home"><img src="../../../assets/img/perfil-usuario/paypal.png" class="donarImg" style="margin-top: -30px;"></a>
-                            <button type="reset"  class="form-control" id="botonDonar" >Donar</button>
-                        </div>
-                        <p style="font-size: small;margin-top: 20px;">
-                            En la Protectora nos hacemos cargo de más de 170 animales abandonados. Nos dedicamos a su cuidado y les proporcionamos todo lo necesario para su bienestar (alimentación, alojamiento, higiene, juguetes y otros enseres...). <br>
-                            Además, asumimos el coste de los tratamientos veterinarios indicados para su recuperación. "¿Cómo se consigue dinero para todo el gasto que
-                            supone esto?". Principalmente, de las cuotas que pagan los socios de la protectora o con los donativos que cualquier persona puede 
-                            hacer.<br>
-
-                            Con tu ayuda económica podremos seguir asumiendo los gastos que se originan en el día a día.
-                            <br>
-                            
-                            Formas de ayudar: <br>
-                            - Hazte socio.
-                            - Hacer un Bizum : 600 000 000. <br>
-                            - Utilizando PayPal, sólo hay que darle al botón de donar y poner el importe a donar. <br>
-                            
-                        </p><br>
-
-                    <!-- </p> -->
-                </div>
-        </div>
-
+  
+    <h2>King</h2>
+<div class="info">
+    <img id="imagenInfo" src="../../../assets/perro5.jpg">
+    <table>
+        <thead>
+            <tr>
+                <th>Tamaño</th>
+                <th>Raza</th>
+                <th>GPP</th>
+                <th>Género</th>
+                <th>Ingreso</th>
+                <th>Chip</th>
+            </tr>
+        </thead>
+    <tbody>
+    <ng-container  *ngIf="animal!=null">
+        <tr>
+            <td>{{animal.tamanyo}}</td>
+            <td>{{animal.raza}}</td>
+            <td>{{animal.razaPeligrosa}}</td>
+            <td>{{animal.genero}}</td>
+            <td>{{animal.tiempoAdopcion}}</td>
+            <td>{{animal.chip}}</td>
+        </tr>
+    </ng-container>
+        </tbody>
+    </table>
 </div>
+<div class="boton">
+     <a type="reset" class="form-control" id="botonModificar" href="contacto" style="text-align: center; ">Adopt-Me</a>
 </div>
-<!-- termina container lateral -->
-
-<!-- termina columnas -->
-<!-- </div> -->
-<!-- termina container principal -->
+    <hr>
+    <div class="descripcion">
+        {{animal.descripcion}}
+    </div>
+    <div class="fotos">
+        <img src="../../../assets/perro5.jpg">
+        <img src="../../../assets/perro4.jpg">
+        <img src="../../../assets/perro3.jpg">
+    </div>
 </div>
