@@ -1,60 +1,78 @@
-.page {
-  color: white;
-  padding: 0 1rem;
-
-}
-.page__box {
-  min-height: 120px;
-  height: 100%;
-  background: #1e293b;
-  margin: 0 -1rem;
-  font-size: 36px;
-}
-.page__content {
-  min-height:100vh;
-  border-radius: 10px;
-  margin-top: -2rem;
-  /* background: white; */
-  color: black;
-
-}
- .page__content-data {
-   margin-top: 5%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.contenedor {
+  display: flex;
    flex-direction: column;
-   /* margin: 3.5rem;
-  top: 30%;
-  left: 20%;
-  transform: translate(-50%, -50%); */
+   width: 100%;
 }
 
-  /* .page__box {
-    min-height: 120px;
-    height: 100%;
-    background: #1e293b;
-    margin: 0 -1rem;
-    font-size: 36px;
-  } */
-  /* .page__content {
-  }*/
-  /* /*.page__content {
-    min-height:100vh;
-    border-radius: 10px;
-    margin-top: -2rem;
-    background: white;
-    color: black;
-  } */
-   /* .page__content-data {
-     margin-top: 5%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     margin: 3.5rem;
-    top: 30%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-   } */
- 
+  .datos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+    .dato1 {
+      display: flex;
+      flex-direction: row;
+      width: 20em;
+      height: 10em;
+      align-items: center;
+      background: linear-gradient(70deg, rgb(212, 212, 212), #5EC0CA);
+      border-radius: 1em;
+    }
+
+    .dato2 {
+      display: flex;
+      flex-direction: row;
+      width: 20em;
+      height: 10em;
+      align-items: center;
+      background: linear-gradient(70deg, #5EC0CA, rgb(212, 212, 212));
+      border-radius: 1em;
+    }
+
+      .informacion {
+        display: flex;
+        flex-direction: column;
+        width: 15em;
+        height: 5em;
+        justify-content: flex-start;
+      }
+
+  .estadisticas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
+    .adoptados {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 25em;
+      height: 25em;
+      background-color: transparent;
+      border-radius: 1em;
+      margin-top: 10%;
+    }
+
+      .numero {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+    .estado {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+      width: 25em;
+      height: 25em;
+      background-color: transparent;
+      border-radius: 1em;
+    }
