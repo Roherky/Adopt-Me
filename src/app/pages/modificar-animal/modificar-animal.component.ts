@@ -21,5 +21,4 @@ export class ModificarAnimalComponent implements OnInit {
   onSubmit(form: NgForm){
     console.log(this.animal);
   }
-
 }
