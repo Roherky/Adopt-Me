@@ -47,6 +47,17 @@ label{
     margin-left: 43px;
 }
 
+#botonModificar{
+   width: 200px; 
+   border:none;
+   background-color: orange; 
+   color: #fff;
+   border-radius: 10px;
+   padding: 10px;
+   margin-top: 70px;
+   margin-left: 43px;
+}
+
  #subirImagen{
     font-family: sans-serif;
     font-weight: bold; 
