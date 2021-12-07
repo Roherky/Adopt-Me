@@ -29,6 +29,7 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
 import { RecordarContrasenyaComponent } from './pages/recordar-contrasenya/recordar-contrasenya.component';
 import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
 
+
 // Anggular Material in here is
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -86,7 +87,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatCheckboxModule,
     ReactiveFormsModule,
     NgxMatFileInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

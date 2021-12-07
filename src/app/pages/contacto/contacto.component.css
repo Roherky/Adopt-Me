@@ -12,6 +12,12 @@
    
 }
 
+#detalles{
+    width: 100%; 
+    height: 150px;
+    border-radius: 10px;
+ }
+
 .col{
     margin-bottom: 20px;
 }
@@ -75,21 +81,6 @@ form h1{
 #carouselExampleControls{
     width: 400px;
     height: 400px;
-}
-
-textarea{
-    width: 100%; 
-    padding: 100px; 
-    margin-bottom: 30px;
-    border-radius: 15px;
-    
-}
-
-.detalles{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
 }
 
 input{
