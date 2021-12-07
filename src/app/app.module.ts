@@ -87,8 +87,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatCheckboxModule,
     ReactiveFormsModule,
     NgxMatFileInputModule,
-    MatFormFieldModule,
-    FormsModule
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
