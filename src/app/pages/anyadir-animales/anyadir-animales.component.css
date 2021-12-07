@@ -1,19 +1,20 @@
 /* .container{
     padding:30px;
+
     font-family: sans-serif;
      margin-bottom: -65px; 
 } */
 
 .container h1{
-  color: #000;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-family: sans-serif;
-  
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    
 }
 
 label{
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 
@@ -45,34 +46,8 @@ label{
     margin-bottom: 20px;
 }
 
-.row{
-  margin-bottom: 20px;
-}
-
-.form-group{
-  width: 250px;
-}
-
-
-.redondeado {
- border-radius: 1em;
-  border: 1px solid grey;
-  padding: 5px;
-  width: 250px;
-}
-
-
-.imagenes {
- display: flex;
- flex-direction: row;
- width: 80%;
- margin-left: 5%;
- margin-top: 30px;
-}
-
- .input-file {
-     position: relative;
-     display: inline-block;
+ .form-group{
+    width: 250px;
  }
 
 
@@ -84,13 +59,13 @@ label{
   }
 
 
- .imagenes {
+ /* .imagenes {
    display: flex;
    flex-direction: row;
    width: 80%;
    margin-left: 5%;
    margin-top: 30px;
-}
+} */
 
    .input-file {
        position: relative;

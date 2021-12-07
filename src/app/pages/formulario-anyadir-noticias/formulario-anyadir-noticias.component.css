@@ -1,6 +1,6 @@
 .container{
-    margin: 50px;
-    margin-bottom: 200px;
+    margin: 20px;
+ 
 }
 
 .container h1{
@@ -42,6 +42,7 @@ label{
 
  }
 
+
  .notasYbtn{
     margin-top: 40px;
      display: flex;
@@ -64,6 +65,72 @@ label{
  .row{
      margin-bottom: 20px;
  }
+
+ .form-group{
+    width: 250px;
+  }
+
+
+ .input-file {
+    position: relative;
+    display: inline-block;
+}
+
+
+.redondeado {
+  border-radius: 1em;
+   border: 1px solid grey;
+   padding: 5px;
+   width: 250px;
+ }
+
+
+.imagenes {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 110px;
+}
+
+  .input-file {
+      position: relative;
+      display: inline-block;
+  }
+
+  .input-file::before {
+      background-color: rgb(238, 238, 238);
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      content: 'Subir imagen';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 23em;
+      height: 2em;
+  }
+
+  .input-file::before:hover {
+      background-color: black;
+  }
+
+  .input-file[type="file"] {
+      opacity: 0;
+      display: inline-block;
+  }
+
+  #input-file {
+      content: 'Seleccionar archivo';
+  }
+
+  .row{
+    margin-bottom: 20px;
+  }
 
  @media all and (max-width: 1128px){ 
 
