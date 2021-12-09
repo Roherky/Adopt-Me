@@ -63,3 +63,22 @@
         </div>
     </div>
 </div>
+<div>
+    <div>
+        <p>Nombre: <input #id></p>
+        <p>Apellidos: <input #nombre></p>
+        <p>telefono: <input #apellidos></p>
+        <p>ID del usuario: <input #fecha></p>
+        <p>Nombre: <input #tel></p>
+        <p>Apellidos: <input #email></p>
+        <p>telefono: <input #password></p>
+        <p>ID del usuario: <input #localidad></p>
+        <p>Nombre: <input #direccion></p>
+        <p>Apellidos: <input #imagen></p>
+        <div>
+            <button type="button">Insertar</button>
+            <button type="button" (click)="modificarAdoptante(id.value, nombre.value, apellidos.value, fecha.value, tel.value, email.value, password.value, localidad.value, direccion.value, imagen.value)">Modificar</button>
+            <button type="button">Eliminar</button>
+        </div>
+    </div>
+</div>
