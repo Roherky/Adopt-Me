@@ -13,9 +13,8 @@ export class AnyadirAnimalesComponent implements OnInit {
   public animal: Animal;
 
   constructor(private animalServicio: AnimalService) {
-    this.animal=new Animal(null,"", "", "", "","", null, "", "", "", null, "", null);
+    this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
   }
-
 
   ngOnInit(): void {
   }
