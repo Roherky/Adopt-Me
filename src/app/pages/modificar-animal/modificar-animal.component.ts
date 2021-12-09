@@ -13,23 +13,22 @@ export class ModificarAnimalComponent implements OnInit {
   public animal: Animal;
 
   constructor(private animalServicio: AnimalService) {
-    this.animal=new Animal(null,"", "", "", "","", null, "", "", "", null, "", null);
+    this.animal=new Animal(null,"", "", "", "","",  "", "", "", null, "");
   }
 
   ngOnInit(): void {
   }
 
   
-  editarAnimal(idAnimal:any, nombre: string, raza: string, sexo: string, tamanyo:string, tipo:string, imagen:string, fecha_ingresso:string, estado:string, idProtectora:any, detalle:string){
+  editarAnimal(idAnimal:any, nombre: string, raza: string, sexo: string, imagen:string, tipo_animal:string, estado:string, fecha_ingresso:string, descripcion:string, idProtectora:any, tamanyo:string){
 
-    let animal=new Animal(idAnimal, nombre, raza, sexo, tipo, imagen, null, tamanyo, estado, fecha_ingresso, idProtectora, detalle, null)
+    let animal=new Animal(idAnimal, nombre, raza, sexo,  imagen, tipo_animal, estado, fecha_ingresso, descripcion, idProtectora, tamanyo)
       for(let propiedad in animal){
             if(animal[propiedad]==""){
               animal[propiedad]=null
             }
         }   
 
-       
 
     this.animalServicio.actualizarAnimal(animal)
     .subscribe((data:string) =>{

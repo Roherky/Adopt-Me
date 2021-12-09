@@ -12,9 +12,8 @@ export class PerfilAnimalComponent implements OnInit {
 
   constructor() { 
 
-    this.animal=new Animal(null,"Niebla", "Siberiano", "Macho", "Gato", "", null , "Pequeño", "adoptado", "", null,  "Esta pequeña de mes y medio fue encontrada en mitad de una carretera junto con sus hermanos. Hubo una persona que no quiso mirar hacia otro lado y contactó rápidamente con nosotros para recoger a aquellos tres pequeños tirados sin ninguna sensibilidad.  No sabemos nada de sus historias pero suponemos que un abandono así siendo cachorros, sólo mostraban miedo...", null);
+    this.animal=new Animal(null,"Niebla", "Siberiano", "Macho", "imagen.jpg", "gato", "adoptado" , "2021/12/12",  "Esta pequeña de mes y medio fue encontrada en mitad de una carretera junto con sus hermanos. Hubo una persona que no quiso mirar hacia otro lado y contactó rápidamente con nosotros para recoger a aquellos tres pequeños tirados sin ninguna sensibilidad.  No sabemos nada de sus historias pero suponemos que un abandono así siendo cachorros, sólo mostraban miedo...", null, "pequeño");
   }
-
 
   ngOnInit(): void {
   }
