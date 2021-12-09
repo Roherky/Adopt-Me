@@ -88,6 +88,11 @@ hr{
     cursor: pointer;
 }
 
+.card-body {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
 
 .iconoBody{
     width: 20px;

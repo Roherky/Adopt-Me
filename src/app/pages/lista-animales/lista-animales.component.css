@@ -99,3 +99,12 @@ h1{
     box-shadow: 0 0 40px 40px #f5993e inset;
     color: white;
   }
+
+  @media screen and (max-width: 1000px) {
+    .container{
+        padding: 20px;
+        padding-bottom: 70px;
+        margin-bottom: -55px;
+    }
+    
+}

@@ -1,0 +1,45 @@
+.general{
+    background: url("../../../assets/img/Fondo.jpg");
+    padding:20px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+}
+h1{
+    margin-top: 20px;
+}
+.preguntas{
+    margin-top:50px;
+    
+   
+}
+p{
+    background-color: #5EC0CA;
+    border-radius: 2em;
+    height: 50px;
+    width: 800px;
+    text-align:start;
+    font-size: medium;
+    padding-top: 15px;
+    padding-left: 30px;
+    color:white;
+        /* efectos */
+
+        overflow:hidden;
+    
+}
+.p:hover{
+
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+
+    cursor: pointer;
+
+}
+
+
+.respuesta{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    width: 800px;
+    text-align: justify;
+}

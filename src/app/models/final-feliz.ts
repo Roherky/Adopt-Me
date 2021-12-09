@@ -3,6 +3,6 @@ export class FinalFeliz {
                 public nombreAnimal: string,
                 public fechaPublicacion: string,
                 public descripcion: string,
-                public imagenes: [],
+                public imagenes: string,
                 public id_adoptante: number){}
 }
