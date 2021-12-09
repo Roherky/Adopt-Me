@@ -42,6 +42,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ChatComponent,
     EditarPerfilComponent,
     RecordarContrasenyaComponent,
-    ModificarAnimalComponent
+    ModificarAnimalComponent,
+    FormularioImagenesComponent
   ],
   imports: [
     MatToolbarModule,
@@ -87,7 +89,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatCheckboxModule,
     ReactiveFormsModule,
     NgxMatFileInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

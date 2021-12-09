@@ -17,10 +17,25 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
    
  
 
-    this.animal=new Animal("King", "Labrador", false, "Macho", "Perro", "", 4 , "Grande", true, true, true, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", 0, "", 0);
+    this.animal=new Animal(null, "King", "Labrador", "Macho", "Perro", "", 4 , "Grande", "adoptado", "2020/12/12", null, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", null);
   }
 
   ngOnInit(): void {
   }
 
 }
+
+
+/**    public id:number,
+public nombre: string,
+public raza: string,
+public sexo: string,
+public tipo_animal: string,
+public imagen: string,
+public edad: number,
+public tamanyo: string,
+public estado: string,
+public fecha_ingresso: string,
+public id_protectora: number,
+public descripcion: string,
+public tiempoAdopcion: number){} */  

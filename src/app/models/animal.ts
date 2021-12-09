@@ -1,18 +1,16 @@
 export class Animal {
     constructor(
+                public idAnimal:number,
                 public nombre: string,
                 public raza: string,
-                public razaPeligrosa: boolean,
-                public genero: string,
-                public tipoAnimal: string,
+                public sexo: string,
+                public tipo_animal: string,
                 public imagen: string,
                 public edad: number,
                 public tamanyo: string,
-                public esAptoPerros: boolean,
-                public esAptoGatos: boolean,
-                public esAptoNinyos: boolean,
+                public estado: string,
+                public fecha_ingresso: string,
+                public id_protectora: number,
                 public descripcion: string,
-                public tiempoAdopcion: number,
-                public notas: string,
-                public chip: number){}
+                public tiempoAdopcion: number){}
 }

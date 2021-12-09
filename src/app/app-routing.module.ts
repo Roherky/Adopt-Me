@@ -21,6 +21,7 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 import { RecordarContrasenyaComponent } from './pages/recordar-contrasenya/recordar-contrasenya.component';
 import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
+import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
 
 
 const routes: Routes = [
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path: "editarPerfil", component: EditarPerfilComponent},
   {path: "recordarContraseña", component: RecordarContrasenyaComponent},
   {path: "modificarAnimal", component: ModificarAnimalComponent},
+  {path: "formularioImagenes", component: FormularioImagenesComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

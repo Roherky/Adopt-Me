@@ -1,0 +1,91 @@
+<div class="container">
+  <h1>Añadir Imágenes</h1>
+  <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank" #anyadirImagen="ngForm" (ngSubmit)="onSubmit(anyadirImagen)">
+
+    <div class="row">
+      <!--Input id adoptante-->
+       <div class="col">
+         <div class="form-group">
+             <label>ID adoptante</label>
+             <input type="text"  class="redondeado" name="idAdoptante" [(ngModel)]="imagenes.id_adoptantes" #idAdoptante="ngModel" placeholder="ID del adoptante" #idAdop
+             [ngClass]="{'is-invalid': anyadirImagen.submitted && idAdoptante.invalid}" required>
+             <div class="invalid-feedback" *ngIf="anyadirImagen.submitted && idAdoptante.invalid">
+                 <p *ngIf="idAdoptante.errors?.['required']">El id del adoptante es obligatorio.</p>
+                </div>
+         </div>
+       </div>
+
+        <!--Input id protectora-->
+        <div class="col">
+          <div class="form-group">
+              <label>ID protectora</label>
+              <input type="text"  class="redondeado" name="idProtectora" [(ngModel)]="imagenes.id_protectora" #idProtectora="ngModel" placeholder="ID de la protectora" #idProtec
+              [ngClass]="{'is-invalid': anyadirImagen.submitted && idProtectora.invalid}" required>
+              <div class="invalid-feedback" *ngIf="anyadirImagen.submitted && idProtectora.invalid">
+                  <p *ngIf="idProtectora.errors?.['required']">El id de la protectora es obligatorio.</p>
+                 </div>
+          </div>
+        </div>
+
+              <!--Input id animal-->
+              <div class="col">
+                <div class="form-group">
+                    <label>ID animal</label>
+                    <input type="text"  class="redondeado" name="idAnimal" [(ngModel)]="imagenes.id_animal" #idAnimal="ngModel" placeholder="ID de la protectora" #idAnim
+                    [ngClass]="{'is-invalid': anyadirImagen.submitted && idAnimal.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirImagen.submitted && idAnimal.invalid">
+                        <p *ngIf="idAnimal.errors?.['required']">El id del animal es obligatorio.</p>
+                       </div>
+                </div>
+              </div>
+    </div>
+
+
+
+    <div class="row">
+      <!--Input id noticia-->
+       <div class="col">
+         <div class="form-group">
+             <label>ID noticia</label>
+             <input type="text"  class="redondeado" name="idNoticia" [(ngModel)]="imagenes.id_noticia" #idNoticia="ngModel" placeholder="ID de la noticia" #idNotic
+             [ngClass]="{'is-invalid': anyadirImagen.submitted && idNoticia.invalid}" required>
+             <div class="invalid-feedback" *ngIf="anyadirImagen.submitted && idNoticia.invalid">
+                 <p *ngIf="idNoticia.errors?.['required']">El id de la noticia es obligatorio.</p>
+                </div>
+         </div>
+       </div>
+
+   
+        <!--Input id final feliz-->
+         <div class="col-sm-8">
+           <div class="form-group">
+               <label>ID final feliz</label>
+               <input type="text"  class="redondeado" name="idFinalFeliz" [(ngModel)]="imagenes.id_final_feliz" #idFinalFeliz="ngModel" placeholder="ID de final feliz" #idFinalFel
+               [ngClass]="{'is-invalid': anyadirImagen.submitted && idFinalFeliz.invalid}" required>
+               <div class="invalid-feedback" *ngIf="anyadirImagen.submitted && idFinalFeliz.invalid">
+                   <p *ngIf="idFinalFeliz.errors?.['required']">El id del final feliz es obligatorio.</p>
+                  </div>
+           </div>
+         </div>
+        </div>
+
+            <!--Input id final feliz-->
+            <div class="imagenes">
+              <div class="form-group">
+                  <h5 style="margin-top: 4%; margin-bottom: 3%;">Imagen</h5>
+                  <div class="input-file" id="input-file">
+                      <input style="opacity: 0;" type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" accept="image/png, .jpeg, .jpg, image/gif" [(ngModel)]="imagenes.imagen" #imagen="ngModel"
+                      [ngClass]="{'is-invalid':anyadirImagen.submitted && imagen.invalid}" required>
+                      <div class="invalid-feedback" *ngIf="anyadirImagen.submitted && imagen.invalid">
+                          <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+    
+
+
+    <button class="btn btn-primary btn-block"  id="botonEnviar">Añadir</button>
+  </form>
+  </div>
