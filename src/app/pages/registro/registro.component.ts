@@ -18,7 +18,7 @@ export class RegistroComponent implements OnInit {
   constructor() {
 
     this.esProtectora = false;
-    this.usuario = new Usuario("", "", "", 0, "", "", "", "", "");
+    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "");
     this.protectora = new Protectora("", "", "", "", "", "", [], []);
   }
 
