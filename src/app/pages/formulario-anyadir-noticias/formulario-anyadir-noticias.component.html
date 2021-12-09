@@ -2,6 +2,7 @@
     <h1>Añadir Noticias</h1>
     <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank" #anyadirNoticia="ngForm" (ngSubmit)="onSubmit(anyadirNoticia)">
 
+
          <!--Input titular-->
           <div class="row">
               <div class="col">
@@ -58,13 +59,13 @@
                 <div class="form-group">
                   <label for="start">Fecha de la noticia</label><br>
 
-                  <input type="date" id="noticia" name="fechaNoticia" class="redondeado"
+                  <input type="date" id="noticia" name="fecha_publicacion" class="redondeado"
                          value="2021-11-29"
                          min="2018-01-01" max="2021-12-31"
-                         [(ngModel)]="noticia.fechaNoticia" #fechaNoticia="ngModel"
-                         [ngClass]="{'is-invalid': anyadirNoticia.submitted && fechaNoticia.invalid}" required>
-                         <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && fechaNoticia.invalid">
-                            <p *ngIf="fechaNoticia.errors?.['required']">Introduce la fecha de la noticia</p>
+                         [(ngModel)]="noticia.fecha_publicacion" #fecha_publicacion="ngModel"
+                         [ngClass]="{'is-invalid': anyadirNoticia.submitted && fecha_publicacion.invalid}" required>
+                         <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && fecha_publicacion.invalid">
+                            <p *ngIf="fecha_publicacion.errors?.['required']">Introduce la fecha de la noticia</p>
                         </div>
               </div>
             </div>
