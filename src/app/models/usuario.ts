@@ -7,5 +7,6 @@ export class Usuario {
                 public password: string,
                 public localidad: string,
                 public direccion: string,
-                public imagenPerfil: string){}
+                // public imagenPerfil: string
+                ){}
 }

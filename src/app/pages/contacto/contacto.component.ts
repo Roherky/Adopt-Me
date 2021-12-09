@@ -11,7 +11,7 @@ export class ContactoComponent implements OnInit {
 
   public usuario!:Usuario
   constructor() { 
-    this.usuario = new Usuario("", "", "", 0, "", "", "", "", "");
+    this.usuario = new Usuario("", "", "", 0, "", "", "", "");
   }
 
   ngOnInit(): void {
