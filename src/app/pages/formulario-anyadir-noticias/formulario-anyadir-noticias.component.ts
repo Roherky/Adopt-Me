@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Noticia } from 'src/app/models/noticia';
+import { NoticiaService} from 'src/app/shared/noticia.service';
 
 @Component({
   selector: 'app-formulario-anyadir-noticias',
@@ -11,12 +12,27 @@ export class FormularioAnyadirNoticiasComponent implements OnInit {
 
   public noticia:Noticia
 
-  constructor() { 
-    this.noticia=new Noticia("", "", "", "", "", "", "");
+  constructor(private apiService: NoticiaService) { 
+    this.noticia=new Noticia("", "", "", "", "", "",0);
   }
 
+
   onSubmit(form: NgForm){
-    console.log(this.noticia);
+    this.apiService.postNoticia(this.noticia)
+    .subscribe((data:string) =>
+    {
+    
+      console.log(data);
+      if (data != "-1")
+      {
+        alert("Se ha insertado la noticia con id: " + data);
+        this.apiService.getNoticia(this.noticia);
+      }  
+      else
+        alert("Error al insertar la noticia");
+
+    })
+
   }
 
   ngOnInit(): void {

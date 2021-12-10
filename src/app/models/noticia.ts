@@ -5,5 +5,5 @@ export class Noticia {
                 public fecha_publicacion: string,
                 public descripcion: string,
                 public imagen: string,
-                public id_Protectora: string){}
+                public id_Protectora: number){}
 }

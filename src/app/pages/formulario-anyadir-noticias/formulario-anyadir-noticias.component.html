@@ -74,8 +74,8 @@
             <div class="row">
                 <!--Textarea detalles-->
                <div class="col">
-             <label>Detalles</label><br>
-             <textarea class="form-control" id="detalles"
+             <label>Descripcion</label><br>
+             <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="noticia.descripcion" #descripcion="ngModel"
              ></textarea>
            </div>
        </div>
@@ -100,10 +100,10 @@
  <!--textarea notas y botón enviar-->
     <div class="notasYbtn">
         <div>
-              <label>Notas</label><br>
-              <textarea id="textAreaNotas"></textarea>
+              <label>Id_Protectora</label><br>
+              <textarea id="id_Protectora" name="id_Protectora" [(ngModel)]="noticia.id_Protectora" #id_Protectora="ngModel"></textarea>
           </div>
-    <button type="submit" class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
+    <button type="submit" class="btn btn-primary btn-block"  id="botonEnviar" (click)="onSubmit">Guardar</button>
    </div>
 </form>
 </div>

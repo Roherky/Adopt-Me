@@ -18,8 +18,8 @@ export class AnimalService {
   }
 
 
-  obtenerAnimal(nom:string){
-    let url= "http://localhost:3000/animal?nombre=" +nom; 
+  obtenerAnimal(idAnimal:string){
+    let url= "http://localhost:3000/animal?idAnimal=" +idAnimal; 
     return this.http.get(url)
   }
 

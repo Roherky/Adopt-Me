@@ -3,24 +3,21 @@
 <section class="general">
     <!-- Columna1, ultima foto-->
     <article>
-        <div class="ultima">
-            <img src="./assets/noticias/loteria.jpg" id="ultimafoto" (click)="open(content1)">
-            <p id="ultimafecha" style="margin-top: 20px;">16 de noviembre 2021</p>
-            <p id="ultimatitulo">¡Loteria de Navidad!</p>
-            <p class="breve">Llegadas estas fechas, queremos contarte, que ya esta disponible nuestra 
-                lotería solidaria de Navidad y nuestro calendario 2022.<br>
-                Amor y agradecimiento derrochan todos nuestros pequeñajos, ya que muchos de los 
-                animalitos que pudimos rescatar del abandono y el maltrato este año, 
-                han sido adoptados y disfrutan de una vida feliz.<br> Otros siguen 
-                con nosotros, a la espera de que vayan apareciendo las personas con las que iniciarán 
-                una nueva vida.<br>
-        </div>  
+        <div class="ultima" >
+            <img src="./assets/noticias/loteria.jpg" id="ultimafoto" >
+            <p id="ultimafecha" style="margin-top: 20px;">{{noticia.fecha_publicacion}}</p>
+            <p id="ultimatitulo">{{noticia.titular}}</p>
+            <p class="breve">{{noticia.descripcion}}<br>
+            </div>
+        <!-- <div>
+            No hay noticias
+        </div> -->
     </article> 
     <!-- Columna2, noticias-->
     <article class="noticiascolumna">
         <div class="noticias">
             <img src="./assets/noticias/RASTRILLO.jpg" class="fotopequeña" (click)="open(content1)">
-            <div  class="fecha">
+            <div class="fecha">
                 <p class="fechapequeña" style="margin-top: -11px;">10 de diciembre 2021</p>
                 <p class="titulopequeño">Mercadillo solidario</p>
             </div>

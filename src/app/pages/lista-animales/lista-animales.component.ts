@@ -13,7 +13,7 @@ export class ListaAnimalesComponent implements OnInit {
   public animales: Animal[];
 
   constructor(private animalServicio: AnimalService) { 
-   
+    this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
   }
 
   ngOnInit(): void {
@@ -21,35 +21,8 @@ export class ListaAnimalesComponent implements OnInit {
   onSubmit(form: NgForm){
     console.log(this.animal);
   }
-
-
-  mostrar(nombre:string){
-
-    // for(let i=0;i<this.animal.length;i++){
-
-    // }
-
-    if(nombre!=''){
-      this.animalServicio.obtenerAnimal(nombre).subscribe((data:Animal[]) => 
-      {    
-        console.log(data)
-        this.animal.nombre = data[0].nombre;
-      }   
-      )
-    // }else{
-    
-    //   this.animalServicio.obtenerDiscos().subscribe((data:Disco[])=> { 
-
-    //     this.discos=data;
-    //    console.log(data)
-     
-    //   this.arrayDiscosLongitud=this.discos.length;
-      
-
-    
-    //   })
-       
-      
-   }  
-  }
+mostrar(nombre){
+  console.log(this.animales)
+}
+  
 }

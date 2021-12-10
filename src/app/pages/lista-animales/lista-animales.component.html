@@ -28,18 +28,20 @@
                     <select id="tipoAnimal" style="background-color: white;" class="redondeado" name="tipoAnimal"  [(ngModel)]="animal.tipo_animal" #tipoAnimal="ngModel" #tipo_animal>
                         <!-- <option value="" disabled selected>Selecciona tipo</option> -->
                         <option value="1">Perro</option> 
-                        <option value="2">Gato</option> 
+                        <option value="2">Gato</option>
+                        <option value="2">Roedores</option>
+                        <option value="2">Otros</option>  
                     </select>
                 </div>
              
 
                <!--Input fecha ingreso-->
               
-                <!-- <div class="form-group" style="margin-left: 10px;">
+                <div class="form-group" style="margin-left: 10px;">
                   <label for="start" style="margin-left: 10px;">Ingreso:</label><br>
-                  <input type="date" id="start" name="ftiempoAdopcion"  class="redondeado" value="" min="2018-01-01" max="2021-12-31"
-                    [(ngModel)]="animal.tiempoAdopcion" #tiempoAdopcion="ngModel"> 
-                </div> -->
+                  <input type="date" id="start" name="fecha_ingreso"  class="redondeado" value="" min="2018-01-01" max="2021-12-31"
+                    [(ngModel)]="animal.fecha_ingresso" #fecha_ingreso="ngModel">  
+                </div>
                 
                
         </div>
@@ -53,59 +55,25 @@
      </div>
 
     </form>
-    <div class="columna">
-        <div >
+    <div class="columna" *ngFor ='let animal of animales'>
+        <div>
             <img src="./assets/noticias/dog.jpg" class="imagen">
             <p style="text-align: center; margin-top: 10px; font-weight: bold;" *ngIf="animal!=null && nombre.value!='';">{{animal.nombre}}</p>
         </div>
-        <div>
-            <img src="./assets/img/perfil-usuario/cerdito.webp" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Pin-Pon</p>
-        </div>
-        <div>
-            <img src="./assets/noticias/kitten.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Polo</p>
-        </div>
-        <div>
-            <img src="./assets/img/Página inicio/Peluso.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Peluso</p>
-        </div>
+        
+        
        
     </div>
-    <div class="columna">
+    <div class="columna" *ngFor= 'let animal of animales'>
         <div>
             <img src="./assets/img/perfil-usuario/gato1.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Bigotes</p>
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">{{animal.nombre}}</p>
         </div>
-        <div>
-            <img src="./assets/img/perfil-usuario/hamster.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Goloso</p>
-        </div>
-        <div>
-            <img src="./assets/img/perfil-usuario/puppy.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Buda</p>
-        </div>
-        <div>
-            <img src="./assets/img/perfil-usuario/gato3.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Brooklyn</p>
-        </div>
-    </div>
-    <div class="columna">
+    
+    <div class="columna" *ngFor= 'let animal of animales'>
         <div>
             <img src="./assets/img/perfil-usuario/cocker.webp" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Cocker</p>
-        </div>
-        <div>
-            <img src="./assets/img/perfil-usuario/gato.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Chicho</p>
-        </div>
-        <div>
-            <img src="./assets/img/perfil-usuario/spike.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Spike</p>
-        </div>
-        <div>
-            <img src="./assets/img/Página inicio/Gato ojos.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">Salem</p>
+            <p style="text-align: center; margin-top: 10px; font-weight: bold;">{{animal.nombre}}</p>
         </div>
     </div>
 </div>
