@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Login } from 'src/app/models/login';
 import { Protectora } from 'src/app/models/protectora';
 import { Usuario } from 'src/app/models/usuario';
