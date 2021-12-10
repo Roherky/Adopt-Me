@@ -17,24 +17,16 @@
         </div>
         <!-- Login de usuario -->
         <div class="login-usuario" style="background-color: transparent;">
-            <form #usuarioLogin="ngForm" (ngSubmit)="onSubmit(usuarioLogin)">
+            <form>
                 <!-- Correo electrónico -->
                 <div class="form-group" id="email-usuario">
                     <label style="margin-bottom: 1%;">Correo electrónico</label>
-                    <input id="input-usuarioEmail" type="email" name="email" class="form-control" [(ngModel)]="usuario.email" #email="ngModel"
-                    [ngClass]="{'is-invalid': (email.dirty || email.touched) && email.invalid}" required>
-                    <div class="invalid-feedback" *ngIf="(email.dirty || email.touched) && email.invalid">
-                        <p *ngIf="email.errors?.['required']">Debes introducir un correo electrónico</p>
-                    </div>
+                    <input id="input-usuarioEmail" type="email" name="email" class="form-control" #email>
                 </div>
                 <!-- Contraseña -->
                 <div class="form-group" id="password-usuario">
                     <label style="margin-bottom: 1%;">Contraseña</label>
-                    <input id="input-usuarioPassword" type="password" name="password" class="form-control" [(ngModel)]="usuario.password" #password="ngModel"
-                    [ngClass]="{'is-invalid': (password.dirty || password.touched) && password.invalid}" required>
-                    <div class="invalid-feedback" *ngIf="(password.dirty || password.touched) && password.invalid">
-                        <p *ngIf="password.errors?.['required']">Debes introducir una contraseña</p>
-                    </div>
+                    <input id="input-usuarioPassword" type="password" name="password" class="form-control" #password>
                 </div>
                 <!-- Checkbox de recordar usuario e hipervínculo para recuperar la contraseña -->
                 <div class="recordar-pass">
@@ -52,7 +44,7 @@
                 <!-- Botón de login -->
                 <div class="boton">
                     <div class="form-group" id="contenedor-boton">
-                        <button id="boton" class="btn btn-primary btn-block">Iniciar sesión</button>
+                        <button id="boton" class="btn btn-primary btn-block" (click)="hacerLogin(email.value, password.value)">Iniciar sesión</button>
                     </div>
                 </div>
                 <!-- Hipervínculo para registrarse -->
