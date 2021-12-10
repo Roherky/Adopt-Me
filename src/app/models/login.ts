@@ -1,7 +1,7 @@
 export class Login {
-    constructor(public id: number,
-                public id_adoptante: number,
-                public id_protectora: number,
+    constructor(public id: any,
+                public id_adoptante: any,
+                public id_protectora: any,
                 public email: string,
                 public password: string){}
 }
