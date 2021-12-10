@@ -22,7 +22,6 @@ export class NoticiasComponent implements OnInit {
   }
 // mostrar noticias
 public getNoticias(id: any){
-  console.log("hola")
   if(id != ""){
     this.apiService.getNoticia(id).subscribe((data: any) => {
       this.noticias = [data[0]];

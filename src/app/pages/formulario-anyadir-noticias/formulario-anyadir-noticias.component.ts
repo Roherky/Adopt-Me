@@ -26,7 +26,7 @@ export class FormularioAnyadirNoticiasComponent implements OnInit {
       if (data != "-1")
       {
         alert("Se ha insertado la noticia con id: " + data);
-        this.apiService.getNoticia(this.noticia);
+        
       }  
       else
         alert("Error al insertar la noticia");

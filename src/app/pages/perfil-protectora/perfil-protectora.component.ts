@@ -37,19 +37,19 @@ export class PerfilProtectoraComponent implements OnInit {
     })
   }
 
-   insertarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, descripcion:string)
-  { 
-    this.apiService.postProtectora(new Protectora(id, nombre, direccion, localidad,email, password, telefono,descripcion))
-    .subscribe((data:any) =>
-    {
-      console.log(data);
-      if(data != "-1")
-       alert("se ha insertado una nueva protectora con id: " + data)
-      else
-        alert("Error al insertar la protectora");
+  //  insertarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, descripcion:string)
+  // { 
+  //   this.apiService.postProtectora(new Protectora(id, nombre, direccion, localidad,email, password, telefono,descripcion))
+  //   .subscribe((data:any) =>
+  //   {
+  //     console.log(data);
+  //     if(data != "-1")
+  //      alert("se ha insertado una nueva protectora con id: " + data)
+  //     else
+  //       alert("Error al insertar la protectora");
       
-    })
-  }
+  //   })
+  // }
  
   public modificarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, descripcion:string)
   {
@@ -66,19 +66,19 @@ export class PerfilProtectoraComponent implements OnInit {
     })
   }
 
-   eliminarProtectora(id:string)
-  {
-    this.apiService.deleteProtectora({"id":id})
-    .subscribe((data) =>
-    {
-      console.log(data);
-      if (data != "-1")
-      alert("Se ha eliminado la protectora con id: " + data)
-    else
-      alert("Error al eliminar la protectora");
+  //  eliminarProtectora(id:string)
+  // {
+  //   this.apiService.deleteProtectora({"id":id})
+  //   .subscribe((data) =>
+  //   {
+  //     console.log(data);
+  //     if (data != "-1")
+  //     alert("Se ha eliminado la protectora con id: " + data)
+  //   else
+  //     alert("Error al eliminar la protectora");
 
-    })
+  //   })
 
-  }
+  // }
 
 }
