@@ -1,0 +1,129 @@
+ <!-- Página para protectora -->
+ <div class="container">
+<h1>Editar perfil</h1>
+ 
+    <form action="../../form-result.php" method="put" enctype="multipart/form-data" target="_blank" #editarPerfil="ngForm" (ngSubmit)="onSubmit(editarPerfil)">
+        
+        <!--Input nombre-->
+        <div class="row"> 
+              <div class="col">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text"  class="redondeado" name="nombre" [(ngModel)]="protectora.nombre" #nombre="ngModel" placeholder="Nombre"
+                    [ngClass]="{'is-invalid': editarPerfil.submitted && nombre.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="editarPerfil.submitted && nombre.invalid">
+                        <p *ngIf="nombre.errors?.['required']">El nombre es obligatorio</p>
+                       </div>
+                </div>
+              </div>
+  
+               <!--Input direccion-->
+               <div class="col">
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text"  class="redondeado" name="direccion" [(ngModel)]="protectora.direccion" #direccion="ngModel"  placeholder="Direccion" 
+                    [ngClass]="{'is-invalid': editarPerfil.submitted && direccion.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="editarPerfil.submitted && direccion.invalid">
+                        <p *ngIf="direccion.errors?.['required']">La direccion es obligatoria</p>
+                       </div>
+                </div>
+              </div> 
+          
+
+               <!--Input localidad-->
+              <div class="col">
+                <div class="form-group">
+                    <label>Localidad</label>
+                    <input type="text"  class="redondeado" name="localidad" [(ngModel)]="protectora.localidad" #localidad="ngModel"  placeholder="Localidad" 
+                    [ngClass]="{'is-invalid': editarPerfil.submitted && localidad.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="editarPerfil.submitted && localidad.invalid">
+                        <p *ngIf="localidad.errors?.['required']">La localidad es obligatoria</p>
+                       </div>
+                </div>
+              </div>
+  
+           
+        </div>
+  
+  
+            <div class="row"> 
+              <!--input telefono-->
+             
+             <div class="col">
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text"  class="redondeado" name="telefono" [(ngModel)]="protectora.telefono" #telefono="ngModel"  placeholder="Telefono" 
+                    [ngClass]="{'is-invalid': editarPerfil.submitted && telefono.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="editarPerfil.submitted && telefono.invalid">
+                        <p *ngIf="telefono.errors?.['required']">El teléfono es obligatoria</p>
+                       </div>
+                </div>
+              </div>
+       
+                               
+  
+  
+              <!--url imagen-->
+              
+             <div class="col-sm-8">
+                <div class="form-group">
+                   <label>Url imagen </label><br>
+                <input type="text"  class="redondeado" name="imagen" [(ngModel)]="protectora.imagen" #imagen="ngModel" placeholder="url imagen" 
+                [ngClass]="{'is-invalid': editarPerfil.submitted && imagen.invalid}" required>
+                <div class="invalid-feedback" *ngIf="editarPerfil.submitted && imagen.invalid">
+                 <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
+                </div>
+            </div>
+        </div>
+      </div> 
+
+  <!--Textarea detalles-->
+            <div class="row"> 
+                 <div class="col" style="margin-top: 20px;">
+              <label>Descripcion</label><br>
+              <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="protectora.descripcion" #descripcion="ngModel" placeholder="Descripción" 
+               [ngClass]="{'is-invalid': editarPerfil.submitted && descripcion.invalid}" required></textarea>
+               <div class="invalid-feedback" *ngIf="editarPerfil.submitted && descripcion.invalid">
+                <p *ngIf="descripcion.errors?.['required']">La descripción es obligatoria</p>
+               </div>
+            
+            </div>   
+        </div>
+  
+
+
+  
+  <!--Boton guardar-->
+  <div style="display: flex; justify-content: center; gap:40px">
+  <button class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
+    <!-- Botón de eliminar cuenta -->
+    <div class="form-group" id="contenedor-boton"> 
+        <button type="button" id="botonEliminar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Eliminar cuenta
+        </button> 
+    </div>
+   </div> 
+   
+
+
+  <!-- </form> -->
+<!-- </div> -->
+
+<!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="border-radius: 1em;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres eliminar tu cuenta?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    Si eliminas la cuenta perderás toda la información que tengas y no podrás recuperarla
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar cuenta</button>
+                    </div>
+                </div>
+            </div>
+        </div> 

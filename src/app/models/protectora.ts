@@ -8,8 +8,8 @@ export class Protectora {
                 public email: string,
                 public password: string,
                 public telefono: string,
-                public descripcion: string
+                public descripcion: string,
                 // public animales: Animal[],
-                // public imagenes: []
+                public imagen: string,
                 ){}
 }

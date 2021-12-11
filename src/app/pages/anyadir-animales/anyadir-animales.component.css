@@ -53,40 +53,7 @@ label{
 
 
 
-   .input-file {
-       position: relative;
-       display: inline-block;
-   }
-
-   .input-file::before {
-       background-color: rgb(238, 238, 238);
-       color: black;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       border-radius: 1em;
-       content: 'Subir imagen';
-       position: absolute;
-       left: 0;
-       right: 0;
-       top: 0;
-       bottom: 0;
-       width: 23em;
-       height: 2em;
-   }
-
-   .input-file::before:hover {
-       background-color: black;
-   }
-
-   .input-file[type="file"] {
-       opacity: 0;
-       display: inline-block;
-   }
-
-   #input-file {
-       content: 'Seleccionar archivo';
-   }
+   
 
 
  @media all and (max-width: 994px){ 

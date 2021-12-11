@@ -22,7 +22,7 @@ export class PerfilProtectoraComponent implements OnInit {
     perfectamente aisladas y con mantas para las épocas de frío, especialmente dada su cercanía con la sierra. \
     Así mismo todos tienen su patio para que salgan a tomar el aire cuando quieran mientras esperan su turno de salida. \
     Durante su estancia en el albergue, aparte de ejercicio, nuestros perros reciben todos los cuidados necesarios: \
-    alimentación, atención veterinaria, paseos con los voluntarios, y por supuesto, muchísimo cariño. \ ')
+    alimentación, atención veterinaria, paseos con los voluntarios, y por supuesto, muchísimo cariño. \ ',"")
   }
 
   ngOnInit(): void {
@@ -51,10 +51,10 @@ export class PerfilProtectoraComponent implements OnInit {
   //   })
   // }
  
-  public modificarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, descripcion:string)
+  public modificarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, descripcion:string, imagen:string)
   {
     
-    this.apiService.putProtectora(new Protectora(id, nombre, direccion, localidad,email, password, telefono, descripcion))
+    this.apiService.putProtectora(new Protectora(id, nombre, direccion, localidad,email, password, telefono, descripcion,imagen))
 
     .subscribe((data:any) => 
     {

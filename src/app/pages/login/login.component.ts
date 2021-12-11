@@ -15,20 +15,20 @@ export class LoginComponent implements OnInit {
   public protectora: Protectora;
   public login: Login;
 
-  constructor(private loginService: SesionesService) {
-    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "");
-    this.protectora = new Protectora(0,"", "", "", "", "", "","");
+  constructor() {
+    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "","");
+    this.protectora = new Protectora(0,"", "", "", "", "", "","","");
   }
 
   hacerLogin(email: string, password: string){
-    console.log(email);
-    console.log(password);
-    let object = new Login(0, 0, 0, email, password);
-    this.loginService.postLogin(object).subscribe((data: any) => {
-      console.log(data);
-      if(data != "-1") console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
-      else console.log("Ha ocurrido un error al procesar su solicitud");
-    })
+    // console.log(email);
+    // console.log(password);
+    // let object = new Login(0, 0, 0, email, password);
+    // this.loginService.postLogin(object).subscribe((data: any) => {
+    //   console.log(data);
+    //   if(data != "-1") console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
+    //   else console.log("Ha ocurrido un error al procesar su solicitud");
+    // })
   }
 
   ngOnInit(): void {

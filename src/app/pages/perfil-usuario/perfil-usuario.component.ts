@@ -15,7 +15,7 @@ export class PerfilUsuarioComponent implements OnInit {
   public adoptantes: Usuario[];
 
   constructor(private apiService: UsuarioService) {
-    this.usuario = new Usuario(0, "Nuria", "Fernández", "21 - Julio - 1990", 600000000 , "nuri@gmail.com", "", "Getafe","", "")
+    this.usuario = new Usuario(0, "Nuria", "Fernández", "21 - Julio - 1990", 600000000 , "nuri@gmail.com", "", "Getafe","", "","")
   }
 
   public mostrarAdoptante(id: any){
@@ -34,9 +34,9 @@ export class PerfilUsuarioComponent implements OnInit {
 
   public modificarAdoptante(id: any, nombre: string, apellidos: string, fechaNacimiento: string, 
                             telefono: number, email: string, password: string, localidad: string,
-                            direccion: string, imagenPerfil: string){
+                            direccion: string, descripcion:string, imagenPerfil: string){
     this.apiService.putAdoptante(new Usuario(id, nombre, apellidos, fechaNacimiento, telefono, email,
-                                             password, localidad, direccion, imagenPerfil))
+                                             password, localidad, direccion, descripcion, imagenPerfil))
     .subscribe((data: any) => {
       console.log(data);
       if(data != "-1") console.log("Su solicitud se ha procesado con éxito");
