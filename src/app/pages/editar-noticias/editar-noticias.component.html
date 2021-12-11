@@ -1,1 +1,150 @@
-<p>editar-noticias works!</p>
+<!-- Página para protectora -->
+<div class="container">
+    <h1>Editar noticias</h1>
+     
+        <form action="../../form-result.php" method="put" enctype="multipart/form-data" target="_blank" #editarNoticias="ngForm" (ngSubmit)="onSubmit(editarNoticias)">
+            
+            <!--Input titular-->
+            <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                  <label>Titular</label><br>
+                  <input type="text"  class="redondeado" name="titular" [(ngModel)]="noticias.titular" #titular="ngModel" placeholder="Titular"
+                  [ngClass]="{'is-invalid': editarNoticias.submitted && titular.invalid}" required>
+                  <div class="invalid-feedback" *ngIf="editarNoticias.submitted && titular.invalid">
+                      <p *ngIf="titular.errors?.['required']">El titular es obligatorio</p>
+                     </div>
+                </div>
+                </div>
+      
+                   <!--Input categoria-->
+                   <div class="col">
+                    <div class="form-group">
+                        <label>Categoria</label><br>
+                        <select id="categoria"  class="redondeado" type="radio" name="categoria"  [(ngModel)]="noticias.categoria" #categoria="ngModel" 
+                        [ngClass]="{'is-invalid': editarNoticias.submitted && categoria.invalid}" style ="background-color: white;" required>
+                        <option value="" disabled selected>Selecciona categoria</option>
+                            <option value="urgente">Urgente</option>
+                            <option value="destacado">Destacado</option>
+                            <option value="lo último">Lo último</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                        <div class="invalid-feedback" *ngIf="editarNoticias.submitted  && categoria.invalid">
+                            <p *ngIf="categoria.errors?.['required']">Debes elegir una categoria</p>
+                        </div>    
+                        
+                    </div>
+                </div>
+              
+    
+                   <!--Input prioridad-->
+                   <div class="col">
+                    <div class="form-group">
+                    <label>Prioridad de la noticia</label><br>
+                    <select name="prioridad" class="redondeado" [(ngModel)]="noticias.prioridad" #prioridad="ngModel"
+                    [ngClass]="{'is-invalid': editarNoticias.submitted && prioridad.invalid}" style ="background-color: white;" required>
+                    <option value="" disabled selected>Selecciona la prioridad</option>
+                        <option value="muy importante">Muy importante</option>
+                        <option value="importante">Importante</option>
+                        <option value="normal">Normal</option>
+                        <option value="no importante">No importante</option>
+                     </select>
+                     <div class="invalid-feedback" *ngIf="editarNoticias.submitted  && prioridad.invalid">
+                        <p *ngIf="prioridad.errors?.['required']">Debes elegir una prioridad</p>
+                    </div>
+                  </div>
+                </div>
+      
+               
+            </div>
+      
+      
+                
+                  <!--input fecha-->
+                 <div class="row" > 
+                    <div class="col">
+                        <div class="form-group">
+                          <label for="start">Fecha noticia</label><br>
+        
+                          <input type="date" id="noticia" name="fecha_publicacion" class="redondeado"
+                                 value="2021-11-29"
+                                 min="2018-01-01" max="2021-12-31"
+                                 [(ngModel)]="noticias.fecha_publicacion" #fecha_publicacion="ngModel"
+                                 [ngClass]="{'is-invalid': editarNoticias.submitted && fecha_publicacion.invalid}" required>
+                                 <div class="invalid-feedback" *ngIf="editarNoticias.submitted && fecha_publicacion.invalid">
+                                    <p *ngIf="fecha_publicacion.errors?.['required']">Introduce la fecha de la noticia</p>
+                                </div>
+                      </div>
+                    </div>
+                 
+           
+                                   
+      
+      
+                  <!--url imagen-->
+                  <div class="col" style="margin-left: -400px;">
+                    <div class="form-group">
+                        <label>Url imagen</label>
+                        <input type="text"  class="redondeado" name="imagen" [(ngModel)]="noticias.imagen" #imagen="ngModel" placeholder="imagen"
+                        [ngClass]="{'is-invalid': editarNoticias.submitted && imagen.invalid}" required>
+                        <div class="invalid-feedback" *ngIf="editarNoticias.submitted && imagen.invalid">
+                            <p *ngIf="imagen.errors?.['required']">La url de la imagen es obligatoria</p>
+                           </div>
+                    </div>
+                  </div>
+                
+                
+                 
+          </div> 
+    
+      <!--Textarea detalles-->
+                <div class="row"> 
+                     <div class="col" style="margin-top: 20px;">
+                  <label>Descripcion</label><br>
+                  <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="noticias.descripcion" #descripcion="ngModel" placeholder="Descripción" 
+                   [ngClass]="{'is-invalid': editarNoticias.submitted && descripcion.invalid}" required></textarea>
+                   <div class="invalid-feedback" *ngIf="editarNoticias.submitted && descripcion.invalid">
+                    <p *ngIf="descripcion.errors?.['required']">La descripción es obligatoria</p>
+                   </div>
+                
+                </div>   
+            </div>
+      
+    
+    
+      
+      <!--Boton guardar-->
+      <div style="display: flex; justify-content: center; gap:40px">
+      <button class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
+        <!-- Botón de eliminar noticia -->
+        <div class="form-group" id="contenedor-boton"> 
+            <button type="button" id="botonEliminar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Eliminar noticia
+            </button> 
+        </div>
+       </div> 
+       
+    
+    
+      </form>
+    <!-- </div> -->
+    
+    <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="border-radius: 1em;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres eliminar la noticia?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Si eliminas la noticia perderás toda la información que tengas y no podrás recuperarla
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar noticia</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
