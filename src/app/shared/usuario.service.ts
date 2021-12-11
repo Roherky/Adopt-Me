@@ -20,7 +20,7 @@ export class UsuarioService {
   }
 
   public postAdoptante(nuevoAdoptante: Usuario){
-    return this.http.post(this.url, nuevoAdoptante);
+    return this.http.post(this.url, nuevoAdoptante, {responseType: "text"});
   }
 
   public putAdoptante(adoptanteActualizado: Usuario){
