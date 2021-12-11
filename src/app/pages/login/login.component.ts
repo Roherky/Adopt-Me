@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   public protectora: Protectora;
 
   constructor() {
-    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "");
-    this.protectora = new Protectora(0,"", "", "", "", "", "","");
+    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "","");
+    this.protectora = new Protectora(0,"", "", "", "", "", "","","");
   }
 
   onSubmit(form: NgForm){

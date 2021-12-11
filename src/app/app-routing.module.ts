@@ -22,6 +22,7 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
 import { RecordarContrasenyaComponent } from './pages/recordar-contrasenya/recordar-contrasenya.component';
 import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
 import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
+import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,7 @@ const routes: Routes = [
   {path: "recordarContraseña", component: RecordarContrasenyaComponent},
   {path: "modificarAnimal", component: ModificarAnimalComponent},
   {path: "formularioImagenes", component: FormularioImagenesComponent},
+  {path: "editarPerfilProtectora", component: EditarPerfilProtectoraComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

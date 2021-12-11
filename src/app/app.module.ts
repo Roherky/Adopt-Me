@@ -43,6 +43,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
+import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
+
+
 
 
 @NgModule({
@@ -70,7 +73,9 @@ import { FormularioImagenesComponent } from './pages/formulario-imagenes/formula
     EditarPerfilComponent,
     RecordarContrasenyaComponent,
     ModificarAnimalComponent,
-    FormularioImagenesComponent
+    FormularioImagenesComponent,
+    EditarPerfilProtectoraComponent,
+    
   ],
   imports: [
     MatToolbarModule,

@@ -9,7 +9,7 @@ import { Noticia} from '../models/noticia';
 export class NoticiaService {
 
   public noticia: Noticia
-  private url = "http://localhost:3000/noticias"
+  private url = "http://localhost:300/noticias"
 
   constructor(private http: HttpClient) { }
 

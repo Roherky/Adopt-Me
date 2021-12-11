@@ -32,7 +32,7 @@
             <div class="form-group">
                 <label>Sexo</label><br>
                 <select id="genero"  class="redondeado" type="radio" name="genero"  [(ngModel)]="animal.sexo" #genero="ngModel" #sexo
-                [ngClass]="{'is-invalid': anyadirAnimal.submitted && genero.invalid}" required>
+                [ngClass]="{'is-invalid': anyadirAnimal.submitted && genero.invalid}" style ="background-color: white;" required>
                 <option value="" disabled selected>Selecciona género</option>
                     <option value="macho">Macho</option> 
                     <option value="hembra">Hembra</option> 
@@ -53,7 +53,7 @@
               <label>Tamaño</label><br>
 
            <select id="tamanyo"  class="redondeado" type="radio" name="tamanyo"  [(ngModel)]="animal.tamanyo" #tamanyo="ngModel" #stamany
-           [ngClass]="{'is-invalid': anyadirAnimal.submitted && tamanyo.invalid}" required>
+           [ngClass]="{'is-invalid': anyadirAnimal.submitted && tamanyo.invalid}" style ="background-color: white;" required>
            <option value="" disabled selected>Selecciona tamaño</option>
                <option value="pequeño">Pequeño</option> 
                <option value="mediano">Mediano</option> 
@@ -73,10 +73,12 @@
               <div class="form-group">
               <label>Tipo de Animal</label><br>
               <select id="tipoAnimal"  class="redondeado" name="tipo"  [(ngModel)]="animal.tipo_animal" #tipo="ngModel"
-              [ngClass]="{'is-invalid': anyadirAnimal.submitted && tipo.invalid}" required>
+              [ngClass]="{'is-invalid': anyadirAnimal.submitted && tipo.invalid}" style ="background-color: white;" required>
                 <option value="" disabled selected>Selecciona tipo</option>
                 <option value="perro">Perro</option> 
                 <option value="gato">Gato</option> 
+                <option value="roedor">Roedor</option> 
+                <option value="otro">Otro</option> 
              </select>
              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && tipo.invalid">
               <p *ngIf="tipo.errors?.['required']">Debes elegir el tipo de animal</p>
@@ -89,7 +91,7 @@
             <div class="col">
               <div class="form-group">
                 <label for="start">Ingreso:</label><br>
-                <input type="date" id="start" name="fechaIngreso"  class="redondeado"
+                <input type="date" id="start" name="fechaIngreso"  class="redondeado" style ="background-color: white;"
                        value=""
                        min="2018-01-01" max="2021-12-31"
                        [(ngModel)]="animal.fecha_ingresso" #fechaIngreso="ngModel"
@@ -107,7 +109,7 @@
               <div class="form-group">
               <label>Estado</label><br>
               <select id="estadoAnimal"  class="redondeado" name="estadoAnimal"  [(ngModel)]="animal.estado" #estadoAnimal="ngModel" #estado
-              [ngClass]="{'is-invalid': anyadirAnimal.submitted && estadoAnimal.invalid}" required>
+              [ngClass]="{'is-invalid': anyadirAnimal.submitted && estadoAnimal.invalid}" style ="background-color: white;" required>
                 <option value="" disabled selected>Selecciona estado</option>
                 <option value="adoptado">adoptado</option> 
                 <option value="adopcion">adopcion</option> 
@@ -121,15 +123,15 @@
       </div>
 
 
-            <!--id Protectora-->
+            <!--url imagen-->
             
             <div class="col-sm-8">
               <div class="form-group">
-                 <label>ID Protectora</label><br>
-              <input type="text"  class="redondeado" name="idProtectora" [(ngModel)]="animal.id_protectora" #idProtectora="ngModel" placeholder="ID Protectora" #idProtecto
-              [ngClass]="{'is-invalid': anyadirAnimal.submitted && idProtectora.invalid}" required>
-              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && idProtectora.invalid">
-               <p *ngIf="idProtectora.errors?.['required']">El id de la protectora es obligatorio</p>
+                 <label>Url imagen </label><br>
+              <input type="text"  class="redondeado" name="url" [(ngModel)]="animal.idAnimal" #idAnimal="ngModel" placeholder="url imagen" #url
+              [ngClass]="{'is-invalid': anyadirAnimal.submitted && idAnimal.invalid}" required>
+              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && idAnimal.invalid">
+               <p *ngIf="idAnimal.errors?.['required']">La imagen es obligatoria</p>
               </div>
           </div>
       </div>
@@ -139,8 +141,8 @@
           <div class="row">
                <!--Textarea detalles-->
               <div class="col">
-            <label>Detalles</label><br>
-            <textarea class="form-control" id="detalles" name="descripcione" [(ngModel)]="animal.descripcion" #descripcione="ngModel" placeholder="descripción" #descrip
+            <label>Descripcion</label><br>
+            <textarea class="form-control" id="detalles" name="descripcione" [(ngModel)]="animal.descripcion" #descripcione="ngModel" placeholder="Descripción" #descripcion
              [ngClass]="{'is-invalid': anyadirAnimal.submitted && descripcione.invalid}" required></textarea>
              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && descripcione.invalid">
               <p *ngIf="descripcione.errors?.['required']">La descripción es obligatoria</p>
@@ -151,7 +153,7 @@
 
 
            <!--Enviar imágenes-->
-<div class="imagenes">
+<!-- <div class="imagenes">
   <div class="form-group">
       <h5 style="margin-top: 4%; margin-bottom: 3%;">Imagen</h5>
       <div class="input-file" id="input-file">
@@ -162,7 +164,7 @@
           </div>
       </div>
   </div>
-</div>
+</div> -->
 
 
 <!--Boton añadir animal-->

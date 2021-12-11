@@ -8,7 +8,7 @@
      color: #fff;
      border-radius: 15px;
      border: 2px solid orange;
-
+    text-decoration: none;
   
 
  }
@@ -17,6 +17,7 @@
  #botonModificar{
     width: 200px;
      background-color: #5EC0CA;
+     
      color: #fff;
      border-radius: 15px;
      border: 2px solid #5EC0CA;
@@ -24,14 +25,14 @@
    
  }
 
- #botonCrear{
+ /* #botonCrear{
     width: 200px;
     border-radius: 1em;
     background-color: orange;
     color: #fff;
     border:none;
     text-decoration: none;
- }
+ } */
 
 
  .boton{

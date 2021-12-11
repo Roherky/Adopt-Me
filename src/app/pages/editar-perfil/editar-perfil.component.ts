@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Protectora } from 'src/app/models/protectora';
-import { ProtectoraService } from 'src/app/shared/protectora.service';
+import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/app/shared/usuario.service';
+
 
 @Component({
   selector: 'app-editar-perfil',
@@ -10,25 +11,32 @@ import { ProtectoraService } from 'src/app/shared/protectora.service';
 })
 export class EditarPerfilComponent implements OnInit {
 
-  public tipoUsuario: string;
-  public protectora:Protectora
+ 
+  public usuario: Usuario;
+  
 
-  constructor(private apiService: ProtectoraService) {
-    this.tipoUsuario = "protectora";
+  constructor( private apiService: UsuarioService) {
+    
+    
   }
   onSubmit(form: NgForm){
-    this.apiService.putProtectora(this.protectora)
+    
+    this.apiService.putAdoptante(this.usuario)
     .subscribe((data:string) =>
     {
     
       console.log(data);
       if (data != "-1")
-        alert("Se modificado la protectora con id: " + data)
+        alert("Se modificado el usuario" + data)
       else
-        alert("Error al modificar la protectora");
+        alert("Error al modificar el usuario");
 
     })
+
   }
+
+    
+ 
 
   ngOnInit(): void {
   }
