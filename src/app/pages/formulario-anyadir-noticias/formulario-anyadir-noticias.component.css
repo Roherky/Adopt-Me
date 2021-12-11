@@ -24,43 +24,22 @@ label{
      width: 200px; 
      background-color: #5EC0CA; 
      color: #fff;
+     border-style: none;
      border-radius: 10px;
      padding: 10px;
-     margin-top: 20px;
+     margin-top: 120px;
  }
 
- #subirImagen{
-    font-weight: bold; 
-    font-size: 20px;
-    font-family: sans-serif;
- }
 
- #detalles{
-    width: 87%; 
+
+ #descripcion{
+    width: 89%; 
     height: 200%;
     border-radius: 10px;
 
  }
 
 
- .notasYbtn{
-    margin-top: 40px;
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-    width: 200%;
-    height: 300%;
-     gap: 100px;
-   
- }
-
- #textAreaNotas{
-    
-    width: 90%;
-    height: 120px;
-    border-radius: 10px;
-    margin-right: 400px;
- }
 
  .row{
      margin-bottom: 20px;
@@ -69,13 +48,6 @@ label{
  .form-group{
     width: 250px;
   }
-
-
- .input-file {
-    position: relative;
-    display: inline-block;
-}
-
 
 .redondeado {
   border-radius: 1em;
@@ -93,68 +65,15 @@ label{
   margin-top: 130px;
 }
 
-  .input-file {
-      position: relative;
-      display: inline-block;
-  }
-
-  .input-file::before {
-      background-color: rgb(238, 238, 238);
-      color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 1em;
-      content: 'Subir imagen';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 23em;
-      height: 2em;
-  }
-
-  .input-file::before:hover {
-      background-color: black;
-  }
-
-  .input-file[type="file"] {
-      opacity: 0;
-      display: inline-block;
-  }
-
-  #input-file {
-      content: 'Seleccionar archivo';
-  }
-
+  
   .row{
     margin-bottom: 20px;
   }
 
- @media all and (max-width: 1128px){ 
-
-    .notasYbtn{
-      
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: right;
-        gap: 20px;
-       
-     }   
-}
 
  @media all and (max-width: 994px){ 
 
     input, select{
         margin-bottom: 20px;
     }
-}
-
-@media all and (max-width: 858px){ 
-
-    #textAreaNotas{
-    
-        width: 80%;    
- }
 }

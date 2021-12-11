@@ -1,0 +1,85 @@
+.container h1{
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    
+}
+.container{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+label{
+    font-family: sans-serif;
+}
+
+
+ select{
+     padding: 7px;
+ }
+
+
+ #botonEnviar{
+   width: 200px;
+   border-radius: 1em;
+   background-color: orange;
+   color: #fff;
+   border:none;
+   text-decoration: none;
+   display: block;
+   margin-top: 70px;
+}
+#botonEliminar{
+    width: 200px;
+    border-radius: 1em;
+    background-color: #5EC0CA;
+    color: #fff;
+    border:none;
+    text-decoration: none;
+    display: block;
+    margin-top: 70px;
+
+}
+
+#botonCancelar{
+    width: 200px;
+    border-radius: 1em;
+    background-color: orange;
+    color: #fff;
+    border:none;
+    text-decoration: none;
+    display: block;
+    margin-top: 70px;
+}
+ #descripcion{
+    width: 90%; 
+    height: 150px;
+    border-radius: 10px;
+ }
+
+ .row{
+    margin-bottom: 20px;
+}
+
+ .form-group{
+    width: 250px;
+ }
+
+
+ .redondeado {
+   border-radius: 1em;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 250px;
+  }
+
+
+  
+
+ @media all and (max-width: 994px){ 
+
+    input, select{
+        margin-bottom: 20px;
+    }
+}
