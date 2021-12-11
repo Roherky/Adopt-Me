@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Lista de animales</h1>
-    <form  method="post" enctype="multipart/form-data" target="_blank" class="formulario">
+    <div class="formulario">
         
         
              <!--Input nombre-->
@@ -13,10 +13,10 @@
                 
             <div class="form-group" style="margin-left: 10px;">
                 <label style="margin-left: 10px;">Sexo</label><br>
-                <select id="genero" style="background-color: white;" class="redondeado" type="radio" name="genero"  [(ngModel)]="animal.sexo" #genero="ngModel" #sexo>
-                <!-- <option value="" disabled selected>Selecciona género</option> -->
-                    <option value="1">Macho</option> 
-                    <option value="2">Hembra</option> 
+                <select id="genero" style="background-color: white;" class="redondeado" type="radio" name="genero" #sexo>
+                    <option value=""  selected>Selecciona género</option>
+                    <option value="macho">Macho</option> 
+                    <option value="hembra">Hembra</option> 
                 </select>
             </div>
         
@@ -25,12 +25,12 @@
               
                 <div class="form-group" style="margin-left: 10px;">
                     <label style="margin-left: 10px;">Tipo de Animal</label><br>
-                    <select id="tipoAnimal" style="background-color: white;" class="redondeado" name="tipoAnimal"  [(ngModel)]="animal.tipo_animal" #tipoAnimal="ngModel" #tipo_animal>
-                        <!-- <option value="" disabled selected>Selecciona tipo</option> -->
-                        <option value="1">Perro</option> 
-                        <option value="2">Gato</option>
-                        <option value="2">Roedores</option>
-                        <option value="2">Otros</option>  
+                    <select id="tipoAnimal" style="background-color: white;" class="redondeado" name="tipoAnimal" #tipo_animal>
+                        <option value=""  selected>Selecciona tipo</option>
+                        <option value="perro">Perro</option> 
+                        <option value="gato">Gato</option>
+                        <option value="roedores">Roedores</option>
+                        <option value="otros">Otros</option>  
                     </select>
                 </div>
              
@@ -40,7 +40,7 @@
                 <div class="form-group" style="margin-left: 10px;">
                   <label for="start" style="margin-left: 10px;">Ingreso:</label><br>
                   <input type="date" id="start" name="fecha_ingreso"  class="redondeado" value="" min="2018-01-01" max="2021-12-31"
-                    [(ngModel)]="animal.fecha_ingresso" #fecha_ingreso="ngModel">  
+                  #fecha_ingresso>  
                 </div>
                 
                
@@ -49,31 +49,25 @@
       <div class="botondiv">
         <div class="row" >
             <div class="col"class="botosposicion" >
-                <button type="submit" id="botonEnviar" (click) = "mostrar(nombre.value)">Buscar</button>
+                <button type="submit" id="botonEnviar" (click) = "mostrar(nombre.value, sexo.value, tipo_animal.value, fecha_ingresso.value)">Buscar</button>
             </div>
         </div>
      </div>
 
-    </form>
-    <div class="columna" *ngFor ='let animal of animales'>
-        <div>
-            <img src="./assets/noticias/dog.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;" *ngIf="animal!=null && nombre.value!='';">{{animal.nombre}}</p>
-        </div>
-        
-        
-       
     </div>
-    <div class="columna" *ngFor= 'let animal of animales'>
-        <div>
-            <img src="./assets/img/perfil-usuario/gato1.jpg" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">{{animal.nombre}}</p>
-        </div>
-    
-    <div class="columna" *ngFor= 'let animal of animales'>
-        <div>
-            <img src="./assets/img/perfil-usuario/cocker.webp" class="imagen">
-            <p style="text-align: center; margin-top: 10px; font-weight: bold;">{{animal.nombre}}</p>
-        </div>
+
+
+<div class="row">
+    <div *ngFor="let anim of animales" class="col-3">
+        
+        <figure>
+        
+        <img src="{{anim.imagen}}" class="imagen">
+        <figcaption style="font-weight: bold;">{{anim.nombre}}</figcaption>
+    </figure>
     </div>
 </div>
+
+
+</div>
+

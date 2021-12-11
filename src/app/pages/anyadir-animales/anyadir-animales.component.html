@@ -77,6 +77,8 @@
                 <option value="" disabled selected>Selecciona tipo</option>
                 <option value="perro">Perro</option> 
                 <option value="gato">Gato</option> 
+                <option value="roedores">Roedores</option> 
+                <option value="otros">Otros</option> 
              </select>
              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && tipo.invalid">
               <p *ngIf="tipo.errors?.['required']">Debes elegir el tipo de animal</p>
@@ -120,10 +122,22 @@
         </div>
       </div>
 
+      <!--Imagen-->
+      <div class="col">
+        <div class="form-group">
+            <label>Imagen</label>
+            <input type="text"  class="redondeado" name="imagenAnimal" [(ngModel)]="animal.imagen" #imagenAnimal="ngModel" placeholder="Imagen" #image
+            [ngClass]="{'is-invalid': anyadirAnimal.submitted && imagenAnimal.invalid}" required>
+            <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && imagenAnimal.invalid">
+                <p *ngIf="imagenAnimal.errors?.['required']">La imagen es obligatoria</p>
+               </div>
+        </div>
+      </div>
+
 
             <!--id Protectora-->
             
-            <div class="col-sm-8">
+            <div class="col">
               <div class="form-group">
                  <label>ID Protectora</label><br>
               <input type="text"  class="redondeado" name="idProtectora" [(ngModel)]="animal.id_protectora" #idProtectora="ngModel" placeholder="ID Protectora" #idProtecto
@@ -151,7 +165,7 @@
 
 
            <!--Enviar imágenes-->
-<div class="imagenes">
+<!-- <div class="imagenes">
   <div class="form-group">
       <h5 style="margin-top: 4%; margin-bottom: 3%;">Imagen</h5>
       <div class="input-file" id="input-file">
@@ -162,7 +176,10 @@
           </div>
       </div>
   </div>
-</div>
+</div> -->
+
+
+
 
 
 <!--Boton añadir animal-->

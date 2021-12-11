@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AnimalService {
 
-  private url = "http://localhost:3000/animal";
+  private url = "http://localhost:300/animal";
 
   public animal: Animal;
 
@@ -18,8 +18,9 @@ export class AnimalService {
   }
 
 
-  obtenerAnimal(idAnimal:string){
-    let url= "http://localhost:3000/animal?idAnimal=" +idAnimal; 
+  obtenerAnimal(nombre:string,sexo:string,tipoAnimal:string,fechaIngreso:string){
+    let url= `http://localhost:300/animal?nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
+    console.log(url);
     return this.http.get(url)
   }
 

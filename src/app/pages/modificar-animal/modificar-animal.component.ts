@@ -20,8 +20,8 @@ export class ModificarAnimalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-  editarAnimal(idAnimal:any, nombre: string, raza: string, sexo: string, imagen:string, tipo_animal:string,  estado:string, fecha_ingresso:string, descripcion:string, id_protectora:any, tamanyo:string){
+
+  editarAnimal(idAnimal:any, nombre: string, raza: string, sexo: string, tamanyo:string, tipo_animal:string,  fecha_ingresso:string, estado:string, imagen:string, id_protectora:any, descripcion:string, ){
 
     let animal=new Animal(idAnimal, nombre, raza, sexo, imagen, tipo_animal,  estado, fecha_ingresso, descripcion, id_protectora, tamanyo)
       for(let propiedad in animal){

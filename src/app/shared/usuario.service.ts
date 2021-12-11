@@ -7,7 +7,7 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-  private url = "http://localhost:3000/adoptante";
+  private url = "http://localhost:300/adoptante";
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class UsuarioService {
   }
 
   public postAdoptante(nuevoAdoptante: Usuario){
-    return this.http.post(this.url, nuevoAdoptante);
+    return this.http.post(this.url, nuevoAdoptante, {responseType: "text"});
   }
 
   public putAdoptante(adoptanteActualizado: Usuario){

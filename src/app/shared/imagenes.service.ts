@@ -7,7 +7,7 @@ import { Imagenes } from '../models/imagenes';
 })
 export class ImagenesService {
 
-  private url = "http://localhost:3000/imagenes";
+  private url = "http://localhost:300/imagenes";
 
   public imagenes:Imagenes;
 
@@ -20,7 +20,7 @@ export class ImagenesService {
   }
 
   obtenerImagen(id_imagenes:number){
-    let url= "http://localhost:3000/imagenes?id_imagenes=" +id_imagenes; 
+    let url= "http://localhost:300/imagenes?id_imagenes=" +id_imagenes; 
     return this.http.get(url)
   }
 

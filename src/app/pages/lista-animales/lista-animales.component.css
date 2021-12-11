@@ -65,6 +65,7 @@ h1{
     cursor: pointer;
 }
 
+
 .clase1{
     display: flex;
     flex-direction: row;
@@ -94,6 +95,21 @@ h1{
     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
  }
+
+
+
+ figure {
+    display: inline-block;
+   
+    margin: 20px; /* adjust as needed */
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+ 
+    text-align: center;
+}
 
  #botonEnviar:hover {
     box-shadow: 0 0 40px 40px #f5993e inset;

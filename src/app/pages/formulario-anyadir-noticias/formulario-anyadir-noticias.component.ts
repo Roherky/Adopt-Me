@@ -13,7 +13,8 @@ export class FormularioAnyadirNoticiasComponent implements OnInit {
   public noticia:Noticia
 
   constructor(private apiService: NoticiaService) { 
-    this.noticia=new Noticia("", "", "", "", "", "",0);
+    this.noticia=new Noticia("", "", "", "", "", "",null);
+    
   }
 
 

@@ -13,16 +13,43 @@ export class ListaAnimalesComponent implements OnInit {
   public animales: Animal[];
 
   constructor(private animalServicio: AnimalService) { 
-    this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
+    
   }
 
   ngOnInit(): void {
+    this.animalServicio.obtenerAnimales()
+    .subscribe((data:Animal[])=>{
+      this.animales=data;
+      console.log(this.animales);
+    })
   }
-  onSubmit(form: NgForm){
-    console.log(this.animal);
-  }
-mostrar(nombre){
-  console.log(this.animales)
+
+mostrar(nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
+
+  console.log(nombre);
+  console.log(sexo);
+  console.log(tipo_animal);
+  console.log(fecha_ingresso);
+
+  console.log(this.animales);
+  this.animalServicio.obtenerAnimal(nombre, sexo, tipo_animal, fecha_ingresso)
+  .subscribe((data:Animal[])=>{
+    this.animales=data;
+    console.log(this.animales);
+  })
+  
+  // this.animalServicio.obtenerAnimales()
+  // .subscribe((data:Animal[])=>{
+
+  //   if(data.length>0){
+  //     console.log(data);
+     
+  //     this.animales=data;
+  //     console.log(this.animales);
+     
+  //   }
+  // })
 }
+
   
 }
