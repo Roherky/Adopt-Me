@@ -28,8 +28,13 @@ export class UsuarioService {
   }
 
   public deleteAdoptante(id: any){
+    let data ={"id_Adoptante": id}
     console.log(id);
-    const httpOptions = {headers: {'Content-Type': 'application/json'}, body: id};
-    return this.http.delete(this.url, httpOptions);
+    let params = {
+      headers: {"Content-type": "application/json; charset = UTF-8"},
+      body: JSON.stringify(data),
+      method: "DELETE"
+    }
+    return this.http.delete(this.url, params);
   }
 }
