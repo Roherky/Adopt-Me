@@ -44,6 +44,7 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
 import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
+import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias.component';
 
 
 
@@ -75,6 +76,7 @@ import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protector
     ModificarAnimalComponent,
     FormularioImagenesComponent,
     EditarPerfilProtectoraComponent,
+    EditarNoticiasComponent,
     
   ],
   imports: [
