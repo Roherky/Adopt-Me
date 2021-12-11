@@ -1,5 +1,5 @@
 export class Noticia {
-    constructor(public titular: string,
+    constructor(public titulo: string,
                 public categoria: string,
                 public prioridad: string,
                 public fecha_publicacion: string,

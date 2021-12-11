@@ -8,10 +8,10 @@
               <div class="col">
                 <div class="form-group">
                 <label>Titular</label><br>
-                <input type="text"  class="redondeado" name="titular" [(ngModel)]="noticia.titular" #titular="ngModel" placeholder="Titular"
-                [ngClass]="{'is-invalid': anyadirNoticia.submitted && titular.invalid}" required>
-                <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && titular.invalid">
-                    <p *ngIf="titular.errors?.['required']">El titular es obligatorio</p>
+                <input type="text"  class="redondeado" name="titulo" [(ngModel)]="noticia.titulo" #titulo="ngModel" placeholder="Título"
+                [ngClass]="{'is-invalid': anyadirNoticia.submitted && titulo.invalid}" required>
+                <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && titulo.invalid">
+                    <p *ngIf="titulo.errors?.['required']">El título es obligatorio</p>
                    </div>
               </div>
               </div>
@@ -23,10 +23,10 @@
                 <select name="categoria" class="redondeado" [(ngModel)]="noticia.categoria" #categoria="ngModel"
                 [ngClass]="{'is-invalid': anyadirNoticia.submitted && categoria.invalid}" required>
                 <option value="" disabled selected>Selecciona la categoría</option>
-                    <option value="1">Urgente</option>
-                    <option value="2">Destacado</option>
-                    <option value="3">Lo último</option>
-                    <option value="4">Otros</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="destacado">Destacado</option>
+                    <option value="Lo último">Lo último</option>
+                    <option value="otros">Otros</option>
                  </select>
                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted  && categoria.invalid">
                     <p *ngIf="categoria.errors?.['required']">Debes elegir una categoría</p>
@@ -41,10 +41,10 @@
                 <select name="prioridad" class="redondeado" [(ngModel)]="noticia.prioridad" #prioridad="ngModel"
                 [ngClass]="{'is-invalid': anyadirNoticia.submitted && prioridad.invalid}" required>
                 <option value="" disabled selected>Selecciona la prioridad</option>
-                    <option value="1">Muy importante</option>
-                    <option value="2">Importante</option>
-                    <option value="3">Normal</option>
-                    <option value="4">No importante</option>
+                    <option value="muy importante">Muy importante</option>
+                    <option value="importante">Importante</option>
+                    <option value="normal">Normal</option>
+                    <option value="4no importante">No importante</option>
                  </select>
                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted  && prioridad.invalid">
                     <p *ngIf="prioridad.errors?.['required']">Debes elegir una prioridad</p>
@@ -69,6 +69,17 @@
                         </div>
               </div>
             </div>
+
+            <div class="col-sm-8">
+              <div class="form-group">
+                  <label>Imagen</label>
+                  <input type="text"  class="redondeado" name="imagen" [(ngModel)]="noticia.imagen" #imagen="ngModel" placeholder="Imagen" #image
+                  [ngClass]="{'is-invalid': anyadirNoticia.submitted && imagen.invalid}" required>
+                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && imagen.invalid">
+                      <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
+                     </div>
+              </div>
+            </div>
             </div>
 
             <div class="row">
@@ -80,9 +91,9 @@
            </div>
        </div>
 
-       <div class="row">
+       <!-- <div class="row">
        
-       <!--Subir imagen-->
+     
        <div class="imagenes">
         <div class="form-group">
             <h5>Imagen</h5>
@@ -95,13 +106,13 @@
             </div>
         </div>
       </div>
-    </div>
+    </div> -->
   
  <!--textarea notas y botón enviar-->
     <div class="notasYbtn">
         <div>
               <label>Id_Protectora</label><br>
-              <textarea id="id_Protectora" name="id_Protectora" [(ngModel)]="noticia.id_Protectora" #id_Protectora="ngModel"></textarea>
+              <input type="text" id="id_Protectora" name="id_Protectora" [(ngModel)]="noticia.id_Protectora" #id_Protectora="ngModel">
           </div>
     <button type="submit" class="btn btn-primary btn-block"  id="botonEnviar" (click)="onSubmit">Guardar</button>
    </div>
