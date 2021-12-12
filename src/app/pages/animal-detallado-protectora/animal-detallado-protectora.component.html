@@ -1,9 +1,9 @@
 <div class="container">
     <h1>Perfil</h1>
   
-    <h2>King</h2>
+    <h2>{{animal.nombre}}</h2>
 <div class="info">
-    <img id="imagenInfo" src="../../../assets/perro5.jpg">
+    <img id="imagenInfo" src="{{animal.imagen}}">
     <table>
         <thead>
             <tr>
@@ -27,8 +27,8 @@
     </table>
 </div>
 <div class="boton">
-    <a type="reset"  class="form-control" id="botonEliminar"  style="text-align: center; ">Eliminar</a>
-     <a type="reset" class="form-control" id="botonModificar" href="modificarAnimal" style="text-align: center; ">Modificar</a>
+    <a type="reset"  class="form-control" id="botonEliminar" (click)="eliminar(animal.idAnimal)"  style="text-align: center; ">Eliminar</a>
+     <a type="reset" class="form-control" id="botonModificar"  [routerLink]="['/modificarAnimal']"  style="text-align: center; ">Modificar</a>
 </div>
     <hr>
     <div class="descripcion">

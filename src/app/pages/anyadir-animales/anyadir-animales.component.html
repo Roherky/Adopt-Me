@@ -122,10 +122,10 @@
         </div>
       </div>
 
-      <!--Imagen-->
+      <!--imagen-->
       <div class="col">
         <div class="form-group">
-            <label>Imagen</label>
+            <label>URL Imagen</label>
             <input type="text"  class="redondeado" name="imagenAnimal" [(ngModel)]="animal.imagen" #imagenAnimal="ngModel" placeholder="Imagen" #image
             [ngClass]="{'is-invalid': anyadirAnimal.submitted && imagenAnimal.invalid}" required>
             <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && imagenAnimal.invalid">
@@ -135,19 +135,20 @@
       </div>
 
 
-            <!--url imagen-->
+            <!--id protectora-->
             
             <div class="col">
               <div class="form-group">
-                 <label>Url imagen </label><br>
-              <input type="text"  class="redondeado" name="url" [(ngModel)]="animal.idAnimal" #idAnimal="ngModel" placeholder="url imagen" #url
-              [ngClass]="{'is-invalid': anyadirAnimal.submitted && idAnimal.invalid}" required>
-              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && idAnimal.invalid">
-               <p *ngIf="idAnimal.errors?.['required']">La imagen es obligatoria</p>
+                 <label>ID Protectora</label><br>
+              <input type="text"  class="redondeado" name="idProtectora" [(ngModel)]="animal.id_protectora" #idProtectora="ngModel" placeholder="ID Protectora" #idProtecto
+              [ngClass]="{'is-invalid': anyadirAnimal.submitted && idProtectora.invalid}" required>
+              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && idProtectora.invalid">
+               <p *ngIf="idProtectora.errors?.['required']">El id de la protectora es obligatorio</p>
               </div>
           </div>
       </div>
     </div>
+
            
 
           <div class="row">

@@ -43,13 +43,13 @@
                   #fecha_ingresso>  
                 </div>
                 
-                   
+               
         </div>
       <!--Botón enviar-->
       <div class="botondiv">
         <div class="row" >
             <div class="col"class="botosposicion" >
-                <button type="submit" id="botonEnviar" (click) = "mostrar(nombre.value, sexo.value, tipo_animal.value, fecha_ingresso.value)">Buscar</button>
+                <button type="submit" id="botonEnviar" (click) = "mostrar(2, nombre.value, sexo.value, tipo_animal.value, fecha_ingresso.value)">Buscar</button>
             </div>
         </div>
      </div>
@@ -58,11 +58,11 @@
 
 
 <div class="row">
-    <div *ngFor="let anim of animales" class="col-3" [routerLink]="['/perfilAnimal']" (click)="mostrarDetalle(anim.idAnimal)">
+    <div *ngFor="let anim of animales" class="col-3" [routerLink]="['/animalDetalleProtectora']" (click)="mostrarDetalle(anim.idAnimal)">
         
         <figure>
-        
-        <img src="{{anim.imagen}}" class="imagen">
+           
+         <img src="{{anim.imagen}}" class="imagen" >
         <figcaption style="font-weight: bold;">{{anim.nombre}}</figcaption>
     </figure>
     </div>
@@ -70,4 +70,5 @@
 
 
 </div>
+
 

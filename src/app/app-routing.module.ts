@@ -24,6 +24,7 @@ import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-ani
 import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
 import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
 import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias.component';
+import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protectora/lista-animales-protectora.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,7 @@ const routes: Routes = [
   {path: "formularioImagenes", component: FormularioImagenesComponent},
   {path: "editarPerfilProtectora", component: EditarPerfilProtectoraComponent},
   {path:"editarNoticias", component:EditarNoticiasComponent},
+  {path:"listaAnimalesProtectora", component:ListaAnimalesProtectoraComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

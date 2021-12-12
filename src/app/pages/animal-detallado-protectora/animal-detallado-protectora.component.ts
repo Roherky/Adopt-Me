@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/models/animal';
+import { AnimalService } from 'src/app/shared/animal.service';
+
 
 
 @Component({
@@ -10,14 +12,80 @@ import { Animal } from 'src/app/models/animal';
 export class AnimalDetalladoProtectoraComponent implements OnInit {
 
   public animal:Animal
+  public animales: Animal[];
+  public id:number;
+
+  constructor(private animalServicio: AnimalService) { 
+
+  
+  }
 
 
-  constructor() { 
+//   eliminarDisco(id:any){
 
-    this.animal=new Animal(null, "King", "Labrador", "Macho", "imagen.jpg", "Perro", "adoptado", "2020/12/12", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", null, "grande");
+//     if(id!=""){
+
+//     this.apiService.borrarDisco(id)
+//     .subscribe((data:string) =>{
+ 
+   
+//       if (data == "1"){
+
+//       alert("Disco eliminado");
+
+//       }else
+//       alert("Error al eliminar el disco");
+   
+//     })
+//   }else{
+//     alert("El campo id tiene que contener un id.");
+//   }
+
+// }
+
+
+
+
+  eliminar(idAnimal){
+    console.log("eliminarrrrrrrrrr");
+    console.log(idAnimal);
+    if(idAnimal!=""){
+
+      this.animalServicio.borrarAnimal(idAnimal)
+      .subscribe((data:string) =>{
+        console.log(data);
+        console.log("dataaaaaaaaaaaaaaaaaaaaaaaaa");
+     
+        if (data == "1"){
+
+          alert("Animal eliminado");
+         
+          }else
+          alert("Error al eliminar el animal");
+       
+        })
+    }
+
+
+
   }
 
   ngOnInit(): void {
+   
+
+   this.id= this.animalServicio.idAnimal;
+   console.log(this.id);
+  
+   console.log(this.animal);
+   
+   this.animalServicio.obtenerId(this.id)
+   .subscribe((data:Animal[])=>{
+   
+           this.animal=data[0];
+       
+         })
+
+
   }
 
 

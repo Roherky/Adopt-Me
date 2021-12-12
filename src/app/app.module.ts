@@ -45,6 +45,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormularioImagenesComponent } from './pages/formulario-imagenes/formulario-imagenes.component';
 import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
 import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias.component';
+import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protectora/lista-animales-protectora.component';
 
 
 
@@ -77,6 +78,7 @@ import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias
     FormularioImagenesComponent,
     EditarPerfilProtectoraComponent,
     EditarNoticiasComponent,
+    ListaAnimalesProtectoraComponent,
     
   ],
   imports: [

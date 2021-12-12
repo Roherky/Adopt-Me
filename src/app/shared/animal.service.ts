@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Animal } from '../models/animal';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,6 +11,8 @@ export class AnimalService {
   private url = "http://localhost:300/animal";
 
   public animal: Animal;
+
+  public idAnimal:number;
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +26,36 @@ export class AnimalService {
     console.log(url);
     return this.http.get(url)
   }
+
+
+  obtenerAnimalProtectora(idProtectora:number, nombre:string,sexo:string,tipoAnimal:string,fechaIngreso:string){
+    let url= `http://localhost:300/animal?idProtec=${idProtectora}&nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
+    console.log(url);
+    return this.http.get(url)
+  }
+
+  obtenerAnimalesProtectora(idProtectora:number){
+    let url= `http://localhost:300/animal?idProtec=${idProtectora}`; 
+    return this.http.get(url)
+  }
+
+
+  obtenerIdAnimal(idAnimal:number){
+ 
+   this.idAnimal=idAnimal
+   return this.idAnimal;
+  }
+
+ 
+
+  obtenerId(idAnimal:number){
+  let url= `http://localhost:300/animal?idAnimal=${idAnimal}`; 
+  console.log(url);
+  console.log("shhhhhhhhhareddddddddddddddd")
+  console.log(this.idAnimal);
+    return this.http.get(url);
+  }
+
 
   
   añadirAnimal(nuevoAnimal: Animal)

@@ -51,5 +51,16 @@ mostrar(nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
   // })
 }
 
+
+mostrarDetalle(idAnimal){
+
+  console.log("id del animallllllllllllllll");
+  console.log(idAnimal)
+  console.log("id del animal");
+  this.animalServicio.obtenerIdAnimal(idAnimal);
+  console.log("id del animal otttttttttttttttttttttt");
+  console.log(idAnimal)
+}
+
   
 }
