@@ -2,102 +2,29 @@
     <div class="titulo">
         <h1 style="margin-top: 5%; margin-left: 3%;">Finales felices</h1>
     </div>
-    <div class="imagenes" *ngIf="finalesFelices == null">
-        <!-- Primera fila -->
-        <div class="fila1">
-            <!-- Primera tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 1.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Laika</p>
-                </div>
-            </div>
-            <!-- Segunda tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 2.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Chispy</p>
-                </div>
-            </div>
-            <!-- Tercera tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 3.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Cristal</p>
-                </div>
-            </div>
-            <!-- Cuarta tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 4.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Turca</p>
-                </div>
-            </div>
+    <div class="row" *ngIf="finalesFelices.length >= 1">
+      <div *ngFor="let final of finalesFelices" class="col-3">
+        <div class="card" style="width: 18rem; border-radius: 1em;">
+          <img src="{{final.imagenes}}" class="card-img-top" alt="" style="width: 18em; height: 12em;" (click)="abrirModal(content1)">
+          <div class="card-body">
+            <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{final?.nombreAnimal}}</p>
+          </div>
         </div>
-        <!-- Segunda fila -->
-        <div class="fila2">
-            <!-- Primera tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 5.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Golfo</p>
-                </div>
-            </div>
-            <!-- Segunda tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 6.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Bayron</p>
-                </div>
-            </div>
-            <!-- Tercera tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 7.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Natilla</p>
-                </div>
-            </div>
-            <!-- Cuarta tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 8.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Nubarrón y Vendaval</p>
-                </div>
-            </div>
-        </div>
-        <!-- Tercera fila -->
-        <div class="fila3">
-            <!-- Primera tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 9.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Oreo</p>
-                </div>
-            </div>
-            <!-- Segunda tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 10.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Quicky</p>
-                </div>
-            </div>
-            <!-- Tercera tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 11.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Bellota</p>
-                </div>
-            </div>
-            <!-- Cuarta tarjeta -->
-            <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="./../../../assets/img/Página finales felices/Perro 12.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;">Kuky</p>
-                </div>
-            </div>
-        </div>
+        <!-- Modal -->
+    <ng-template #content1 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{final?.nombreAnimal}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{final?.descripcion}}</p>
+      </div>
+    </ng-template>
+      </div>
     </div>
-    <div class="sinFinales" *ngIf="finalesFelices != null">
+    <div class="sinFinales" *ngIf="finalesFelices.length == 0">
         <div class="logo">
             <img src="./../../../assets/img/Logo.png">
         </div>

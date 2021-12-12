@@ -5,39 +5,26 @@
     height: 100%;
 }
 
-.imagenes {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-    .fila1 {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-evenly;
-        margin-top: 2%;
+    .row {
+        margin-top: 1%;
+        margin-left: 3%;
+        width: 97%;
     }
 
-    .fila2 {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-evenly;
-        margin-top: 2%;
-    }
-
-    .fila3 {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-evenly;
-        margin-top: 2%;
-        margin-bottom: 5%;
+    .card {
+        margin-top: 5%;
     }
 
     .card-img-top:hover {
         filter: brightness(70%);
+    }
+
+    .close {
+        background-color: #5EC0CA;
+        width: 2em;
+        height: 2em;
+        border-radius: 5em;
+        border-style: none;
     }
 
 .sinFinales {
