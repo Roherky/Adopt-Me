@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { FinalFeliz } from 'src/app/models/final-feliz';
 import { FinalFelizService } from 'src/app/shared/final-feliz.service';
 
@@ -11,12 +12,13 @@ export class FormularioFinalesFelicesComponent implements OnInit {
 
   public finalFeliz: FinalFeliz;
 
-  constructor(private apiService: FinalFelizService) {
+  constructor(private finalService: FinalFelizService) {
     this.finalFeliz = new FinalFeliz(0, "", "", "", "", 0);
   }
 
-  public insertarFinalFeliz(nombreAnimal: string, fechaPublicacion: string, descripcion: string, imagenes: string){
-    this.apiService.postFinalFeliz(new FinalFeliz(0, nombreAnimal, fechaPublicacion, descripcion, imagenes, 0))
+  onSubmit(form: NgForm){
+    console.log(form);
+    this.finalService.postFinalFeliz(this.finalFeliz)
     .subscribe((data: any) => {
       console.log(data);
       if(data != "-1") console.log("Se ha añadido el final feliz correctamente");

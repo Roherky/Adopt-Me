@@ -38,47 +38,17 @@
         margin-left: 5%;
     }
 
-        .input-file {
-            position: relative;
-            display: inline-block;
-        }
-
-        .input-file::before {
-            background-color: rgb(238, 238, 238);
-            color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        #input-imagen {
+            width: 50%;
             border-radius: 1em;
-            content: 'Subir fichero';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 23em;
-            height: 2em;
-        }
-
-        .input-file::before:hover {
-            background-color: black;
-        }
-
-        .input-file[type="file"] {
-            opacity: 0;
-            /* width: 200px;
-            height: 32px; */
-            display: inline-block;
-        }
-
-        #input-file {
-            content: 'Seleccionar archivo';
+            margin-top: 0.5%;
         }
 
     .boton {
         display: flex;
-        justify-content: flex-end;
-        width: 60%;
+        justify-content: center;
+        width: 100%;
+        margin-top: 5%;
     }
 
     #boton {
