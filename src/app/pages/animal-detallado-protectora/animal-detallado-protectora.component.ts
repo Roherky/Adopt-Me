@@ -21,31 +21,6 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   }
 
 
-//   eliminarDisco(id:any){
-
-//     if(id!=""){
-
-//     this.apiService.borrarDisco(id)
-//     .subscribe((data:string) =>{
- 
-   
-//       if (data == "1"){
-
-//       alert("Disco eliminado");
-
-//       }else
-//       alert("Error al eliminar el disco");
-   
-//     })
-//   }else{
-//     alert("El campo id tiene que contener un id.");
-//   }
-
-// }
-
-
-
-
   eliminar(idAnimal){
     console.log("eliminarrrrrrrrrr");
     console.log(idAnimal);
