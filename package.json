@@ -1,13 +1,20 @@
 {
-  "name": "adopt-me",
+  "name": "Adopt-Me",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
+  "repository": 
+  {"type": "git",
+    "url": "git+https://github.com/Roherky/Adopt-Me.git"},
+    "homepage": "https://github.com/Roherky/Adopt-Me#readme",
+
   "private": true,
   "dependencies": {
     "@angular-material-components/file-input": "^7.0.1",
@@ -25,6 +32,7 @@
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "@popperjs/core": "^2.11.0",
     "bootstrap": "^5.1.3",
+    "express": "^4.17.1",
     "jquery": "^3.6.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

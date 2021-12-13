@@ -18,7 +18,7 @@ export class EditarPerfilProtectoraComponent implements OnInit {
   onSubmit(form: NgForm){
     
     this.apiService.putProtectora(this.protectora)
-    .subscribe((data:string) =>
+    .subscribe((data: any) =>
     {
       this.sesiones.id_usuario;
       console.log(data);

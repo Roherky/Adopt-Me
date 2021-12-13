@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
         alert("Error");
       }
     })
-    // this.guardarDatos(this.sesion);
   }
 
   ngOnInit(): void {
