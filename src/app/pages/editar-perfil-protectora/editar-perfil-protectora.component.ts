@@ -16,9 +16,8 @@ export class EditarPerfilProtectoraComponent implements OnInit {
   
   onSubmit(form: NgForm){
     this.apiService.putProtectora(this.protectora)
-    .subscribe((data:string) =>
+    .subscribe((data: any) =>
     {
-    
       console.log(data);
       if (data != "-1")
         alert("Se modificado la protectora " + data)
