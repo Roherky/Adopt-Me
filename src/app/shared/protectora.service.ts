@@ -18,10 +18,10 @@ export class ProtectoraService {
     return this.http.get(this.url + "/" + id);
   }
 
-  // public postProtectora(newProtectora: Protectora)
-  // {
-  //   return this.http.post(this.url, newProtectora);
-  // }
+  public postProtectora(newProtectora: Protectora)
+  {
+    return this.http.post(this.url, newProtectora);
+  }
 
   public putProtectora(modProtectora: Protectora)
   {
@@ -34,5 +34,15 @@ export class ProtectoraService {
   //   const httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body: id}
   //   return this.http.delete(this.url, httpOptions);
   // }
+  public deleteProtectora(id: any){
+    let data ={"id_Adoptante": id}
+    console.log(id);
+    let params = {
+      headers: {"Content-type": "application/json; charset = UTF-8"},
+      body: JSON.stringify(data),
+      method: "DELETE"
+    }
+    return this.http.delete(this.url, params);
+  }
 
 }

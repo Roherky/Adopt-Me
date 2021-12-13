@@ -15,7 +15,10 @@ export class PerfilUsuarioComponent implements OnInit {
   public adoptantes: Usuario[];
 
   constructor(private apiService: UsuarioService) {
-    this.usuario = new Usuario(0, "Nuria", "Fernández", "21 - Julio - 1990", 600000000 , "nuri@gmail.com", "", "Getafe","", "","")
+    this.usuario = new Usuario(0, "Nuria", "Fernández", "21 - Julio - 1990", 600000000 , "nuri@gmail.com", "", "Getafe","", "Me encantan las mascotas, desde muy pequeña he tenido variedad de animales en casa porque son una perfecta compañía. \
+    Actualmente tengo un perrito que adopte hace un par de meses, y con él disfruto en mi tiempo libre jugando, algunas veces hacemos ejercicio juntos e incluso es mi paño de lágrimas en aquellos días grises. \
+    Animo a todas las personas a adoptar, porque no solo iluminas la vida de un animal, además ayudas a liberar espacio en un albergue, lo que permite rescatar a más animales abandonados a su suerte. \
+    El amor que brindan los animales es tan puro que solo querrás tenerlo cerca siempre", "../../../assets/img/perfil-usuario/cocker.webp")
   }
 
   public mostrarAdoptante(id: any){

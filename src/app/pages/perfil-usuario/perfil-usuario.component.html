@@ -1,13 +1,11 @@
 
 <div class="container" style="background-image: url(./../../../assets/img/Fondo.jpg);">
-  <h1 style="margin-top: 20px; margin-bottom: 40px;">Nuria Fernández</h1>
+  <h1 style="margin-top: 20px; margin-bottom: 40px;">{{usuario.nombre}} {{usuario.apellidos}}</h1>
 
  
-
-  <!-- <h2>Abrazo Peludo</h2> -->
 <div class="info text-dark" style="background-color: rgb(238, 238, 238); margin-right: 90px; border-radius: 10px;">
 
-      <img id="imagenInfo" src="../../../assets/img/perfil-usuario/cocker.webp" style="width: 200px; height: 150px; border-radius: 15px;  margin-top: 10px; margin-bottom: 10px; margin-left: 10px;">
+      <img id="imagenInfo" src="{{usuario.imagenPerfil}}" style="width: 200px; height: 150px; border-radius: 15px;  margin-top: 10px; margin-bottom: 10px; margin-left: 10px;">
  
   <table>
       <thead>
@@ -51,12 +49,7 @@
     <div class="cms-heading layout1">
     <h3 class="custom-heading">Acerca de mi:</h3>
         <span>
-            Me encantan las mascotas, desde muy pequeña he tenido variedad de animales en casa porque son una perfecta compañía.
-            Actualmente tengo un perrito que adopte hace un par de meses, y con él disfruto en mi tiempo libre jugando, algunas veces
-            hacemos ejercicio juntos e incluso es mi paño de lágrimas en aquellos días grises.<br>
-            <br>Animo a todas las personas a adoptar, porque no solo iluminas la vida de un animal, además ayudas a liberar espacio en 
-            un albergue, lo que permite rescatar a más animales abandonados a su suerte. <br>
-            El amor que brindan los animales es tan puro que solo querrás tenerlo cerca siempre. 
+            <p>{{usuario.descripcion}}</p> 
         </span>
     </div>
 </section>
@@ -74,7 +67,7 @@
       </div>
     </div>
     <div class="card" style="border-radius:2em">
-      <img src="../../../assets/img/perfil-usuario/dog.webp" class="card-img-top" alt="...">
+      <img src="../../../assets/img/perfil-usuario/dog.webp" style="height: 140px;" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Amigos</h5>
       </div>
