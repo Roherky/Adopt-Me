@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   public usuario: Usuario;
   public protectora: Protectora;
   public login: Login;
+  public sesion: Login;
 
   constructor(private loginService: SesionesService, private router: Router) {
     this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "", "");
@@ -22,23 +23,26 @@ export class LoginComponent implements OnInit {
   }
 
   hacerLogin(email: string, password: string){
-    console.log(email);
-    console.log(password);
     let object = new Login(0, 0, 0, email, password);
     this.loginService.postLogin(object).subscribe((data: any) => {
       console.log(data);
-      // if(data != "-1") console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
-      // else console.log("Ha ocurrido un error al procesar su solicitud");      
-      if(data != "-1"){
-        localStorage.setItem('token', data);
-        this.router.navigate(['inicio']);
+      if(data.mensaje == "correcto"){
+        // localStorage.setItem('token', data.respuesta);
+        this.sesion = data.respuesta[0];
+        this.loginService.saveData(this.sesion);
+        if(this.sesion.id_adoptante != null){
+          this.router.navigate(['listadoAnimales']);
+        }
+        if(this.sesion.id_protectora != null){
+          this.router.navigate(['dashboard']);
+        }
         alert("Correctamente");
       }
       else {
         alert("Error");
       }
-
     })
+    // this.guardarDatos(this.sesion);
   }
 
   ngOnInit(): void {
