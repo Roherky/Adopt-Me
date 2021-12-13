@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/models/animal';
 import { AnimalService } from 'src/app/shared/animal.service';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-lista-animales-protectora',
@@ -12,17 +13,17 @@ export class ListaAnimalesProtectoraComponent implements OnInit {
   public animal: Animal;
   public animales: Animal[];
 
-  constructor(private animalServicio: AnimalService) { }
+  constructor(private animalServicio: AnimalService, private sesion: SesionesService) { }
 
   ngOnInit(): void {
-    this.animalServicio.obtenerAnimalesProtectora(2)
+    this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
     .subscribe((data:Animal[])=>{
       this.animales=data;
       console.log(this.animales);
     })
   }
 
-  mostrar(id_protectora:any, nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
+  mostrar(nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
 
     console.log(nombre);
     console.log(sexo);
@@ -30,7 +31,7 @@ export class ListaAnimalesProtectoraComponent implements OnInit {
     console.log(fecha_ingresso);
   
     console.log(this.animales);
-    this.animalServicio.obtenerAnimalProtectora(id_protectora, nombre, sexo, tipo_animal, fecha_ingresso)
+    this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
     .subscribe((data:Animal[])=>{
       this.animales=data;
       console.log(this.animales);

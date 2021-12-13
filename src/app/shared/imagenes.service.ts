@@ -19,8 +19,8 @@ export class ImagenesService {
     return this.http.get(this.url)
   }
 
-  obtenerImagen(id_imagenes:number){
-    let url= "http://localhost:300/imagenes?id_imagenes=" +id_imagenes; 
+  obtenerImagen(id_animal:number){
+    let url= "http://localhost:300/imagenes?id_animal="+id_animal; 
     return this.http.get(url)
   }
 
