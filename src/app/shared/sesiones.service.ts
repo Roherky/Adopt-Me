@@ -7,14 +7,28 @@ import { Login } from '../models/login';
 })
 export class SesionesService {
 
+  public tipo: string;
+  public id_usuario: number;
   private urlLogin = "http://localhost:300/login";
 
   constructor(private http: HttpClient) { }
 
 
   public postLogin(login: Login){
-    // console.log(login);
-    return this.http.post(this.urlLogin, login, {responseType: "text"});
+    return this.http.post(this.urlLogin, login);
+  }
+
+  public saveData(data: Login){
+    if(data.id_adoptante == null){
+      this.tipo = "protectora";
+      this.id_usuario = data.id_protectora;
+    }
+    else {
+      this.tipo = "adoptante";
+      this.id_usuario = data.id_adoptante;
+      console.log(this.tipo);
+      console.log(this.id_usuario);
+    }
   }
 
   isAuth(): boolean {
