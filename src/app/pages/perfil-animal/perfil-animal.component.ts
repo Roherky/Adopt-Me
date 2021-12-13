@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/models/animal';
+import { Imagenes } from 'src/app/models/imagenes';
 import { AnimalService } from 'src/app/shared/animal.service';
+import { ImagenesService } from 'src/app/shared/imagenes.service';
 @Component({
   selector: 'app-perfil-animal',
   templateUrl: './perfil-animal.component.html',
@@ -10,11 +12,12 @@ export class PerfilAnimalComponent implements OnInit {
 
   public animal:Animal
   public id:number;
+  public imagenes:Imagenes[];
 
 
-  constructor(private animalServicio: AnimalService) { 
+  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService) { 
 
-   
+   this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }
 
   ngOnInit(): void {
@@ -33,6 +36,16 @@ export class PerfilAnimalComponent implements OnInit {
            console.log(this.animal);
           
          })
+
+
+  this.imagenServicio.obtenerImagen(this.id)
+  .subscribe((data:Imagenes[])=>{
+    this.imagenes=data;
+    console.log(this.imagenes);
+
+  })
   }
+
+
 
 }

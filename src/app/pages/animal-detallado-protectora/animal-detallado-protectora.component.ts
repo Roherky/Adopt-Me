@@ -17,19 +17,19 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
 
   constructor(private animalServicio: AnimalService) { 
 
-  
+    this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }
 
 
   eliminar(idAnimal){
-    console.log("eliminarrrrrrrrrr");
+  
     console.log(idAnimal);
     if(idAnimal!=""){
 
       this.animalServicio.borrarAnimal(idAnimal)
       .subscribe((data:string) =>{
         console.log(data);
-        console.log("dataaaaaaaaaaaaaaaaaaaaaaaaa");
+       
      
         if (data == "1"){
 
@@ -59,10 +59,6 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
            this.animal=data[0];
        
          })
-
-
   }
-
-
 }
 
