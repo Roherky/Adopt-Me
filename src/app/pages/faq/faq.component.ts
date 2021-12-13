@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
   public mostrar: Boolean;
+  public pregunta: string;
+
   constructor() { 
     this.mostrar=false;
   }
-  public ver(){
+  public ver(respuesta:string){
+    this.pregunta=respuesta;
 
       this.mostrar=!this.mostrar
 
