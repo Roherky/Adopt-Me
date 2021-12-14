@@ -8,6 +8,7 @@ import { Noticia} from '../models/noticia';
 })
 export class NoticiaService {
 
+  public id:number
   public noticia: Noticia
   private url = "https://adopt-me2021.herokuapp.com/noticias"
 
