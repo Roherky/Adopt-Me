@@ -1,10 +1,11 @@
 .footer {
   display: flex;
+  position: unset;
   flex-direction: column;
   background-color: #e0dfdf;
   width: 100%;
   margin-top: 5%;
-  margin-bottom: 0;
+  bottom: 0;
   height: 11em
 }
 

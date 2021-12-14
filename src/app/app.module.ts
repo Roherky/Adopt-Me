@@ -101,6 +101,7 @@ import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protect
     MatFormFieldModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
