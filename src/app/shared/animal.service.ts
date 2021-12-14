@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AnimalService {
 
-  private url ="https://adopt-me-angular.herokuapp.com/animal"
+  private url ="https://adopt-me2021.herokuapp.com/animal"
   // private url = "http://localhost:300/animal";
 
   public animal: Animal;
@@ -23,7 +23,7 @@ export class AnimalService {
 
 
   obtenerAnimal(nombre:string,sexo:string,tipoAnimal:string,fechaIngreso:string){
-    let url= `https://adopt-me-angular.herokuapp.com/animal?nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
+    let url= `https://adopt-me2021.herokuapp.com/animal?nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
     // let url= `http://localhost:300/animal?nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
     console.log(url);
     return this.http.get(url)
@@ -31,7 +31,7 @@ export class AnimalService {
 
 
   obtenerAnimalProtectora(idProtectora:number, nombre:string,sexo:string,tipoAnimal:string,fechaIngreso:string){
-    let url= `https://adopt-me-angular.herokuapp.com/animal?idProtec=${idProtectora}&nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
+    let url= `https://adopt-me2021.herokuapp.com/animal?idProtec=${idProtectora}&nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
 
     // let url= `http://localhost:300/animal?idProtec=${idProtectora}&nombreAnimal=${nombre}&sexo=${sexo}&tipoAnimal=${tipoAnimal}&ingreso=${fechaIngreso}`; 
     console.log(url);
@@ -39,7 +39,7 @@ export class AnimalService {
   }
 
   obtenerAnimalesProtectora(idProtectora:number){
-    let url= `https://adopt-me-angular.herokuapp.com/animal?idProtec=${idProtectora}`; 
+    let url= `https://adopt-me2021.herokuapp.com/animal?idProtec=${idProtectora}`; 
     // let url= `http://localhost:300/animal?idProtec=${idProtectora}`; 
     return this.http.get(url)
   }
@@ -54,7 +54,7 @@ export class AnimalService {
  
 
   obtenerId(idAnimal:number){
-    let url= `https://adopt-me-angular.herokuapp.com/animal?idAnimal=${idAnimal}`; 
+    let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
   // let url= `http://localhost:300/animal?idAnimal=${idAnimal}`; 
   console.log(url);
   console.log("shhhhhhhhhareddddddddddddddd")
