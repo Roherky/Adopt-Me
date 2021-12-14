@@ -16,27 +16,32 @@ export class NoticiasComponent implements OnInit {
   
   closeResult = '';
   constructor(private modalService: NgbModal, private apiService: NoticiaService, public sesiones: SesionesService){
-    this.noticia = new Noticia("Loteria de Navidad", "urgente", "importante", "12-12-2022", "Ultimos dias para conseguir la loteria de navidad para ayudar a la protectora", "",1);
+    this.noticia = new Noticia("", "", "", "", "", "",null);
   }
 
-  ngOnInit(): void {
-  }
-// mostrar noticias
-public getNoticias(id: any){
-  if(id != ""){
-    this.apiService.getNoticia(id).subscribe((data: any) => {
-      
-      this.noticias = [data[0]];
-      console.log(data);
-    })
-  }
-  else {
-    this.apiService.getNoticias().subscribe((data: any) => {
-      this.noticias = data;
-      console.log(this.noticias);
-    })
-  }
+  ngOnInit(): void { 
+    this.apiService.getNoticias().subscribe((data: Noticia[]) => {
+    this.noticias = data;
+    console.log(this.noticias);
+  })
 }
+  
+// mostrar noticias
+// public getNoticias(id: any){
+//   if(id != ""){
+//     this.apiService.getNoticia(id).subscribe((data: any) => {
+      
+//       this.noticias = [data[0]];
+//       console.log(data);
+//     })
+//   }
+//   else {
+//     this.apiService.getNoticias().subscribe((data: any) => {
+//       this.noticias = data;
+//       console.log(this.noticias);
+//     })
+//   }
+// }
   // funcion modal
 open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
