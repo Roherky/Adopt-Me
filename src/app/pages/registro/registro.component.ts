@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 import { Protectora } from 'src/app/models/protectora';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/shared/usuario.service';
-
+import { Router } from '@angular/router';
+import { ProtectoraService } from 'src/app/shared/protectora.service';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -15,7 +16,7 @@ export class RegistroComponent implements OnInit {
   public usuario: Usuario;
   public protectora: Protectora;
 
-  constructor(private servicioAdoptante: UsuarioService) {
+  constructor(private servicioAdoptante: UsuarioService, private router: Router, private servicioProtectora: ProtectoraService) {
 
     this.esProtectora = false;
     this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "","");
@@ -31,11 +32,30 @@ export class RegistroComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    this.servicioAdoptante.postAdoptante(this.usuario).subscribe((data: any) => {
-      console.log(data);
-      if(data != "-1") console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
-      else console.log("Ha ocurrido un error al procesar su solicitud");
-    })
+    console.log(this.protectora);
+    console.log(form);
+    console.log(this.usuario);
+    if(this.usuario.nombre == ''){
+      console.log('Se registrado una protectora')
+      this.servicioProtectora.postProtectora(this.protectora).subscribe((data:any)=>{
+        console.log(data);
+        if(data !="-1"){
+          alert("Se guardado la protectora correctamente")
+          // this.router.navigate(['loguin']);
+        }else{
+          alert("error")
+        }
+      })
+      /// Hacer la post protectora  y envias this.protectora si no hace lo contrario
+    }else{
+        this.servicioAdoptante.postAdoptante(this.usuario).subscribe((data: any) => {
+        console.log(data);
+        // this.router.navigate(['loguin']);
+        if(data != "-1") console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
+        else console.log("Ha ocurrido un error al procesar su solicitud");
+      })
+    }
+
   }
 
   ngOnInit(): void {

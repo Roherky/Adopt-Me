@@ -8,6 +8,7 @@ import { Usuario } from '../models/usuario';
 export class UsuarioService {
 
   private url = "http://localhost:300/adoptante";
+  private urlgeneracion = "http://localhost:300/registro/adoptante";
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +21,7 @@ export class UsuarioService {
   }
 
   public postAdoptante(nuevoAdoptante: Usuario){
-    return this.http.post(this.url, nuevoAdoptante, {responseType: "text"});
+    return this.http.post(this.urlgeneracion, nuevoAdoptante, {responseType: "text"});
   }
 
   public putAdoptante(adoptanteActualizado: Usuario){
