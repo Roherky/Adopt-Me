@@ -98,7 +98,7 @@
                   <div class="col-sm-8" style="margin-top: 20px;">
                     <div class="form-group">
                        <label>Url imagen </label><br>
-                    <input type="text"  class="redondeado" name="imagen" [(ngModel)]="usuario.imagenPerfil" #imagen="ngModel" placeholder="url imagen" 
+                    <input type="text"  class="redondeado" name="imagen" [(ngModel)]="usuario.imagenPerfil" #imagen="ngModel" placeholder="url imagen" #imagenPerfil
                     [ngClass]="{'is-invalid': editarPerfil.submitted && imagen.invalid}" required>
                     <div class="invalid-feedback" *ngIf="editarPerfil.submitted && imagen.invalid">
                      <p *ngIf="imagen.errors?.['required']">La imagen es obligatoria</p>
@@ -125,9 +125,10 @@
       
       <!--Botones-->
       <div style="display: flex; justify-content: center; gap:40px">
-      <button class="btn btn-primary btn-block"  id="botonEnviar" (click)="editarPerfil(nombre.value, apellidos.value, fechaNacimiento.value, telefono.value, localidad.value, direccion.value, descripcion.value, imagenPerfil.value)">Guardar</button>
+      
+      <button class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
          <div class="form-group" id="contenedor-boton">
-            
+           
              <button type="button" id="botonEliminar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Eliminar cuenta
            

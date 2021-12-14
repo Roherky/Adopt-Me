@@ -21,47 +21,47 @@ export class EditarPerfilComponent implements OnInit {
     this.usuario=new Usuario(null,"","","",null,"","","","","","")
     
   }
-  // onSubmit(form: NgForm){
+  onSubmit(form: NgForm){
     
-  //   this.apiService.putAdoptante(this.usuario)
-  //   .subscribe((data:string) =>
-  //   {
+    this.apiService.putAdoptante(this.usuario)
+    .subscribe((data:string) =>
+    {
     
-  //     console.log(data);
-  //     if (data != "-1")
-  //       alert("Se modificado el usuario" + data)
-  //     else
-  //       alert("Error al modificar el usuario");
+      console.log(data);
+      if (data != "-1")
+        alert("Se modificado el usuario" + data)
+      else
+        alert("Error al modificar el usuario");
 
-  //   })
+    })
 
   // }imagenPerfil:string,
-  editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono:number, email:string,  password:string, localidad:string,  descripcion:string, direccion:string, imagenPerfil:string){
-    this.id= this.apiService.id; 
- let usuario=new Usuario(this.id, nombre, apellidos, fechaNacimiento, telefono, email,  password, localidad, direccion, descripcion, imagenPerfil)
-   for(let propiedad in usuario){
-         if(usuario[propiedad]==""){
-           usuario[propiedad]=null
-         }
-     }   
+//   editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono:number, email:string,  password:string, localidad:string,  descripcion:string, direccion:string, imagenPerfil:string){
+//     this.id= this.apiService.id; 
+//  let usuario=new Usuario(this.id, nombre, apellidos, fechaNacimiento, telefono, email,  password, localidad, direccion, descripcion, imagenPerfil)
+//    for(let propiedad in usuario){
+//          if(usuario[propiedad]==""){
+//            usuario[propiedad]=null
+//          }
+//      }   
 
     
 
- this.apiService.getAdoptante(usuario)
- .subscribe((data:string) =>{
-   console.log(data);
-   if(data=="1"){
+//  this.apiService.getAdoptante(usuario)
+//  .subscribe((data:string) =>{
+//    console.log(data);
+//    if(data=="1"){
 
-     alert("se ha modificado correctamente")
-   }
-   else{
-     alert("No se puede modificar")
+//      alert("se ha modificado correctamente")
+//    }
+//    else{
+//      alert("No se puede modificar")
    
-    }
+//     }
 
-   console.log(data);
- })
-}
+//    console.log(data);
+//  })
+ }
     
  
 
