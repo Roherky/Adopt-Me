@@ -7,8 +7,8 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-  private url = "http://localhost:300/adoptante";
-  private urlgeneracion = "http://localhost:300/registro/adoptante";
+  private url = "https://adopt-me-angular.herokuapp.com/adoptante";
+  private urlgeneracion = "https://adopt-me-angular.herokuapp.com/registro/adoptante";
 
   constructor(private http: HttpClient) { }
 

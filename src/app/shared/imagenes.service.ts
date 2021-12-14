@@ -7,7 +7,7 @@ import { Imagenes } from '../models/imagenes';
 })
 export class ImagenesService {
 
-  private url = "http://localhost:300/imagenes";
+  private url = "https://adopt-me-angular.herokuapp.com/imagenes";
 
   public imagenes:Imagenes;
 
@@ -20,7 +20,7 @@ export class ImagenesService {
   }
 
   obtenerImagen(id_animal:number){
-    let url= "http://localhost:300/imagenes?id_animal="+id_animal; 
+    let url= "https://adopt-me-angular.herokuapp.com/imagenes?id_animal="+id_animal; 
     return this.http.get(url)
   }
 

@@ -9,7 +9,7 @@ import { Noticia} from '../models/noticia';
 export class NoticiaService {
 
   public noticia: Noticia
-  private url = "http://localhost:300/noticias"
+  private url = "https://adopt-me-angular.herokuapp.com/noticias"
 
   constructor(private http: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { FinalFeliz } from '../models/final-feliz';
 })
 export class FinalFelizService {
 
-  private url = "http://localhost:300/finalfeliz";
+  private url = "https://adopt-me-angular.herokuapp.com/finalfeliz";
 
   constructor(private http: HttpClient) { }
 

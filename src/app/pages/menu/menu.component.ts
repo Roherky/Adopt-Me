@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public tipoUsuario: string;
 
-  ngOnInit(): void {
+  constructor(public sesiones: SesionesService) {
   }
 
+  ngOnInit(): void { }
 }
