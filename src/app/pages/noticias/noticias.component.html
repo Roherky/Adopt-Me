@@ -1,111 +1,69 @@
 <div class="container">
 <h1>Noticias</h1>
-<section class="general">
+<div class="row" *ngIf="noticias.length >= 1">
+<div class="general" *ngFor="let noticia of noticias;">
     <!-- Columna1, ultima foto-->
-    <article>
+    
         <div class="ultima" >
-            <img src="./assets/noticias/loteria.jpg" id="ultimafoto" >
-            <p id="ultimafecha" style="margin-top: 20px;">{{noticia.fecha_publicacion}}</p>
+            <img src="{{noticia.imagen}}" id="ultimafoto" >
+            <p id="ultimafecha" style="margin-top: 20px;"  >{{noticia.fecha_publicacion}}</p>
             <p id="ultimatitulo">{{noticia.titular}}</p>
             <p class="breve">{{noticia.descripcion}}<br>
             </div>
-        <!-- <div>
-            No hay noticias
-        </div> -->
-    </article> 
+
     <!-- Columna2, noticias-->
-    <article class="noticiascolumna">
+    <div class="noticiascolumna" >
         <div class="noticias">
-            <img src="./assets/noticias/RASTRILLO.jpg" class="fotopequeña" (click)="open(content)">
+            <img src="{{noticia.imagen}}" class="fotopequeña" (click)="open(content)">
             <div class="fecha">
                 <p class="fechapequeña" style="margin-top: -11px;">{{noticia.fecha_publicacion}}</p>
                 <p class="titulopequeño">{{noticia.titular}}</p>
             </div>
         </div>
-        <div class="noticias">
-            <img src="./assets/noticias/kitten.jpg" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -35px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-        <div class="noticias">
-            <img src="./assets/noticias/techo.jpg" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -35px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño" style="margin-left: -35px;">{{noticia.titular}}</p>
-            </div>
-        </div>
-        <div class="noticias">
-            <img src="./assets/noticias/camadaH.jpeg" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-        <div class="noticias">
-            <img src="./assets/noticias/cine.jpg" class="fotopequeña" (click)="open(content)" >
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}} </p>
-            </div>
-        </div>
-    </article>
+        
+       
+        
+    </div>
     <!-- Columna3, noticias -->
-    <article class="noticiascolumna">
+    <div class="noticiascolumna" >
         <div class="noticias">
-            <img src="./assets/noticias/mantas-0-90547555_m.jpg" class="fotopequeña" (click)="open(content)"> 
+            <img src="{{noticia.imagen}}" class="fotopequeña" (click)="open(content)"> 
             <div class="fecha">
                 <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
                 <p class="titulopequeño">{{noticia.titular}}</p>
             </div>
         </div>
-        <div class="noticias">
-            <img src="./assets/noticias/cachorros.jpg" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-        <div class="noticias">
-            <img src="./assets/noticias/cine.jpg" class="fotopequeña" (click)="open(content)" >
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-        <div class="noticias">
-            <img src="./assets/noticias/gato2.jpg" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-        <div class="noticias">
-            <img src="./assets/noticias/kitten.jpg" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -35px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-     
-    </article>
-</section> 
+    </div>
 
-
-  <!-- Modal -->
+<!-- Modal -->
     <ng-template #content let-modal>
-            <div class="modal-header">
-              <h4 class="modal-title" id="modal-basic-title">{{noticia.titular}}</h4>
-              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p> {{noticia.descripcion}}</p>
-            </div>
-          </ng-template>
-          <!-- <hr> -->
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">{{noticia.titular}}</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p> {{noticia.descripcion}}</p>
+        </div>
+      </ng-template>
+      <!-- <hr> -->
+
+      <div class="sinNoticias" *ngIf="noticias.length == 0">
+        <div class="logo">
+            <img src="./../../../assets/img/Logo.png">
+        </div>
+        <div class="texto">
+            <h2>No hay noticias</h2>
+        </div>
+        <div class="hipervinculo">
+            <h4>¿Quieres conocer algún amigo peludo?</h4><br>
+            <a routerLink="/listadoAnimales">¡A ver esos animalitos!</a>
+        </div>
+    </div>
+</div>
+</div>
+
 
 <!-- termina container -->
 </div>

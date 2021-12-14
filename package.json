@@ -10,11 +10,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "repository": 
-  {"type": "git",
-    "url": "git+https://github.com/Roherky/Adopt-Me.git"},
-    "homepage": "https://github.com/Roherky/Adopt-Me#readme",
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roherky/Adopt-Me.git"
+  },
+  "homepage": "https://github.com/Roherky/Adopt-Me#readme",
   "private": true,
   "dependencies": {
     "@angular-material-components/file-input": "^7.0.1",
