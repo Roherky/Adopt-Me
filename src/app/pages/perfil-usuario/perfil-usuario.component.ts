@@ -22,26 +22,26 @@ export class PerfilUsuarioComponent implements OnInit {
     El amor que brindan los animales es tan puro que solo querrás tenerlo cerca siempre", "../../../assets/img/perfil-usuario/cocker.webp")
   }
 
-  public mostrarAdoptante(id: any){
-    this.apiService.getAdoptante(id).subscribe((data: any) => {
-      this.adoptante = data;
-      this.sesiones.id_usuario;
-      console.log(this.adoptante);
-    })
-  }
+  // public mostrarAdoptante(id: any){
+  //   this.apiService.getAdoptante(id).subscribe((data: any) => {
+  //     this.adoptante = data;
+  //     this.sesiones.id_usuario;
+  //     console.log(this.adoptante);
+  //   })
+  // }
 
-  public mostrarAdoptantes(){
-    this.apiService.getAdoptantes().subscribe((data: any) => {
-      this.adoptantes = data;
-      console.log(this.adoptantes);
-    })
-  }
+  // public mostrarAdoptantes(){
+  //   this.apiService.getAdoptantes().subscribe((data: any) => {
+  //     this.adoptantes = data;
+  //     console.log(this.adoptantes);
+  //   })
+  // }
 
   public modificarAdoptante(id: any, nombre: string, apellidos: string, fechaNacimiento: string, 
                             telefono: number, email: string, password: string, localidad: string,
-                            direccion: string, descripcion:string, imagenPerfil: string){
+                            direccion: string, descripcion:string, imagenPerfil: string, ){
     this.apiService.putAdoptante(new Usuario(id, nombre, apellidos, fechaNacimiento, telefono, email,
-                                             password, localidad, direccion, descripcion, imagenPerfil))
+                                             password, localidad, direccion, descripcion, imagenPerfil, ))
     .subscribe((data: any) => {
       console.log(data);
       if(data != "-1") console.log("Su solicitud se ha procesado con éxito");
@@ -49,7 +49,10 @@ export class PerfilUsuarioComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {this.apiService.getAdoptante(this.sesiones.id_usuario).subscribe((data: any) => {
+    this.usuario = data;
+    console.log(this.usuario);
+  })
   }
 
 
