@@ -26,17 +26,37 @@
         </tbody>
     </table>
 </div>
+
 <div class="boton">
     <a type="reset"  class="form-control" id="botonEliminar" (click)="eliminar(animal.idAnimal)"  style="text-align: center; ">Eliminar</a>
      <a type="reset" class="form-control" id="botonModificar"  [routerLink]="['/modificarAnimal']"  style="text-align: center; ">Modificar</a>
+     <a type="reset" class="form-control" id="botonAñadirFoto"  (click)="anyadirAnimal()"   style="text-align: center; ">Añadir imagen</a>
 </div>
+
+
+
+<div *ngIf="btnPulsado">
+   <form>
+    <div class="form-group">
+       <label>Añadir url imagen</label><br>
+       <input class="redondeado" placeholder="url imagen" #imagen>
+       <button  (click)="agregarImagen(imagen.value)">Agregar</button>
+    </div>
+   </form>
+</div>
+
+
     <hr>
     <div class="descripcion">
         {{animal.descripcion}}
     </div>
-    <div class="fotos">
-        <img src="../../../assets/perro5.jpg">
+    <div class="row">
+        <div *ngFor="let imagen of imagenes" class="col-4">
+        <!-- <img src="../../../assets/perro5.jpg">
         <img src="../../../assets/perro4.jpg">
-        <img src="../../../assets/perro3.jpg">
+        <img src="../../../assets/perro3.jpg"> -->
+        <img src="{{imagen.imagen}}">
+       </div>
     </div>
+
 </div>

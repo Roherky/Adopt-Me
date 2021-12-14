@@ -34,28 +34,20 @@
     <div class="descripcion">
         {{animal.descripcion}}
     </div>
-    <div class="fotos">
-        <div *ngFor="let imagen of imagenes" class="col-3">
-        <!-- <img src="../../../assets/perro5.jpg">
-        <img src="../../../assets/perro4.jpg">
-        <img src="../../../assets/perro3.jpg"> -->
-        <img src="{{imagen.imagen}}">
-       </div>
-    </div>
+ 
+  
+    <div class="row">
+        <div *ngFor="let imagen of imagenes" class="col-4">
+            
+          
+            
+            <img src="{{imagen.imagen}}">
+     
+       
+        </div>
+  
+
 </div>
-
-
-
-<!-- <div class="row">
-    <div *ngFor="let anim of animales" class="col-3" [routerLink]="['/animalDetalleProtectora']" (click)="mostrarDetalle(anim.idAnimal)">
-        
-        <figure>
-           
-         <img src="{{anim.imagen}}" class="imagen" >
-        <figcaption style="font-weight: bold;">{{anim.nombre}}</figcaption>
-    </figure>
-    </div>
-</div> -->
-
+</div>
 
 

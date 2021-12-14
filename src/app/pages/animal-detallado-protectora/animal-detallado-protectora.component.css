@@ -21,6 +21,23 @@
 
  }
 
+ .redondeado {
+    border-radius: 1em;
+     border: 1px solid grey;
+     padding: 5px;
+     width: 250px;
+   }
+
+ #botonAñadirFoto{
+    width: 200px;
+    border-radius: 1em;
+    background-color: #f5993e;
+    color: #fff;
+    border:none;
+    text-decoration: none;
+
+ }
+
 
  #botonModificar{
     width: 200px;
