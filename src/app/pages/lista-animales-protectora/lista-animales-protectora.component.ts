@@ -16,7 +16,7 @@ export class ListaAnimalesProtectoraComponent implements OnInit {
   constructor(private animalServicio: AnimalService, private sesion: SesionesService) { }
 
   ngOnInit(): void {
-    this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
+    this.animalServicio.obtenerAnimalesProtectora(2)
     .subscribe((data:Animal[])=>{
       this.animales=data;
       console.log(this.animales);
@@ -31,7 +31,7 @@ export class ListaAnimalesProtectoraComponent implements OnInit {
     console.log(fecha_ingresso);
   
     console.log(this.animales);
-    this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
+    this.animalServicio.obtenerAnimalProtectora(2, nombre, sexo, tipo_animal, fecha_ingresso)
     .subscribe((data:Animal[])=>{
       this.animales=data;
       console.log(this.animales);

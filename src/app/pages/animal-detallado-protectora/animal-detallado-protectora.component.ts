@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/models/animal';
+import { Imagenes } from 'src/app/models/imagenes';
 import { AnimalService } from 'src/app/shared/animal.service';
+import { ImagenesService } from 'src/app/shared/imagenes.service';
 
 
 
@@ -14,8 +16,9 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   public animal:Animal
   public animales: Animal[];
   public id:number;
+  public imagenes:Imagenes[];
 
-  constructor(private animalServicio: AnimalService) { 
+  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService) { 
 
     this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }
@@ -57,6 +60,14 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
    .subscribe((data:Animal[])=>{
    
            this.animal=data[0];
+       
+         })
+
+
+         this.imagenServicio.obtenerImagen(this.id)
+         .subscribe((data:Imagenes[])=>{
+           this.imagenes=data;
+           console.log(this.imagenes);
        
          })
   }

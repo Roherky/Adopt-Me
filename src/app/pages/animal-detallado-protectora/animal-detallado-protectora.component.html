@@ -35,8 +35,12 @@
         {{animal.descripcion}}
     </div>
     <div class="fotos">
-        <img src="../../../assets/perro5.jpg">
+        <div *ngFor="let imagen of imagenes" class="col-3">
+        <!-- <img src="../../../assets/perro5.jpg">
         <img src="../../../assets/perro4.jpg">
-        <img src="../../../assets/perro3.jpg">
+        <img src="../../../assets/perro3.jpg"> -->
+        <img src="{{imagen.imagen}}">
+       </div>
     </div>
+
 </div>
