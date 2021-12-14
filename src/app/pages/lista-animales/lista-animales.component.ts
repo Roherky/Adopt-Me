@@ -68,12 +68,15 @@ mostrar(nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
 
 mostrarDetalle(idAnimal){
 
-  if(this.sesion.tipo=="adoptante"){
-  this.animalServicio.obtenerIdAnimal(idAnimal);
-  }
-  else if(this.sesion.tipo=="protectora"){
+ if(this.sesion.tipo=="protectora"){
     this.animalServicio.obtenerIdAnimal(idAnimal);
   }
+
+
+  else{
+  this.animalServicio.obtenerIdAnimal(idAnimal);
+  }
+
  
 }
 
