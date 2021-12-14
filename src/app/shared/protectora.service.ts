@@ -9,8 +9,8 @@ import { Protectora } from '../models/protectora';
 export class ProtectoraService {
 
   public protectora: Protectora;
-  private url = "https://adopt-me-angular.herokuapp.com/protectora";
-  private registro = "https://adopt-me-angular.herokuapp.com/registro/protectora";
+  private url = "https://adopt-me2021.herokuapp.com/protectora";
+  private registro = "https://adopt-me2021.herokuapp.com/registro/protectora";
 
   constructor(private http: HttpClient) { }
 

@@ -36,14 +36,14 @@ export class RegistroComponent implements OnInit {
     console.log(form);
     console.log(this.usuario);
     if(this.usuario.nombre == ''){
-      console.log('Se registrado una protectora')
+      console.log('Se ha registrado una protectora')
       this.servicioProtectora.postProtectora(this.protectora).subscribe((data:any)=>{
         console.log(data);
         if(data !="-1"){
-          alert("Se guardado la protectora correctamente")
-          // this.router.navigate(['loguin']);
+          console.log("Se ha guardado la protectora correctamente")
+          this.router.navigate(['dashboard']);
         }else{
-          alert("error")
+          console.log("Ha ocurrido un error al procesar su solicitud")
         }
       })
       /// Hacer la post protectora  y envias this.protectora si no hace lo contrario
@@ -51,7 +51,10 @@ export class RegistroComponent implements OnInit {
         this.servicioAdoptante.postAdoptante(this.usuario).subscribe((data: any) => {
         console.log(data);
         // this.router.navigate(['loguin']);
-        if(data != "-1") console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
+        if(data != "-1"){
+          console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
+          this.router.navigate(['listadoAnimales']);
+        }
         else console.log("Ha ocurrido un error al procesar su solicitud");
       })
     }
