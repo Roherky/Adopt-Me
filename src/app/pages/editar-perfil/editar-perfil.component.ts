@@ -47,21 +47,21 @@ export class EditarPerfilComponent implements OnInit {
 
     
 
- this.apiService.getAdoptante(usuario)
- .subscribe((data:string) =>{
-   console.log(data);
-   if(data=="1"){
+//  this.apiService.getAdoptante(usuario)
+//  .subscribe((data:string) =>{
+//    console.log(data);
+//    if(data=="1"){
 
-     alert("se ha modificado correctamente")
-   }
-   else{
-     alert("No se puede modificar")
+//      alert("se ha modificado correctamente")
+//    }
+//    else{
+//      alert("No se puede modificar")
    
-    }
+//     }
 
-   console.log(data);
- })
-}
+//    console.log(data);
+//  })
+ }
     
  
 
@@ -69,3 +69,4 @@ export class EditarPerfilComponent implements OnInit {
   }
 
 }
+

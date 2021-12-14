@@ -33,14 +33,16 @@ export class ModificarAnimalComponent implements OnInit {
         }   
 
        
-        
+
 
     this.animalServicio.actualizarAnimal(animal)
     .subscribe((data:string) =>{
       console.log(data);
       if(data=="1"){
 
-        alert("se ha modificado correctamente")
+        alert("se ha modificado correctamente");
+        console.log(data);
+        console.log("aaaaaass")
       }
       else{
         alert("No se puede modificar")
