@@ -1,55 +1,30 @@
-<div class="container">
-<h1>Noticias</h1>
-<div class="row" *ngIf="noticias.length >= 1">
-<div class="general" *ngFor="let noticia of noticias;">
-    <!-- Columna1, ultima foto-->
-    
-        <div class="ultima" >
-            <img src="{{noticia.imagen}}" id="ultimafoto" >
-            <p id="ultimafecha" style="margin-top: 20px;"  >{{noticia.fecha_publicacion}}</p>
-            <p id="ultimatitulo">{{noticia.titular}}</p>
-            <p class="breve">{{noticia.descripcion}}<br>
-            </div>
-
-    <!-- Columna2, noticias-->
-    <div class="noticiascolumna" >
-        <div class="noticias">
-            <img src="{{noticia.imagen}}" class="fotopequeña" (click)="open(content)">
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -11px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
-        </div>
-        
-       
-        
+<div class="contenedor">
+    <div class="titulo">
+        <h1 style="margin-top: 5%; margin-left: 3%;">Noticias</h1>
     </div>
-    <!-- Columna3, noticias -->
-    <div class="noticiascolumna" >
-        <div class="noticias">
-            <img src="{{noticia.imagen}}" class="fotopequeña" (click)="open(content)"> 
-            <div class="fecha">
-                <p class="fechapequeña" style="margin-top: -18px;">{{noticia.fecha_publicacion}}</p>
-                <p class="titulopequeño">{{noticia.titular}}</p>
-            </div>
+    <div class="row" *ngIf="noticias.length >= 1">
+      <div *ngFor="let noticia of noticias" class="col-3">
+        <div class="card" style="width: 18rem; border-radius: 1em;">
+          <img src="{{noticia.imagen}}" class="card-img-top" alt="" style="width: 18em; height: 12em;" (click)="open(content1)">
+          <div class="card-body">
+            <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{noticia.titular}}</p>
+          </div>
         </div>
+        <!-- Modal -->
+    <ng-template #content1 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{noticia.titular}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{noticia.descripcion}}</p>
+      </div>
+    </ng-template>
+      </div>
     </div>
-
-<!-- Modal -->
-    <ng-template #content let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">{{noticia.titular}}</h4>
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p> {{noticia.descripcion}}</p>
-        </div>
-      </ng-template>
-      <!-- <hr> -->
-
-      <div class="sinNoticias" *ngIf="noticias.length == 0">
+    <div class="sinFinales" *ngIf="noticias.length == 0">
         <div class="logo">
             <img src="./../../../assets/img/Logo.png">
         </div>
@@ -61,9 +36,4 @@
             <a routerLink="/listadoAnimales">¡A ver esos animalitos!</a>
         </div>
     </div>
-</div>
-</div>
-
-
-<!-- termina container -->
 </div>

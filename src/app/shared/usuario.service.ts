@@ -6,6 +6,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
+  public id:number
 
   private url = "https://adopt-me2021.herokuapp.com/adoptante";
   private urlgeneracion = "https://adopt-me2021.herokuapp.com/registro/adoptante";

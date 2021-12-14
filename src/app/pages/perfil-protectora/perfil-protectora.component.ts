@@ -26,34 +26,37 @@ export class PerfilProtectoraComponent implements OnInit {
     alimentación, atención veterinaria, paseos con los voluntarios, y por supuesto, muchísimo cariño. \ ',"../../../assets/img/perfil-usuario/puppy.jpg")
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {this.apiService.getProtectora(this.sesiones.id_usuario).subscribe((data: any) => {
+    this.protectora = data;
+    console.log(this.protectora);
+  })
   }
  
  
 
-  public mostrarProtectora(id:any)
-  { 
-    this.apiService.getProtectora(id).subscribe((data: any) =>
-    {
-      this.protectora = data;
-      console.log(this.protectora);
-      this.sesiones.id_usuario;
-    })
-  }
+  // public mostrarProtectora(id:any)
+  // { 
+  //   this.apiService.getProtectora(id).subscribe((data: any) =>
+  //   {
+  //     this.protectora = data;
+  //     console.log(this.protectora);
+  //     this.sesiones.id_usuario;
+  //   })
+  // }
 
-   insertarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, imagen:string, descripcion:string)
-  { 
-    this.apiService.postProtectora(new Protectora(id, nombre, direccion, localidad,email, password, telefono,imagen, descripcion))
-    .subscribe((data:any) =>
-    {
-      console.log(data);
-      if(data != "-1")
-       alert("se ha insertado una nueva protectora con id: " + data)
-      else
-        alert("Error al insertar la protectora");
+  //  insertarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, imagen:string, descripcion:string)
+  // { 
+  //   this.apiService.postProtectora(new Protectora(id, nombre, direccion, localidad,email, password, telefono,imagen, descripcion))
+  //   .subscribe((data:any) =>
+  //   {
+  //     console.log(data);
+  //     if(data != "-1")
+  //      alert("se ha insertado una nueva protectora con id: " + data)
+  //     else
+  //       alert("Error al insertar la protectora");
       
-    })
-  }
+  //   })
+  // }
  
   public modificarProtectora(id:any, nombre: string, direccion: string, localidad: string, email: string, password: string, telefono: string, descripcion:string, imagen:string)
   {
@@ -70,19 +73,19 @@ export class PerfilProtectoraComponent implements OnInit {
     })
   }
 
-   eliminarProtectora(id:string)
-  {
-    this.apiService.deleteProtectora({"id":id})
-    .subscribe((data) =>
-    {
-      console.log(data);
-      if (data != "-1")
-      alert("Se ha eliminado la protectora con id: " + data)
-    else
-      alert("Error al eliminar la protectora");
+  //  eliminarProtectora(id:string)
+  // {
+  //   this.apiService.deleteProtectora({"id":id})
+  //   .subscribe((data) =>
+  //   {
+  //     console.log(data);
+  //     if (data != "-1")
+  //     alert("Se ha eliminado la protectora con id: " + data)
+  //   else
+  //     alert("Error al eliminar la protectora");
 
-    })
+  //   })
 
-  }
+//   }
 
-}
+ }
