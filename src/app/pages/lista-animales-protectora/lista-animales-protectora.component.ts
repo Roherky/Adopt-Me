@@ -13,10 +13,14 @@ export class ListaAnimalesProtectoraComponent implements OnInit {
   public animal: Animal;
   public animales: Animal[];
 
-  constructor(private animalServicio: AnimalService, private sesion: SesionesService) { }
+  constructor(private animalServicio: AnimalService, private sesion: SesionesService) {
+    console.log('snkandhijsandiasdnasndhaisd')
+    console.log(this.sesion.id_usuario);
+    console.log(this.sesion.tipo);
+  }
 
   ngOnInit(): void {
-    this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
+    this.animalServicio.obtenerAnimalesProtectora(2)
     .subscribe((data:Animal[])=>{
       this.animales=data;
       console.log(this.animales);
@@ -29,15 +33,15 @@ export class ListaAnimalesProtectoraComponent implements OnInit {
     console.log(sexo);
     console.log(tipo_animal);
     console.log(fecha_ingresso);
-  
+
     console.log(this.animales);
-    this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
+    this.animalServicio.obtenerAnimalProtectora(2, nombre, sexo, tipo_animal, fecha_ingresso)
     .subscribe((data:Animal[])=>{
       this.animales=data;
       console.log(this.animales);
     })
-    
- 
+
+
   }
 
   mostrarDetalle(idAnimal){

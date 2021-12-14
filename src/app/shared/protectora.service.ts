@@ -10,6 +10,7 @@ export class ProtectoraService {
 
   public protectora: Protectora;
   private url = "http://localhost:300/protectora"
+  private registro = "http://localhost:300/registro/protectora";
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +21,7 @@ export class ProtectoraService {
 
   public postProtectora(newProtectora: Protectora)
   {
-    return this.http.post(this.url, newProtectora);
+    return this.http.post(this.registro, newProtectora);
   }
 
   public putProtectora(modProtectora: Protectora)

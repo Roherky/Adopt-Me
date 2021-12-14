@@ -11,6 +11,7 @@ import { AnimalService } from 'src/app/shared/animal.service';
 export class ModificarAnimalComponent implements OnInit {
 
   public animal: Animal;
+  public id:number;
 
   constructor(private animalServicio: AnimalService) {
    this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
@@ -21,9 +22,9 @@ export class ModificarAnimalComponent implements OnInit {
   }
 
 
-  editarAnimal(idAnimal:any, nombre: string, raza: string, sexo: string, tamanyo:string, tipo_animal:string,  fecha_ingresso:string, estado:string, imagen:string, id_protectora:any, descripcion:string, ){
-
-    let animal=new Animal(idAnimal, nombre, raza, sexo, imagen, tipo_animal,  estado, fecha_ingresso, descripcion, id_protectora, tamanyo)
+  editarAnimal(nombre: string, raza: string, sexo: string, tamanyo:string, tipo_animal:string,  fecha_ingresso:string, estado:string, imagen:string, id_protectora:any, descripcion:string, ){
+       this.id= this.animalServicio.idAnimal; 
+    let animal=new Animal(this.id, nombre, raza, sexo, imagen, tipo_animal,  estado, fecha_ingresso, descripcion, id_protectora, tamanyo)
       for(let propiedad in animal){
             if(animal[propiedad]==""){
               animal[propiedad]=null

@@ -26,7 +26,7 @@ import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protector
 import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias.component';
 import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protectora/lista-animales-protectora.component';
 
-
+//can activate routes
 const routes: Routes = [
   {path: "inicio", component: InicioComponent},
   {path: "footer",component:FooterComponent},

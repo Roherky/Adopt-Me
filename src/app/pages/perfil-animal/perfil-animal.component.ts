@@ -13,6 +13,7 @@ export class PerfilAnimalComponent implements OnInit {
   public animal:Animal
   public id:number;
   public imagenes:Imagenes[];
+  
 
 
   constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService) { 
@@ -42,6 +43,7 @@ export class PerfilAnimalComponent implements OnInit {
   .subscribe((data:Imagenes[])=>{
     this.imagenes=data;
     console.log(this.imagenes);
+   
 
   })
   }
