@@ -17,6 +17,7 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   public animales: Animal[];
   public id:number;
   public imagenes:Imagenes[];
+  public btnPulsado:boolean;
 
   constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService) { 
 
@@ -47,6 +48,31 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
 
 
   }
+
+  anyadirAnimal(){
+    this.btnPulsado=true;
+  }
+
+  agregarImagen(urlImagen:string){
+   
+    let imagen:Imagenes;
+    imagen=new Imagenes(null, null, null, this.animal.idAnimal, null, null, urlImagen);
+    
+    this.imagenServicio.añadirImagen(imagen)
+    .subscribe((data:string)=>{
+
+      console.log(data);
+      if (data != "-1")
+        alert("Se ha insertado la imagen con id: " + data)
+      else
+        alert("Error al insertar la imagen");
+
+    })
+
+  
+  
+  }
+
 
   ngOnInit(): void {
    
