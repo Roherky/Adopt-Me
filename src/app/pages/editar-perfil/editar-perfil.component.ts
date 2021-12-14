@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 import { UsuarioService } from 'src/app/shared/usuario.service';
 
 
@@ -13,10 +14,11 @@ export class EditarPerfilComponent implements OnInit {
 
  
   public usuario: Usuario;
+  public id:number;
   
 
-  constructor( private apiService: UsuarioService) {
-    
+  constructor( private apiService: UsuarioService, private sesiones:SesionesService) {
+    this.usuario=new Usuario(null,"","","",null,"","","","","","")
     
   }
   onSubmit(form: NgForm){
@@ -33,8 +35,33 @@ export class EditarPerfilComponent implements OnInit {
 
     })
 
-  }
+  }imagenPerfil:string;
+  editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono:number, email:string,  password:string, localidad:string,  descripcion:string, direccion:string, imagenPerfil:string){
+    this.id= this.apiService.id; 
+ let usuario=new Usuario(this.id, nombre, apellidos, fechaNacimiento, telefono, email,  password, localidad, direccion, descripcion, imagenPerfil)
+   for(let propiedad in usuario){
+         if(usuario[propiedad]==""){
+           usuario[propiedad]=null
+         }
+     }   
 
+    
+
+ this.apiService.getAdoptante(usuario)
+ .subscribe((data:string) =>{
+   console.log(data);
+   if(data=="1"){
+
+     alert("se ha modificado correctamente")
+   }
+   else{
+     alert("No se puede modificar")
+   
+    }
+
+   console.log(data);
+ })
+}
     
  
 

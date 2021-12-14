@@ -33,6 +33,7 @@ export class ModificarAnimalComponent implements OnInit {
         }   
 
        
+        
 
     this.animalServicio.actualizarAnimal(animal)
     .subscribe((data:string) =>{

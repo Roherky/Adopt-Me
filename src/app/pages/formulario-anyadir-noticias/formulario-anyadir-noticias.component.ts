@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Noticia } from 'src/app/models/noticia';
 import { NoticiaService} from 'src/app/shared/noticia.service';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-formulario-anyadir-noticias',
@@ -12,7 +13,7 @@ export class FormularioAnyadirNoticiasComponent implements OnInit {
 
   public noticia:Noticia
 
-  constructor(private apiService: NoticiaService) { 
+  constructor(private apiService: NoticiaService, private sesiones:SesionesService) { 
     this.noticia=new Noticia("", "", "", "", "", "",null);
     
   }
