@@ -62,8 +62,10 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
     .subscribe((data:string)=>{
 
       console.log(data);
-      if (data != "-1")
+      if (data != "-1"){
         alert("Se ha insertado la imagen con id: " + data)
+      this.ngOnInit()
+      }
       else
         alert("Error al insertar la imagen");
 

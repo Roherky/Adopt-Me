@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Animal } from 'src/app/models/animal';
 import { AnimalService } from 'src/app/shared/animal.service';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-modificar-animal',
@@ -13,7 +14,7 @@ export class ModificarAnimalComponent implements OnInit {
   public animal: Animal;
   public id:number;
 
-  constructor(private animalServicio: AnimalService) {
+  constructor(private animalServicio: AnimalService, public sesion: SesionesService) {
    this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
 
   }
@@ -21,10 +22,10 @@ export class ModificarAnimalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  editarAnimal(nombre: string, raza: string, sexo: string, tamanyo:string, tipo_animal:string,  fecha_ingresso:string, estado:string, imagen:string, id_protectora:any, descripcion:string, ){
+ 
+  editarAnimal(nombre: string, raza: string, sexo: string, tamanyo:string, tipo_animal:string,  fecha_ingresso:string, estado:string, imagen:string, descripcion:string){
        this.id= this.animalServicio.idAnimal; 
-    let animal=new Animal(this.id, nombre, raza, sexo, imagen, tipo_animal,  estado, fecha_ingresso, descripcion, id_protectora, tamanyo)
+    let animal=new Animal(this.id, nombre, raza, sexo, imagen, tipo_animal,  estado, fecha_ingresso, descripcion, this.sesion.id_usuario, tamanyo)
       for(let propiedad in animal){
             if(animal[propiedad]==""){
               animal[propiedad]=null

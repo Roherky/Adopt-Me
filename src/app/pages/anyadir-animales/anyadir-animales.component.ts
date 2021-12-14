@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Animal } from 'src/app/models/animal';
 import { AnimalService } from 'src/app/shared/animal.service';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-anyadir-animales',
@@ -12,14 +13,18 @@ export class AnyadirAnimalesComponent implements OnInit {
 
   public animal: Animal;
 
-  constructor(private animalServicio: AnimalService) {
+  constructor(private animalServicio: AnimalService,  public sesion: SesionesService) {
     this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
+   
+    console.log(this.sesion.id_usuario)
   }
 
   ngOnInit(): void {
+    
   }
 
   onSubmit(form: NgForm){
+    console.log(this.sesion.id_usuario)
     this.animalServicio.añadirAnimal(this.animal)
     .subscribe((data:string) =>
     {
