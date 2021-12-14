@@ -20,6 +20,8 @@ export class NoticiasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.sesiones.tipo);
+    console.log(this.sesiones.id_usuario);
   }
 // mostrar noticias
 public getNoticias(id: any){

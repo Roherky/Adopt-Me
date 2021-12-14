@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  constructor() { }
+  constructor(private sesiones: SesionesService) { }
 
   ngOnInit(): void {
+    console.log(this.sesiones.tipo)
   }
 
 }
