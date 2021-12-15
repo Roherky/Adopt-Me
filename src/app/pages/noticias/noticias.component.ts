@@ -16,7 +16,7 @@ export class NoticiasComponent implements OnInit {
   
   closeResult = '';
   constructor(private modalService: NgbModal, private apiService: NoticiaService, public sesiones: SesionesService){
-    this.noticia = new Noticia("", "", "", "", "", "",null);
+    this.noticia = new Noticia(null,"", "", "", "", "", "",null);
   }
 
   ngOnInit(): void { 
@@ -25,23 +25,13 @@ export class NoticiasComponent implements OnInit {
     console.log(this.noticias);
   })
 }
+mostrarDetalle(idNoticias){
   
-// mostrar noticias
-// public getNoticias(id: any){
-//   if(id != ""){
-//     this.apiService.getNoticia(id).subscribe((data: any) => {
-      
-//       this.noticias = [data[0]];
-//       console.log(data);
-//     })
-//   }
-//   else {
-//     this.apiService.getNoticias().subscribe((data: any) => {
-//       this.noticias = data;
-//       console.log(this.noticias);
-//     })
-//   }
-// }
+  this.apiService.obteneridNoticia(idNoticias);
+
+  console.log(idNoticias)
+}
+
   // funcion modal
 open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
