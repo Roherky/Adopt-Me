@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Imagenes } from 'src/app/models/imagenes';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-formulario-imagenes',
@@ -11,7 +12,7 @@ import { ImagenesService } from 'src/app/shared/imagenes.service';
 export class FormularioImagenesComponent implements OnInit {
   
    public imagenes:Imagenes;
-  constructor(private imagenesServicio: ImagenesService) {
+  constructor(private imagenesServicio: ImagenesService, public sesiones: SesionesService) {
   
     this.imagenes=new Imagenes(null, null, null, null, null, null, "");
    }

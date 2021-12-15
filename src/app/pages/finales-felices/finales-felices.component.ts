@@ -18,21 +18,6 @@ export class FinalesFelicesComponent implements OnInit {
     this.finalFeliz = new FinalFeliz(0, "", "", "", "", 0);
   }
 
-  // public mostrarFinalesFelices(id: any){
-  //   if(id != ""){
-  //     this.apiService.getFinalFeliz(id).subscribe((data: any) => {
-  //       this.finalesFelices = [data[0]];
-  //       console.log(data);
-  //     })
-  //   }
-  //   else {
-  //     this.apiService.getFinalesFelices().subscribe((data: any) => {
-  //       this.finalesFelices = data;
-  //       console.log(this.finalesFelices);
-  //     })
-  //   }
-  // }
-
   abrirModal(content: any){
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

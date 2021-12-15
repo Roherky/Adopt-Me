@@ -16,7 +16,9 @@ export class PerfilAnimalComponent implements OnInit {
   public imagenes:Imagenes[];
   
 
-  constructor(private animalServicio: AnimalService, private sesiones: SesionesService, private imagenServicio: ImagenesService) { 
+  constructor(private animalServicio: AnimalService,
+              private sesiones: SesionesService,
+              private imagenServicio: ImagenesService) { 
 
    this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }

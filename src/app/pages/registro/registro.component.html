@@ -86,12 +86,7 @@
                 <!-- Confirmar contraseña -->
                 <div class="form-group" id="password-usuario">
                     <label style="margin-bottom: 1%;">Confirma la contraseña</label>
-                    <input id="input-usuarioPassword" type="password" name="password" class="form-control" [(ngModel)]="usuario.password" #password="ngModel"
-                    [ngClass]="{'is-invalid': (password.dirty || password.touched) && password.invalid}" required minlength="8">
-                    <div class="invalid-feedback" *ngIf="(password.dirty || password.touched) && password.invalid">
-                        <p *ngIf="password.errors?.['required']">Debes introducir una contraseña</p>
-                        <p *ngIf="password.errors?.['minlength']">La contraseña debe contener 8 dígitos como mínimo</p>
-                    </div>
+                    <input id="input-usuarioConfirmPassword" type="password" class="form-control" required>
                 </div>
                 <!-- Localidad -->
                 <div class="form-group" id="localidad-usuario">
@@ -194,12 +189,7 @@
                     <!-- Confirmar contraseña -->
                     <div class="form-group" id="password-protectora">
                         <label style="margin-bottom: 1%;">Confirma la contraseña</label>
-                        <input id="input-protectoraPassword" type="password" name="password" class="form-control" [(ngModel)]="protectora.password" #password="ngModel"
-                        [ngClass]="{'is-invalid': (password.dirty || password.touched) && password.invalid}" required minlength="8">
-                        <div class="invalid-feedback" *ngIf="(password.dirty || password.touched) && password.invalid">
-                            <p *ngIf="password.errors?.['required']">Debes introducir una contraseña</p>
-                            <p *ngIf="password.errors?.['minlength']">La contraseña debe contener 8 dígitos como mínimo</p>
-                        </div>
+                        <input id="input-protectoraConfirmPassword" type="password" class="form-control" required>
                     </div>
                 </div>
                 <!-- Checkbox de mostrar contraseña -->

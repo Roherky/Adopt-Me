@@ -20,6 +20,7 @@ export class FormularioFinalesFelicesComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
+    this.finalFeliz.id_adoptante = this.sesiones.id_usuario;
     this.finalService.postFinalFeliz(this.finalFeliz)
     .subscribe((data: any) => {
       console.log(data);
@@ -29,7 +30,6 @@ export class FormularioFinalesFelicesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.sesiones.id_usuario);
   }
 
 }
