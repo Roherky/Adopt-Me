@@ -14,21 +14,12 @@ export class FormularioFinalesFelicesComponent implements OnInit {
   public finalFeliz: FinalFeliz;
   public mostrarDiv: boolean;
 
-<<<<<<< HEAD
   constructor(private finalService: FinalFelizService, public sesiones: SesionesService) {
-=======
-  constructor(private finalService: FinalFelizService, public sesion: SesionesService) {
->>>>>>> arreglarImperfecciones
     this.finalFeliz = new FinalFeliz(0, "", "", "", "", 0);
     this.mostrarDiv = true;
   }
 
   onSubmit(form: NgForm){
-<<<<<<< HEAD
-=======
-    console.log(form);
-    this.finalFeliz.id_adoptante=this.sesion.id_usuario;
->>>>>>> arreglarImperfecciones
     this.finalService.postFinalFeliz(this.finalFeliz)
     .subscribe((data: any) => {
       console.log(data);
