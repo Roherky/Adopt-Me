@@ -49,20 +49,38 @@ export class ListaAnimalesComponent implements OnInit {
   
 mostrar(nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
 
-  if(this.sesion.tipo=="adoptante"){
+if(this.sesion.tipo=="protectora"){
+  this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
+  .subscribe((data:Animal[])=>{
+    this.animales=data;
+    console.log(this.animales);
+  })
+}else{
   this.animalServicio.obtenerAnimal(nombre, sexo, tipo_animal, fecha_ingresso)
   .subscribe((data:Animal[])=>{
     this.animales=data;
     console.log(this.animales);
   })
+}
 
-  }else if(this.sesion.tipo=="protectora"){
-    this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
-    .subscribe((data:Animal[])=>{
-      this.animales=data;
-      console.log(this.animales);
-    })
-  }
+
+
+
+
+  // if(this.sesion.tipo=="adoptante"){
+  // this.animalServicio.obtenerAnimal(nombre, sexo, tipo_animal, fecha_ingresso)
+  // .subscribe((data:Animal[])=>{
+  //   this.animales=data;
+  //   console.log(this.animales);
+  // })
+
+  // }else if(this.sesion.tipo=="protectora"){
+  //   this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
+  //   .subscribe((data:Animal[])=>{
+  //     this.animales=data;
+  //     console.log(this.animales);
+  //   })
+  // }
 }
 
 
