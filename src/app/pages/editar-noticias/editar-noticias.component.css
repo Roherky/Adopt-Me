@@ -73,7 +73,10 @@ label{
     padding: 5px;
     width: 250px;
   }
-
+.botones{
+    display: flex;
+    gap: 50px
+}
 
   
 
