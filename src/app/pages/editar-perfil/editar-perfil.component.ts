@@ -17,7 +17,7 @@ export class EditarPerfilComponent implements OnInit {
   public id:number;
   
 
-  constructor( private apiService: UsuarioService, private sesiones:SesionesService) {
+  constructor( private apiService: UsuarioService, private sesiones: SesionesService) {
     this.usuario=new Usuario(null,"","","",null,"","","","","","")
     
   }

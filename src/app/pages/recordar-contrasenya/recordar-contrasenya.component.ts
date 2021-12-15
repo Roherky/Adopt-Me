@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-recordar-contrasenya',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecordarContrasenyaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sesiones: SesionesService) { }
 
   ngOnInit(): void {
   }

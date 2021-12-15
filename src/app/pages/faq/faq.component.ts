@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-faq',
@@ -9,7 +10,7 @@ export class FaqComponent implements OnInit {
   public mostrar: Boolean;
   public pregunta: string;
 
-  constructor() { 
+  constructor(public sesiones: SesionesService) { 
     this.mostrar=false;
   }
   public ver(respuesta:string){

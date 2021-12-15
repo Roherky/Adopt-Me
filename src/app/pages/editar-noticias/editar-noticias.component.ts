@@ -13,7 +13,7 @@ export class EditarNoticiasComponent implements OnInit {
 
   public noticias: Noticia;
 
-  constructor(private apiService: NoticiaService, private sesiones:SesionesService) { }
+  constructor(private apiService: NoticiaService, private sesiones: SesionesService) { }
 
   ngOnInit(): void {
   }

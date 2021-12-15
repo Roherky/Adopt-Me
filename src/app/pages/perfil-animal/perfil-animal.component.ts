@@ -3,6 +3,7 @@ import { Animal } from 'src/app/models/animal';
 import { Imagenes } from 'src/app/models/imagenes';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 @Component({
   selector: 'app-perfil-animal',
   templateUrl: './perfil-animal.component.html',
@@ -16,7 +17,9 @@ export class PerfilAnimalComponent implements OnInit {
   
 
 
-  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService) { 
+  constructor(private animalServicio: AnimalService,
+              private imagenServicio: ImagenesService,
+              public sesiones: SesionesService) { 
 
    this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }

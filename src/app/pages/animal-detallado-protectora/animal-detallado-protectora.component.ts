@@ -4,6 +4,7 @@ import { Imagenes } from 'src/app/models/imagenes';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
 import { Router } from '@angular/router';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 
 
@@ -20,7 +21,10 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   public imagenes:Imagenes[];
   public btnPulsado:boolean;
 
-  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService, private router:Router) { 
+  constructor(private animalServicio: AnimalService,
+              private imagenServicio: ImagenesService,
+              private router: Router,
+              public sesiones: SesionesService) { 
 
     this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }
