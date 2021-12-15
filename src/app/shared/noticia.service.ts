@@ -7,9 +7,11 @@ import { Noticia} from '../models/noticia';
   providedIn: 'root'
 })
 export class NoticiaService {
+  
 
-  public id:number
+  public idNoticia:number
   public noticia: Noticia
+  private url2= "http://localhost:300/noticias"
   private url = "https://adopt-me2021.herokuapp.com/noticias"
 
   constructor(private http: HttpClient) { }
@@ -33,11 +35,24 @@ export class NoticiaService {
     return this.http.put(this.url, modNoticia);
   }
 
-  public deleteNoticia(id:any)
+  deleteNoticia(idNoticia:any)
   {
-    console.log(id);
-    const httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body: id}
-    return this.http.delete(this.url, httpOptions);
+    let data ={"idNoticia": idNoticia}
+    console.log(idNoticia);
+    let param={
+      headers: {"Content-type": "application/json; charset=UTF-8"},
+      body : JSON.stringify(data),
+      method: "DELETE"
+ }
+
+    return this.http.delete(this.url, param)
   }
+
+
+  obteneridNoticia(idNoticia:number){
+ 
+    this.idNoticia=idNoticia
+    return this.idNoticia;
+   }
 
 }

@@ -10,7 +10,7 @@
       <div class="row" *ngIf="noticias.length >= 1">
         <div *ngFor="let noticia of noticias" class="col-3">
           <div class="card" style="width: 18rem; border-radius: 1em;">
-            <img src="{{noticia.imagen}}" class="card-img-top" alt="" style="width: 18em; height: 12em;" (click)="open(content1)">
+            <img src="{{noticia.imagen}}" class="card-img-top" alt="" style="width: 18em; height: 12em;" (click)="open(content1) ">
             <div class="card-body">
               <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{noticia.titular}}</p>
             </div>
@@ -25,6 +25,7 @@
         </div>
         <div class="modal-body">
           <p>{{noticia.descripcion}}</p>
+          <button type="reset" class="form-control" routerLink="/editarNoticias" id="botonModificar" (click)="mostrarDetalle(noticia.idNoticias)">Modificar</button>
         </div>
       </ng-template>
         </div>

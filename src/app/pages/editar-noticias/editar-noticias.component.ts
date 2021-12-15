@@ -12,15 +12,24 @@ import { SesionesService } from 'src/app/shared/sesiones.service';
 export class EditarNoticiasComponent implements OnInit {
 
   public noticias: Noticia;
+  public id:number;
 
   constructor(private apiService: NoticiaService, private sesiones:SesionesService) { }
 
   ngOnInit(): void {
   }
-  onSubmit(form: NgForm){
-    
-    
-    this.apiService.putNoticia(this.noticias)
+
+  editarNoticia(titular: string, categoria: string, prioridad: string, fecha_publicacion:string,  imagen:string, descripcion:string){
+    this.id= this.apiService.idNoticia;
+    console.log(this.id)
+ let noticias=new Noticia(this.id, titular, categoria, prioridad, imagen,  fecha_publicacion, descripcion, this.sesiones.id_usuario)
+ for(let propiedad in noticias){
+         if(noticias[propiedad]==""){
+           noticias[propiedad]=null
+         }
+     }
+
+     this.apiService.putNoticia(noticias)
     .subscribe((data:string) =>
     {
     
@@ -30,22 +39,46 @@ export class EditarNoticiasComponent implements OnInit {
       else
         alert("Error al modificar la noticia");
 
-    })
+    })  
+  } 
+
+  eliminar(idNoticia){
+    idNoticia=this.apiService.idNoticia;
+    console.log(idNoticia);
+    if(idNoticia!=""){
+      this.apiService.deleteNoticia(idNoticia)
+      .subscribe((data:string) =>{
+        console.log(data)
+        if (data == "1"){
+
+          alert("Noticia eliminada");
+          }
+        else
+          alert("Error al eliminar la noticia");
+        })
+    }
+
+
 
   }
-    eliminarNoticia(id:string)
-  {
-    this.apiService.deleteNoticia({"id":id})
-    .subscribe((data) =>
-    {
-      console.log(data);
-      if (data != "-1")
-      alert("Se ha eliminado la noticia " )
-    else
-      alert("Error al eliminar la noticia");
+    
 
-    })
+ 
+  //   eliminarNoticia(idNoticia){
+  //  this.id= this.apiService.idNoticia; 
+   
+  //   this.apiService.deleteNoticia({"id":id})
+  //   .subscribe((data) =>
+  //   {
+  //     console.log(data);
+  //     if (data != "-1")
+  //     alert("Se ha eliminado la noticia " )
+  //   else
+  //     alert("Error al eliminar la noticia");
 
-  }
-
+  //   })
+  // }
 }
+   
+
+
