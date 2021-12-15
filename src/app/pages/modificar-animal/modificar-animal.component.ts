@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Animal } from 'src/app/models/animal';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { SesionesService } from 'src/app/shared/sesiones.service';
@@ -14,7 +15,7 @@ export class ModificarAnimalComponent implements OnInit {
   public animal: Animal;
   public id:number;
 
-  constructor(private animalServicio: AnimalService, public sesion: SesionesService) {
+  constructor(private animalServicio: AnimalService, public sesion: SesionesService, private router:Router) {
    this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
 
   }
@@ -43,6 +44,7 @@ export class ModificarAnimalComponent implements OnInit {
         alert("se ha modificado correctamente");
         console.log(data);
         console.log("aaaaaass")
+        this.router.navigate(['/listadoAnimales'])
       }
       else{
         alert("No se puede modificar")

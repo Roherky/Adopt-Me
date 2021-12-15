@@ -4,6 +4,7 @@ import { Imagenes } from 'src/app/models/imagenes';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
 import { Router } from '@angular/router';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 
 
@@ -18,9 +19,10 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   public animales: Animal[];
   public id:number;
   public imagenes:Imagenes[];
+  public imagen:Imagenes;
   public btnPulsado:boolean;
 
-  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService, private router:Router) { 
+  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService, private router:Router, public sesion: SesionesService) { 
 
     this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }
@@ -39,7 +41,7 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
         if (data == "1"){
 
           alert("Animal eliminado");
-         // this.router.navigate(['/listadoAnimales'])
+          this.router.navigate(['/listadoAnimales'])
 
          
           }else
@@ -59,8 +61,9 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   agregarImagen(urlImagen:string){
    
     let imagen:Imagenes;
-    imagen=new Imagenes(null, null, null, this.animal.idAnimal, null, null, urlImagen);
-    
+    imagen=new Imagenes(null, null, this.sesion.id_usuario, this.animal.idAnimal, null, null, urlImagen);
+    console.log(imagen)
+    console.log("aaaaaaaaaaaaaaaa")
     this.imagenServicio.añadirImagen(imagen)
     .subscribe((data:string)=>{
 
