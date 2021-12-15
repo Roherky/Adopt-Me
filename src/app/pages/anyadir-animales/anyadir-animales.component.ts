@@ -25,6 +25,7 @@ export class AnyadirAnimalesComponent implements OnInit {
 
   onSubmit(form: NgForm){
     console.log(this.sesion.id_usuario)
+    this.animal.id_protectora=this.sesion.id_usuario;
     this.animalServicio.añadirAnimal(this.animal)
     .subscribe((data:string) =>
     {
