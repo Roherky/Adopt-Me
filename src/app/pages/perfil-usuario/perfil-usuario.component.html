@@ -15,7 +15,6 @@
               <th>Apellidos</th>
               <th>Fecha de Nacimiento</th>
               <th>Teléfono</th>
-              <th>Email</th>
               <th>Localidad</th>
               
           </tr>
@@ -28,7 +27,6 @@
           <td>{{usuario.apellidos}}</td>
           <td>{{usuario.fechaNacimiento}}</td>
           <td>{{usuario.telefono}}</td>
-          <td>{{usuario.email}}</td>
           <td>{{usuario.localidad}}</td>
       </tr>
 
@@ -38,8 +36,8 @@
 
 </div>
 <div class="boton">
-  <button type="reset" class="form-control" routerLink="/editarPerfil" id="botonModificar">Modificar</button>
-  </div>
+  <button type="reset" class="form-control" routerLink="/editarPerfil" id="botonModificar" (click)="mostrarDetalle(usuario.idUsuario)" >Modificar</button>
+</div>
   <hr>
 
 <!-- termina container -->
@@ -57,34 +55,12 @@
 <!-- termina descripcion -->
 
 <!-- galeria fotos -->
-<div class="galeria">
-<div class="card-group">
-    <div class="card" style="border-radius:2em">
-      <img src="../../../assets/img/perfil-usuario/cocker.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Cocker</h5>
-        
-      </div>
-    </div>
-    <div class="card" style="border-radius:2em">
-      <img src="../../../assets/img/perfil-usuario/dog.webp" style="height: 140px;" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Amigos</h5>
-      </div>
-    </div>
-    <div class="card" style="border-radius:2em">
-      <img src="../../../assets/img/perfil-usuario/niebla.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Niebla</h5>
-      </div>
-    </div>
-    <div class="card" style="border-radius:2em;">
-      <img src="../../../assets/img/perfil-usuario/puppy.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Puppy</h5>
-      </div>
-    </div>
+<div class="row">
+  <div *ngFor="let imagen of imagenes" class="col-4">
+      <img src="{{imagen.imagen}}" style="width: 50px; height: 50px;border-radius:2em;">
   </div>
+</div>
+
 </div>
 
 

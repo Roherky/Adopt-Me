@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { Protectora } from '../models/protectora';
-
+ 
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +9,33 @@ import { Protectora } from '../models/protectora';
 export class ProtectoraService {
 
   public protectora: Protectora;
+  public idProtectora:number;
+
   private url = "https://adopt-me-angular.herokuapp.com/protectora";
   private registro = "https://adopt-me-angular.herokuapp.com/registro/protectora";
 
   constructor(private http: HttpClient) { }
 
+  obtenerIdProtectora(idProtectora:number){
+ 
+    this.idProtectora=idProtectora
+    return this.idProtectora;
+   }
+ 
+ 
+   obtenerId(idProtectora:number){
+     let url= `https://adopt-me2021.herokuapp.com/protectora?idProtectora=${idProtectora}`; 
+   console.log(url);
+   console.log(this.idProtectora);
+     return this.http.get(url);
+   }
+
+   getProtectoras(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string){
+    let url = `https://adopt-me2021.herokuapp.com/protectora?nombre=${nombre}&direccion=${direccion}&localidad=${localidad}&telefono=${telefono}&imagen=${imagen}&descripcion=${descripcion}`;
+    console.log(url);
+    return this.http.get(url)
+  }
+  
   public getProtectora(id:any)
   {
     return this.http.get(this.url + "/" + id);

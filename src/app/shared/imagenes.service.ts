@@ -13,7 +13,11 @@ export class ImagenesService {
 
   constructor(private http: HttpClient) {  
   }
-
+  
+  getImagen(id_adoptantes:number){
+    let url ="https://adopt-me2021.herokuapp.com/imagenes?id_adoptantes="+id_adoptantes;
+    return this.http.get(url)
+  }
 
   obtenerImagenes(){
     return this.http.get(this.url)

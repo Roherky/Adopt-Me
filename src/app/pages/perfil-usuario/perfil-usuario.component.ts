@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario';
+import { Imagenes } from 'src/app/models/imagenes';
+import { ImagenesService } from 'src/app/shared/imagenes.service';
 import { UsuarioService } from 'src/app/shared/usuario.service';
 import { SesionesService } from 'src/app/shared/sesiones.service';
 
@@ -12,30 +14,67 @@ import { SesionesService } from 'src/app/shared/sesiones.service';
 export class PerfilUsuarioComponent implements OnInit {
 
   public usuario: Usuario;
+  public id:number;
   public adoptante: Usuario;
   public adoptantes: Usuario[];
+  public imagenes:Imagenes[];
 
-  constructor(private apiService: UsuarioService, public sesiones: SesionesService) {
-    this.usuario = new Usuario(0, "Nuria", "Fernández", "21 - Julio - 1990", 600000000 , "nuri@gmail.com", "", "Getafe","", "Me encantan las mascotas, desde muy pequeña he tenido variedad de animales en casa porque son una perfecta compañía. \
-    Actualmente tengo un perrito que adopte hace un par de meses, y con él disfruto en mi tiempo libre jugando, algunas veces hacemos ejercicio juntos e incluso es mi paño de lágrimas en aquellos días grises. \
-    Animo a todas las personas a adoptar, porque no solo iluminas la vida de un animal, además ayudas a liberar espacio en un albergue, lo que permite rescatar a más animales abandonados a su suerte. \
-    El amor que brindan los animales es tan puro que solo querrás tenerlo cerca siempre", "../../../assets/img/perfil-usuario/cocker.webp")
+  constructor(private apiService: UsuarioService, public sesiones: SesionesService, private imagenServicio: ImagenesService) {
+    this.usuario = new Usuario(null,"", "", "", null, "", "", "", "", "", "")
   }
 
-  // public mostrarAdoptante(id: any){
-  //   this.apiService.getAdoptante(id).subscribe((data: any) => {
-  //     this.adoptante = data;
-  //     this.sesiones.id_usuario;
-  //     console.log(this.adoptante);
-  //   })
-  // }
+  ngOnInit(): void {
+    //   this.apiService.getAdoptante(this.sesiones.id_usuario).subscribe((data: any) => {
+    //   this.usuario = data;
+    //   console.log(this.usuario);
+    // })
 
-  // public mostrarAdoptantes(){
-  //   this.apiService.getAdoptantes().subscribe((data: any) => {
-  //     this.adoptantes = data;
-  //     console.log(this.adoptantes);
-  //   })
-  // }
+    
+    this.id= this.apiService.idUsuario;
+    console.log(this.id);
+    console.log(this.usuario);
+    
+    this.apiService.obtenerId(this.sesiones.id_usuario)
+    .subscribe((data:Usuario[])=>{
+   
+            this.usuario=data[0];
+            console.log(this.usuario);
+           
+          })
+  
+  
+   this.imagenServicio.getImagen(this.sesiones.id_usuario)
+   .subscribe((data:Imagenes[])=>{
+     this.imagenes=data;
+     console.log(this.imagenes);
+   })
+  
+  }
+
+  mostrarDetalle(idUsuario){
+
+    this.apiService.obtenerIdUsuario(idUsuario);
+    console.log(idUsuario)
+    
+    }
+
+
+
+  public mostrarAdoptante(id: any){
+    this.apiService.getAdoptante("", "", "", null, "", "", "", "", "")
+    .subscribe((data: any) => {
+      this.adoptante = data;
+      this.sesiones.id_usuario;
+      console.log(this.adoptante);
+    })
+  }
+
+  public mostrarAdoptantes(){
+    this.apiService.getAdoptantes().subscribe((data: any) => {
+      this.adoptantes = data;
+      console.log(this.adoptantes);
+    })
+  }
 
   public modificarAdoptante(id: any, nombre: string, apellidos: string, fechaNacimiento: string, 
                             telefono: number, email: string, password: string, localidad: string,
@@ -49,11 +88,7 @@ export class PerfilUsuarioComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {this.apiService.getAdoptante(this.sesiones.id_usuario).subscribe((data: any) => {
-    this.usuario = data;
-    console.log(this.usuario);
-  })
-  }
+  
 
 
 }
