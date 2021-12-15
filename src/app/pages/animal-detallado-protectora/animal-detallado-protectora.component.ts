@@ -3,6 +3,7 @@ import { Animal } from 'src/app/models/animal';
 import { Imagenes } from 'src/app/models/imagenes';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
+import { Router } from '@angular/router';
 
 
 
@@ -19,7 +20,7 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   public imagenes:Imagenes[];
   public btnPulsado:boolean;
 
-  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService) { 
+  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService, private router:Router) { 
 
     this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }
@@ -38,6 +39,8 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
         if (data == "1"){
 
           alert("Animal eliminado");
+         // this.router.navigate(['/listadoAnimales'])
+
          
           }else
           alert("Error al eliminar el animal");

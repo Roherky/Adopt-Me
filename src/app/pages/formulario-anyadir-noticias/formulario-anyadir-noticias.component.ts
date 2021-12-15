@@ -20,6 +20,7 @@ export class FormularioAnyadirNoticiasComponent implements OnInit {
 
 
   onSubmit(form: NgForm){
+    this.noticia.id_Protectora=this.sesiones.id_usuario;
     this.apiService.postNoticia(this.noticia)
     .subscribe((data:string) =>
     {
