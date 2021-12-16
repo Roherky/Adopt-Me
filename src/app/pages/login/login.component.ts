@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   public login: Login;
   public sesion: Login;
 
-  constructor(private loginService: SesionesService, private router: Router) {
+  constructor(private loginService: SesionesService,
+              private router: Router) {
     this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "", "");
     this.protectora = new Protectora(0,"", "", "", "", "", "", "", "");
   }
@@ -27,7 +28,6 @@ export class LoginComponent implements OnInit {
     this.loginService.postLogin(object).subscribe((data: any) => {
       console.log(data);
       if(data.mensaje == "correcto"){
-        // localStorage.setItem('token', data.respuesta);
         this.sesion = data.respuesta[0];
         this.loginService.saveData(this.sesion);
         if(this.sesion.id_adoptante != null){

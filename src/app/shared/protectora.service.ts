@@ -11,8 +11,10 @@ export class ProtectoraService {
   public protectora: Protectora;
   public idProtectora:number;
 
-  private url = "https://adopt-me-angular.herokuapp.com/protectora";
-  private registro = "https://adopt-me-angular.herokuapp.com/registro/protectora";
+  private url = "https://adopt-me2021.herokuapp.com/protectora";
+  // private registro = "https://adopt-me2021.herokuapp.com/registro/protectora";
+  private registro = "https://adopt-me2021.herokuapp.com/registro/protectora";
+
 
   constructor(private http: HttpClient) { }
 

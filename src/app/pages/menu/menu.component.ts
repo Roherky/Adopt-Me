@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
   public tipoUsuario: string;
 
   constructor(public sesiones: SesionesService) {
+    sesiones.clearSesion();
   }
 
   ngOnInit(): void { }

@@ -79,7 +79,6 @@ import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protect
     EditarPerfilProtectoraComponent,
     EditarNoticiasComponent,
     ListaAnimalesProtectoraComponent,
-    
   ],
   imports: [
     MatToolbarModule,

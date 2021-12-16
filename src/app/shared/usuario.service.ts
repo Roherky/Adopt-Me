@@ -50,7 +50,7 @@ export class UsuarioService {
   }
 
   public putAdoptante(adoptanteActualizado: Usuario){
-    return this.http.put(this.url2, adoptanteActualizado);
+    return this.http.put(this.url, adoptanteActualizado);
     console.log(adoptanteActualizado);
     
   }

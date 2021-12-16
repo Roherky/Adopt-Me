@@ -59,6 +59,15 @@ export class RegistroComponent implements OnInit {
     }
   }
 
+  // llamadaFuncion(password, confirmPassword){
+  //   console.log(password);
+  //   console.log(confirmPassword);
+  //   if(password == confirmPassword){
+  //     return true;
+  //   }
+  //   else return false;
+  // }
+
   ngOnInit(): void {
   }
 
