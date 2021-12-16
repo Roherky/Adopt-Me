@@ -18,7 +18,7 @@
         <div class="input-fecha">
             <div class="form-group" id="fechaPublicacion">
                 <label style="margin-top: 1%;">Fecha de la publicación</label>
-                <input id="input-fechaPublicacion" type="date" name="fechaPublicacion" class="form-control" [(ngModel)]="finalFeliz.fechaPublicacion" #fechaPublicacion="ngModel"
+                <input id="input-fechaPublicacion" type="date" name="fechaPublicacion" class="form-control" [(ngModel)]="finalFeliz.fecha_Publicacion" #fechaPublicacion="ngModel"
                 [ngClass]="{'is-invalid': (fechaPublicacion.dirty || fechaPublicacion.touched) && fechaPublicacion.invalid}" required>
                 <div class="invalid-feedback" *ngIf="(fechaPublicacion.dirty || fechaPublicacion.touched) && fechaPublicacion.invalid">
                     <p *ngIf="fechaPublicacion.errors?.['required']">Debes introducir un formato de fecha válido</p>

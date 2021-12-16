@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario';
+import { SesionesService } from 'src/app/shared/sesiones.service';
 
 @Component({
   selector: 'app-contacto',
@@ -10,7 +11,7 @@ import { Usuario } from 'src/app/models/usuario';
 export class ContactoComponent implements OnInit {
 
   public usuario!:Usuario
-  constructor() { 
+  constructor(public sesiones: SesionesService) { 
     this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "", "");
   }
 

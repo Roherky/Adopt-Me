@@ -36,10 +36,10 @@ export class LoginComponent implements OnInit {
         if(this.sesion.id_protectora != null){
           this.router.navigate(['dashboard']);
         }
-        alert("Correctamente");
+        alert("Se ha logueado correctamente");
       }
       else {
-        alert("Error");
+        alert("Ha ocurrido un error al intentar loguearse, compruebe su correo electrónico y contraseña");
       }
     })
   }

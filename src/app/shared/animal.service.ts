@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Animal } from '../models/animal';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
+ 
 @Injectable({
   providedIn: 'root'
 })

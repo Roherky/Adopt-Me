@@ -13,7 +13,7 @@ export class AnyadirAnimalesComponent implements OnInit {
 
   public animal: Animal;
 
-  constructor(private animalServicio: AnimalService,  public sesion: SesionesService) {
+  constructor(private animalServicio: AnimalService, public sesion: SesionesService) {
     this.animal=new Animal(null,"", "", "", "","", "", "", "",  null, "");
    
     console.log(this.sesion.id_usuario)

@@ -81,6 +81,10 @@
                 border-radius: 1em;
             }
 
+            #input-usuarioConfirmPassword {
+                border-radius: 1em;
+            }
+
         #localidad-usuario {
             margin-top: 2%;
         }
@@ -173,6 +177,10 @@
                 }
 
                     #input-protectoraPassword {
+                        border-radius: 1em;
+                    }
+
+                    #input-protectoraConfirmPassword {
                         border-radius: 1em;
                     }
 

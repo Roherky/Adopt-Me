@@ -2,68 +2,78 @@
 <div class="container">
     <h1>Editar noticias</h1>
      
-        <form>
+    <form action="../../form-result.php" method="post" enctype="multipart/form-data" target="_blank">
             
             <!--Input titular-->
+            
             <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label>Titular</label><br>
-                    <input type="text"  class="redondeado" name="titular" >
-                </div>
-                </div>
-      
+           
+                 <div class="col">
+                   <div class="form-group">
+                       <label>Titular</label>
+                       <input type="text"  class="redondeado" name="titular"  placeholder="Titular" #titular>
+                      
+                   </div>
+                 </div>
                    <!--Input categoria-->
                    <div class="col">
-                        <label>Categoria</label><br>
-                        <select id="categoria"  class="redondeado" type="radio" name="categoria" style="background-color: white;">
-                            <option value="" disabled selected>Selecciona categoria</option>
-                            <option value="urgente">Urgente</option>
-                            <option value="destacado">Destacado</option>
-                            <option value="lo último">Lo último</option>
-                            <option value="otros">Otros</option>
-                        </select>
-                  
-                </div>
+                    <div class="form-group">
+                    <label>Categoria</label><br>
+                    <select id="categoria"  class="redondeado" name="categoria" #categoria>
+                      <option value="" disabled selected>Selecciona categoria</option>
+                      <option value="urgente">Urgente</option> 
+                      <option value="destacado">Destacado</option>
+                      <option value="lo ultimo">Lo último</option> 
+                      <option value="otros">Otros</option>   
+                   </select>
+                 
+              </div>
+            </div>
               
     
                    <!--Input prioridad-->
                    <div class="col">
-                    
-                        <label>Prioridad de la noticia</label><br>
-                        <select name="prioridad" class="redondeado" style="background-color: white;">
-                            <option value="" disabled selected>Selecciona la prioridad</option>
-                            <option value="muy importante">Muy importante</option>
-                            <option value="importante">Importante</option>
-                            <option value="normal">Normal</option>
-                            <option value="no importante">No importante</option>
-                        </select>
-                   </div>
+                    <div class="form-group">
+                    <label>Prioridad</label><br>
+                    <select id="prioridad"  class="redondeado" name="prioridad" #prioridad>
+                      <option value="" disabled selected>Selecciona prioridad</option>
+                      <option value="Muy importante">Muy importante</option> 
+                      <option value="importante">Importante</option>
+                      <option value="normal">Normal</option> 
+                      <option value="no importante">No importante</option> 
+                   </select>
+                 
+              </div>
+            </div>
+                   
             </div>
       
       
                 
                   <!--input fecha-->
-                 <div class="row" > 
-                    <div class="col">
-                          <label for="start">Fecha noticia</label><br>
-        
-                          <input type="date" id="noticia" name="fecha_publicacion" class="redondeado"
-                                 value="2021-11-29"
-                                 min="2018-01-01" max="2021-12-31">
-                                
-                      </div>
-                    </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="start">fecha_publicacion:</label><br>
+                      <input type="date" id="start" name="fecha_publicacion"  class="redondeado"
+                             value=""
+                             min="2018-01-01" max="2021-12-31"
+                            #fecha_publicacion> 
+                            
+                   </div>
+                  </div> 
                  
            
                                    
       
       
                   <!--url imagen-->
-                    <div class="col" style="margin-left: -400px;">
-                        <label>Url imagen</label>
-                        <input type="text"  class="redondeado" name="imagen" placeholder="imagen">
+                  <div class="col">
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="text"  class="redondeado" name="imagen"  placeholder="Imagen" #imagen>
+                
                     </div>
+                  </div>
                 
                 
                 
@@ -71,21 +81,19 @@
           
     
       <!--Textarea descripcion-->
-                <div class="row"> 
-                     <div class="col" style="margin-top: 20px;">
-                        <label>Descripcion</label><br>
-                        <textarea id="descripcion" ></textarea>
-                     </div>   
-                </div>
-      
-    
-    
+      <div class="row">
+        <!--Textarea detalles-->
+       <div class="col">
+     <label>Descripcion</label><br>
+     <textarea class="form-control" name="descripcion" id="detalles" #descripcion></textarea>
+   </div>   
+</div>
       
       <!--Boton guardar-->
 
      <div class="botones">
-            <button class="btn btn-primary btn-block"  id="botonEnviar">Guardar</button>
-            <button  class="btn btn-primary btn-block"type="button" id="botonEliminar"> Eliminar noticia </button> 
+            <button type="reset"class="btn btn-primary btn-block"  id="botonEnviar" (click)="editarNoticia(titular.value, categoria.value, prioridad.value, fecha_publicacion.value, imagen.value, descripcion.value )">Guardar</button>
+            <button  class="btn btn-primary btn-block"type="button" id="botonEliminar"(click)="eliminar(noticias.idNoticias)"> Eliminar noticia </button> 
      </div> 
        
     
@@ -106,7 +114,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar noticia</button>
+                            <!-- <button type="reset" class="btn btn-danger" id="botonEliminar" (click)="eliminarNoticia(id)">Eliminar noticia</button> -->
                         </div>
                     </div>
                 </div>

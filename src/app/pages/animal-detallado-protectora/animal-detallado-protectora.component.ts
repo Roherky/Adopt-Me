@@ -22,7 +22,10 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   public imagen:Imagenes;
   public btnPulsado:boolean;
 
-  constructor(private animalServicio: AnimalService, private imagenServicio: ImagenesService, private router:Router, public sesion: SesionesService) { 
+  constructor(private animalServicio: AnimalService,
+              private imagenServicio: ImagenesService,
+              private router:Router,
+              public sesion: SesionesService) { 
 
     this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
   }

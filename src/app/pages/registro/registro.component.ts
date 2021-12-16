@@ -46,11 +46,10 @@ export class RegistroComponent implements OnInit {
           console.log("Ha ocurrido un error al procesar su solicitud")
         }
       })
-      /// Hacer la post protectora  y envias this.protectora si no hace lo contrario
-    }else{
+    }
+    else {
         this.servicioAdoptante.postAdoptante(this.usuario).subscribe((data: any) => {
         console.log(data);
-        // this.router.navigate(['loguin']);
         if(data != "-1"){
           console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
           this.router.navigate(['listadoAnimales']);
@@ -58,7 +57,6 @@ export class RegistroComponent implements OnInit {
         else console.log("Ha ocurrido un error al procesar su solicitud");
       })
     }
-
   }
 
   ngOnInit(): void {

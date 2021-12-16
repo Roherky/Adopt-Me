@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario';
 import { SesionesService } from 'src/app/shared/sesiones.service';
 import { UsuarioService } from 'src/app/shared/usuario.service';
@@ -16,36 +15,59 @@ export class EditarPerfilComponent implements OnInit {
   public usuario: Usuario;
   public id:number;
   
-
-  constructor( private apiService: UsuarioService, private sesiones:SesionesService) {
+  constructor( private apiService: UsuarioService, private sesiones: SesionesService) {
     this.usuario=new Usuario(null,"","","",null,"","","","","","")
-    
   }
-  onSubmit(form: NgForm){
-    
-    this.apiService.putAdoptante(this.usuario)
-    .subscribe((data:string) =>
-    {
-    
+
+
+  editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono:any, localidad:string,  direccion:string, imagen:string, descripcion:string){
+    this.id= this.apiService.idUsuario; 
+    let user = new Usuario(this.sesiones.id_usuario, nombre, apellidos, fechaNacimiento, telefono, "", "",localidad,  direccion, imagen, descripcion)
+    for(let propiedad in user){
+
+        if(user[propiedad]==""){
+          user[propiedad]=null
+        }
+    }   
+
+
+    this.apiService.putAdoptante(user)
+    .subscribe((data:string) =>{
       console.log(data);
-      if (data != "-1")
-        alert("Se modificado el usuario" + data)
-      else
-        alert("Error al modificar el usuario");
+      if(data=="1"){
 
+        alert("se ha modificado correctamente");
+        console.log(data);
+        console.log("aaaaaass")
+      }
+      else{
+        alert("No se puede modificar")
+      
+        }
+
+      console.log(data);
     })
+}
 
-  }imagenPerfil:string;
-  editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono:number, email:string,  password:string, localidad:string,  descripcion:string, direccion:string, imagenPerfil:string){
-    this.id= this.apiService.id; 
- let usuario=new Usuario(this.id, nombre, apellidos, fechaNacimiento, telefono, email,  password, localidad, direccion, descripcion, imagenPerfil)
-   for(let propiedad in usuario){
-         if(usuario[propiedad]==""){
-           usuario[propiedad]=null
-         }
-     }   
+  
+  // onSubmit(form: NgForm){
+  // console.log(form.value);
+  // console.log(this.usuario);
+  // console.log(this.sesiones.id_usuario)
 
+  // this.apiService.putAdoptante(this.usuario)
+  // .subscribe((data: string) => {
+  //   console.log(data);
+  //   if (data != "-1")
+  //       alert("Se ha modificado el usuario con id: " + data)
+  //     else
+  //       alert("Error al modificar el usuario");
     
+  // })
+  
+  // this.apiService.getAdoptantes().subscribe((data:string) =>{
+  //   console.log(data)
+  // })
 
 //  this.apiService.getAdoptante(usuario)
 //  .subscribe((data:string) =>{
@@ -61,7 +83,7 @@ export class EditarPerfilComponent implements OnInit {
 
 //    console.log(data);
 //  })
- }
+//  }
     
  
 
