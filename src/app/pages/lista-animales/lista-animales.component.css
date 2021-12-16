@@ -17,7 +17,7 @@ h1{
    
 }
 .formulario{
-    width: 1020px;
+    width: 1160px;
     margin-top: 10px;
     margin-bottom: 40px;
     /* margin-right: 55px; */
@@ -26,7 +26,7 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     background-color: #5EC0CA;
     color: #fff;
     border-radius: 2em;
@@ -35,7 +35,7 @@ h1{
 .redondeado{
     border-radius: 2em;
     border-style: none;
-    width: 180px;
+    width: 190px;
     height: 35px;
     text-align: center;
     display: flex;
@@ -51,16 +51,18 @@ h1{
     justify-content: center;
     gap: 50px
 }
-.imagen{
-    width: 220px;
-    height: 200px;
-    border-radius: 2em;
-
-    /* efectos */
-    overflow:hidden;
-    
+.card{
+ /* efectos */
+ overflow:hidden;
+ transition: all 1.5s;
 }
-.imagen:hover{
+.imagen{
+    width: 250px;
+    height: 200px;
+    /* border-radius: 1em; */
+
+}
+.card:hover{
     -webkit-transform:scale(1.2);transform:scale(1.2);
     cursor: pointer;
 }

@@ -6,13 +6,13 @@
              <!--Input nombre-->
              <div class="clase1" > 
                 <div class="form-group" >
-                    <label style="margin-left: 10px;">Nombre</label>
+                    <label style="margin-right: 10px;">Nombre</label>
                     <input type="text"  class="redondeado" #nombre>
               </div>
                  <!--Lista desplegable genero-->
                 
             <div class="form-group" style="margin-left: 10px;">
-                <label style="margin-left: 10px;">Sexo</label><br>
+                <label style="margin-left: 10px; margin-right: 10px;">Sexo</label><br>
                 <select id="genero" style="background-color: white;" class="redondeado" type="radio" name="genero" #sexo>
                     <option value=""  selected>Selecciona género</option>
                     <option value="macho">Macho</option> 
@@ -62,12 +62,14 @@
 
     <div class="row" *ngIf="sesion.tipo=='protectora'; else adoptante">
         <div *ngFor="let anim of animales" class="col-3" [routerLink]="['/animalDetalleProtectora']" (click)="mostrarDetalle(anim.idAnimal)">
-            
+           
             <figure>
-               
-             <img src="{{anim.imagen}}" class="imagen" >
-            <figcaption style="font-weight: bold;">{{anim.nombre}}</figcaption>
-        </figure>
+                <div class="card" style=" border-radius: 1em;">
+                <img src="{{anim.imagen}}" class="imagen" >
+                <figcaption style="font-weight: bold; margin-top: 15px; margin-bottom: 15px;">{{anim.nombre}}</figcaption>
+                </div>
+            </figure>
+           
         </div>
     </div>
 
@@ -99,15 +101,18 @@
 
 
 <ng-template #adoptante> 
+
   
     <div class="row">
         <div *ngFor="let anim of animales" class="col-3" [routerLink]="['/perfilAnimal']" (click)="mostrarDetalle(anim.idAnimal)">
-            
+           
             <figure>
+                <div class="card" style="border-radius: 1em;">
+                <img src="{{anim.imagen}}" class="imagen">
+                <figcaption style="font-weight: bold; margin-top: 10px; margin-bottom: 15px;">{{anim.nombre}}</figcaption>
+                </div>
+            </figure>
             
-            <img src="{{anim.imagen}}" class="imagen">
-            <figcaption style="font-weight: bold;">{{anim.nombre}}</figcaption>
-        </figure>
         </div>
     </div>
 </ng-template>

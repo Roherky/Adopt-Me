@@ -30,7 +30,7 @@
   </ng-container>
       </tbody>
   </table>
-
+ 
 </div>
 <div class="boton">
   <a type="reset" class="form-control" id="botonCrear" routerLink="/añadirAnimal" style="text-align: center; ">Crear Animal</a>
@@ -41,11 +41,12 @@
 
     <!-- descripcion  -->
     <section class="descripcion">
-      <h3 class="custom-heading">Sobre nosotros:</h3>
+    
         <div class="cms-heading layout1" style="display: flex; flex-direction: row;">
-       
-            <span style="font-size:large;">
-              <p >{{protectora.descripcion}}</p>
+          
+            <span style="font-size:larger;">
+              <h3 class="custom-heading" >Sobre nosotros:</h3>
+              <p style="line-height: 180%">{{protectora.descripcion}}</p>
             </span>
             <img src="./assets/img/perfil-usuario/protectora.jpg" class="protectora" style="width: 410px; height: 400px; display: flex; align-items: flex-end; margin-left: 40px; border-radius: 15px;">
         </div>

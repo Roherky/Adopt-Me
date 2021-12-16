@@ -42,8 +42,6 @@
 
      font-size: 3em;
      padding-top: 20px;
-     /* margin-top: 20px; */
-     /* text-align: center; */
  }
 
 
@@ -86,6 +84,7 @@ img{
       /* efectos */
 
       overflow:hidden;
+      transition: all 1.5s;
 }
 img:hover{
 -webkit-transform:scale(1.2);transform:scale(1.2);
@@ -104,7 +103,7 @@ img:hover{
 #imagenInfo{
     width: 200px;
     height: 200px;
-    
+    transition: all 1.5s;
     margin-top: 0;
 }
 
