@@ -32,6 +32,11 @@ export class SesionesService {
     }
   }
 
+  clearSesion(){
+    this.tipo = null;
+    this.id_usuario = null;
+  }
+
   isAuth(): boolean {
     const almacenamientoLocal = localStorage.getItem('token');
     return true;
