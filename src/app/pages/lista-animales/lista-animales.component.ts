@@ -22,27 +22,24 @@ export class ListaAnimalesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.sesion.tipo=="adoptante"){
-    this.animalServicio.obtenerAnimales()
-    .subscribe((data:Animal[])=>{
-      this.animales=data;
-      console.log(this.animales);
-    })
 
-  }else if(this.sesion.tipo=="protectora"){
-    this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
-    .subscribe((data:Animal[])=>{
-      this.animales=data;
-      console.log(this.animales);
-    })
+    if(this.sesion.tipo=="protectora"){
+      this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
+      .subscribe((data:Animal[])=>{
+        this.animales=data;
+        console.log(this.animales);
+      })
 
-  }else{
-    this.animalServicio.obtenerAnimales()
-    .subscribe((data:Animal[])=>{
-      this.animales=data;
-      console.log(this.animales);
-    })
-  }
+    }else{
+
+      this.animalServicio.obtenerAnimales()
+      .subscribe((data:Animal[])=>{
+        this.animales=data;
+        console.log(this.animales);
+      })
+    }
+
+  
 
   }
 
