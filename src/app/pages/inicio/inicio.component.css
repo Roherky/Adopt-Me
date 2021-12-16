@@ -102,7 +102,7 @@
     }
 
     #imagen-animal1 {
-        transition: 0.5s;
+        transition: 1s;
     }
 
     #imagen-animal1:hover {
@@ -115,7 +115,7 @@
     }
 
     #imagen-animal2 {
-        transition: 0.5s;
+        transition: 1s;
     }
 
     #imagen-animal2:hover {
@@ -128,7 +128,7 @@
     }
 
     #imagen-animal3 {
-        transition: 0.5s;
+        transition: 1s;
     }
 
     #imagen-animal3:hover {
@@ -141,7 +141,7 @@
     }
 
     #imagen-animal4 {
-        transition: 0.5s;
+        transition: 1s;
     }
 
     #imagen-animal4:hover {

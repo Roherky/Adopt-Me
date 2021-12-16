@@ -33,7 +33,6 @@ export class RegistroComponent implements OnInit {
 
   onSubmit(form: NgForm){
     console.log(this.protectora);
-    console.log(form);
     console.log(this.usuario);
     if(this.usuario.nombre == ''){
       console.log('Se ha registrado una protectora')
@@ -57,6 +56,15 @@ export class RegistroComponent implements OnInit {
         else console.log("Ha ocurrido un error al procesar su solicitud");
       })
     }
+  }
+
+  confirmarPassword(password, confirmPassword){
+    console.log(password);
+    console.log(confirmPassword);
+    if(password == confirmPassword){
+      return true;
+    }
+    else return false;
   }
 
   ngOnInit(): void {

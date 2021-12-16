@@ -1,21 +1,29 @@
-
-*{
+/* *{
     font-family: sans-serif;
+} */
+
+/* .principal{
+    display: flex;
+    flex-direction: column;
 }
 
-.principal{
-    background: url("../../../assets/img/Fondo.jpg");
-    padding: 20px;
-    margin-bottom: -65px;
+.textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
     display: flex;
     justify-content: center;
-   
+    margin-top: 2%;
 }
 
 #detalles{
-    width: 100%; 
+    width: 70%; 
     height: 150px;
-    border-radius: 10px;
+    border-radius: 1em;
  }
 
 .col{
@@ -95,9 +103,9 @@ input{
     background-color: #5EC0CA;
     color: #fff;
     border-radius: 15px;
-    border:none;
+    border:none; */
      /* efectos */
-     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+     /* -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 #btnEnviar:hover{
@@ -120,4 +128,89 @@ input{
         position: absolute; 
         right: 35%;
     }
+} */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
+
+    .formulario {
+        margin-left: 3%;
+        margin-top: 1%;
+    }
+
+        .fila1 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+            }
+
+            .nombre {
+                margin-top: 1%;
+            }
+
+            #nombre {
+                border-radius: 1em;
+                width: 80%;
+            }
+
+            .email {
+                margin-top: 2%;
+            }
+
+            #email {
+                border-radius: 1em;
+                width: 80%;
+            }
+
+            .telefono {
+                margin-top: 2%;
+            }
+
+            #telefono {
+                border-radius: 1em;
+                width: 80%;
+            }
+
+            .detalles {
+                margin-top: 1%;
+            }
+
+            #detalles {
+                border-radius: 1em;
+                width: 80%;
+                height: 8em;
+            }
+
+            .boton {
+                display: flex;
+                justify-content: flex-start;
+                margin-left: 40%;
+                margin-top: 3%;
+                margin-bottom: -0.65%;
+            }
+
+            #boton {
+                background-color: #5EC0CA;
+                border-radius: 1em;
+                border: none;
+                width: 15%;
+                padding: 0.75em;
+                color: white;
+                background-image: linear-gradient(45deg, orange  50%, transparent 50%);
+                background-position: 100%;
+                background-size: 400%;
+                transition: background 300ms ease-in-out;
+            }
+
+            #boton:hover {
+                background-position: 0;
+            }

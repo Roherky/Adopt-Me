@@ -41,13 +41,7 @@ export class PerfilUsuarioComponent implements OnInit {
       console.log(this.imagenes);
      
     })
-
-
-  
-  
   }
-
-
   public modificarAdoptante(id:any, nombre: string, apellidos: string, fechaNacimiento: string, 
     telefono: number, email: string, password: string, localidad: string,
     direccion: string, descripcion:string, imagenPerfil: string, )
@@ -64,9 +58,4 @@ export class PerfilUsuarioComponent implements OnInit {
         alert("Error al actualizar la protectora");
     })
   }
-
-
-
-
 }
-

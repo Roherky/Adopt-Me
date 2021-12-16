@@ -11,7 +11,6 @@ export class ProtectoraService {
  
   public protectora: Protectora;
   public id:number;
-  private urlPrueba = "http://localhost:300/protectora"
   private url = "https://adopt-me2021.herokuapp.com/protectora";
   private registro = "https://adopt-me2021.herokuapp.com/registro/protectora";
 
@@ -49,7 +48,7 @@ export class ProtectoraService {
 
   public putProtectora(modProtectora: Protectora)
   {
-    return this.http.put(this.urlPrueba, modProtectora);
+    return this.http.put(this.url, modProtectora);
   }
 
   

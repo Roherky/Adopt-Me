@@ -78,8 +78,7 @@ import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protect
     FormularioImagenesComponent,
     EditarPerfilProtectoraComponent,
     EditarNoticiasComponent,
-    ListaAnimalesProtectoraComponent,
-    
+    ListaAnimalesProtectoraComponent
   ],
   imports: [
     MatToolbarModule,

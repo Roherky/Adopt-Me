@@ -37,8 +37,8 @@ export class SesionesService {
     this.id_usuario = null;
   }
 
-  isAuth(): boolean {
-    const almacenamientoLocal = localStorage.getItem('token');
-    return true;
-  }
+  // isAuth(): boolean {
+  //   const almacenamientoLocal = localStorage.getItem('token');
+  //   return true;
+  // }
 }

@@ -12,7 +12,6 @@ export class UsuarioService {
   public id:number;
  
   private url = "https://adopt-me2021.herokuapp.com/adoptante";
-  private url2 = "http://localhost:300/adoptante";
   private urlgeneracion = "https://adopt-me2021.herokuapp.com/registro/adoptante";
 
   constructor(private http: HttpClient) { }
@@ -46,7 +45,7 @@ export class UsuarioService {
   }
 
   public putAdoptante(adoptanteActualizado: Usuario){
-    return this.http.put(this.url2, adoptanteActualizado);
+    return this.http.put(this.url, adoptanteActualizado);
   }
 
   public deleteAdoptante(id: any){

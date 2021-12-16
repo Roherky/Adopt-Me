@@ -1,16 +1,11 @@
-.general{
-    background: url("../../../assets/img/Fondo.jpg");
-    padding:20px;
-    padding-bottom: 100px;
-    padding-left: 50px;
-}
 h1{
     margin-top: 20px;
 }
 .preguntas{
     margin-top:50px;
-    
-   
+    padding:20px;
+    padding-bottom: 100px;
+    padding-left: 50px;
 }
 p{
     background-color: #5EC0CA;

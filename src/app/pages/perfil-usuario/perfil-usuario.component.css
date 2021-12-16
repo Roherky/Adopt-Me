@@ -26,6 +26,28 @@
     background-position: 0;
   }
 
+  #botonFinales{
+    width: 200px;
+     background-color: orange;
+     color: #fff;
+     border-radius: 15px;
+     border: none;
+
+     /* animacion */
+     border-color: orange;
+     color: #fff;
+     background-image: -webkit-linear-gradient(45deg, #5EC0CA 50%, transparent 50%);
+     background-image: linear-gradient(45deg, #5EC0CA  50%, transparent 50%);
+     background-position: 100%;
+     background-size: 400%;
+     -webkit-transition: background 300ms ease-in-out;
+     transition: background 300ms ease-in-out;
+ }
+
+ #botonFinales:hover {
+    background-position: 0;
+  }
+
  .boton{
      display: flex;
      align-items: center;
