@@ -19,7 +19,9 @@ export class PerfilUsuarioComponent implements OnInit {
   // public adoptantes: Usuario[];
   public imagenes:Imagenes[];
 
-  constructor(private apiService: UsuarioService, public sesiones: SesionesService, private imagenServicio: ImagenesService) {
+  constructor(private apiService: UsuarioService,
+              public sesiones: SesionesService,
+              private imagenServicio: ImagenesService) {
     this.usuario = new Usuario(null,"", "", "", null, "", "", "", "", "", "")
   }
 
@@ -29,9 +31,6 @@ export class PerfilUsuarioComponent implements OnInit {
     //   console.log(this.usuario);
     // })
 
-    
-
-    
     this.id= this.apiService.idUsuario;
     console.log(this.id);
     console.log(this.usuario);
@@ -43,7 +42,6 @@ export class PerfilUsuarioComponent implements OnInit {
       console.log(this.usuario);
            
           })
-  
   
    this.imagenServicio.getImagen(this.id)
    .subscribe((data:Imagenes[])=>{
@@ -59,8 +57,6 @@ export class PerfilUsuarioComponent implements OnInit {
     console.log(idUsuario)
     
     }
-
-
 
   public mostrarAdoptante(id: any){
     this.apiService.getAdoptante("", "", "", null, "", "", "", "", "")
@@ -89,12 +85,4 @@ export class PerfilUsuarioComponent implements OnInit {
       else ("Ha ocurrido un error al procesar su solicitud");
     })
   }
-
-  
-
-
 }
-
-
-
-

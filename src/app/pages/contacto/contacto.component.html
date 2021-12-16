@@ -1,9 +1,7 @@
-
-<div class="principal">
+<!-- <div class="principal">
     <form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
         <div class="tituloLogo">
-            <img src="../../../assets/img/Página inicio/formulario1.png" id="imgContacto">
-             <h1>Formulario de contacto</h1>
+             <h1 style="margin-top: 5%; margin-left: 3%;">Formulario de contacto</h1>
             
         </div>
         <div class="contenedor">
@@ -35,46 +33,74 @@
           </div>
         </div>
     </div>
-
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./../../../assets/perro3.jpg" class="d-block w-100" alt="..." >
-              </div>
-              <div class="carousel-item">
-                <img src="./../../../assets/perro4.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./../../../assets/gatito.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./../../../assets/perro5.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-  
+    <img src="./../../../assets/img/Página inicio/EmojiPerrito.png">
     </div>
-    <div class="row">
+    <div> -->
       <!--Textarea detalles-->
-     <div class="col">
-   <label>Detalles</label><br>
+      <!-- <label style="margin-left: 16%; margin-bottom: 0.5%">Detalles</label>
+     <div class="textarea">
    <textarea class="form-control" id="detalles"></textarea>
  </div>   
 </div>
         
-          <div class="col">
+          <div class="boton">
             <button id ="btnEnviar" type="submit" class="btn btn-secondary ml-auto">Enviar</button>
           </div>
     
         </form>
-   
-    </div>
+    </div> -->
 
+<div class="contenedor">
+  <!-- Título de la página -->
+  <div class="titulo">
+    <h1 style="margin-top: 5%; margin-left: 3%;">Contacto</h1>
+  </div>
+  <!-- Formulario de contacto -->
+  <form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)" class="formulario">
+    <div class="fila1">
+      <div class="inputs">
+        <!-- Input de nombre -->
+        <div class="nombre">
+          <label style="margin-bottom: 1%;">Nombre</label><br>
+          <input type="text" id="nombre" class="form-control" name="nombre" [(ngModel)]="usuario.nombre" #nombre="ngModel" placeholder="Nombre"
+          [ngClass]="{'is-invalid': formContacto.submitted && nombre.invalid}" required>
+          <div class="invalid-feedback" *ngIf="formContacto.submitted && nombre.invalid">
+            <p *ngIf="nombre.errors?.['required']">El nombre es obligatorio</p>
+          </div>
+        </div>
+        <!-- Input de correo electrónico -->
+        <div class="email">
+          <label style="margin-bottom: 1%;">Email</label><br>
+          <input type="email" id="email" class="form-control" name="email" [(ngModel)]="usuario.email" #email="ngModel"  placeholder="Email"
+          [ngClass]="{'is-invalid': formContacto.submitted && email.invalid}" required>
+          <div class="invalid-feedback" *ngIf="formContacto.submitted && email.invalid">
+            <p *ngIf="email.errors?.['required']">Debes introducir un email válido</p>
+          </div>
+        </div>
+        <!-- Input de teléfono -->
+        <div class="telefono">
+          <label style="margin-bottom: 1%;">Teléfono</label><br>
+          <input type="text" id="telefono" class="form-control" name="telefono" [(ngModel)]="usuario.telefono" #telefono="ngModel" placeholder="Teléfono" 
+          [ngClass]="{'is-invalid': formContacto.submitted && email.invalid}" required minlength="9" maxlength="9">
+          <div class="invalid-feedback" *ngIf="formContacto.submitted && telefono.invalid">
+            <p *ngIf="telefono.errors?.['required']">Debes introducir un número de teléfono</p>
+            <p *ngIf="telefono.errors?.['minlength']">El número de teléfono debe contener 9 dígitos</p> 
+          </div>
+        </div>
+      </div>
+      <!-- Imagen -->
+      <div class="imagen">
+        <img src="./../../../assets/img/Página inicio/EmojiPerrito.png" style="width: 15em; height: 15em;">
+      </div>
+    </div>
+    <!-- Input de detalles -->
+    <div class="detalles">
+      <label style="margin-bottom: 1%;">Detalles</label>
+      <textarea id="detalles" class="form-control"></textarea>
+    </div>
+    <!-- Botón de enviar -->
+    <div class="boton">
+      <button id="boton">Enviar</button>
+    </div>
+  </form>
+</div>

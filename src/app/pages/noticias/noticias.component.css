@@ -1,42 +1,47 @@
-.container{
-    padding: 20px;
-    padding-bottom: 70px;
-    margin-bottom: -55px;
-}
-
-.general{
+.contenedor {
     display: flex;
     flex-direction: column;
-    gap:10px
 }
-h1{
-   
-    margin-left: 25px;
-    margin-bottom: 40px;
-    margin-top: 30px;
-   
+
+.row {
+    margin-top: 1%;
+    margin-left: 3%;
+    width: 97%;
 }
+
+.card {
+    margin-top: 5%;
+}
+
+.card-img-top:hover {
+    filter: brightness(70%);
+    transition: 1s;
+}
+
+.sinNoticias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
 #botonCrear{
     width: 200px;
-     background-color: orange;
-     color: #fff;
-     border-radius: 15px;
-     border: 2px solid orange;
+    background-color: orange;
+    color: #fff;
+    border-radius: 15px;
+    border: 2px solid orange;
     text-decoration: none;
-  
-
  }
-
 
  #botonModificar{
     width: 200px;
-     background-color: #5EC0CA;
-     
-     color: #fff;
-     border-radius: 15px;
-     border: 2px solid #5EC0CA;
-
-   
+    background-color: #5EC0CA;
+    color: #fff;
+    border-radius: 15px;
+    border: 2px solid #5EC0CA;
  }
 
 .redondeado{
@@ -47,7 +52,6 @@ h1{
     text-align: center;
     display: flex;
     flex-direction: row;
-    
 }
 
 .imagen{
@@ -64,13 +68,13 @@ h1{
     cursor: pointer;
 }
 
-
 .clase1{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .botondiv{
     margin-top: 2%;
     display: flex;
@@ -79,7 +83,6 @@ h1{
     align-items: center;
 }
  
-    
 .botones{
     display: flex;
     justify-content: flex-end;
@@ -87,16 +90,16 @@ h1{
     margin-bottom: 20px;
 }
 
-
-
  figure {
     display: inline-block;
    
     margin: 20px; /* adjust as needed */
 }
+
 figure img {
     vertical-align: top;
 }
+
 figure figcaption {
  
     text-align: center;
@@ -112,14 +115,8 @@ figure figcaption {
         padding: 20px;
         padding-bottom: 70px;
         margin-bottom: -55px;
-    }
-    
+    } 
 }
-
-
-
-
-  
 
   @media screen and (max-width: 1000px) {
     .container{
@@ -127,5 +124,4 @@ figure figcaption {
         padding-bottom: 70px;
         margin-bottom: -55px;
     }
-    
 }

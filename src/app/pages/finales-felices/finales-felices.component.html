@@ -9,19 +9,19 @@
         <div class="card" style="width: 18rem; border-radius: 1em;">
           <img src="{{final.imagenes}}" class="card-img-top" alt="" style="width: 18em; height: 12em;" (click)="abrirModal(contenido)">
           <div class="card-body">
-            <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{final?.nombreAnimal}}</p>
+            <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{final.nombreAnimal}}</p>
           </div>
         </div>
         <!-- Modal -->
         <ng-template #contenido let-modal>
           <div class="modal-header">
-            <h4 class="modal-title" id="modal-basic-title">{{final?.nombreAnimal}}</h4>
+            <h4 class="modal-title" id="modal-basic-title">{{final.nombreAnimal}}</h4>
             <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>{{final?.descripcion}}</p>
+            <p>{{final.descripcion}}</p>
           </div>
         </ng-template>
       </div>

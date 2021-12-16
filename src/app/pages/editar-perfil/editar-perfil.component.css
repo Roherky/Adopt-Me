@@ -14,11 +14,9 @@ label{
     font-family: sans-serif;
 }
 
-
  select{
      padding: 7px;
  }
-
 
  #botonEnviar{
    width: 200px;
@@ -66,19 +64,12 @@ label{
     width: 250px;
  }
 
-
  .redondeado {
    border-radius: 1em;
     border: 1px solid grey;
     padding: 5px;
     width: 250px;
   }
-
-
-   
-
-   
-
 
  @media all and (max-width: 994px){ 
 

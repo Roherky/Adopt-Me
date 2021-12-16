@@ -44,7 +44,7 @@
      transition: background 300ms ease-in-out;
  }
 
- #botonModificar:hover {
+ #botonFinales:hover {
     background-position: 0;
   }
 
