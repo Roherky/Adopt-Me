@@ -59,6 +59,7 @@ h1{
 
     /* efectos */
     overflow:hidden;
+    transition: all 1.5s;
     
 }
 .imagen:hover{

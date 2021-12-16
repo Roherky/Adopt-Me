@@ -25,14 +25,6 @@
    
  }
 
- /* #botonCrear{
-    width: 200px;
-    border-radius: 1em;
-    background-color: orange;
-    color: #fff;
-    border:none;
-    text-decoration: none;
- } */
 
 
  .boton{
@@ -87,6 +79,7 @@ hr{
     margin-top: 0;
     /* efectos */
     overflow:hidden;
+    transition: all 1.5s;
  }
 
  #imagenInfo:hover{
@@ -103,21 +96,21 @@ hr{
 }
 
 .descripcion{
-    margin-top: 50px;
+    margin-top: 60px;
     margin-left: 20px;
     margin-right: 90px;
     text-align: justify;
-    
+  
 }
 .galeria{
     display: flex;
     flex-direction: row;
     margin-left: 20px;
     width: 1100px;
-  
+    margin-top: 50px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px
+    gap: 70px
 }
 
 
