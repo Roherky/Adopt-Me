@@ -15,7 +15,7 @@ export class ListaAnimalesComponent implements OnInit {
   public animales: Animal[];
 
   constructor(private animalServicio: AnimalService,  public sesion: SesionesService) {
-    this.animal=new Animal(null, "", "", "", "", "", "", "", "", null, "");
+    this.animal=new Animal(null, "", "", "", "", "", "", "", "", this.sesion.id_usuario, "");
     console.log('snkandhijsandiasdnasndhaisd')
     console.log(this.sesion.id_usuario);
     console.log(this.sesion.tipo);
