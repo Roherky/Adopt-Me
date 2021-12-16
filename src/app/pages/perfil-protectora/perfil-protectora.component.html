@@ -53,12 +53,12 @@
     <br>
     <!-- termina descripcion -->
     
-    <!-- galeria fotos -->
-
-    <div class="row">
-      <div *ngFor="let imagen of imagenes" class="col-4">
-          <img src="{{imagen.imagen}}">
+   <!-- galeria fotos -->
+    <div class="galeria" >
+      <div class="card" style="border-radius:2em" *ngFor="let imagen of imagenes">
+        <img src="{{imagen.imagen}}" class="row" >
       </div>
+    </div>
 
-     </div>
+
 </div>
