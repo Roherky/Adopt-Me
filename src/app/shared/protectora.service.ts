@@ -8,29 +8,30 @@ import { Protectora } from '../models/protectora';
 })
 export class ProtectoraService {
 
+ 
   public protectora: Protectora;
-  public idProtectora:number;
-
-  private url = "https://adopt-me-angular.herokuapp.com/protectora";
-  private registro = "https://adopt-me-angular.herokuapp.com/registro/protectora";
+  public id:number;
+  private urlPrueba = "http://localhost:300/protectora"
+  private url = "https://adopt-me2021.herokuapp.com/protectora";
+  private registro = "https://adopt-me2021.herokuapp.com/registro/protectora";
 
   constructor(private http: HttpClient) { }
 
-  obtenerIdProtectora(idProtectora:number){
+  obtenerIdProtectora(id:number){
  
-    this.idProtectora=idProtectora
-    return this.idProtectora;
+    this.id=id
+    return this.id;
    }
+  
  
- 
-   obtenerId(idProtectora:number){
-     let url= `https://adopt-me2021.herokuapp.com/protectora?idProtectora=${idProtectora}`; 
+   obtenerId(id:number){
+     let url= `https://adopt-me2021.herokuapp.com/protectora?id=${id}`; 
    console.log(url);
-   console.log(this.idProtectora);
+   console.log(this.id);
      return this.http.get(url);
    }
 
-   getProtectoras(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string){
+  public getProtectoras(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string){
     let url = `https://adopt-me2021.herokuapp.com/protectora?nombre=${nombre}&direccion=${direccion}&localidad=${localidad}&telefono=${telefono}&imagen=${imagen}&descripcion=${descripcion}`;
     console.log(url);
     return this.http.get(url)
@@ -48,17 +49,12 @@ export class ProtectoraService {
 
   public putProtectora(modProtectora: Protectora)
   {
-    return this.http.put(this.url, modProtectora);
+    return this.http.put(this.urlPrueba, modProtectora);
   }
 
-  // public deleteProtectora(id:any)
-  // {
-  //   console.log(id);
-  //   const httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body: id}
-  //   return this.http.delete(this.url, httpOptions);
-  // }
+  
   public deleteProtectora(id: any){
-    let data ={"id_Adoptante": id}
+    let data ={"id_Protectora": id}
     console.log(id);
     let params = {
       headers: {"Content-type": "application/json; charset = UTF-8"},

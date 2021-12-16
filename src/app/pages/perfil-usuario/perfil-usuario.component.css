@@ -26,28 +26,6 @@
     background-position: 0;
   }
 
-  #botonFinales{
-    width: 200px;
-     background-color: orange;
-     color: #fff;
-     border-radius: 15px;
-     border: none;
-
-     /* animacion */
-     border-color: orange;
-     color: #fff;
-     background-image: -webkit-linear-gradient(45deg, #5EC0CA 50%, transparent 50%);
-     background-image: linear-gradient(45deg, #5EC0CA  50%, transparent 50%);
-     background-position: 100%;
-     background-size: 400%;
-     -webkit-transition: background 300ms ease-in-out;
-     transition: background 300ms ease-in-out;
- }
-
- #botonModificar:hover {
-    background-position: 0;
-  }
-
  .boton{
      display: flex;
      align-items: center;
@@ -110,11 +88,11 @@ hr{
     cursor: pointer;
 }
 
-.card-body {
+/* .card-body {
     display: flex;
     align-items: center;
     margin: auto;
-}
+} */
 
 .iconoBody{
     width: 20px;
@@ -130,28 +108,24 @@ hr{
     
 }
 .galeria{
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 100%;
-}
-.card-group{
-    margin-left: 10px;
-    margin-right: 100px;
-    margin-bottom: 30px;
     display: flex;
-    gap: 40px;
-    padding-top: 20px;
-    
+    flex-direction: row;
+    margin-left: 5px;
+    width: 1220px;
+    margin-right: 20px ;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px
 }
 
+
 .card{
-    width: 100px;
-    height: 230px;
-    display: flex;
-    align-items: flex-end;
+    width: 220px;
+    height: 140px;
     
       /* efectos */
     overflow:hidden;
+    transition: all 1.5s;
     
 }
 .card:hover{

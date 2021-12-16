@@ -12,13 +12,16 @@ export class EditarPerfilProtectoraComponent implements OnInit {
   public protectora:Protectora;
   public id:number;
 
-  constructor(private apiService: ProtectoraService, private sesiones: SesionesService) { 
+  constructor(private apiService: ProtectoraService, public sesiones: SesionesService) { 
     this.protectora = new Protectora (null,"","","","","","","","")
+    console.log(this.sesiones.id_usuario)
   }
 
   editarPerfil(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string){
-    this.id= this.apiService.idProtectora; 
+    this.id= this.sesiones.id_usuario;
+    console.log(this.id)
     let protect = new Protectora (this.id, nombre, direccion, localidad,"", "", telefono, descripcion, imagen)
+    console.log(protect)
     for(let propiedad in protect){
 
         if(protect[propiedad]==""){
@@ -30,7 +33,8 @@ export class EditarPerfilProtectoraComponent implements OnInit {
     this.apiService.putProtectora(protect)
     .subscribe((data:string) =>{
       console.log(data);
-      if(data=="1"){
+      console.log(protect)
+      if(data !="-1"){
 
         alert("Se ha modificado correctamente");
         console.log(data);
@@ -43,25 +47,6 @@ export class EditarPerfilProtectoraComponent implements OnInit {
       console.log(data);
     })
 }
-
-
-
-
-  
-  // onSubmit(form: NgForm){
-    
-  //   this.apiService.putProtectora(this.protectora)
-  //   .subscribe((data: any) =>
-  //   {
-  //     this.sesiones.id_usuario;
-  //     console.log(data);
-  //     if (data != "-1")
-  //       alert("Se modificado la protectora " + data)
-  //     else
-  //       alert("Error al modificar la protectora");
-
-  //   })
-  // }
 
   ngOnInit(): void {
   }
