@@ -29,6 +29,7 @@ export class EditarPerfilComponent implements OnInit {
         if(user[propiedad]==""){
           user[propiedad]=null
         }
+        
     }   
 
     this.apiService.putAdoptante(user)
