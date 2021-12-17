@@ -21,6 +21,16 @@
 
  }
 
+ #btnAgregar{
+    width: 100px;
+    border-radius: 1em;
+    background-color: #5EC0CA;
+    color: #fff;
+    border:none;
+    text-decoration: none; 
+    margin-left: 3px;
+ }
+
  .redondeado {
     border-radius: 1em;
      border: 1px solid grey;
