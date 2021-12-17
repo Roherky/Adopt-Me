@@ -20,10 +20,37 @@ export class NoticiasComponent implements OnInit {
   }
 
   ngOnInit(): void { 
-    this.apiService.getNoticias().subscribe((data: Noticia[]) => {
-    this.noticias = data;
-    console.log(this.noticias);
-  })
+
+
+/**if(this.sesion.tipo=="protectora"){
+      this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
+      .subscribe((data:Animal[])=>{
+        this.animales=data;
+        console.log(this.animales);
+      })
+
+    }else{
+
+      this.animalServicio.obtenerAnimales()
+      .subscribe((data:Animal[])=>{
+        this.animales=data;
+        console.log(this.animales);
+      })
+    } */
+    if(this.sesiones.tipo=="protectora"){
+      this.apiService.getNoticia(this.sesiones.id_usuario)
+      .subscribe((data: Noticia[]) => {
+        this.noticias = data;
+        console.log(this.noticias);
+      })
+    }else{
+      this.apiService.getNoticias()
+      .subscribe((data: Noticia[])=>{
+        this.noticias = data;
+      })
+    }
+
+   
 }
 mostrarDetalle(idNoticias){
   
