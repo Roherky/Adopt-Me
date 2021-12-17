@@ -83,14 +83,15 @@ if(this.sesion.tipo=="protectora"){
 
 mostrarDetalle(idAnimal){
 
- if(this.sesion.tipo=="protectora"){
-    this.animalServicio.obtenerIdAnimal(idAnimal);
-  }
-
-
-  else{
   this.animalServicio.obtenerIdAnimal(idAnimal);
-  }
+//  if(this.sesion.tipo=="protectora"){
+//     this.animalServicio.obtenerIdAnimal(idAnimal);
+//   }
+
+
+//   else{
+//   this.animalServicio.obtenerIdAnimal(idAnimal);
+//   }
 
  
 }
