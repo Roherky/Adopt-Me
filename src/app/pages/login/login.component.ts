@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['listadoAnimales']);
         }
         if(this.sesion.id_protectora != null){
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['perfilProtectora']);
         }
         alert("Se ha logueado correctamente");
       }

@@ -40,7 +40,7 @@ export class RegistroComponent implements OnInit {
         console.log(data);
         if(data !="-1"){
           console.log("Se ha guardado la protectora correctamente")
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['login']);
         }else{
           console.log("Ha ocurrido un error al procesar su solicitud")
         }
@@ -51,7 +51,7 @@ export class RegistroComponent implements OnInit {
         console.log(data);
         if(data != "-1"){
           console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
-          this.router.navigate(['listadoAnimales']);
+          this.router.navigate(['login']);
         }
         else console.log("Ha ocurrido un error al procesar su solicitud");
       })
