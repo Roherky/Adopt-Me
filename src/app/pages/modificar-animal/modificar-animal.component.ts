@@ -43,8 +43,8 @@ export class ModificarAnimalComponent implements OnInit {
 
         alert("se ha modificado correctamente");
         console.log(data);
-        console.log("aaaaaass")
-        this.router.navigate(['/listadoAnimales'])
+     
+        this.router.navigate(['/animalDetalleProtectora'])
       }
       else{
         alert("No se puede modificar")

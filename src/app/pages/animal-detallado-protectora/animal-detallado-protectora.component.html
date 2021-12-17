@@ -27,15 +27,26 @@
     </table>
 </div>
 
-<div class="boton">
+<div class="row">
+
+     <div class="col">
+    <div class="agregarImg">
+    <input class="redondeado" placeholder="Añadir imagen"  #imagen>
+    <button  id="btnAgregarImagen" (click)="agregarImagen(imagen.value)" class="btn btn-primary btn-block">+</button>
+    </div>
+</div>
+<div class="col">
+<div class="boton" style="border: 1px solib black;">
+ 
     <a type="reset"  class="form-control" id="botonEliminar" (click)="eliminar(animal.idAnimal)"  style="text-align: center; ">Eliminar</a>
      <a type="reset" class="form-control" id="botonModificar"  [routerLink]="['/modificarAnimal']"  style="text-align: center; ">Modificar</a>
-     <a type="reset" class="form-control" id="botonAñadirFoto"  (click)="anyadirAnimal()"   style="text-align: center; ">Añadir imagen</a>
+
+    </div>
+</div>
 </div>
 
 
-
-<div *ngIf="btnPulsado">
+<!-- <div *ngIf="btnPulsado">
    <form>
     <div class="form-group">
        <label>Añadir url imagen</label><br>
@@ -43,7 +54,7 @@
        <button  (click)="agregarImagen(imagen.value)" id="btnAgregar">Agregar</button>
     </div>
    </form>
-</div>
+</div> -->
 
 
     <hr>

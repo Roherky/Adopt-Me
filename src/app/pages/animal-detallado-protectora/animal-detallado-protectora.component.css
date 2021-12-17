@@ -28,7 +28,7 @@
     color: #fff;
     border:none;
     text-decoration: none; 
-    margin-left: 3px;
+    /* margin-left: 3px; */
  }
 
  .redondeado {
@@ -58,7 +58,12 @@
     text-decoration: none;
  
  }
- 
+ /* .btnForm{
+      display: flex;
+   
+    justify-content: flex-start;
+  
+ } */
 
  .boton{
      display: flex;
@@ -69,12 +74,37 @@
      margin-bottom: 40px;
  }
 
+ 
+ .redondeado{
+    margin-top: 20px;
+    margin-bottom: 40px;
+ }
+
+
+ #btnAgregarImagen {
+
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: #5EC0CA;
+
+    border: none;
+    margin-top: 20px;
+}
+
+.agregarImg{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+
+
+}
+
  h1{
 
      font-size: 3em;
      padding-top: 20px;
-     /* margin-top: 20px; */
-     /* text-align: center; */
  }
 
 
@@ -116,7 +146,7 @@ img{
     border-radius: 15px;
       /* efectos */
     overflow:hidden;
-    transition: all 1.5s;
+    transition: all 1s;
 }
 img:hover{
     -webkit-transform:scale(1.2);transform:scale(1.2);

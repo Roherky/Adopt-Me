@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { SesionesService } from 'src/app/shared/sesiones.service';
 import { UsuarioService } from 'src/app/shared/usuario.service';
@@ -15,7 +16,7 @@ export class EditarPerfilComponent implements OnInit {
   public id:number;
 
   constructor(private apiService: UsuarioService,
-              private sesiones: SesionesService) {
+              private sesiones: SesionesService, private router:Router) {
     this.usuario=new Usuario(null,"","","",null,"","","","","","")
     console.log(this.sesiones.id_usuario)
   }
@@ -38,6 +39,7 @@ export class EditarPerfilComponent implements OnInit {
 
         alert("Se ha modificado correctamente");
         console.log(data);
+        this.router.navigate(['/perfilUsuario'])
       }
       else{
         alert("No se puede modificar")

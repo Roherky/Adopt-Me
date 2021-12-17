@@ -79,7 +79,7 @@ hr{
     margin-top: 0;
     /* efectos */
     overflow:hidden;
-    transition: all 1.5s;
+    transition: all 1s;
  }
 
  #imagenInfo:hover{

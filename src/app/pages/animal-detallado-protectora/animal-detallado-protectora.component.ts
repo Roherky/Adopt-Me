@@ -57,9 +57,9 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
 
   }
 
-  anyadirAnimal(){
-    this.btnPulsado=true;
-  }
+  // anyadirAnimal(){
+  //   this.btnPulsado=true;
+  // }
 
   agregarImagen(urlImagen:string){
    

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Protectora } from 'src/app/models/protectora';
 import { ProtectoraService } from 'src/app/shared/protectora.service';
 import { SesionesService } from 'src/app/shared/sesiones.service';
@@ -12,7 +13,7 @@ export class EditarPerfilProtectoraComponent implements OnInit {
   public protectora:Protectora;
   public id:number;
 
-  constructor(private apiService: ProtectoraService, public sesiones: SesionesService) { 
+  constructor(private apiService: ProtectoraService, public sesiones: SesionesService,  private router:Router) { 
     this.protectora = new Protectora (null,"","","","","","","","")
     console.log(this.sesiones.id_usuario)
   }
@@ -38,6 +39,7 @@ export class EditarPerfilProtectoraComponent implements OnInit {
 
         alert("Se ha modificado correctamente");
         console.log(data);
+        this.router.navigate(['/perfilProtectora'])
       }
       else{
         alert("No se puede modificar")
