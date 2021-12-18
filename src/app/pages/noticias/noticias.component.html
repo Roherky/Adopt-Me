@@ -8,41 +8,6 @@
     </div>
       </div>
 
-      <!-- <div class="row" >
-        <div *ngFor="let noti of noticias" class="col-3">
-          <div class="card" style="width: 18rem; border-radius: 1em;">
-            <img src="{{noti.imagen}}" class="card-img-top" alt="" style="width: 18em; height: 12em;" (click)="open(content1) ">
-            <div class="card-body">
-              <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{noti.titular}}</p>
-            </div>
-          </div> -->
-          <!-- Modal -->
-      <!-- <ng-template #content1 let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">{{noticia.titular}}</h4>
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>{{noticia.descripcion}}</p>
-          <button type="reset" class="form-control" routerLink="/editarNoticias" id="botonModificar" (click)="mostrarDetalle(noticia.idNoticias)">Modificar</button>
-        </div>
-      </ng-template>
-        </div>
-      </div> -->
-      <!-- <div class="sinNoticias" *ngIf="noticias.length == 0">
-          <div class="logo">
-              <img src="./../../../assets/img/Logo.png">
-          </div>
-          <div class="texto">
-              <h2>No hay noticias</h2>
-          </div>
-          <div class="hipervinculo">
-              <h4>¿Quieres conocer algún amigo peludo?</h4><br>
-              <a routerLink="/listadoAnimales">¡A ver esos animalitos!</a>
-          </div>
-      </div> -->
   </div>
   </div>
   
@@ -50,10 +15,16 @@
   
 
   <div *ngIf="sesiones.tipo=='protectora'"> 
-  <!-- <div class="contenedor"> -->
-    <!-- <div class="titulo">
-        <h1 style="margin-top: 5%; margin-left: 3%;">Noticias</h1>
-    </div> -->
+    <div class="sinNoticiass" *ngIf="noticias.length == 0">
+      <div class="logo">
+          <img src="./../../../assets/img/Logo.png">
+      </div>
+      <div class="texto">
+          <h2>No hay noticias</h2>
+      </div>
+  
+  </div> 
+
     <div class="row" >
       <div *ngFor="let noticia of noticias" class="col-3">
         <div class="card" style="width: 18rem; border-radius: 1em;">
@@ -81,41 +52,24 @@
     </ng-template>
       </div>
     </div>
-    <!-- <div class="sinNoticiass" *ngIf="noticias.length == 0">
-        <div class="logo">
-            <img src="./../../../assets/img/Logo.png">
-        </div>
-        <div class="texto">
-            <h2>No hay noticias</h2>
-        </div>
-        <div class="hipervinculo">
-            <h4>¿Quieres conocer algún amigo peludo?</h4><br>
-            <a routerLink="/listadoAnimales">¡A ver esos animalitos!</a>
-        </div>
-    </div> -->
+ 
   </div>
-  <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <div *ngIf="sesiones.tipo!='protectora'"> 
-  
-  <!-- <div >  -->
-    <!-- <div class="contenedor"> -->
-      <!-- <div class="titulo">
-          <h1 style="margin-top: 5%; margin-left: 3%;">Noticias</h1>
-      </div> -->
+    <div class="sinNoticiass" *ngIf="noticias.length == 0">
+      <div class="logo">
+          <img src="./../../../assets/img/Logo.png">
+      </div>
+      <div class="texto">
+          <h2>No hay noticias</h2>
+      </div>
+      <div class="hipervinculo">
+          <h4>¿Quieres conocer algún amigo peludo?</h4><br>
+          <a routerLink="/listadoAnimales">¡A ver esos animalitos!</a>
+      </div>
+  </div> 
+
       <div class="row" >
         <div *ngFor="let noticia of noticias" class="col-3">
           <div class="card" style="width: 18rem; border-radius: 1em;">
@@ -138,19 +92,5 @@
       </ng-template>
         </div>
       </div>
-      <!-- <div class="sinNoticiass" *ngIf="noticias.length == 0">
-          <div class="logo">
-              <img src="./../../../assets/img/Logo.png">
-          </div>
-          <div class="texto">
-              <h2>No hay noticias</h2>
-          </div>
-          <div class="hipervinculo">
-              <h4>¿Quieres conocer algún amigo peludo?</h4><br>
-              <a routerLink="/listadoAnimales">¡A ver esos animalitos!</a>
-          </div>
-      </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
 
     </div>
