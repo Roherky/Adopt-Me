@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { Noticia } from 'src/app/models/noticia';
 import { NoticiaService } from 'src/app/shared/noticia.service';
@@ -16,7 +15,7 @@ export class NoticiasComponent implements OnInit {
   public noticias: Noticia[];
   
   closeResult = '';
-  constructor(private modalService: NgbModal, private apiService: NoticiaService, public sesiones: SesionesService, private router:Router){
+  constructor(private modalService: NgbModal, private apiService: NoticiaService, public sesiones: SesionesService){
     this.noticia = new Noticia(null,"", "", "", "", "", "",null);
   }
 
@@ -91,11 +90,11 @@ console.log(idNoticia);
         if (data == "1"){
 
                   alert("noticia eliminada");
-                  //this.router.navigate(['/noticias'])
-        this.ngOnInit();
+                 
+                   this.ngOnInit();
                  
                   }else
-                  alert("Error al eliminar el animal");
+                  alert("Error al eliminar la noticia");
                
                 })
     }
