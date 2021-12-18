@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { Noticia } from 'src/app/models/noticia';
 import { NoticiaService } from 'src/app/shared/noticia.service';
@@ -15,7 +16,7 @@ export class NoticiasComponent implements OnInit {
   public noticias: Noticia[];
   
   closeResult = '';
-  constructor(private modalService: NgbModal, private apiService: NoticiaService, public sesiones: SesionesService){
+  constructor(private modalService: NgbModal, private apiService: NoticiaService, public sesiones: SesionesService, private router:Router){
     this.noticia = new Noticia(null,"", "", "", "", "", "",null);
   }
 
@@ -41,12 +42,14 @@ export class NoticiasComponent implements OnInit {
       this.apiService.getNoticia(this.sesiones.id_usuario)
       .subscribe((data: Noticia[]) => {
         this.noticias = data;
+        console.log("aaaaaaa");
         console.log(this.noticias);
       })
     }else{
       this.apiService.getNoticias()
       .subscribe((data: Noticia[])=>{
         this.noticias = data;
+        console.log(this.noticias);
       })
     }
 
@@ -76,6 +79,52 @@ open(content:any) {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  public eliminar(idNoticia: any){
+console.log(idNoticia);
+    if(idNoticia!=""){
+   /// let id=  this.apiService.obteneridNoticia(idNoticia);
+      this.apiService.deleteNoticia(idNoticia)
+      .subscribe((data:string) =>{
+
+        if (data == "1"){
+
+                  alert("noticia eliminada");
+                  //this.router.navigate(['/noticias'])
+        this.ngOnInit();
+                 
+                  }else
+                  alert("Error al eliminar el animal");
+               
+                })
+    }
+
+
+  // eliminar(idAnimal){
+  
+  //   console.log(idAnimal);
+  //   if(idAnimal!=""){
+
+  //     this.animalServicio.borrarAnimal(idAnimal)
+  //     .subscribe((data:string) =>{
+  //       console.log(data);
+       
+     
+  //       if (data == "1"){
+
+  //         alert("Animal eliminado");
+  //         this.router.navigate(['/listadoAnimales'])
+
+         
+  //         }else
+  //         alert("Error al eliminar el animal");
+       
+  //       })
+  //   }
+
+
+
   }
 
 }

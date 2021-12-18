@@ -11,19 +11,23 @@ export class NoticiaService {
 
   public idNoticia:number
   public noticia: Noticia
-  // private url2= "http://localhost:300/noticias"
+  // private url= "http://localhost:300/noticias"
   private url = "https://adopt-me2021.herokuapp.com/noticias"
 
   constructor(private http: HttpClient) { }
 
-  public getNoticia(id:any)
+  public getNoticia(id_Protectora:any)
   {
-    return this.http.get(this.url + "/" + id);
+    let url= `http://localhost:300/noticias?id_Protectora=${id_Protectora}`; 
+    return this.http.get(url);
   }
   public getNoticias()
   {
     return this.http.get(this.url + "/" );
   }
+
+ 
+
 
   public postNoticia(newNoticia: Noticia)
   {
@@ -37,7 +41,7 @@ export class NoticiaService {
 
   deleteNoticia(idNoticia:any)
   {
-    let data ={"idNoticia": idNoticia}
+    let data ={"idNoticias": idNoticia}
     console.log(idNoticia);
     let param={
       headers: {"Content-type": "application/json; charset=UTF-8"},
