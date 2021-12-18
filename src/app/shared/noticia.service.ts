@@ -18,7 +18,8 @@ export class NoticiaService {
 
   public getNoticia(id_Protectora:any)
   {
-    let url= `http://localhost:300/noticias?id_Protectora=${id_Protectora}`; 
+   // https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
+    let url= `https://adopt-me2021.herokuapp.com/noticias?id_Protectora=${id_Protectora}`; 
     return this.http.get(url);
   }
   public getNoticias()
