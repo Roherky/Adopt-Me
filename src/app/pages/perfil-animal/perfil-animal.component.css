@@ -13,6 +13,7 @@
 
 
  #botonModificar{
+     border: none;
     width: 200px;
     border-radius: 1em;
     background-color: #5EC0CA;
@@ -27,6 +28,7 @@
  #botonModificar:hover {
     box-shadow: 0 0 40px 40px #f5993e inset;
     color: white;
+    border: none;
   }
 
  .boton{
