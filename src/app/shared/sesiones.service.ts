@@ -8,7 +8,6 @@ import { Login } from '../models/login';
 export class SesionesService {
 
   public tipo: string;
-  // protectora te pinto algo
   public id_usuario: number;
   private urlLogin = "https://adopt-me2021.herokuapp.com/login";
 

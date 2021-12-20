@@ -24,10 +24,10 @@ export class UsuarioService {
  
  
    obtenerId(id:number){
-     let url= `https://adopt-me2021.herokuapp.com/adoptante?id=${id}`; 
-   console.log(url);
-   console.log(this.id);
-     return this.http.get(url);
+    let url= `https://adopt-me2021.herokuapp.com/adoptante?id=${id}`; 
+    console.log(url);
+    console.log(this.id);
+    return this.http.get(url);
    }
 
   public getAdoptante(id:any){
