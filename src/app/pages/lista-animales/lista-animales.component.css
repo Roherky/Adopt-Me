@@ -16,6 +16,13 @@ h1{
     margin-top: 30px;
    
 }
+
+.row {
+    margin-top: 1%;
+    margin-left: 3%;
+    width: 97%;
+}
+
 .formulario{
     width: 1225px;
     margin-top: 10px;
@@ -67,7 +74,6 @@ h1{
     cursor: pointer;
 }
 
-
 .clase1{
     display: flex;
     flex-direction: row;
@@ -82,7 +88,6 @@ h1{
     align-items: center;
 }
  
-    
 #botonEnviar{
     /* margin-left: 330px; */
     border-top: 10px;
@@ -97,8 +102,6 @@ h1{
     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
  }
-
-
 
  figure {
     display: inline-block;
