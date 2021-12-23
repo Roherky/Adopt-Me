@@ -37,7 +37,7 @@ export class EditarNoticiasComponent implements OnInit {
     
       console.log(data);
       if (data != "-1"){
-        alert("Se modificado la noticia" + data);
+        alert("Se modificado la noticia correctamente");
         this.router.navigate(['/noticias'])
       }
         

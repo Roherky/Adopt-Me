@@ -23,10 +23,10 @@
                 <select name="categoria" class="redondeado" [(ngModel)]="noticia.categoria" #categoria="ngModel"
                 [ngClass]="{'is-invalid': anyadirNoticia.submitted && categoria.invalid}" style="background-color: white;" required>
                 <option value="" disabled selected>Selecciona la categoría</option>
-                    <option value="urgente">Urgente</option>
-                    <option value="destacado">Destacado</option>
+                    <option value="Urgente">Urgente</option>
+                    <option value="Destacado">Destacado</option>
                     <option value="Lo último">Lo último</option>
-                    <option value="otros">Otros</option>
+                    <option value="Otros">Otros</option>
                  </select>
                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted  && categoria.invalid">
                     <p *ngIf="categoria.errors?.['required']">Debes elegir una categoría</p>
@@ -41,10 +41,10 @@
                 <select name="prioridad" class="redondeado" [(ngModel)]="noticia.prioridad" #prioridad="ngModel"
                 [ngClass]="{'is-invalid': anyadirNoticia.submitted && prioridad.invalid}" style="background-color: white;"required>
                 <option value="" disabled selected>Selecciona la prioridad</option>
-                    <option value="muy importante">Muy importante</option>
-                    <option value="importante">Importante</option>
-                    <option value="normal">Normal</option>
-                    <option value="4no importante">No importante</option>
+                    <option value="Muy importante">Muy importante</option>
+                    <option value="Importante">Importante</option>
+                    <option value="Normal">Normal</option>
+                    <option value="No importante">No importante</option>
                  </select>
                  <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted  && prioridad.invalid">
                     <p *ngIf="prioridad.errors?.['required']">Debes elegir una prioridad</p>
@@ -61,7 +61,7 @@
 
                   <input type="date" id="noticia" name="fecha_publicacion" class="redondeado"
                          value="2021-11-29"
-                         min="2018-01-01" max="2021-12-31"
+                         min="2018-01-01" max="2050-12-31"
                          [(ngModel)]="noticia.fecha_publicacion" #fecha_publicacion="ngModel"
                          [ngClass]="{'is-invalid': anyadirNoticia.submitted && fecha_publicacion.invalid}" required>
                          <div class="invalid-feedback" *ngIf="anyadirNoticia.submitted && fecha_publicacion.invalid">

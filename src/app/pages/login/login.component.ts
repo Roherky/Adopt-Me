@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   hacerLogin(email: string, password: string){
     let object = new Login(0, 0, 0, email, password);
     this.loginService.postLogin(object).subscribe((data: any) => {
-      console.log(data);
       if(data.mensaje == "correcto"){
         this.sesion = data.respuesta[0];
         this.loginService.saveData(this.sesion);

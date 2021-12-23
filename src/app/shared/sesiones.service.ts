@@ -13,7 +13,6 @@ export class SesionesService {
 
   constructor(private http: HttpClient) { }
 
-
   public postLogin(login: Login){
     return this.http.post(this.urlLogin, login);
   }
@@ -26,8 +25,6 @@ export class SesionesService {
     else {
       this.tipo = "adoptante";
       this.id_usuario = data.id_adoptante;
-      console.log(this.tipo);
-      console.log(this.id_usuario);
     }
   }
 

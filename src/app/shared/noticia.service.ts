@@ -8,7 +8,6 @@ import { Noticia} from '../models/noticia';
 })
 export class NoticiaService {
   
-
   public idNoticia:number
   public noticia: Noticia
   // private url= "http://localhost:300/noticias"
@@ -18,7 +17,6 @@ export class NoticiaService {
 
   public getNoticia(id_Protectora:any)
   {
-   // https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
     let url= `https://adopt-me2021.herokuapp.com/noticias?id_Protectora=${id_Protectora}`; 
     return this.http.get(url);
   }
@@ -26,9 +24,6 @@ export class NoticiaService {
   {
     return this.http.get(this.url + "/" );
   }
-
- 
-
 
   public postNoticia(newNoticia: Noticia)
   {
@@ -53,11 +48,9 @@ export class NoticiaService {
     return this.http.delete(this.url, param)
   }
 
-
   obteneridNoticia(idNoticia:number){
  
     this.idNoticia=idNoticia
     return this.idNoticia;
    }
-
 }

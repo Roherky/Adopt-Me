@@ -26,6 +26,10 @@
       border-radius: 5em 0 0 5em;
     }
 
+    .ruta::selection {
+      background-color: red;
+    }
+
 a {
   text-decoration: none;
   color: black;

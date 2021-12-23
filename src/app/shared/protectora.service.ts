@@ -2,15 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { Protectora } from '../models/protectora';
  
-
 @Injectable({
   providedIn: 'root'
 })
 export class ProtectoraService {
 
- 
   public protectora: Protectora;
-  public id:number;
+  public id: number;
   private url = "https://adopt-me2021.herokuapp.com/protectora";
   private registro = "https://adopt-me2021.herokuapp.com/registro/protectora";
 
@@ -21,7 +19,6 @@ export class ProtectoraService {
     this.id=id
     return this.id;
    }
-  
  
    obtenerId(id:number){
      let url= `https://adopt-me2021.herokuapp.com/protectora?id=${id}`; 
@@ -51,7 +48,6 @@ export class ProtectoraService {
     return this.http.put(this.url, modProtectora);
   }
 
-  
   public deleteProtectora(id: any){
     let data ={"id_Protectora": id}
     console.log(id);
@@ -62,5 +58,4 @@ export class ProtectoraService {
     }
     return this.http.delete(this.url, params);
   }
-
 }

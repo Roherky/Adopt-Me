@@ -32,28 +32,25 @@ export class RegistroComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(this.protectora);
-    console.log(this.usuario);
     if(this.usuario.nombre == ''){
-      console.log('Se ha registrado una protectora')
-      this.servicioProtectora.postProtectora(this.protectora).subscribe((data:any)=>{
+      this.servicioProtectora.postProtectora(this.protectora).subscribe((data: any) => {
         console.log(data);
-        if(data !="-1"){
-          console.log("Se ha guardado la protectora correctamente")
+        console.log(data.usuario);
+        if(data.usuario == "protectora"){
+          alert("Se ha registrado satisfactoriamente")
           this.router.navigate(['login']);
         }else{
-          console.log("Ha ocurrido un error al procesar su solicitud")
+          alert("Ha ocurrido un error al procesar su solicitud")
         }
       })
     }
     else {
         this.servicioAdoptante.postAdoptante(this.usuario).subscribe((data: any) => {
-        console.log(data);
-        if(data != "-1"){
-          console.log("Se ha creado el usuario con ID: " + data + " satisfactoriamente");
+        if(data[12] == "a"){
+          alert("Se ha registrado satisfactoriamente");
           this.router.navigate(['login']);
         }
-        else console.log("Ha ocurrido un error al procesar su solicitud");
+        else alert("Ha ocurrido un error al procesar su solicitud");
       })
     }
   }

@@ -24,8 +24,8 @@ export class FormularioFinalesFelicesComponent implements OnInit {
     this.finalService.postFinalFeliz(this.finalFeliz)
     .subscribe((data: any) => {
       console.log(data);
-      if(data != "-1") console.log("Se ha añadido el final feliz correctamente");
-      else console.log("Error al procesar su solicitud");
+      if(data != "-1") alert("Se ha añadido el final feliz correctamente");
+      else alert("Error al procesar su solicitud");
     })
   }
 

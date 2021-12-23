@@ -27,11 +27,11 @@ export class FormularioAnyadirNoticiasComponent implements OnInit {
       console.log(data);
       if (data != "-1")
       {
-        alert("Se ha insertado la noticia con id: " + data);
+        alert("Se ha insertado la noticia correctamente");
         
       }  
       else
-        alert("Error al insertar la noticia");
+        alert("Ha ocurrido un error al insertar la noticia");
 
     })
 

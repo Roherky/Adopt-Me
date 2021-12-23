@@ -21,7 +21,6 @@ export class NoticiasComponent implements OnInit {
 
   ngOnInit(): void { 
 
-
 /**if(this.sesion.tipo=="protectora"){
       this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
       .subscribe((data:Animal[])=>{
@@ -41,7 +40,6 @@ export class NoticiasComponent implements OnInit {
       this.apiService.getNoticia(this.sesiones.id_usuario)
       .subscribe((data: Noticia[]) => {
         this.noticias = data;
-        console.log("aaaaaaa");
         console.log(this.noticias);
       })
     }else{
@@ -51,8 +49,6 @@ export class NoticiasComponent implements OnInit {
         console.log(this.noticias);
       })
     }
-
-   
 }
 mostrarDetalle(idNoticias){
   
@@ -94,11 +90,9 @@ console.log(idNoticia);
                    this.ngOnInit();
                  
                   }else
-                  alert("Error al eliminar la noticia");
-               
+                  alert("Error al eliminar la noticia");               
                 })
     }
-
 
   // eliminar(idAnimal){
   
@@ -121,9 +115,5 @@ console.log(idNoticia);
        
   //       })
   //   }
-
-
-
   }
-
 }

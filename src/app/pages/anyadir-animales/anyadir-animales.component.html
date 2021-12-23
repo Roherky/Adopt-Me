@@ -34,8 +34,8 @@
                 <select id="genero"  class="redondeado" type="radio" name="genero"  [(ngModel)]="animal.sexo" #genero="ngModel" #sexo
                 [ngClass]="{'is-invalid': anyadirAnimal.submitted && genero.invalid}" style ="background-color: white;" required>
                 <option value="" disabled selected>Selecciona género</option>
-                    <option value="macho">Macho</option> 
-                    <option value="hembra">Hembra</option> 
+                    <option value="Macho">Macho</option> 
+                    <option value="Hembra">Hembra</option> 
                 </select>
                 <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && genero.invalid">
                     <p *ngIf="genero.errors?.['required']">Debes elegir un género</p>
@@ -55,9 +55,9 @@
            <select id="tamanyo"  class="redondeado" type="radio" name="tamanyo"  [(ngModel)]="animal.tamanyo" #tamanyo="ngModel" #stamany
            [ngClass]="{'is-invalid': anyadirAnimal.submitted && tamanyo.invalid}" style ="background-color: white;" required>
            <option value="" disabled selected>Selecciona tamaño</option>
-               <option value="pequeño">Pequeño</option> 
-               <option value="mediano">Mediano</option> 
-               <option value="grande">Grande</option> 
+               <option value="Pequeño">Pequeño</option> 
+               <option value="Mediano">Mediano</option> 
+               <option value="Grande">Grande</option> 
            </select>
            <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && tamanyo.invalid">
                <p *ngIf="tamanyo.errors?.['required']">Debes elegir un tamaño</p>
@@ -75,10 +75,10 @@
               <select id="tipoAnimal"  class="redondeado" name="tipo"  [(ngModel)]="animal.tipo_animal" #tipo="ngModel"
               [ngClass]="{'is-invalid': anyadirAnimal.submitted && tipo.invalid}" style ="background-color: white;" required>
                 <option value="" disabled selected>Selecciona tipo</option>
-                <option value="perro">Perro</option> 
-                <option value="gato">Gato</option> 
-                <option value="roedores">Roedores</option> 
-                <option value="otros">Otros</option> 
+                <option value="Perro">Perro</option> 
+                <option value="Gato">Gato</option> 
+                <option value="Roedor">Roedor</option> 
+                <option value="Otros">Otros</option> 
              </select>
              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && tipo.invalid">
               <p *ngIf="tipo.errors?.['required']">Debes elegir el tipo de animal</p>
@@ -91,9 +91,9 @@
             <div class="col">
               <div class="form-group">
                 <label for="start">Ingreso:</label><br>
-                <input type="date" id="start" name="fechaIngreso"  class="redondeado" style ="background-color: white;"
+                <input type="date" id="start" name="fechaIngreso" class="redondeado" style ="background-color: white;"
                        value=""
-                       min="2018-01-01" max="2021-12-31"
+                       min="2010-01-01"
                        [(ngModel)]="animal.fecha_ingresso" #fechaIngreso="ngModel"
                        [ngClass]="{'is-invalid': anyadirAnimal.submitted && fechaIngreso.invalid}" required> 
                        <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted && fechaIngreso.invalid">
@@ -111,10 +111,10 @@
               <select id="estadoAnimal"  class="redondeado" name="estadoAnimal"  [(ngModel)]="animal.estado" #estadoAnimal="ngModel" #estado
               [ngClass]="{'is-invalid': anyadirAnimal.submitted && estadoAnimal.invalid}" style ="background-color: white;" required>
                 <option value="" disabled selected>Selecciona estado</option>
-                <option value="adoptado">adoptado</option> 
-                <option value="adopcion">adopcion</option> 
-                <option value="acogina">acogida</option> 
-                <option value="otros">otros</option> 
+                <option value="Adoptado">Adoptado</option> 
+                <option value="Adopción">En adopción</option> 
+                <option value="Acogina">En acogida</option> 
+                <option value="Otros">Otros</option> 
              </select>
              <div class="invalid-feedback" *ngIf="anyadirAnimal.submitted  && estadoAnimal.invalid">
               <p *ngIf="estadoAnimal.errors?.['required']">Debes elegir el tipo de animal</p>
