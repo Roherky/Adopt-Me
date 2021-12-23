@@ -19,6 +19,12 @@ export class ImagenesService {
     return this.http.get(url)
   }
 
+  getImagenProtectora(id_protectora:number){
+  //  let url ="https://adopt-me2021.herokuapp.com/imagenes?id_protectora="+id_protectora;
+    let url= `http://localhost:300/imagenes?id_protectora=${id_protectora}`; 
+    return this.http.get(url)
+  }
+
   obtenerImagenes(){
     return this.http.get(this.url)
   }

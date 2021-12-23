@@ -4,6 +4,8 @@ import { Imagenes } from 'src/app/models/imagenes';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
 import { ProtectoraService } from 'src/app/shared/protectora.service';
 import { SesionesService } from 'src/app/shared/sesiones.service';
+import { AnimalService } from 'src/app/shared/animal.service';
+import { Animal } from 'src/app/models/animal';
 @Component({
   selector: 'app-perfil-protectora',
   templateUrl: './perfil-protectora.component.html',
@@ -14,9 +16,12 @@ export class PerfilProtectoraComponent implements OnInit {
   public protectora: Protectora;
   public id:number;
   public imagenes:Imagenes[];
+  public imagen:Imagenes;
+  public animales:Animal[];
 
-  constructor(private apiService: ProtectoraService, public sesion: SesionesService, private imagenServicio: ImagenesService) { 
-    this.protectora = new Protectora(null, "", "", "", "", "", null, "", "")
+  constructor(private apiService: ProtectoraService, public sesion: SesionesService, private imagenServicio: ImagenesService, private animalServicio: AnimalService) { 
+    this.protectora = new Protectora(null, "", "", "", "", "", null, "", "");
+    this.imagen=new Imagenes(null, null, null, null, null, null, "");
    console.log(this.sesion.id_usuario)
   }
 
@@ -32,11 +37,18 @@ export class PerfilProtectoraComponent implements OnInit {
     console.log(this.protectora);
     })
     
+this.imagenServicio.getImagenProtectora(this.id)
+.subscribe((data:Imagenes[])=>{
+     this.imagen=data[0];
+     console.log("aaaaaaaaaaaaaquiiiiiiiiiiiiiiiiiiiii");
+     console.log(this.imagen);
+    
+   })
+   //obtenerAnimalesProtectora
 
-
- this.imagenServicio.getImagen(this.id)
- .subscribe((data:Imagenes[])=>{
-   this.imagenes=data;
+ this.animalServicio.obtenerAnimalesProtectora(this.id)
+ .subscribe((data:Animal[])=>{
+   this.animales=data;
    console.log(this.imagenes);
   
  })
