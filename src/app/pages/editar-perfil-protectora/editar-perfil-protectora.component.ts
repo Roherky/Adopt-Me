@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Imagenes } from 'src/app/models/imagenes';
 import { Protectora } from 'src/app/models/protectora';
+import { ImagenesService } from 'src/app/shared/imagenes.service';
 import { ProtectoraService } from 'src/app/shared/protectora.service';
 import { SesionesService } from 'src/app/shared/sesiones.service';
 
@@ -12,16 +14,52 @@ import { SesionesService } from 'src/app/shared/sesiones.service';
 export class EditarPerfilProtectoraComponent implements OnInit {
   public protectora:Protectora;
   public id:number;
+  public imagenes:Imagenes;
 
-  constructor(private apiService: ProtectoraService, public sesiones: SesionesService,  private router:Router) { 
-    this.protectora = new Protectora (null,"","","","","","","","")
+  constructor(private apiService: ProtectoraService, public sesiones: SesionesService, private imagenServicio: ImagenesService, private router:Router) { 
+    this.protectora = new Protectora (null,"","","","","","","","");
+    this.imagenes=new Imagenes(null, null, null, null, null, null, "");
     console.log(this.sesiones.id_usuario)
   }
 
-  editarPerfil(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string){
+  editarPerfil(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string, imagenNosotros:string){
     this.id= this.sesiones.id_usuario;
     console.log(this.id)
-    let protect = new Protectora (this.id, nombre, direccion, localidad,"", "", telefono, descripcion, imagen)
+    let protect = new Protectora (this.id, nombre, direccion, localidad,"", "", telefono, descripcion, imagen);
+    let imagenSobreNosotros=new Imagenes(null, null, this.sesiones.id_usuario, null, null, null, imagenNosotros);
+
+    // 
+  //   for(let propiedad in imagenSobreNosotros){
+
+  //     if(imagenSobreNosotros[propiedad]==""){
+  //       imagenSobreNosotros[propiedad]=null
+  //     }
+  // }
+
+  if(imagenNosotros!=""){
+  this.imagenServicio.añadirImagen(imagenSobreNosotros)
+  .subscribe((data:string) =>{
+    console.log(data);
+    console.log("laaaaaaaaaaaaa imagennnnnnnnnn");
+    console.log(imagenSobreNosotros)
+    if(data !="-1"){
+
+      console.log("laaaaaaaaaaaaa imagennnnnnnnnn 222222222222");
+      console.log(imagenSobreNosotros);
+      
+    }
+    else{
+      alert("No se puede modificar")
+    
+      }
+
+    console.log(data);
+  })
+
+  }
+
+
+
     console.log(protect)
     for(let propiedad in protect){
 
@@ -29,6 +67,7 @@ export class EditarPerfilProtectoraComponent implements OnInit {
           protect[propiedad]=null
         }
     }   
+
 
 
     this.apiService.putProtectora(protect)
@@ -48,6 +87,17 @@ export class EditarPerfilProtectoraComponent implements OnInit {
 
       console.log(data);
     })
+
+
+    
+
+
+    // this.imagenServicio.obtenerImagen(this.id)
+    // .subscribe((data:Imagenes[])=>{
+    //   this.imagenes=data;
+    //   console.log(this.imagenes);
+  
+    // })
 }
 
   ngOnInit(): void {

@@ -45,11 +45,19 @@
          </div>      
 
 
-        <!--Input Imagen-->
-        <div class="col" style="margin-left: -550px">
+        <!--Input Imagen perfil-->
+        <div class="col">
             <div class="form-group">
-                <label>Imagen</label>
-                <input type="text"  class="redondeado" name="imagen"  placeholder="Imagen" #imagen>
+                <label>Imagen Perfil</label>
+                <input type="text"  class="redondeado" name="imagen"  placeholder="Imagen perfil" #imagen>
+            </div>
+        </div>
+
+          <!--Input Imagen sobre nosotros-->
+          <div class="col">
+            <div class="form-group">
+                <label>Imagen sobre nosotros</label>
+                <input type="text"  class="redondeado" name="imagen"  placeholder="Imagen sobre nosotros" #imagenNosotros>
             </div>
         </div>
 
@@ -67,7 +75,7 @@
       
         <!--Botones-->
         <div style="display: flex; justify-content: center; gap:40px">
-                <button type="reset" class="btn btn-primary btn-block" id="botonEnviar" (click) = "editarPerfil(nombre.value, direccion.value, localidad.value, telefono.value, imagen.value, descripcion.value)">Guardar</button> 
+                <button type="reset" class="btn btn-primary btn-block" id="botonEnviar" (click) = "editarPerfil(nombre.value, direccion.value, localidad.value, telefono.value, imagen.value, descripcion.value, imagenNosotros.value)">Guardar</button> 
             
                 <div class="form-group" id="contenedor-boton">
                     <button type="button" id="botonEliminar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">

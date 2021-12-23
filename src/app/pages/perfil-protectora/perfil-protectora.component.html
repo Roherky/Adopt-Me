@@ -48,7 +48,7 @@
               <h3 class="custom-heading" >Sobre nosotros:</h3>
               <p style="line-height: 180%">{{protectora.descripcion}}</p>
             </span>
-            <img src="./assets/img/perfil-usuario/protectora.jpg" class="protectora" style="width: 410px; height: 400px; display: flex; align-items: flex-end; margin-left: 40px; border-radius: 15px;">
+            <img src="{{imagen.imagen}}" class="protectora" style="width: 410px; height: 400px; display: flex; align-items: flex-end; margin-left: 40px; border-radius: 15px;">
         </div>
     </section>
     <br>
@@ -56,8 +56,8 @@
     
    <!-- galeria fotos -->
     <div class="galeria" >
-      <div class="card" style="border-radius:2em" *ngFor="let imagen of imagenes">
-        <img src="{{imagen.imagen}}" class="row" >
+      <div class="card" style="border-radius:2em" *ngFor="let animal of animales">
+        <img src="{{animal.imagen}}" class="row" >
       </div>
     </div>
 
