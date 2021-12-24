@@ -93,10 +93,12 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
   
    console.log(this.animal);
    
-   this.animalServicio.obtenerId(this.id)
+   this.animalServicio.obtenerIdAnimalProtec(this.id, this.sesion.id_usuario)
    .subscribe((data:Animal[])=>{
    
            this.animal=data[0];
+           console.log("aaaaaaa");
+           console.log(this.animal)
        
          })
 
