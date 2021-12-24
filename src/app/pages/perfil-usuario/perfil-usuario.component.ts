@@ -35,12 +35,20 @@ export class PerfilUsuarioComponent implements OnInit {
     console.log(this.usuario);
     })
 
-    this.imagenServicio.getImagen(this.id)
+
+    this.imagenServicio.obtenerImagenesAdoptante(this.id)
     .subscribe((data:Imagenes[])=>{
       this.imagenes=data;
       console.log(this.imagenes);
-     
+  
     })
+
+    // this.imagenServicio.getImagen(this.id)
+    // .subscribe((data:Imagenes[])=>{
+    //   this.imagenes=data;
+    //   console.log(this.imagenes);
+     
+    // })
   }
   public modificarAdoptante(id:any, nombre: string, apellidos: string, fechaNacimiento: string, 
     telefono: number, email: string, password: string, localidad: string,
@@ -58,4 +66,32 @@ export class PerfilUsuarioComponent implements OnInit {
         alert("Error al actualizar la protectora");
     })
   }
+
+
+
+
+  
+agregarImagen(urlImagen:string){
+ 
+  let imagen:Imagenes;
+  imagen=new Imagenes(null, this.sesion.id_usuario, null, null, null, null, urlImagen);
+  console.log(imagen)
+
+  this.imagenServicio.añadirImagen(imagen)
+  .subscribe((data:string)=>{
+
+    console.log(data);
+    if (data != "-1"){
+      alert("Se ha insertado la imagen con id: " + data)
+    this.ngOnInit()
+    }
+    else
+      alert("Error al insertar la imagen");
+
+  })
+
+
+
 }
+}
+

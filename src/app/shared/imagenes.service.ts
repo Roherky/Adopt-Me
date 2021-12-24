@@ -34,6 +34,12 @@ export class ImagenesService {
     return this.http.get(url)
   }
 
+  obtenerImagenesAdoptante(id_adoptante:number){
+  //  let url= "https://adopt-me2021.herokuapp.com/imagenes?id_adoptante="+id_adoptante; 
+  let url= `http://localhost:300/imagenes?id_adoptante=${id_adoptante}`;
+    return this.http.get(url)
+  }
+
   añadirImagen(nuevaImagen: Imagenes)
   {
     

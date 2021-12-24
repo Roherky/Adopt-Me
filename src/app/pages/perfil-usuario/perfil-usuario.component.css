@@ -48,23 +48,23 @@
     background-position: 0;
   }
 
- .boton{
-     display: flex;
-     align-items: center;
-     justify-content: flex-end;
-     gap: 50px;
-     margin-top: 50px;
-     margin-right: 90px;
- }
+  .boton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 
- #botonFinales{
+ /* #botonFinales{
     width: 200px;
      background-color: orange;
      color: #fff;
      border-radius: 15px;
      border: none;
 
-     /* animacion */
+  
      border-color: orange;
      color: #fff;
      background-image: -webkit-linear-gradient(45deg, #5EC0CA 50%, transparent 50%);
@@ -73,7 +73,7 @@
      background-size: 400%;
      -webkit-transition: background 300ms ease-in-out;
      transition: background 300ms ease-in-out;
- }
+ } */
 
  #botonFinales:hover {
     background-position: 0;
@@ -152,6 +152,26 @@ hr{
     text-align: justify;
     
 }
+
+
+#botonAñadirFoto{
+    width: 200px;
+    border-radius: 1em;
+    background-color: #f5993e;
+    color: #fff;
+    border:none;
+    text-decoration: none;
+
+ }
+
+.agregarImg{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+
+
+}
 .galeria{
     display: flex;
     flex-direction: row;
@@ -183,3 +203,37 @@ hr{
     display: flex;
     align-items: flex-end;
 }
+
+.redondeado {
+    border-radius: 1em;
+     border: 1px solid grey;
+     padding: 5px;
+     width: 250px;
+     margin-top: 20px;
+     margin-bottom: 40px;
+   }
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#btnAgregarImagen {
+
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: #5EC0CA;
+
+    border: none;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+

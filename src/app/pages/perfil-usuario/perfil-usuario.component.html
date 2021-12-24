@@ -35,11 +35,33 @@
     </table>
   
   </div>
-  <div class="boton">
+
+
+  <div class="row">
+
+    <div class="col">
+   <div class="botones">
+   <input class="redondeado" placeholder="Añadir imagen"  #imagen>
+   <button  id="btnAgregarImagen" (click)="agregarImagen(imagen.value)" class="btn btn-primary btn-block">+</button>
+   </div>
+</div>
+<div class="col">
+<div class="boton">
+  <button type="reset" class="form-control" routerLink="/editarPerfil" id="botonModificar">Modificar</button>
+   <button type="reset" class="form-control" routerLink="/añadirFinalesFelices" id="botonFinales">Añadir final feliz</button>
+ 
+
+   </div>
+</div>
+</div>
+  <!-- <div class="boton">
     <button type="reset" class="form-control" routerLink="/editarPerfil" id="botonModificar">Modificar</button>
     <button type="reset" class="form-control" routerLink="/añadirFinalesFelices" id="botonFinales">Añadir final feliz</button>
-  </div>
+  </div> -->
     <hr>
+
+
+ 
   
   <!-- termina container -->
   
@@ -62,3 +84,4 @@
         </div>
     </div>
   </div>
+
