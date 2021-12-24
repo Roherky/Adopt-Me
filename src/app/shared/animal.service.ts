@@ -64,8 +64,8 @@ export class AnimalService {
 
   obtenerIdAnimalProtec(idAnimal:number, idProtectora:number){
   
-    //let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
-   let url= `http://localhost:300/animal?idAnimal=${idAnimal}&idProtec=${idProtectora}`; 
+   let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}&idProtec=${idProtectora}`; 
+  // let url= `http://localhost:300/animal?idAnimal=${idAnimal}&idProtec=${idProtectora}`; 
   console.log(url);
   console.log("shhhhhhhhhareddddddddddddddd")
   console.log(this.idAnimal);
