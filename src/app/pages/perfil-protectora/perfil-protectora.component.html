@@ -55,9 +55,9 @@
     <!-- termina descripcion -->
     
    <!-- galeria fotos -->
-    <div class="galeria" >
-      <div class="card" style="border-radius:2em" *ngFor="let animal of animales">
-        <img src="{{animal.imagen}}" class="row" >
+    <div class="row" >
+      <div  style="border-radius:2em" *ngFor="let animal of animales" class="col-4">
+        <img src="{{animal.imagen}}" >
       </div>
     </div>
 

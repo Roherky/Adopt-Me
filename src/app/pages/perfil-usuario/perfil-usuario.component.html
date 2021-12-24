@@ -78,9 +78,9 @@
   <!-- termina descripcion -->
   
  <!-- galeria fotos -->
-    <div class="galeria" >
-        <div class="card" style="border-radius:2em" *ngFor="let imagen of imagenes">
-        <img src="{{imagen.imagen}}" class="row" >
+    <div class="row" >
+        <div  style="border-radius:2em" *ngFor="let imagen of imagenes" class="col-4">
+        <img src="{{imagen.imagen}}">
         </div>
     </div>
   </div>
