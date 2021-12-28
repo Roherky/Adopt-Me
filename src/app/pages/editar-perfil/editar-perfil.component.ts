@@ -62,13 +62,15 @@ export class EditarPerfilComponent implements OnInit {
       console.log(data);
       console.log("eeeeeeeeeeeee");
       console.log(this.sesiones.id_usuario);
-     if (data != "-1")
-      alert("Se ha eliminado correctamente")
+     if (data == "1")
+     console.log("se ha eliminado correctamente");
+     // alert("Se ha eliminado correctamente")
    else
      alert("Error al eliminar");
 
     })
 
   }
+
 
 }

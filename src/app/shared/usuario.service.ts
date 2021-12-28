@@ -49,6 +49,10 @@ export class UsuarioService {
       body: JSON.stringify(data),
       method: "DELETE"
     }
+    console.log(this.url);
+    console.log(params);
     return this.http.delete(this.url, params);
   }
+
+  
 }
