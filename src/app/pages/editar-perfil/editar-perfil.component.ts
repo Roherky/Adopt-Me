@@ -51,4 +51,24 @@ export class EditarPerfilComponent implements OnInit {
 }
   ngOnInit(): void {
   }
+
+
+  eliminarPerfil()
+  {
+    this.apiService.deleteAdoptante(this.sesiones.id_usuario)
+    .subscribe((data:string) =>
+    {
+      console.log("eeeeeeeeeeeee");
+      console.log(data);
+      console.log("eeeeeeeeeeeee");
+      console.log(this.sesiones.id_usuario);
+     if (data != "-1")
+      alert("Se ha eliminado correctamente")
+   else
+     alert("Error al eliminar");
+
+    })
+
+  }
+
 }
