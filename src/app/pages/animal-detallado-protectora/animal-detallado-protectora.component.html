@@ -38,13 +38,14 @@
 <div class="col">
 <div class="boton">
  
-    <a type="reset"  class="form-control" id="botonEliminar" (click)="eliminar(animal.idAnimal)"  style="text-align: center; ">Eliminar</a>
+    <a type="reset"  class="form-control"  data-bs-toggle="modal" data-bs-target="#exampleModal" id="botonEliminar" style="text-align: center; ">Eliminar</a>
      <a type="reset" class="form-control" id="botonModificar"  [routerLink]="['/modificarAnimal']"  style="text-align: center; ">Modificar</a>
 
      
     </div>
 </div>
 </div>
+
 
 
 <!-- <div *ngIf="btnPulsado">
@@ -72,3 +73,27 @@
     </div>
 
 </div>
+
+
+
+
+
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="border-radius: 1em;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres eliminar?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Si eliminas el animal perderás toda su información.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" (click)="eliminar(animal.idAnimal)" id="botonEliminar"  data-bs-dismiss="modal">Eliminar animal</button>
+            </div>
+        </div>
+    </div>
+</div>
+

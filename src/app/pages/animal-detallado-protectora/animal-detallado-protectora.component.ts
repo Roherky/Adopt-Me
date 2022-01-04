@@ -44,7 +44,7 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
         if (data == "1"){
 
           alert("Animal eliminado");
-          this.router.navigate(['/listadoAnimales'])
+         this.router.navigate(['/listadoAnimales'])
 
          
           }else
