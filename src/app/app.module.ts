@@ -46,6 +46,7 @@ import { FormularioImagenesComponent } from './pages/formulario-imagenes/formula
 import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
 import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias.component';
 import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protectora/lista-animales-protectora.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 
 
 
@@ -78,7 +79,8 @@ import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protect
     FormularioImagenesComponent,
     EditarPerfilProtectoraComponent,
     EditarNoticiasComponent,
-    ListaAnimalesProtectoraComponent
+    ListaAnimalesProtectoraComponent,
+    MensajesComponent
   ],
   imports: [
     MatToolbarModule,

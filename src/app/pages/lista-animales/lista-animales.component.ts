@@ -16,9 +16,6 @@ export class ListaAnimalesComponent implements OnInit {
 
   constructor(private animalServicio: AnimalService,  public sesion: SesionesService) {
     this.animal=new Animal(null, "", "", "", "", "", "", "", "", this.sesion.id_usuario, "");
-    console.log('snkandhijsandiasdnasndhaisd')
-    console.log(this.sesion.id_usuario);
-    console.log(this.sesion.tipo);
   }
 
   ngOnInit(): void {
@@ -27,22 +24,15 @@ export class ListaAnimalesComponent implements OnInit {
       this.animalServicio.obtenerAnimalesProtectora(this.sesion.id_usuario)
       .subscribe((data:Animal[])=>{
         this.animales=data;
-        console.log(this.animales);
       })
 
     }else{
-
       this.animalServicio.obtenerAnimales()
       .subscribe((data:Animal[])=>{
         this.animales=data;
-        console.log(this.animales);
       })
     }
-
-  
-
   }
-
   
 mostrar(nombre:string, sexo:string, tipo_animal:string, fecha_ingresso:string){
 
@@ -50,51 +40,17 @@ if(this.sesion.tipo=="protectora"){
   this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
   .subscribe((data:Animal[])=>{
     this.animales=data;
-    console.log(this.animales);
   })
 }else{
   this.animalServicio.obtenerAnimal(nombre, sexo, tipo_animal, fecha_ingresso)
   .subscribe((data:Animal[])=>{
     this.animales=data;
-    console.log(this.animales);
   })
 }
-
-
-
-
-
-  // if(this.sesion.tipo=="adoptante"){
-  // this.animalServicio.obtenerAnimal(nombre, sexo, tipo_animal, fecha_ingresso)
-  // .subscribe((data:Animal[])=>{
-  //   this.animales=data;
-  //   console.log(this.animales);
-  // })
-
-  // }else if(this.sesion.tipo=="protectora"){
-  //   this.animalServicio.obtenerAnimalProtectora(this.sesion.id_usuario, nombre, sexo, tipo_animal, fecha_ingresso)
-  //   .subscribe((data:Animal[])=>{
-  //     this.animales=data;
-  //     console.log(this.animales);
-  //   })
-  // }
 }
-
 
 mostrarDetalle(idAnimal){
 
   this.animalServicio.obtenerIdAnimal(idAnimal);
-//  if(this.sesion.tipo=="protectora"){
-//     this.animalServicio.obtenerIdAnimal(idAnimal);
-//   }
-
-
-//   else{
-//   this.animalServicio.obtenerIdAnimal(idAnimal);
-//   }
-
- 
 }
-
-
 }

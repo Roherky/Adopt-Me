@@ -46,8 +46,7 @@ export class AnimalService {
 
 
   obtenerIdAnimal(idAnimal:number){
- 
-   this.idAnimal=idAnimal
+   this.idAnimal = idAnimal
    return this.idAnimal;
   }
 
@@ -56,17 +55,13 @@ export class AnimalService {
   obtenerId(idAnimal:number){
     let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
   // let url= `http://localhost:300/animal?idAnimal=${idAnimal}`; 
-  console.log(url);
-  console.log("shhhhhhhhhareddddddddddddddd")
-  console.log(this.idAnimal);
     return this.http.get(url);
   }
 
 
   
   añadirAnimal(nuevoAnimal: Animal)
-  {
-    
+  {  
     return this.http.post(this.url, nuevoAnimal)
   }
 

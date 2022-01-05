@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   public protectora: Protectora;
   public login: Login;
   public sesion: Login;
+  public id_login: number;
 
   constructor(private loginService: SesionesService,
               private router: Router) {
@@ -27,6 +28,8 @@ export class LoginComponent implements OnInit {
     let object = new Login(0, 0, 0, email, password);
     this.loginService.postLogin(object).subscribe((data: any) => {
       if(data.mensaje == "correcto"){
+        this.id_login = data.respuesta[0].id_login;
+        this.loginService.saveIDLogin1(this.id_login);
         this.sesion = data.respuesta[0];
         this.loginService.saveData(this.sesion);
         if(this.sesion.id_adoptante != null){
