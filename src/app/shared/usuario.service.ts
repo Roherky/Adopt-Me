@@ -53,6 +53,4 @@ export class UsuarioService {
     console.log(params);
     return this.http.delete(this.url, params);
   }
-
-  
 }

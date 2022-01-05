@@ -19,8 +19,8 @@ export class RegistroComponent implements OnInit {
   constructor(private servicioAdoptante: UsuarioService, private router: Router, private servicioProtectora: ProtectoraService) {
 
     this.esProtectora = false;
-    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "","");
-    this.protectora = new Protectora(0,"", "", "", "", "", "","","");
+    this.usuario = new Usuario(0, "", "", "", 0, "", "", "", "", "", "");
+    this.protectora = new Protectora(0, "", "", "", "", "", "", "", "");
   }
 
   usuarioAdoptante(){
@@ -34,8 +34,6 @@ export class RegistroComponent implements OnInit {
   onSubmit(form: NgForm){
     if(this.usuario.nombre == ''){
       this.servicioProtectora.postProtectora(this.protectora).subscribe((data: any) => {
-        console.log(data);
-        console.log(data.usuario);
         if(data.usuario == "protectora"){
           alert("Se ha registrado satisfactoriamente")
           this.router.navigate(['login']);
@@ -55,14 +53,14 @@ export class RegistroComponent implements OnInit {
     }
   }
 
-  confirmarPassword(password, confirmPassword){
-    console.log(password);
-    console.log(confirmPassword);
-    if(password == confirmPassword){
-      return true;
-    }
-    else return false;
-  }
+  // confirmarPassword(password, confirmPassword){
+  //   console.log(password);
+  //   console.log(confirmPassword);
+  //   if(password == confirmPassword){
+  //     return true;
+  //   }
+  //   else return false;
+  // }
 
   ngOnInit(): void {
   }

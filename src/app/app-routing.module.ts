@@ -25,11 +25,12 @@ import { FormularioImagenesComponent } from './pages/formulario-imagenes/formula
 import { EditarPerfilProtectoraComponent } from './pages/editar-perfil-protectora/editar-perfil-protectora.component';
 import { EditarNoticiasComponent } from './pages/editar-noticias/editar-noticias.component';
 import { ListaAnimalesProtectoraComponent } from './pages/lista-animales-protectora/lista-animales-protectora.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 
 //can activate routes
 const routes: Routes = [
   {path: "inicio", component: InicioComponent},
-  {path: "footer",component:FooterComponent},
+  {path: "footer",component: FooterComponent},
   {path: "login", component: LoginComponent},
   {path: "registro", component: RegistroComponent},
   {path: "contacto", component: ContactoComponent},
@@ -52,8 +53,9 @@ const routes: Routes = [
   {path: "modificarAnimal", component: ModificarAnimalComponent},
   {path: "formularioImagenes", component: FormularioImagenesComponent},
   {path: "editarPerfilProtectora", component: EditarPerfilProtectoraComponent},
-  {path:"editarNoticias", component:EditarNoticiasComponent},
-  {path:"listaAnimalesProtectora", component:ListaAnimalesProtectoraComponent},
+  {path:"editarNoticias", component: EditarNoticiasComponent},
+  {path:"listaAnimalesProtectora", component: ListaAnimalesProtectoraComponent},
+  {path:"mensajes", component: MensajesComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

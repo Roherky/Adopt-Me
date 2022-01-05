@@ -1,6 +1,6 @@
 <div class="contenedor">
     <div class="titulo">
-        <h1 style="margin-top: 5%; margin-left: 3%;">Chat</h1>
+        <h1 style="margin-top: 5%; margin-left: 3%;">Chats</h1>
     </div>
     <!-- Chat -->
     <div class="chat">
@@ -22,16 +22,19 @@
         <!-- Chats -->
         <div class="mensajeria">
             <!-- Chat de grupos -->
-            <div class="chats" style="margin-top: 2%;">
-                <!-- <div class="contenido">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, deleniti eos mollitia earum suscipit magni placeat. Itaque laudantium non aliquam, in vel ipsam quos eius, accusamus perferendis inventore, nam sint.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque sint hic earum adipisci odio nam quo blanditiis nesciunt ipsa saepe eligendi voluptas quia autem nostrum, odit ea impedit delectus.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ut quae nesciunt soluta a modi hic ipsum quibusdam cum? Iste, omnis autem? Est autem corrupti, iste suscipit reprehenderit beatae aperiam.</p>
-                </div> -->
-                <div class="contenido">
-                    <h3 style="margin-top: 5%; margin-bottom: 7%;">No tienes conversaciones</h3>
-                    <img src="./../../../assets/img/Logo.png">
+            <div class="chats" style="margin-top: 2%;" *ngIf="chatsAdoptante.length >= 1">
+                <div class="contenido" *ngFor="let nombre of nombreProtectora" routerLink="/mensajes">
+                    {{nombre}}
                 </div>
+            </div>
+            <div class="chats" style="margin-top: 2%;" *ngIf="chatsProtectora.length >= 1">
+                <div class="contenido" *ngFor="let adoptante of nombreAdoptante" routerLink="/mensajes">
+                    {{adoptante}}
+                </div>
+            </div>
+            <div class="sinChats" *ngIf="chatsAdoptante.length == 0 && chatsProtectora.length == 0">
+                <h3 style="margin-top: 5%; margin-bottom: 7%;">No tienes conversaciones</h3>
+                <img src="./../../../assets/img/Logo.png">
             </div>
         </div>
     </div>

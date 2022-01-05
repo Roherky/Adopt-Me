@@ -27,8 +27,8 @@
         </tbody>
     </table>
 </div>
-<div class="boton">
-     <a type="reset" class="form-control" id="botonModificar" routerLink="/chat" style="text-align: center; ">Adopt-Me</a>
+<div class="boton" *ngIf="this.sesiones.tipo == 'adoptante'">
+     <a type="reset" class="form-control" id="botonModificar" (click)="crearChat()" style="text-align: center;">Adopt-Me</a>
 </div>
     <hr>
     <div class="descripcion" style="line-height: 180%">

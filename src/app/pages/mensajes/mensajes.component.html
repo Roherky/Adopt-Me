@@ -1,0 +1,28 @@
+<div class="contenedor">
+    <div class="titulo">
+        <h1 style="margin-top: 5%; margin-left: 3%;">Mensajes</h1>
+    </div>
+    <!-- Chat -->
+    <div class="chat">
+        <div class="nombreContacto">
+            Chat
+        </div>
+        <div class="contenidoChat">
+            <div class="mensaje" *ngFor="let texto of mensajes" [ngClass]="{'mensajePropio' : texto.id_emisor == this.sesiones.id_login1}">
+                <p>{{texto.mensaje}}</p>
+            </div>
+        </div>
+        <!-- Input para escribir mensaje -->
+        <div class="input">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+            <div id="search-wrapper">
+                <input type="text" id="search" placeholder="Escribe tu mensaje" #mensaje required>
+            </div>
+            <!-- Botón -->
+            <div class="boton">
+                <div class="form-group" id="contenedor-boton">
+                    <button id="boton" class="btn btn-primary btn-block" (click)="nuevoMensaje(mensaje.value)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>

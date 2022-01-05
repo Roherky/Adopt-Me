@@ -1,0 +1,108 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+    .chat {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 80%;
+        padding: 1%;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        margin: auto;
+    }
+
+    .nombreContacto {
+        display: flex;
+        justify-content: flex-start;
+        }
+
+    .contenidoChat {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+        .mensaje {
+            background-color: #dadada;
+            border-radius: 0 1em 1em 0;
+            width: 70%;
+            margin-top: 2%;
+            margin-left: 5%;
+        }
+
+            .mensaje p {
+                margin-left: 2%;
+                margin-right: 2%;
+                margin-top: 2%;
+            }
+
+        .mensajePropio {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #5EC0CA;
+            border-radius: 1em 0 0 1em;
+            width: 70%;
+            margin-top: 2%;
+            margin-left: 20%;
+            color: white;
+        }
+
+    .input {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+
+    #search-wrapper {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-flex-flow: row-reverse nowrap;
+            -ms-flex-flow: row-reverse nowrap;
+                flex-flow: row-reverse nowrap;
+        width: 50em;
+    }
+    #search-wrapper #search {
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5em;
+        color: #444;
+        padding: .6rem .5rem;
+        font-family: 'Lato';
+        font-size: 1em;
+        font-weight: lighter;
+        -webkit-transition: border-color .2s ease;
+        transition: border-color .2s ease;
+        width: 100%;
+    }
+  
+    #search-wrapper #search:focus {
+        border-color: #999;
+        outline: none;
+    }
+
+    .boton {
+        margin-left: 3%;
+    }
+
+    #boton {
+        display: block;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: #5EC0CA;
+        border: none;
+    }

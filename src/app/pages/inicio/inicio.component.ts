@@ -8,11 +8,8 @@ import { SesionesService } from 'src/app/shared/sesiones.service';
 })
 export class InicioComponent implements OnInit {
 
-
   constructor(public sesiones: SesionesService) { }
 
   ngOnInit(): void {
-    console.log(this.sesiones.tipo)
   }
-
 }
