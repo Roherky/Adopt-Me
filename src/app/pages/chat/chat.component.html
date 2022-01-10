@@ -3,7 +3,7 @@
         <h1 style="margin-top: 5%; margin-left: 3%;">Chats</h1>
     </div>
     <!-- Chat -->
-    <div class="chat">
+    <div class="chat" *ngIf="muestraMensajes == false">
         <!-- Búsqueda -->
         <div class="busqueda">
             <div class="input">
@@ -22,20 +22,39 @@
         <!-- Chats -->
         <div class="mensajeria">
             <!-- Chat de grupos -->
-            <div class="chats" style="margin-top: 2%;" *ngIf="chatsAdoptante.length >= 1">
-                <div class="contenido" *ngFor="let nombre of nombreProtectora" routerLink="/mensajes">
-                    {{nombre}}
+            <div class="chats" style="margin-top: 2%;" *ngIf="datosChat.length >= 1">
+                <div class="contenido" *ngFor="let chats of datosChat" (click)="mostrarMensajes(chats.id_chat)">
+                    {{chats.nombre}} {{chats.apellidos}}
                 </div>
-            </div>
-            <div class="chats" style="margin-top: 2%;" *ngIf="chatsProtectora.length >= 1">
-                <div class="contenido" *ngFor="let adoptante of nombreAdoptante" routerLink="/mensajes">
-                    {{adoptante}}
-                </div>
-            </div>
-            <div class="sinChats" *ngIf="chatsAdoptante.length == 0 && chatsProtectora.length == 0">
-                <h3 style="margin-top: 5%; margin-bottom: 7%;">No tienes conversaciones</h3>
-                <img src="./../../../assets/img/Logo.png">
             </div>
         </div>
+        <!-- No hay chats -->
+        <div class="sinChats" *ngIf="datosChat.length == 0">
+            <h3 style="margin-top: 5%; margin-bottom: 7%;">No tienes conversaciones</h3>
+            <img src="./../../../assets/img/Logo.png">
+        </div>
     </div>
+    <!-- Chat -->
+    <div class="chat2" *ngIf="muestraMensajes == true">
+        <div class="nombreContacto">
+            Chat
+        </div>
+        <div class="contenidoChat">
+            <div class="mensaje" *ngFor="let texto of mensajes" [ngClass]="{'mensajePropio' : texto.id_emisor == this.sesiones.id_login1}">
+                <p>{{texto.mensaje}}</p>
+            </div>
+        </div>
+        <!-- Input para escribir mensaje -->
+        <div class="inputMensaje">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+            <div id="search-wrapper2">
+                <input type="text" id="search" placeholder="Escribe tu mensaje" #mensaje required>
+            </div>
+            <!-- Botón -->
+            <div class="botonMensaje">
+                <div class="form-group" id="contenedor-boton">
+                    <button id="botonMensaje" class="btn btn-primary btn-block" (click)="nuevoMensaje(mensaje.value)">+</button>
+                </div>
+            </div>
+        </div>
 </div>

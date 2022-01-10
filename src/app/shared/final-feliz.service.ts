@@ -15,10 +15,6 @@ export class FinalFelizService {
     return this.http.get(this.url);
   }
 
-  // public getFinalFeliz(id: any){
-  //   return this.http.get(this.url + "/" + id);
-  // }
-
   public postFinalFeliz(nuevoFinalFeliz: FinalFeliz){
     return this.http.post(this.url, nuevoFinalFeliz);
   }

@@ -55,10 +55,7 @@ export class AnimalService {
 
   obtenerId(idAnimal:number){
     //let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
-   let url= `http://localhost:300/animal?idAnimal=${idAnimal}`; 
-  console.log(url);
-  console.log("shhhhhhhhhareddddddddddddddd")
-  console.log(this.idAnimal);
+   let url= `https://adopt-me2021.herokuapp.com?idAnimal=${idAnimal}`; 
     return this.http.get(url);
   }
 
@@ -66,9 +63,6 @@ export class AnimalService {
   
    let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}&idProtec=${idProtectora}`; 
   // let url= `http://localhost:300/animal?idAnimal=${idAnimal}&idProtec=${idProtectora}`; 
-  console.log(url);
-  console.log("shhhhhhhhhareddddddddddddddd")
-  console.log(this.idAnimal);
     return this.http.get(url);
   }
 

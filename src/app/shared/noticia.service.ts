@@ -10,7 +10,6 @@ export class NoticiaService {
   
   public idNoticia:number
   public noticia: Noticia
-  // private url= "http://localhost:300/noticias"
   private url = "https://adopt-me2021.herokuapp.com/noticias"
 
   constructor(private http: HttpClient) { }

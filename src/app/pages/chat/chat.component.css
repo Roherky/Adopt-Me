@@ -45,13 +45,13 @@
         display: flex;
         width: 100%;
         justify-content: center;
+        margin-top: 5%;
     }
 
         .chats {
           display: flex;
           flex-direction: column;
-          width: 60%;
-          height: 100%;
+          width: 80%;
           border: 1px solid #ccc;
           border-radius: 1em;
         }
@@ -59,7 +59,6 @@
             .contenido {
               display: flex;
               flex-direction: column;
-              height: 100%;
               width: 100%;
               justify-content: center;
               align-items: center;
@@ -76,7 +75,7 @@
             .sinChats {
               margin-top: 5%;
               text-align: center;
-              height: 100%;
+              height: 31.75vh;
             }
 
 *,
@@ -89,6 +88,106 @@
 
 body {
   padding: 1rem;
+}
+
+.chat2 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 80%;
+  padding: 1%;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  margin: auto;
+}
+
+.nombreContacto {
+  display: flex;
+  justify-content: flex-start;
+  }
+
+.contenidoChat {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+  .mensaje {
+      background-color: #dadada;
+      border-radius: 0 1em 1em 0;
+      width: 70%;
+      margin-top: 2%;
+      margin-left: 5%;
+  }
+
+      .mensaje p {
+          margin-left: 2%;
+          margin-right: 2%;
+          margin-top: 2%;
+      }
+
+  .mensajePropio {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #5EC0CA;
+      border-radius: 1em 0 0 1em;
+      width: 70%;
+      margin-top: 2%;
+      margin-left: 20%;
+      color: white;
+  }
+
+.inputMensaje {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+#search-wrapper2 {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-flow: row-reverse nowrap;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  width: 50em;
+}
+#search-wrapper2 #search {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5em;
+  color: #444;
+  padding: .6rem .5rem;
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: lighter;
+  -webkit-transition: border-color .2s ease;
+  transition: border-color .2s ease;
+  width: 100%;
+}
+
+#search-wrapper2 #search:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.botonMensaje {
+  margin-left: 3%;
+}
+
+#botonMensaje {
+  display: block;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: #5EC0CA;
+  border: none;
 }
 
 #search-wrapper {
@@ -136,4 +235,37 @@ body {
 }
 #search-wrapper #search:focus + i {
   border-color: #999;
+}
+
+#search-wrapper2 {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-flow: row-reverse nowrap;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  width: 50em;
+}
+#search-wrapper2 #search {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5em;
+  color: #444;
+  padding: .6rem .5rem;
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: lighter;
+  -webkit-transition: border-color .2s ease;
+  transition: border-color .2s ease;
+  width: 100%;
+}
+
+#search-wrapper2 #search:focus {
+  border-color: #999;
+  outline: none;
 }

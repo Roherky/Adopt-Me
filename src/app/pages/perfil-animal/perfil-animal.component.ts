@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Animal } from 'src/app/models/animal';
 import { Chat } from 'src/app/models/chat';
 import { Imagenes } from 'src/app/models/imagenes';
+import { Mensaje } from 'src/app/models/mensaje';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { ChatService } from 'src/app/shared/chat.service';
 import { ImagenesService } from 'src/app/shared/imagenes.service';
@@ -48,7 +49,6 @@ export class PerfilAnimalComponent implements OnInit {
       this.sesiones.saveIDLogin2(this.IDLogin);
       this.sesiones.getIDLogin(this.sesiones.id_login2).subscribe((data: any) => {
         this.IDLoginProtectora = data[0].id_login;
-        console.log(this.IDLoginProtectora);
       })
     })
   }

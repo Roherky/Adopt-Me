@@ -10,16 +10,18 @@ export class ChatService {
 
   public id: number;
   public id_chat: number;
+  public idReceptor: number;
+
 
   constructor(private http: HttpClient) { }
 
-  public getChatsAdoptante(id: number){
-    let urlChats = `https://adopt-me2021.herokuapp.com/chat/login/adoptante?id=${id}`;
+  public getChatsProtectora(id: number){
+    let urlChats = `https://adopt-me2021.herokuapp.com/chats/protectora?id=${id}`;
     return this.http.get(urlChats);
   }
 
-  public getChatsProtectora(id: number){
-    let urlChats = `https://adopt-me2021.herokuapp.com/chat/login/protectora?id=${id}`;
+  public getChatsAdoptante(id: number){
+    let urlChats = `https://adopt-me2021.herokuapp.com/chats/adoptante?id=${id}`;
     return this.http.get(urlChats);
   }
 
@@ -43,9 +45,20 @@ export class ChatService {
     return this.http.get(urlMensajes);
   }
 
-  public getIDChat(id_emisor: number, id_receptor: number){
-    let url = `https://adopt-me2021.herokuapp.com/idchat?id_emisor=${id_emisor}&id_receptor=${id_receptor}`;
+  public getIDChat(id_login1: number, id_login2: number){
+    let url = `https://adopt-me2021.herokuapp.com/idchat?id_login1=${id_login1}&id_login2=${id_login2}`;
     return this.http.get(url);
+  }
+
+  public getIDReceptor(id: number){
+    let url = `https://adopt-me2021.herokuapp.com/idreceptor?id=${id}`;
+    return this.http.get(url);
+  }
+
+  public saveIDReceptor(id: number){
+    if(id != null){
+      this.idReceptor = id;
+    }
   }
 
   public postChat(chat: Chat){
