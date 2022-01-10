@@ -54,8 +54,8 @@ export class AnimalService {
  
 
   obtenerId(idAnimal:number){
-    //let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
-   let url= `https://adopt-me2021.herokuapp.com?idAnimal=${idAnimal}`; 
+    let url= `https://adopt-me2021.herokuapp.com/animal?idAnimal=${idAnimal}`; 
+  
     return this.http.get(url);
   }
 
