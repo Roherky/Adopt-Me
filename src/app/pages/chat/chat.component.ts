@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Chat } from 'src/app/models/chat';
 import { Mensaje } from 'src/app/models/mensaje';
 import { ChatService } from 'src/app/shared/chat.service';
@@ -19,8 +21,12 @@ export class ChatComponent implements OnInit {
   public idChat: number;
   public idEmisor: number;
   public idReceptor: number;
+  closeResult = '';
 
-  constructor(public sesiones: SesionesService, public chatService: ChatService) {
+  constructor(public sesiones: SesionesService,
+              public chatService: ChatService,
+              private modalService: NgbModal,
+              private router: Router) {
     this.chat = new Chat(0, 0, 0);
     this.datosChat = [];
     this.muestraMensajes = false;
@@ -45,6 +51,31 @@ export class ChatComponent implements OnInit {
     if(this.sesiones.tipo == 'protectora'){
       let objetoMensaje = new Mensaje(0, this.idChat, mensaje, this.idReceptor, this.idEmisor);
     this.chatService.postMensaje(objetoMensaje).subscribe((data: Mensaje) => { })
+    }
+  }
+
+  borrarChat(){
+    let id = this.idChat;
+    this.chatService.deleteChat(id).subscribe((data: any) => {
+      this.router.navigate(['listadoAnimales']);
+    })
+  }
+
+  abrirModal(content: any){
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
     }
   }
 

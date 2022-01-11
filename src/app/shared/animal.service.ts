@@ -83,7 +83,6 @@ export class AnimalService {
   borrarAnimal(idAnimal:any)
   {
     let data ={"idAnimal": idAnimal}
-    console.log(idAnimal);
     let param={
       headers: {"Content-type": "application/json; charset=UTF-8"},
       body : JSON.stringify(data),

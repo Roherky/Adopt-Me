@@ -76,4 +76,15 @@ export class ChatService {
     let urlMensajes = "https://adopt-me2021.herokuapp.com/mensaje";
     return this.http.post(urlMensajes, mensaje);
   }
+
+  public deleteChat(id: number){
+    let url = "https://adopt-me2021.herokuapp.com/chat";
+    let data = {"id_chat" : id}
+    let param = {
+      headers: {"Content-type": "application/json; charset=UTF-8"},
+      body : JSON.stringify(data),
+      method: "DELETE"
+    }
+    return this.http.delete(url, param);
+  }
 }
