@@ -5,13 +5,14 @@
 
     .formulario {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center;
+        align-items: center; */
+        margin-left: 3%;
         width: 97%;
     }
 
         .estiloFormulario{
-            width: 80%;
+            width: 95%;
             margin-top: 2%;
             margin-bottom: 2%;
             margin-left: 0%;
@@ -19,6 +20,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            gap: 30px;
             background-color: #5EC0CA;
             color: #fff;
             border-radius: 1em;
@@ -28,7 +30,7 @@
             .redondeado{
                 border-radius: 1em;
                 border-style: none;
-                width: 190px;
+                width: 200px;
                 height: 35px;
                 text-align: center;
                 display: flex;
@@ -68,6 +70,7 @@
     .row {
         margin-top: 1%;
         margin-left: 3%;
+        margin-right: 3%;
         width: 97%;
     }
 

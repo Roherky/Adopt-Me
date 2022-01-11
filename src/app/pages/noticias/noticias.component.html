@@ -45,7 +45,7 @@
         <p style="font-weight: bold;">Categoría: {{noticia.categoria}}</p>
         <p style="font-weight: bold;">Prioridad: {{noticia.prioridad}}</p>
         <p style="font-weight: bold;">Fecha de publicación: {{noticia.fecha_publicacion}}</p>
-        <p>{{noticia.descripcion}}</p>
+        <p style="text-align: justify;">{{noticia.descripcion}}</p>
         <div class="botones">
         <button type="reset" class="form-control" routerLink="/editarNoticias" id="botonModificar" (click)="mostrarDetalle(noticia.idNoticias)">Modificar</button>
       
@@ -93,7 +93,7 @@
           <p style="font-weight: bold;">Categoría: {{noticia.categoria}}</p>
           <p style="font-weight: bold;">Prioridad: {{noticia.prioridad}}</p>
           <p style="font-weight: bold;">Fecha de publicación: {{noticia.fecha_publicacion}}</p>
-          <p>{{noticia.descripcion}}</p>
+          <p style="text-align: justify;">{{noticia.descripcion}}</p>
         </div>
       </ng-template>
         </div>
