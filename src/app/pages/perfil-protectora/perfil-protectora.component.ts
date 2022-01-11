@@ -27,21 +27,14 @@ export class PerfilProtectoraComponent implements OnInit {
 
   ngOnInit(): void {
     this.id= this.sesion.id_usuario;
-    console.log(this.id);
-    console.log(this.protectora);
-
-
     this.apiService.obtenerId(this.id)
     .subscribe((data: Protectora[]) => {
     this.protectora = data[0];
-    console.log(this.protectora);
     })
     
 this.imagenServicio.getImagenProtectora(this.id)
 .subscribe((data:Imagenes[])=>{
      this.imagen=data[0];
-     console.log("aaaaaaaaaaaaaquiiiiiiiiiiiiiiiiiiiii");
-     console.log(this.imagen);
     
    })
    //obtenerAnimalesProtectora
@@ -49,7 +42,6 @@ this.imagenServicio.getImagenProtectora(this.id)
  this.animalServicio.obtenerAnimalesProtectora(this.id)
  .subscribe((data:Animal[])=>{
    this.animales=data;
-   console.log(this.imagenes);
   
  })
 

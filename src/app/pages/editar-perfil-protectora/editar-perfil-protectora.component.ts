@@ -19,12 +19,10 @@ export class EditarPerfilProtectoraComponent implements OnInit {
   constructor(private apiService: ProtectoraService, public sesiones: SesionesService, private imagenServicio: ImagenesService, private router:Router) { 
     this.protectora = new Protectora (null,"","","","","","","","");
     this.imagenes=new Imagenes(null, null, null, null, null, null, "");
-    console.log(this.sesiones.id_usuario)
   }
 
   editarPerfil(nombre: string, direccion: string, localidad: string, telefono:any, imagen:string, descripcion:string, imagenNosotros:string){
     this.id= this.sesiones.id_usuario;
-    console.log(this.id)
     let protect = new Protectora (this.id, nombre, direccion, localidad,"", "", telefono, descripcion, imagen);
     let imagenSobreNosotros=new Imagenes(null, null, this.sesiones.id_usuario, null, null, null, imagenNosotros);
 
@@ -39,13 +37,8 @@ export class EditarPerfilProtectoraComponent implements OnInit {
   if(imagenNosotros!=""){
   this.imagenServicio.añadirImagen(imagenSobreNosotros)
   .subscribe((data:string) =>{
-    console.log(data);
-    console.log("laaaaaaaaaaaaa imagennnnnnnnnn");
-    console.log(imagenSobreNosotros)
     if(data !="-1"){
 
-      console.log("laaaaaaaaaaaaa imagennnnnnnnnn 222222222222");
-      console.log(imagenSobreNosotros);
       
     }
     else{
@@ -53,14 +46,12 @@ export class EditarPerfilProtectoraComponent implements OnInit {
     
       }
 
-    console.log(data);
   })
 
   }
 
 
 
-    console.log(protect)
     for(let propiedad in protect){
 
         if(protect[propiedad]==""){
@@ -72,12 +63,9 @@ export class EditarPerfilProtectoraComponent implements OnInit {
 
     this.apiService.putProtectora(protect)
     .subscribe((data:string) =>{
-      console.log(data);
-      console.log(protect)
       if(data !="-1"){
 
         alert("Se ha modificado correctamente");
-        console.log(data);
         this.router.navigate(['/perfilProtectora'])
       }
       else{
@@ -85,7 +73,6 @@ export class EditarPerfilProtectoraComponent implements OnInit {
       
         }
 
-      console.log(data);
     })
 
 

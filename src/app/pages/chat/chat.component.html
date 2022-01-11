@@ -36,9 +36,34 @@
     </div>
     <!-- Chat -->
     <div class="chat2" *ngIf="muestraMensajes == true">
-        <div class="nombreContacto">
-            Chat
+        <div class="barraSuperior">
+            <!-- Nombre del chat -->
+            <div class="nombreContacto">
+                Chat
+            </div>
+            <!-- Botón para eliminar chat -->
+            <div class="botonBorrar">
+                <button id="botonBorrar" class="btn btn-danger btn-block" (click)="abrirModal(contenido)">
+                    x
+                </button>
+            </div>
         </div>
+        <!-- Modal para eliminar chat -->
+        <ng-template #contenido let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title" style="margin-left: 3%;">¿Eliminar chat?</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')" style="margin-right: 3%;">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p style="font-weight: bold; text-align: center;">¿Seguro que quieres eliminar el chat?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="botonEliminar" (click)="borrarChat()">Eliminar</button>
+              </div>
+        </ng-template>
+        <!-- Contenido del chat -->
         <div class="contenidoChat">
             <div class="mensaje" *ngFor="let texto of mensajes" [ngClass]="{'mensajePropio' : texto.id_emisor == this.sesiones.id_login1}">
                 <p>{{texto.mensaje}}</p>
@@ -57,4 +82,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </div>
