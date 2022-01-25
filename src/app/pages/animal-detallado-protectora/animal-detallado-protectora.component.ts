@@ -73,7 +73,7 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
       console.log(data);
       if (data != "-1"){
         alert("Se ha insertado la imagen con id: " + data)
-      this.ngOnInit()
+      this.mostrarImagenes();
       }
       else
         alert("Error al insertar la imagen");
@@ -82,6 +82,15 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
 
   
   
+  }
+
+  mostrarImagenes(){
+    this.imagenServicio.obtenerImagen(this.id)
+    .subscribe((data:Imagenes[])=>{
+      this.imagenes=data;
+      console.log(this.imagenes);
+  
+    })
   }
 
 
@@ -97,18 +106,12 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
    .subscribe((data:Animal[])=>{
    
            this.animal=data[0];
-           console.log("aaaaaaa");
-           console.log(this.animal)
+
        
          })
 
-
-         this.imagenServicio.obtenerImagen(this.id)
-         .subscribe((data:Imagenes[])=>{
-           this.imagenes=data;
-           console.log(this.imagenes);
-       
-         })
+this.mostrarImagenes();
+        
   }
 }
 

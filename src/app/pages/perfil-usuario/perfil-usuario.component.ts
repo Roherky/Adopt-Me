@@ -36,20 +36,21 @@ export class PerfilUsuarioComponent implements OnInit {
     })
 
 
+  this.mostrarImagenes();
+
+
+  }
+
+  mostrarImagenes(){
     this.imagenServicio.obtenerImagenesAdoptante(this.id)
     .subscribe((data:Imagenes[])=>{
       this.imagenes=data;
       console.log(this.imagenes);
   
     })
-
-    // this.imagenServicio.getImagen(this.id)
-    // .subscribe((data:Imagenes[])=>{
-    //   this.imagenes=data;
-    //   console.log(this.imagenes);
-     
-    // })
   }
+
+
   public modificarAdoptante(id:any, nombre: string, apellidos: string, fechaNacimiento: string, 
     telefono: number, email: string, password: string, localidad: string,
     direccion: string, descripcion:string, imagenPerfil: string, )
@@ -83,7 +84,8 @@ agregarImagen(urlImagen:string){
     console.log(data);
     if (data != "-1"){
       alert("Se ha insertado la imagen con id: " + data)
-    this.ngOnInit()
+    this.mostrarImagenes();
+
     }
     else
       alert("Error al insertar la imagen");
