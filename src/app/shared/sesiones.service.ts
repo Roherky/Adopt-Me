@@ -53,6 +53,22 @@ export class SesionesService {
     this.id_usuario = null;
   }
 
+  public updatePassword(login: Login){
+    let url = "http://localhost:300/password";
+    return this.http.put(url, login);
+  }
+
+  public eliminarAdoptante(id: number){
+    let url = "http://localhost:300/adoptante";
+    let data = {"id_Adoptante": id};
+    let param = {
+      headers: {"Content-type": "application/json; charset = UTF-8"},
+      body : JSON.stringify(data),
+      method: "DELETE"
+    }
+    return this.http.delete(url, param);
+  }
+
   // isAuth(): boolean {
   //   const almacenamientoLocal = localStorage.getItem('token');
   //   return true;

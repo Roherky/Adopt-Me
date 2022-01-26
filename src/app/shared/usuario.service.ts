@@ -42,15 +42,4 @@ export class UsuarioService {
     return this.http.put(this.url, adoptanteActualizado);
   }
 
-  public deleteAdoptante(id: any){
-    let data ={"id_Adoptante": id}
-    let params = {
-      headers: {"Content-type": "application/json; charset = UTF-8"},
-      body: JSON.stringify(data),
-      method: "DELETE"
-    }
-    console.log(this.url);
-    console.log(params);
-    return this.http.delete(this.url, params);
-  }
 }

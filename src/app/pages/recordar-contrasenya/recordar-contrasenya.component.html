@@ -21,20 +21,20 @@
                 <!-- Correo electrónico -->
                 <div class="form-group" id="email-usuario">
                     <label style="margin-bottom: 1%;">Correo electrónico</label>
-                    <input class="form-control" id="input-usuarioEmail" type="text">
+                    <input class="form-control" id="input-usuarioEmail" type="text" #email>
                 </div>
                 <!-- Nueva contraseña -->
                 <div class="form-group" id="password-usuario">
                     <label style="margin-bottom: 1%;">Nueva contraseña</label>
-                    <input class="form-control" id="input-usuarioPassword">
+                    <input class="form-control" id="input-usuarioPassword" #pass>
                 </div>
                 <!-- Confirma la nueva contraseña -->
-                <div class="form-group" id="newPassword-usuario">
+                <!-- <div class="form-group" id="newPassword-usuario">
                     <label style="margin-bottom: 1%;">Confirma la nueva contraseña</label>
                     <input class="form-control" id="input-usuarioNewPassword" type="password">
-                </div>
+                </div> -->
                 <!-- Checkbox de recordar usuario e hipervínculo para recuperar la contraseña -->
-                <div class="mostrar-pass">
+                <!-- <div class="mostrar-pass">
                     <form>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -43,11 +43,11 @@
                             </label>
                           </div>
                     </form>
-                </div>
+                </div> -->
                 <!-- Botón de login -->
                 <div class="boton">
                     <div class="form-group" id="contenedor-boton">
-                        <button id="boton" class="btn btn-primary btn-block">Cambiar contraseña</button>
+                        <button id="boton" class="btn btn-primary btn-block" (click)="actualizarPass(email.value, pass.value)">Cambiar contraseña</button>
                     </div>
                 </div>
                 <!-- Hipervínculo para registrarse -->
