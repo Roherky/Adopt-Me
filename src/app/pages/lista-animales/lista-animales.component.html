@@ -50,7 +50,7 @@
     <div class="row" *ngIf="sesion.tipo == 'protectora'">
         <div *ngFor="let animal of animales" class="col-3" [routerLink]="['/animalDetalleProtectora']" (click)="mostrarDetalle(animal.idAnimal)">          
             <div class="card" style="width: 18rem; border-radius: 1em;">
-                <img src="{{animal.imagen}}" class="card-img-top" alt="" style="width: 17em; height: 12em;">
+                <img src="{{animal.imagen}}" class="card-img-top" alt="" style="width: 18em; height: 12em;">
                 <div class="card-body">
                   <p class="card-text" style="text-align: center; font-weight: 1000; font-size: 1.25em;">{{animal.nombre}}</p>
                 </div>
