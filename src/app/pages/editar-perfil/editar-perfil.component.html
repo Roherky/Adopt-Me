@@ -87,11 +87,12 @@
         <div style="display: flex; justify-content: center; gap:40px">
                 <button type="reset" class="btn btn-primary btn-block"  id="botonEnviar" (click) = "editarPerfil(nombre.value, apellidos.value, fechaNacimiento.value, telefono.value, localidad.value, direccion.value, descripcion.value, imagen.value)">Guardar</button> 
             
-                <div class="form-group" id="contenedor-boton">
-                    <button type="button" id="botonEliminar" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <!-- <div class="form-group" id="contenedor-boton">
+                    <button type="button" id="botonEliminar" class="btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Eliminar cuenta
                     </button>
-                </div>
+                </div> -->
+
         </div>
 </form> 
   
@@ -99,7 +100,7 @@
 
 
    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content" style="border-radius: 1em;">
                 <div class="modal-header">
@@ -110,9 +111,9 @@
                 Si eliminas la cuenta perderás toda la información que tengas y no podrás recuperarla
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger" (click)="eliminarPerfil()" id="botonEliminar">Eliminar cuenta</button>
+                    <button type="button" class="btn btn" id="botonCancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn" (click)="eliminarPerfil()" id="botonEliminar">Eliminar cuenta</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>

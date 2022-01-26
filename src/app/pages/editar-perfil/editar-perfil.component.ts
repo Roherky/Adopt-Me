@@ -16,61 +16,41 @@ export class EditarPerfilComponent implements OnInit {
   public id:number;
 
   constructor(private apiService: UsuarioService,
-              private sesiones: SesionesService, private router:Router) {
-    this.usuario=new Usuario(null,"","","",null,"","","","","","")
-    console.log(this.sesiones.id_usuario)
-  }
+              private sesiones: SesionesService,
+              private router: Router) { }
 
-  editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono:any, localidad:string,  direccion:string, imagen:string, descripcion:string){
-    this.id= this.apiService.id; 
-    let user = new Usuario(this.sesiones.id_usuario, nombre, apellidos, fechaNacimiento, telefono, "", "",localidad,  direccion, imagen, descripcion)
+  editarPerfil(nombre: string, apellidos: string, fechaNacimiento: string, telefono: any, localidad: string,  direccion: string, imagen: string, descripcion: string){
+    this.id = this.apiService.id; 
+    let user = new Usuario(this.sesiones.id_usuario, nombre, apellidos, fechaNacimiento, telefono, "", "", localidad, direccion, imagen, descripcion)
     for(let propiedad in user){
 
-        if(user[propiedad]==""){
-          user[propiedad]=null
+        if(user[propiedad] == ""){
+          user[propiedad] = null
         }
         
     }   
 
     this.apiService.putAdoptante(user)
     .subscribe((data:string) =>{
-      console.log(data);
-      console.log(user)
       if(data !="-1"){
 
-        alert("Se ha modificado correctamente");
-        console.log(data);
-        this.router.navigate(['/perfilUsuario'])
+        alert("Se han modificado sus datos correctamente");
+        this.router.navigate(['perfilUsuario'])
       }
       else{
-        alert("No se puede modificar")
-      
+        alert("Ha ocurrido un error al procesar su solicitud")     
         }
-      console.log(data);
     })
 }
+
   ngOnInit(): void {
   }
 
-
-  eliminarPerfil()
-  {
-    this.apiService.deleteAdoptante(this.sesiones.id_usuario)
-    .subscribe((data:string) =>
-    {
-      console.log("eeeeeeeeeeeee");
-      console.log(data);
-      console.log("eeeeeeeeeeeee");
-      console.log(this.sesiones.id_usuario);
-     if (data == "1")
-     console.log("se ha eliminado correctamente");
-     // alert("Se ha eliminado correctamente")
-   else
-     alert("Error al eliminar");
-
+  eliminarPerfil(){
+    this.sesiones.eliminarAdoptante(this.sesiones.id_usuario).subscribe((data: any) => {
+      this.sesiones.clearSesion();
+      alert("Se ha eliminado su cuenta correctamente");
+      this.router.navigate(['inicio']);
     })
-
   }
-
-
 }
