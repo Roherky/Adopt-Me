@@ -38,11 +38,10 @@ export class ModificarAnimalComponent implements OnInit {
 
     this.animalServicio.actualizarAnimal(animal)
     .subscribe((data:string) =>{
-      console.log(data);
+      
       if(data=="1"){
 
-        alert("se ha modificado correctamente");
-        console.log(data);
+        // alert("se ha modificado correctamente");
      
         this.router.navigate(['/animalDetalleProtectora'])
       }
@@ -51,7 +50,6 @@ export class ModificarAnimalComponent implements OnInit {
       
        }
  
-      console.log(data);
     })
   }
 }

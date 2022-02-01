@@ -6,6 +6,7 @@ import { ProtectoraService } from 'src/app/shared/protectora.service';
 import { SesionesService } from 'src/app/shared/sesiones.service';
 import { AnimalService } from 'src/app/shared/animal.service';
 import { Animal } from 'src/app/models/animal';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-perfil-protectora',
   templateUrl: './perfil-protectora.component.html',
@@ -19,10 +20,9 @@ export class PerfilProtectoraComponent implements OnInit {
   public imagen:Imagenes;
   public animales:Animal[];
 
-  constructor(private apiService: ProtectoraService, public sesion: SesionesService, private imagenServicio: ImagenesService, private animalServicio: AnimalService) { 
+  constructor(private apiService: ProtectoraService, public sesion: SesionesService, private imagenServicio: ImagenesService, private animalServicio: AnimalService, private router:Router) { 
     this.protectora = new Protectora(null, "", "", "", "", "", null, "", "");
     this.imagen=new Imagenes(null, null, null, null, null, null, "");
-   console.log(this.sesion.id_usuario)
   }
 
   ngOnInit(): void {
@@ -56,9 +56,9 @@ this.imagenServicio.getImagenProtectora(this.id)
 
     .subscribe((data:any) => 
     {
-      console.log(data);
       if(data != "-1")
-        alert("Se ha actualizado la protectora con id: " + data)
+        // alert("Se ha actualizado la protectora con id: " + data)
+        this.router.navigate(['/perfilProtectora'])
       else
         alert("Error al actualizar la protectora");
     })

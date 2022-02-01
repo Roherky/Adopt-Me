@@ -21,18 +21,16 @@ export class PerfilUsuarioComponent implements OnInit {
 
   constructor(private apiService: UsuarioService, public sesion: SesionesService, private imagenServicio: ImagenesService) {
     this.usuario = new Usuario(null,"", "", "", null, "", "", "", "", "", "")
-    console.log(this.sesion.id_usuario)
+
   }
 
   ngOnInit(): void {
     this.id= this.sesion.id_usuario;
-    console.log(this.id);
-    console.log(this.usuario);
 
     this.apiService.obtenerId(this.id)
     .subscribe((data: Usuario[]) => {
     this.usuario = data[0];
-    console.log(this.usuario);
+  
     })
 
 
@@ -45,8 +43,6 @@ export class PerfilUsuarioComponent implements OnInit {
     this.imagenServicio.obtenerImagenesAdoptante(this.id)
     .subscribe((data:Imagenes[])=>{
       this.imagenes=data;
-      console.log(this.imagenes);
-  
     })
   }
 
@@ -60,15 +56,13 @@ export class PerfilUsuarioComponent implements OnInit {
 
     .subscribe((data:any) => 
     {
-      console.log(data);
-      if(data != "-1")
-        alert("Se ha actualizado la protectora con id: " + data)
+      if(data != "-1"){
+        // alert("Se ha actualizado el usuario con id: " + data)
+      }
       else
         alert("Error al actualizar la protectora");
     })
   }
-
-
 
 
   
@@ -76,14 +70,13 @@ agregarImagen(urlImagen:string){
  
   let imagen:Imagenes;
   imagen=new Imagenes(null, this.sesion.id_usuario, null, null, null, null, urlImagen);
-  console.log(imagen)
+
 
   this.imagenServicio.añadirImagen(imagen)
   .subscribe((data:string)=>{
 
-    console.log(data);
     if (data != "-1"){
-      alert("Se ha insertado la imagen con id: " + data)
+      // alert("Se ha insertado la imagen con id: " + data)
     this.mostrarImagenes();
 
     }

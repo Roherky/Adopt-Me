@@ -33,19 +33,15 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
 
   eliminar(idAnimal){
   
-    console.log(idAnimal);
     if(idAnimal!=""){
 
       this.animalServicio.borrarAnimal(idAnimal)
       .subscribe((data:string) =>{
-        console.log(data);
        
-     
         if (data == "1"){
 
           alert("Animal eliminado");
          this.router.navigate(['/listadoAnimales'])
-
          
           }else
           alert("Error al eliminar el animal");
@@ -65,14 +61,12 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
    
     let imagen:Imagenes;
     imagen=new Imagenes(null, null, this.sesion.id_usuario, this.animal.idAnimal, null, null, urlImagen);
-    console.log(imagen)
-    console.log("aaaaaaaaaaaaaaaa")
+
     this.imagenServicio.añadirImagen(imagen)
     .subscribe((data:string)=>{
 
-      console.log(data);
       if (data != "-1"){
-        alert("Se ha insertado la imagen con id: " + data)
+        // alert("Se ha insertado la imagen con id: " + data)
       this.mostrarImagenes();
       }
       else
@@ -81,14 +75,12 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
     })
 
   
-  
   }
 
   mostrarImagenes(){
     this.imagenServicio.obtenerImagen(this.id)
     .subscribe((data:Imagenes[])=>{
       this.imagenes=data;
-      console.log(this.imagenes);
   
     })
   }
@@ -98,9 +90,6 @@ export class AnimalDetalladoProtectoraComponent implements OnInit {
    
 
    this.id= this.animalServicio.idAnimal;
-   console.log(this.id);
-  
-   console.log(this.animal);
    
    this.animalServicio.obtenerIdAnimalProtec(this.id, this.sesion.id_usuario)
    .subscribe((data:Animal[])=>{

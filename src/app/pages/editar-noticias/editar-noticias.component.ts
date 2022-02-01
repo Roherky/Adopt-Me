@@ -23,7 +23,7 @@ export class EditarNoticiasComponent implements OnInit {
 
   editarNoticia(titular: string, categoria: string, prioridad: string, fecha_publicacion:string,  imagen:string, descripcion:string){
     this.id= this.apiService.idNoticia;
-    console.log(this.id)
+   
  let noticias=new Noticia(this.id, titular, categoria, prioridad,  fecha_publicacion, descripcion, imagen,  this.sesiones.id_usuario)
  for(let propiedad in noticias){
          if(noticias[propiedad]==""){
@@ -34,8 +34,6 @@ export class EditarNoticiasComponent implements OnInit {
      this.apiService.putNoticia(noticias)
     .subscribe((data:string) =>
     {
-    
-      console.log(data);
       if (data != "-1"){
         alert("Se modificado la noticia correctamente");
         this.router.navigate(['/noticias'])
@@ -49,11 +47,9 @@ export class EditarNoticiasComponent implements OnInit {
 
   eliminar(idNoticia){
     idNoticia=this.apiService.idNoticia;
-    console.log(idNoticia);
     if(idNoticia!=""){
       this.apiService.deleteNoticia(idNoticia)
       .subscribe((data:string) =>{
-        console.log(data)
         if (data == "1"){
 
           alert("Noticia eliminada");
@@ -68,21 +64,6 @@ export class EditarNoticiasComponent implements OnInit {
   }
     
 
- 
-  //   eliminarNoticia(idNoticia){
-  //  this.id= this.apiService.idNoticia; 
-   
-  //   this.apiService.deleteNoticia({"id":id})
-  //   .subscribe((data) =>
-  //   {
-  //     console.log(data);
-  //     if (data != "-1")
-  //     alert("Se ha eliminado la noticia " )
-  //   else
-  //     alert("Error al eliminar la noticia");
-
-  //   })
-  // }
 }
    
 

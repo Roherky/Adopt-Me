@@ -35,7 +35,7 @@ export class RegistroComponent implements OnInit {
     if(this.usuario.nombre == ''){
       this.servicioProtectora.postProtectora(this.protectora).subscribe((data: any) => {
         if(data.usuario == "protectora"){
-          alert("Se ha registrado satisfactoriamente")
+          alert("Se ha registrado correctamente")
           this.router.navigate(['login']);
         }else{
           alert("Ha ocurrido un error al procesar su solicitud")
@@ -45,7 +45,7 @@ export class RegistroComponent implements OnInit {
     else {
         this.servicioAdoptante.postAdoptante(this.usuario).subscribe((data: any) => {
         if(data[12] == "a"){
-          alert("Se ha registrado satisfactoriamente");
+          alert("Se ha registrado correctamente");
           this.router.navigate(['login']);
         }
         else alert("Ha ocurrido un error al procesar su solicitud");

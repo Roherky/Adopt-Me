@@ -39,7 +39,6 @@ export class FinalesFelicesComponent implements OnInit {
   ngOnInit(): void {
     this.finalFelizService.getFinalesFelices().subscribe((data: FinalFeliz[]) => {
       this.finalesFelices = data;
-      console.log(this.finalesFelices);
     })
   }
 

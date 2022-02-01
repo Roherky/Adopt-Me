@@ -60,12 +60,11 @@ export class EditarPerfilProtectoraComponent implements OnInit {
     }   
 
 
-
     this.apiService.putProtectora(protect)
     .subscribe((data:string) =>{
       if(data !="-1"){
 
-        alert("Se ha modificado correctamente");
+        // alert("Se ha modificado correctamente");
         this.router.navigate(['/perfilProtectora'])
       }
       else{
@@ -75,8 +74,6 @@ export class EditarPerfilProtectoraComponent implements OnInit {
 
     })
 
-
-    
 
 
     // this.imagenServicio.obtenerImagen(this.id)

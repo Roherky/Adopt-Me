@@ -54,7 +54,8 @@ export class SesionesService {
   }
 
   public updatePassword(login: Login){
-    let url = "http://localhost:300/password";
+    // let url = "http://localhost:300/password";
+    let url = `https://adopt-me2021.herokuapp.com/password`;
     return this.http.put(url, login);
   }
 

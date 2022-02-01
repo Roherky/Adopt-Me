@@ -40,13 +40,13 @@ export class NoticiasComponent implements OnInit {
       this.apiService.getNoticia(this.sesiones.id_usuario)
       .subscribe((data: Noticia[]) => {
         this.noticias = data;
-        console.log(this.noticias);
+        
       })
     }else{
       this.apiService.getNoticias()
       .subscribe((data: Noticia[])=>{
         this.noticias = data;
-        console.log(this.noticias);
+        
       })
     }
 }
@@ -54,7 +54,6 @@ mostrarDetalle(idNoticias){
   
   this.apiService.obteneridNoticia(idNoticias);
 
-  console.log(idNoticias)
 }
 
   // funcion modal
@@ -77,7 +76,7 @@ open(content:any) {
   }
 
   public eliminar(idNoticia: any){
-console.log(idNoticia);
+
     if(idNoticia!=""){
    /// let id=  this.apiService.obteneridNoticia(idNoticia);
       this.apiService.deleteNoticia(idNoticia)
@@ -85,7 +84,7 @@ console.log(idNoticia);
 
         if (data == "1"){
 
-                  alert("noticia eliminada");
+                  // alert("noticia eliminada");
                  
                    this.ngOnInit();
                  
@@ -94,26 +93,5 @@ console.log(idNoticia);
                 })
     }
 
-  // eliminar(idAnimal){
-  
-  //   console.log(idAnimal);
-  //   if(idAnimal!=""){
-
-  //     this.animalServicio.borrarAnimal(idAnimal)
-  //     .subscribe((data:string) =>{
-  //       console.log(data);
-       
-     
-  //       if (data == "1"){
-
-  //         alert("Animal eliminado");
-  //         this.router.navigate(['/listadoAnimales'])
-
-         
-  //         }else
-  //         alert("Error al eliminar el animal");
-       
-  //       })
-  //   }
   }
 }

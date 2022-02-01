@@ -34,7 +34,7 @@ export class EditarPerfilComponent implements OnInit {
     .subscribe((data:string) =>{
       if(data !="-1"){
 
-        alert("Se han modificado sus datos correctamente");
+        // alert("Se han modificado sus datos correctamente");
         this.router.navigate(['perfilUsuario'])
       }
       else{
@@ -46,11 +46,11 @@ export class EditarPerfilComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  eliminarPerfil(){
-    this.sesiones.eliminarAdoptante(this.sesiones.id_usuario).subscribe((data: any) => {
-      this.sesiones.clearSesion();
-      alert("Se ha eliminado su cuenta correctamente");
-      this.router.navigate(['inicio']);
-    })
-  }
+  // eliminarPerfil(){
+  //   this.sesiones.eliminarAdoptante(this.sesiones.id_usuario).subscribe((data: any) => {
+  //     this.sesiones.clearSesion();
+  //     alert("Se ha eliminado su cuenta correctamente");
+  //     this.router.navigate(['inicio']);
+  //   })
+  // }
 }

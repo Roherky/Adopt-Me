@@ -38,10 +38,10 @@ export class LoginComponent implements OnInit {
         if(this.sesion.id_protectora != null){
           this.router.navigate(['perfilProtectora']);
         }
-        alert("Se ha logueado correctamente");
+        // alert("Has iniciado sesión correctamente");
       }
       else {
-        alert("Ha ocurrido un error al intentar loguearse, compruebe su correo electrónico y contraseña");
+        alert("Ha ocurrido un error al intentar iniciar sesión, compruebe su correo electrónico y contraseña");
       }
     })
   }
